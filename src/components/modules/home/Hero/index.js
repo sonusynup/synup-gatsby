@@ -11,7 +11,7 @@ const Hero = () => (
         <Button type="primary" text="GET STARTED" />
       </div>
     </div>
-</section>
+  </section>
 )
 
 export default Hero

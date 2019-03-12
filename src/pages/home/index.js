@@ -9,17 +9,10 @@ import MainProducts from '../../components/modules/home/MainProducts'
 
 const IndexPage = () => (
   <Layout>
-      <section className="section_homepage">
-        <div className="container">
-          <div className="heroblock">
-            <h2>Get found everywhere</h2>
-            <p>Manage business location data on search, voice, and social </p>
-            
-          </div>
-        </div>
-      </section>
+    <Hero />
     <Partner />
     <ProductWhatWeDo />
+    <MainProducts />
   </Layout>
 )
 
