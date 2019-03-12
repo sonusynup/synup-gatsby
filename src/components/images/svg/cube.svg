@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="109px" height="120px" viewBox="0 0 109 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>cube</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="70.5815565%" x2="0%" y2="43.449545%" id="linearGradient-1">
+            <stop stop-color="#4865FF" offset="0%"></stop>
+            <stop stop-color="#BFC9FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI/Headers/Resources" transform="translate(-82.000000, -160.000000)">
+            <g id="cube" transform="translate(82.000000, 160.000000)">
+                <polygon id="Path" fill="url(#linearGradient-1)" opacity="0.942522321" points="54.028436 120 0 93.0552923 0 26.7298578 54.028436 53.6745656"></polygon>
+                <polygon id="Path" fill="#516DFD" points="54.028436 120 108.056872 93.0552923 108.056872 26.7298578 54.028436 53.6745656"></polygon>
+                <polygon id="Path" fill="#C3CCFE" points="0 27.014218 51.9504192 0 108.056872 27.014218 54.028436 54.028436"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
