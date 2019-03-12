@@ -16,10 +16,17 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          camelCase: false,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `2ddwaxp8l2no`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: '0aaf089f64fd1c4f2e7e4e2a7de6df3ace0bd852b38e3e71d3e9653f19331ce7',
       },
     },
