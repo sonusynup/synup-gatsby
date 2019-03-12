@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../../components/atoms/Buttons';
+import Button from '../../../atoms/Buttons';
 
 const Hero = () => (
   <section className="section_homepage">
@@ -11,7 +11,7 @@ const Hero = () => (
         <Button type="primary" text="GET STARTED" />
       </div>
     </div>
-  </section>
+</section>
 )
 
-export default Button
+export default Hero

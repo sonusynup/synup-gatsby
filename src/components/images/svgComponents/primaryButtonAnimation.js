@@ -3,7 +3,7 @@ import React from 'react'
 const PrimaryButtonAnimation = () => (
   <svg width="15px" height="18px" viewBox="0 0 15 18"
                   version="1.1" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g id="UI/Components/Buttons/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
           fill="#FFFFFF">
         <g id="Arrow/white" transform="translate(119.000000, 15.000000)">

@@ -10,8 +10,8 @@ const Button = ({
   switch (type) {
     default:
       return (
-        <button class="btn btn_primary btn_arrow">
-          <span class="btn_textSpan">
+        <button className="btn btn_primary btn_arrow">
+          <span className="btn_textSpan">
             {text}
             <PrimaryButtonAnimation />
           </span>

@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -52,7 +51,7 @@ const Header = ({ siteTitle }) => (
               xmlns="http://www.w3.org/2000/svg" 
               xlinkHref="http://www.w3.org/1999/xlink"
             >
-              <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="UI/Components/Buttons/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
                     fill="#FFFFFF">
                   <g id="Arrow/white" transform="translate(119.000000, 15.000000)">

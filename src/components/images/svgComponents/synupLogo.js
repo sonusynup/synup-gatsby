@@ -2,12 +2,12 @@ import React from 'react';
 
 export default () => (
   <svg className="desktop-view" width="96px" height="32px" viewBox="0 0 96 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g id="UI/Topbars/Full-Light" transform="translate(-80.000000, -24.000000)" fill="#4865FF">
         <g id="Group-2" transform="translate(72.000000, 16.000000)">
           <g id="Group-3" transform="translate(8.000000, 8.000000)">
-            <text id="synup" font-family="Sailec" font-size="16" font-weight="800"
-                line-spacing="14" letter-spacing="-0.400000006">
+            <text id="synup" fontFamily="Sailec" fontSize="16" fontWeight="800"
+                line-spacing="14" letterSpacing="-0.400000006">
               <tspan x="40" y="24">SYNU</tspan>
               <tspan x="85.568" y="24">P</tspan>
             </text>
