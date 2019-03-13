@@ -6,11 +6,14 @@ import PrimaryButtonAnimation from '../../images/svgComponents/primaryButtonAnim
 const Button = ({ 
   type,
   text,
+  fullWidthBtn
 }) => {
+  const fullWidthClass = fullWidthBtn ? 'btn_fullWidth' : '';
+
   switch (type) {
     default:
       return (
-        <button className="btn btn_primary btn_arrow">
+        <button className={`btn btn_primary btn_arrow ${fullWidthClass}`}>
           <span className="btn_textSpan">
             {text}
             <PrimaryButtonAnimation />
