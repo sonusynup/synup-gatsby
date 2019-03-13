@@ -9,31 +9,37 @@ const path = require('path')
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
-    {
-      allContentfulEbooks(limit:100) {
-        edges {
-          node {
-            bookTitle
-            bookDescription {
-              id
+  {
+    allContentfulEbooks(sort: { fields: updatedAt }) {
+      edges {
+        node {
+          bookTitle
+          bookCoverImage {
+            file{
+              url
+            }
+          }
+          bookDescription {
+            id
+            content {
               content {
-                content {
-                  value
-                  nodeType
-                }
+                value
               }
             }
           }
         }
       }
     }
+  }
   `).then(result => {
-    result.data.allContentfulEbooks.edges.map((ebook) => {
+    const ebooks = result.data.allContentfulEbooks.edges;
+    ebooks.map((ebook) => {
       createPage({
-        path: `resources/ebook/${ebook.node.bookDescription.id}`,
+        path: `resources/ebook/${ebook.node.bookTitle}`,
         component: path.resolve('./src/templates/Ebook/index.js'),
         context: {
           bookDetails: ebook.node,
+          latestBooksLimited: ebooks.length < 4 ? ebooks : ebooks.slice(ebooks.length - 4) // Max paginated count being 4
         }
       })
     })
