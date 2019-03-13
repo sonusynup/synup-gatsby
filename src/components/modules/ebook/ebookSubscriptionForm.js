@@ -1,16 +1,23 @@
 import React from 'react'
 
 import Button from '../../atoms/Buttons';
+import FormInput from '../../atoms/FormInput';
 
 class EbookSubscriptionForm extends React.Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      fullName: '',
-      email: '',
-      businessName: '',
-      employeeCount: null,
+  state = {
+    fullName: '',
+    email: '',
+    businessName: '',
+    businessType: '',
+    employeeCount: null,
+  }
+
+  onChangeFormField = (fieldName) => {
+    return (e) => {
+      this.setState({
+        [fieldName]: e.target.value,
+      })
     }
   }
 
@@ -19,30 +26,24 @@ class EbookSubscriptionForm extends React.Component {
       <div className="form_wrapper">
         <h3 className="form_title">Ready to Watch?</h3>
         <form>
-          <div className="form_field">
-            <label htmlFor="name">FULL NAME</label>
-            <input
-              type="text"
-              className="form_inputField form_control"
-              placeholder="Your full name"
-            />
-          </div>
-          <div className="form_field">
-            <label htmlFor="exampleInputEmail1">WORK EMAIL</label>
-            <input
-              type="email"
-              className="form_inputField form_control"
-              placeholder="you@yourcompany.com"
-            />
-          </div>
-          <div className="form_field">
-            <label htmlFor="name">BUSINESS NAME</label>
-            <input
-              type="text"
-              className="form_inputField form_control"
-              placeholder="Your business name"
-            />
-          </div>
+          <FormInput
+            name="name"
+            label="FULL NAME"
+            placeholder="Your full name"
+            onChange={this.onChangeFormField('fullName')}
+          />
+          <FormInput
+            name="exampleInputEmail1"
+            label="WORK EMAIL"
+            placeholder="you@yourcompany.com"
+            onChange={this.onChangeFormField('email')}
+          />
+          <FormInput
+            name="name"
+            label="BUSINESS NAME"
+            placeholder="Your business name"
+            onChange={this.onChangeFormField('businessName')}
+          />
           <div className="btn_group" role="group" aria-label="Basic">
             <label htmlFor="name">Select your business type</label>
             <div className="btn_groupWrapper">
