@@ -14,7 +14,7 @@ const OtherEbooks = ({
         <div className="ebook_wrapper">
           <div className="ebook_lists">
             {
-              latestBooksLimited.map((ebook) => (
+              latestBooksLimited.reverse().map((ebook) => (
                 <Link to={`/resources/ebook/${ebook.node.bookTitle}`} className="ebook_anchor">
                   <div className="overlay_content">
                     <div className="content-overlay"></div>
