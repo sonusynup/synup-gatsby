@@ -10,6 +10,29 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
   {
+    allContentfulWebinar(sort:{ fields: updatedAt }) {
+      edges {
+        node {
+          webinarTitle
+          webinarDescription {
+            webinarDescription
+          }
+          webinarStatus
+          speakers {
+            speakerName
+            speakerLogo {
+              description
+            }
+          }
+          webinarLearning
+          webinarDuration
+          webinarDate
+          webinarAgenda
+          webinarJoinLink
+          
+        }
+      }
+    }
     allContentfulEbooks(sort: { fields: updatedAt }) {
       edges {
         node {
@@ -33,6 +56,8 @@ exports.createPages = ({ graphql, actions }) => {
   }
   `).then(result => {
     const ebooks = result.data.allContentfulEbooks.edges;
+    const webinars = result.data.allContentfulWebinar.edges;
+
     ebooks.map((ebook) => {
       createPage({
         path: `resources/ebook/${ebook.node.bookTitle}`,
@@ -40,6 +65,16 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           bookDetails: ebook.node,
           latestBooksLimited: ebooks.length < 4 ? ebooks : ebooks.slice(ebooks.length - 4) // Max paginated count being 4
+        }
+      })
+    })
+
+    webinars.map((webinar) => {
+      createPage({
+        path: `resources/webinar/${webinar.node.webinarTitle}`,
+        component: path.resolve('./src/templates/Webinar/index.js'),
+        context: {
+          webinarDetails: webinar.node,
         }
       })
     })
