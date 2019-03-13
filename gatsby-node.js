@@ -10,6 +10,47 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
   {
+    allContentfulCaseStudy {
+      edges {
+        node {
+          id
+          casestudyTitle {
+            casestudyTitle
+          }
+          casestudyStats
+          casestudyPartner{
+            partnerName
+            partnerPhoto {
+              file {
+                url
+              }
+            }
+            partnerLogo {
+              file{
+                url
+              }
+            }
+            partnerGoal
+            partnerIndustry
+            partnerSuccess
+            partnerDescription{
+              content {
+                content {
+                  value
+                }
+              }
+            }
+            partnerTestimonial {
+              content {
+                content {
+                  value
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     allContentfulWebinar(sort:{ fields: updatedAt }) {
       edges {
         node {
@@ -71,6 +112,7 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
     const ebooks = result.data.allContentfulEbooks.edges;
     const webinars = result.data.allContentfulWebinar.edges;
+    const caseStudy = result.data.allContentfulCaseStudy.edges;
 
     ebooks.map((ebook) => {
       createPage({
@@ -92,5 +134,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
     })
+
+    caseStudy.map((study) => {
+      createPage({
+        path: `resources/casestudy/${study.node.id}`,
+        component: path.resolve('./src/templates/CaseStudy/index.js'),
+        context: {
+          caseStudyDetails: study.node,
+        }
+      });
+    });
   })
 }
