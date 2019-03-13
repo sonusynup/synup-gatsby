@@ -36,7 +36,10 @@ const Webinar = ({
         </div>
       </div>
     </section>
-    <WebinarBenefits />
+    <WebinarBenefits
+      agenda={webinarAgenda}
+      learning={webinarLearning}
+    />
   </Layout>
 )
 
