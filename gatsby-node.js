@@ -20,8 +20,22 @@ exports.createPages = ({ graphql, actions }) => {
           webinarStatus
           speakers {
             speakerName
+            speakerPhoto {
+              file {
+                url
+              }
+            }
             speakerLogo {
-              description
+              file{
+                url
+              } 
+            }
+            speakerDescription {
+              content {
+                content {
+                  value
+                }
+              }
             }
           }
           webinarLearning

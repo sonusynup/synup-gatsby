@@ -1,4 +1,5 @@
 import React from 'react'
+import WebinarSpeakers from './WebinarSpeakers';
 
 // Todo bring this to the right format 
 // January 15, 2019 / 9:00AM EST</pre>
@@ -16,9 +17,9 @@ const WebinarDetails = ({
 }) => (
   <div class="webinar_wrapper">
     <div className="webinar_wrapperHead">
-    <span className="badge badge_secondary">
-      {status} Webinars
-    </span>
+      <span className="badge badge_secondary">
+        {status} Webinars
+      </span>
       <h3>{title}</h3>
       <div className="date_wrapper webinar_description">
         <pre>{date}</pre>
@@ -28,6 +29,9 @@ const WebinarDetails = ({
         {description.webinarDescription}
       </p>
     </div>
+    <WebinarSpeakers
+      speakers={speakers}
+    />
   </div>    
 )
 
