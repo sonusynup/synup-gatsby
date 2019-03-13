@@ -14,20 +14,21 @@ const WebinarDetails = ({
   speakers,
   status,
 }) => (
-  <div className="webinar_wrapperHead">
+  <div class="webinar_wrapper">
+    <div className="webinar_wrapperHead">
     <span className="badge badge_secondary">
       {status} Webinars
     </span>
       <h3>{title}</h3>
-        <div className="date_wrapper webinar_description">
-          <pre>{date}</pre>
-          <pre>Duration: {duration} mins</pre>
-        </div>
-        <p className="webinar_description">
-          {description.webinarDescription}
-        </p>
-  </div>
-      
+      <div className="date_wrapper webinar_description">
+        <pre>{date}</pre>
+        <pre>Duration: {duration} mins</pre>
+      </div>
+      <p className="webinar_description">
+        {description.webinarDescription}
+      </p>
+    </div>
+  </div>    
 )
 
 export default WebinarDetails

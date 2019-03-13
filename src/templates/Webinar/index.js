@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/layout'
 import WebinarDetails from '../../components/modules/webinar/WebinarDetails'
+import WebinarRegisterForm from '../../components/modules/webinar/WebinarRegisterForm'
 
 const Webinar = ({
   pathContext: {
@@ -22,18 +23,16 @@ const Webinar = ({
     <section className="section_hero">
       <div className="container">
         <div className="blockWrapper">
-          <div className="webinar_wrapper">
-            <WebinarDetails
-              title={webinarTitle}
-              date={webinarDate}
-              duration={webinarDuration}
-              description={webinarDescription}
-              speakers={speakers}
-              status={webinarStatus}
-            />
-            {/* <WebinarRegisterForm /> */}
-            {/* <WebinarBenefits /> */}
-          </div>
+          <WebinarDetails
+            title={webinarTitle}
+            date={webinarDate}
+            duration={webinarDuration}
+            description={webinarDescription}
+            speakers={speakers}
+            status={webinarStatus}
+          />
+          <WebinarRegisterForm />
+          {/* <WebinarBenefits /> */}
         </div>
       </div>
     </section>
