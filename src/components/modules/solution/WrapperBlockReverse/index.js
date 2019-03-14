@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Button from '../../../atoms/Buttons';
-import BlueBox from '../../../images/png/blue-rectangle.png';
 
 const WrapperBlockReverse = () => (
   <section>
@@ -15,7 +14,7 @@ const WrapperBlockReverse = () => (
                 <Button type="primary" text="LEARN MORE" />
             </div>
             <div class="rightBlock">
-                <img src={BlueBox} className="img_fluid" alt="" />
+                <img className="img_fluid" alt="" />
             </div>
         </div>
     </div>
