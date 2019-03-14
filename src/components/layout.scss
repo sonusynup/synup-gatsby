@@ -4038,7 +4038,7 @@ h1 {
 }
 h1 .navbar-brand {
   padding: 0;
-  margin-right: 1.25rem;
+  margin-right: 0;
 }
 
 nav {
@@ -6530,7 +6530,7 @@ form {
 .casestudy_set li {
   margin: 4rem 20px;
 }
-.casestudy_set li small {
+.casestudy_set h6 {
   font-family: Helvetica;
   font-size: 16px;
   color: #00D09C;
@@ -6734,9 +6734,7 @@ iframe.embed-responsive-item {
   display: flex;
   justify-content: flex-end;
 }
-.guideTemplate_img img {
-  max-width: 430px;
-}
+
 @media only screen and (max-width: 1199px) {
   .guideTemplate_img {
     flex: auto;
@@ -6744,8 +6742,9 @@ iframe.embed-responsive-item {
 }
 
 .guideTemplate_content {
-  max-width: 700px;
-  flex: 1;
+  img {
+    max-width: 430px;
+  }
 }
 @media only screen and (max-width: 1199px) {
   .guideTemplate_content {
@@ -6962,8 +6961,8 @@ iframe.embed-responsive-item {
 
 .ebook_lists {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 3.125rem 0;
 }
 @media only screen and (max-width: 991px) {
@@ -7006,6 +7005,10 @@ iframe.embed-responsive-item {
   -moz-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.16);
   margin: 0 15px;
+
+  figure {
+      max-height: 420px;
+  }
 }
 .ebook_anchor:first-child {
   margin-left: 0px;
