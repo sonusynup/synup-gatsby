@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../../../atoms/Card'
 
 const Product = () => (
-  <section className="section_card">
+  <section>
     <div className="container">
       <div className="card_block">
         <h3>What we do</h3>
