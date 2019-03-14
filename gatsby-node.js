@@ -67,6 +67,11 @@ exports.createPages = ({ graphql, actions }) => {
             casestudyTitle
           }
           casestudyStats
+          casestudyDescription {
+            childContentfulRichText{
+              html
+            }
+          }
           casestudyPartner{
             partnerName
             partnerPhoto {
@@ -109,23 +114,25 @@ exports.createPages = ({ graphql, actions }) => {
           }
           webinarStatus
           speakers {
-            speakerName
-            speakerPhoto {
-              file {
-                url
-              }
-            }
-            speakerLogo {
-              file{
-                url
-              } 
-            }
-            speakerDescription {
-              content {
-                content {
-                  value
+            speakers {
+            	speakerName
+              speakerPhoto {
+                file {
+                  url
                 }
               }
+              speakerLogo {
+                file{
+                  url
+                } 
+              }
+              speakerDescription {
+                content {
+                  content {
+                    value
+                  }
+                }
+              }  
             }
           }
           webinarLearning
@@ -159,6 +166,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
   }
   `).then(result => {
+    console.log('result ', result.data);
     const ebooks = result.data.allContentfulEbooks.edges;
     const webinars = result.data.allContentfulWebinar.edges;
     const caseStudy = result.data.allContentfulCaseStudy.edges;
@@ -205,4 +213,5 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
   })
+  
 }

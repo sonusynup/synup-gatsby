@@ -34,8 +34,8 @@ const OtherEbooks = ({
             }  
           </div>
           <Button
-            type="primary"
-            text="VIEW MORE"
+            type="secondary"
+            text="VIEW ALL EBOOKS"
           />
         </div>
       </div>

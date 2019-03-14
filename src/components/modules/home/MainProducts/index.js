@@ -1,7 +1,6 @@
 import React from 'react'
 
 import ProductCard from './ProductCard'
-import CardGroup from '../../../images/png/cardgroup.png'
 
 const MainProducts = () => (
   <section className="section_product">
@@ -32,7 +31,7 @@ const MainProducts = () => (
       <div className="product_wrapper">
         <div className="product_description">
           <figure className="floatingCard_img">
-            <img src={CardGroup} className="img_fluid" alt="" />
+            <img className="img_fluid" alt="" />
           </figure>
         </div>  
         <div className="popCard_wrapper">

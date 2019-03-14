@@ -62,3 +62,24 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 ## 💫 Deploy
 Site is already integrated with netlfiy.
 Look for tick marks near the commits for the latest deployments.
+
+Ebook 
+CSS - stack as per the count
+
+Webinar
+Speakers
+Change SpeakersChange day format
+What you'll learn section should have data only as per the count
+
+Case Study 
+
+Title should be through html
+Advantage section is not proper
+CSS for Description
+Delete any unnecessary schema
+Fix a html for image description
+
+
+Guide
+Day format
+Change description as needed
