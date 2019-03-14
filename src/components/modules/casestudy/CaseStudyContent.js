@@ -49,7 +49,7 @@ const CaseStudyContent = ({
             </div>
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
+        <div className="casestudy_set" dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
       </div>
     </section>
   )

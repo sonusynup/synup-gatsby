@@ -45,7 +45,7 @@ module.exports = {
             [BLOCKS.EMBEDDED_ASSET]: node => {
               console.log('inside gatsby confg found an asset ')
               
-              return `<img class='custom-asset' src="${
+              return `<img class='custom-asset img_fluid' src="${
                 node.data.target.fields.file['en-US'].url
               }"/>`
             },
