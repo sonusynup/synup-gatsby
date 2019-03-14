@@ -1,6 +1,6 @@
 import React from 'react'
 
-// TODO: Refactor this
+// TODO: Refactor this, replace gatsby link
 const Footer = () => (
   <footer>
       <section class="footer">

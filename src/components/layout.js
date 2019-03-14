@@ -15,6 +15,7 @@ import Footer from './footer'
 
 import "./layout.scss"
 
+// TODO: Refactor both header and footer
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
