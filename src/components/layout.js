@@ -11,8 +11,11 @@ import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from './footer'
+
 import "./layout.scss"
 
+// TODO: Refactor both header and footer
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -41,6 +44,7 @@ const Layout = ({ children }) => (
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         </Helmet>
         <main>{children}</main>
+        <Footer />
       </>
     )}
   />
