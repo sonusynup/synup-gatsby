@@ -21,39 +21,8 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
           guideContent {
-            content {
-              content {
-                value
-              }
-            }
-          }
-          guideTip {
-            content {
-              content {
-                value
-              }
-            }
-          }
-          guideAlert {
-            content {
-              content {
-                value
-              }
-            }
-          }
-          guideDescription {
-            guideItemDescriptionList {
-              title {
-                title
-              }
-              description {
-                description
-              }
-              image {
-                file {
-                  url
-                }
-              }
+            childContentfulRichText {
+              html
             }
           }
         }

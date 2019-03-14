@@ -67,19 +67,16 @@ Ebook
 CSS - stack as per the count
 
 Webinar
-Speakers
-Change SpeakersChange day format
-What you'll learn section should have data only as per the count
+Speakers, What you'll learn - CSS for stacking
+Change day format
 
 Case Study 
-
-Title should be through html
 Advantage section is not proper
-CSS for Description
-Delete any unnecessary schema
-Fix a html for image description
-
 
 Guide
 Day format
 Change description as needed
+
+General
+Helper functions
+Navbar updated
