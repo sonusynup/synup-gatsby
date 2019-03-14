@@ -18,9 +18,10 @@ const CaseStudy = ({
     <CaseStudyHeader
       title={casestudyTitle}
       stats={casestudyStats}
-      partner={casestudyPartner}
     />
-    <CaseStudyContent />       
+    <CaseStudyContent
+      partner={casestudyPartner}
+    />       
   </Layout>
 )
 

@@ -11,7 +11,9 @@ const CaseStudyHeader = ({
     <div className="container">
       <div className="casestudy_block">
         <h3>
-          <span className="secoundary_text">{title.casestudyTitle}</span>
+          <span className="secoundary_text">
+            {title.casestudyTitle}
+          </span>
         </h3>
         <ul className="casecard_wrapper">
           <StatisticsCard
