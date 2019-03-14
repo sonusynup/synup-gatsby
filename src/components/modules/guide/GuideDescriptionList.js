@@ -24,9 +24,7 @@ const GuideDescriptionList = ({
                     {
                       item.description.description
                         .split('\n')
-                        .map((line, index) => (
-                          <>{line}</>
-                        ))
+                        .map(line => <>{line}</>)
                     }
                   </p>
                 </div>
@@ -41,18 +39,6 @@ const GuideDescriptionList = ({
             </ul>
           ))
         }
-      </div>
-      <div class="guideTemplate_video">
-        <div class="guideTemplate_content">
-          <span class="guideTemplate_video">video</span>
-          <h5>1 Minute Guide : Add Business On Google My Business</h5>
-        </div>
-        <div class="guideTemplate_videoClip">
-          <div class="embed-responsive embed-responsive-1by1">
-            <iframe class="embed-responsive-item" width="100%" height="100%" min-height="400px" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                allowfullscreen></iframe>
-          </div>
-        </div>
       </div>
     </div>
   </section>
