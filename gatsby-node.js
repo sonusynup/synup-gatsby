@@ -10,6 +10,55 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
   {
+    allContentfulGuides {
+      edges {
+        node {
+          id
+          guideTitle
+          guideCover {
+            file {
+              url
+            }
+          }
+          guideContent {
+            content {
+              content {
+                value
+              }
+            }
+          }
+          guideTip {
+            content {
+              content {
+                value
+              }
+            }
+          }
+          guideAlert {
+            content {
+              content {
+                value
+              }
+            }
+          }
+          guideDescription {
+            guideItemDescriptionList {
+              title {
+                title
+              }
+              description {
+                description
+              }
+              image {
+                file {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     allContentfulCaseStudy {
       edges {
         node {
@@ -113,6 +162,7 @@ exports.createPages = ({ graphql, actions }) => {
     const ebooks = result.data.allContentfulEbooks.edges;
     const webinars = result.data.allContentfulWebinar.edges;
     const caseStudy = result.data.allContentfulCaseStudy.edges;
+    const guides = result.data.allContentfulGuides.edges;
 
     ebooks.map((ebook) => {
       createPage({
@@ -144,5 +194,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
       });
     });
+
+    guides.map((guide) => {
+      createPage({
+        path: `resources/guide/${guide.node.id}`,
+        component: path.resolve('./src/templates/Guides/index.js'),
+        context: {
+          guideDetails: guide.node
+        }
+      })
+    })
   })
 }
