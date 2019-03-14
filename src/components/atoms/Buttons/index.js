@@ -2,6 +2,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 import PrimaryButtonAnimation from '../../images/svgComponents/primaryButtonAnimation';
+import SecondaryButtonAnimation from '../../images/svgComponents/secondaryButtonAnimation';
 
 const Button = ({ 
   type,
@@ -11,6 +12,15 @@ const Button = ({
   const fullWidthClass = fullWidthBtn ? 'btn_fullWidth' : '';
 
   switch (type) {
+    case 'secondary':
+      return (
+        <button className={`btn btn_outlineTransparent btn_arrow ${fullWidthClass}`}>
+          <span className="btn_textSpan">
+            {text}
+            <SecondaryButtonAnimation />
+          </span>
+        </button>
+      ) 
     default:
       return (
         <button className={`btn btn_primary btn_arrow ${fullWidthClass}`}>
