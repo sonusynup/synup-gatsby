@@ -8,6 +8,7 @@ import CaseStudyContent from '../../components/modules/casestudy/CaseStudyConten
 const CaseStudy = ({
   pageContext: {
     caseStudyDetails: {
+      casestudyDescription,
       casestudyPartner,
       casestudyStats,
       casestudyTitle,
@@ -21,6 +22,7 @@ const CaseStudy = ({
     />
     <CaseStudyContent
       partner={casestudyPartner}
+      description={casestudyDescription}
     />       
   </Layout>
 )

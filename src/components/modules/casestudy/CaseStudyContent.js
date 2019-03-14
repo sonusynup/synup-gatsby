@@ -11,7 +11,8 @@ const CaseStudyContent = ({
     partnerLogo,
     partnerIndustry,
     partnerGoal,
-  }
+  },
+  description,
 }) => {
   return (
     <section className="section_casestudy_content">
@@ -48,6 +49,7 @@ const CaseStudyContent = ({
             </div>
           </div>
         </div>
+        <div dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
       </div>
     </section>
   )

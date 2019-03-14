@@ -42,7 +42,9 @@ module.exports = {
            */
           renderNode: {
             // Example
-            [INLINES.ASSET_HYPERLINK]: node => {
+            [BLOCKS.EMBEDDED_ASSET]: node => {
+              console.log('inside gatsby confg found an asset ')
+              
               return `<img class='custom-asset' src="${
                 node.data.target.fields.file['en-US'].url
               }"/>`
