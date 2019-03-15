@@ -54,7 +54,7 @@ const CaseStudyContent = ({
             <ul class="casestudy_set">
               <li>
                 <h5>{item.title}</h5>
-                <p dangerouslySetInnerHTML={{ __html: item.description.childContentfulRichText.html }} />
+                <span dangerouslySetInnerHTML={{ __html: item.description.childContentfulRichText.html }} />
               </li>
             </ul>
           ))

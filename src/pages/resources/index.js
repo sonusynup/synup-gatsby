@@ -10,7 +10,7 @@ const EachItem = ({
   buttonText,
   to
 }) => (
-  <div className="blogWrapper_inner"  style={{ width: '800px', float: 'left', marginLeft: '30px', height: '240px' }}>
+  <div className="blogWrapper_inner"  style={{ width: '550px', textAlign:'left', height: '240px', margin: '20px' }}>
     <a href="#" className="blogcard_anchor">
       <p className="blogcard_text">
         {heading}
@@ -26,7 +26,7 @@ const EachItem = ({
 
 const Resources = () => (
   <Layout>
-    <div style={{ height: '600px' }}>
+    <div className="container" style={{ height: '100vh', display:'flex', alignItems:'flex-start', flexWrap:'wrap', }}>
       <EachItem heading="Ebooks" to={'/resources/ebooks'} buttonText="ALL EBOOKS" />
       <EachItem heading="CaseStudies" to={'/resources/casestudies'} buttonText="ALL CASE STUDIES" />
       <EachItem heading="Webinars" to={'/resources/webinars'} buttonText="WEBINARS" />

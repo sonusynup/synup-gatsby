@@ -33,6 +33,7 @@ const OtherEbooks = ({
               ))
             }  
           </div>
+            <Link to={'/resources/ebooks'}><Button type="secondary" text="VIEW ALL EBOOKS"> </Button></Link>
         </div>
       </div>
     </div>
