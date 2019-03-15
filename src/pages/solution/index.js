@@ -6,7 +6,7 @@ import HeroSub from '../../components/modules/solution/HeroSub'
 import WrapperBlock from '../../components/modules/solution/WrapperBlock'
 import WrapperBlockReverse from '../../components/modules/solution/WrapperBlockReverse'
 import CardGroup from '../../components/modules/solution/CardGroup'
-import CaseStudy from "../../components/modules/home/CaseStudy";
+import CaseStudy from "../../components/modules/solution/CaseStudy";
 
 const SinglelocationPage = () => (
   <Layout>

@@ -6,7 +6,7 @@ const Partner = () => (
       <div className="banner_wrapper">
         <h4>
           We power location intelligence for over 
-            <span className="primary_text"> 150,000 </span>
+            <span className="secondary_text"> 150,000 </span>
             businesses
         </h4>
         <div className="banner_logoWrapper">
