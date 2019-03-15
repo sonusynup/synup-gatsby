@@ -32,6 +32,16 @@ exports.createPages = ({ graphql, actions }) => {
                 html
               }
             }
+            meta {
+              type
+              title
+              description {
+                childContentfulRichText {
+                  html
+                }
+              }
+              buttonText
+            }
             images{
               file {
                 url
