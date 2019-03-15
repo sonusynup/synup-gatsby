@@ -4008,7 +4008,7 @@ small {
 
 .header--fixed {
   left: 0;
-  position: fixed;
+  // position: fixed;
   right: 0;
   z-index: 99;
   top: 0;
@@ -5052,7 +5052,9 @@ section {
 .primary_bg {
   background-color: #4865FF;
 }
-
+.space {
+  padding:0.625rem;
+}
 .label {
   background: #fff;
   font-size: 10px;
@@ -5779,6 +5781,8 @@ section {
   border: 2px solid #4865FF;
   padding: 2px;
   border-radius: 50%;
+  width: 64px;
+  height: 64px;
 }
 
 .testimonialContent {
@@ -5911,7 +5915,7 @@ section {
   color: #4865FF;
 }
 
-.secoundary_text {
+.secondary_text {
   color: #00D09C;
 }
 

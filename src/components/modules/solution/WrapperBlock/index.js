@@ -14,7 +14,7 @@ const WrapperBlock = () => (
                 <Button type="primary" text="LEARN MORE" />
             </div>
             <div class="rightBlock">
-                <img className="img_fluid" alt="" />
+                <img src="" className="img_fluid" alt="" />
             </div>
         </div>
     </div>

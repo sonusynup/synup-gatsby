@@ -11,7 +11,7 @@ const CaseStudyHeader = ({
     <div className="container">
       <div className="casestudy_block">
         <h3>
-          <span className="secoundary_text">
+          <span className="secondary_text">
             {title.casestudyTitle}
           </span>
         </h3>

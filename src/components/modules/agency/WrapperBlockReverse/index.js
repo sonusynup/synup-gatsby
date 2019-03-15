@@ -12,7 +12,7 @@ const WrapperBlockReverse = () => (
                 <p class="block_contentText">An end-to-end white label local marketing suite to manage your
                     clients’ location data,
                     reviews, and reporting at scale</p>
-                <Button type="primary" text="LEARN MORE" />
+                <Button type="secondary" text="LEARN MORE" />
             </div>
             <div class="rightBlock">
                 <img src="" className="img_fluid" alt="" />

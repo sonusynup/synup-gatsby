@@ -2,17 +2,16 @@ import React from 'react';
 
 import Button from '../../../atoms/Buttons';
 
-
-const WrapperBlockReverse = () => (
+const WrapperBlock = () => (
   <section>
     <div class="container">
-        <div class="blockWrapper">
+        <div class="blockWrapper d-flex_reverse">
             <div class="leftBlock block_contentWrap">
                 <h3>A Comprehensive Local Marketing Dashboard</h3>
                 <p class="block_contentText">An end-to-end white label local marketing suite to manage your
                     clients’ location data,
                     reviews, and reporting at scale</p>
-                <Button type="primary" text="LEARN MORE" />
+                <Button type="secondary" text="LEARN MORE" />
             </div>
             <div class="rightBlock">
                 <img src="" className="img_fluid" alt="" />
@@ -22,4 +21,4 @@ const WrapperBlockReverse = () => (
   </section>
 )
 
-export default WrapperBlockReverse
+export default WrapperBlock
