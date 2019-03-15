@@ -105,6 +105,7 @@ exports.createPages = ({ graphql, actions }) => {
     allContentfulWebinar(sort:{ fields: updatedAt }) {
       edges {
         node {
+          id
           webinarTitle
           webinarDescription {
             webinarDescription
@@ -138,57 +139,59 @@ exports.createPages = ({ graphql, actions }) => {
           webinarAgenda
           webinarJoinLink
           
-//         }
-//       }
-//     }
-//     allContentfulEbooks(sort: { fields: updatedAt }) {
-//       edges {
-//         node {
-//           bookTitle
-//           bookCoverImage {
-//             file{
-//               url
-//             }
-//           }
-//           bookDescription {
-//             id
-//             content {
-//               content {
-//                 value
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   `).then(result => {
-//     console.log('result ', result.data);
-//     const ebooks = result.data.allContentfulEbooks.edges;
-//     const webinars = result.data.allContentfulWebinar.edges;
-//     const caseStudy = result.data.allContentfulCaseStudy.edges;
-//     const guides = result.data.allContentfulGuides.edges;
+        }
+      }
+    }
+    allContentfulEbooks(sort: { fields: updatedAt }) {
+      edges {
+        node {
+          id
+          bookTitle
+          bookCoverImage {
+            file{
+              url
+            }
+          }
+          bookDescription {
+            id
+            content {
+              content {
+                value
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  `).then(result => {
+    console.log('result ', result.data);
+    const ebooks = result.data.allContentfulEbooks.edges;
+    const webinars = result.data.allContentfulWebinar.edges;
+    const caseStudy = result.data.allContentfulCaseStudy.edges;
+    const guides = result.data.allContentfulGuides.edges;
 
-//     ebooks.map((ebook) => {
-//       createPage({
-//         path: `resources/ebook/${ebook.node.bookTitle}`,
-//         component: path.resolve('./src/templates/Ebook/index.js'),
-//         context: {
-//           bookDetails: ebook.node,
-//           latestBooksLimited: ebooks.length < 4 ? ebooks : ebooks.slice(ebooks.length - 4) // Max paginated count being 4
-//         }
-//       })
-//     })
+    ebooks.map((ebook) => {
+      console.log(ebook);
+      createPage({
+        path: `resources/ebook/${ebook.node.id}`,
+        component: path.resolve('./src/templates/Ebook/index.js'),
+        context: {
+          bookDetails: ebook.node,
+          latestBooksLimited: ebooks.length < 4 ? ebooks : ebooks.slice(ebooks.length - 4) // Max paginated count being 4
+        }
+      })
+    })
 
-//     webinars.map((webinar) => {
-//       createPage({
-//         path: `resources/webinar/${webinar.node.webinarTitle}`,
-//         component: path.resolve('./src/templates/Webinar/index.js'),
-//         context: {
-//           webinarDetails: webinar.node,
-//         }
-//       })
-//     })
+    webinars.map((webinar) => {
+      createPage({
+        path: `resources/webinar/${webinar.node.id}`,
+        component: path.resolve('./src/templates/Webinar/index.js'),
+        context: {
+          webinarDetails: webinar.node,
+        }
+      })
+    })
 
 //     caseStudy.map((study) => {
 //       createPage({

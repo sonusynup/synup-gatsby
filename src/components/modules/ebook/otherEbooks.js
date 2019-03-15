@@ -15,7 +15,7 @@ const OtherEbooks = ({
           <div className="ebook_lists">
             {
               latestBooksLimited.reverse().map((ebook) => (
-                <Link to={`/resources/ebook/${ebook.node.bookTitle}`} className="ebook_anchor">
+                <Link to={`/resources/ebook/${ebook.node.id}`} className="ebook_anchor">
                   <div className="overlay_content">
                     <div className="content-overlay"></div>
                       <figure>
@@ -33,10 +33,6 @@ const OtherEbooks = ({
               ))
             }  
           </div>
-          <Button
-            type="secondary"
-            text="VIEW ALL EBOOKS"
-          />
         </div>
       </div>
     </div>
