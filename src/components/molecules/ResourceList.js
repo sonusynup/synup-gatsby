@@ -56,7 +56,6 @@ const ResourceList = ({
                   </div>
                 )
               }
-              
             </Link>  
           ))
         }  
