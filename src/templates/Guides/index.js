@@ -8,11 +8,10 @@ const Guides = ({
   pathContext: {
     guideDetails: {
       guideAlert,
-      guideContent,
+      guideSteps,
       guideCover,
       guideTip,
       guideTitle,
-      guideDescription
     }
   }
 }) => (
@@ -22,10 +21,9 @@ const Guides = ({
       cover={guideCover}  
     />
     <GuideDescriptionList
-      content={guideContent}
+      content={guideSteps}
       alert={guideAlert}
       tip={guideTip}
-      description={guideDescription}
     />
   </Layout>
 )

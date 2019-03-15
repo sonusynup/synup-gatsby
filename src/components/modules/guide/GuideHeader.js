@@ -9,7 +9,7 @@ const GuideHeader = ({
         <div className="heroblock">
             <img
               className="heroblock_icon"
-              src={cover}
+              src={cover.file.url}
               alt=""
             />
             <h3>{title}</h3>

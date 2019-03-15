@@ -5,110 +5,130 @@
 //  * See: https://www.gatsbyjs.org/docs/node-apis/
 //  */
 
-// // You can delete this file if you're not using it
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions;
-//   return graphql(`
-//   {
-//     allContentfulGuides {
-//       edges {
-//         node {
-//           id
-//           guideTitle
-//           guideCover {
-//             file {
-//               url
-//             }
-//           }
-//           guideContent {
-//             childContentfulRichText {
-//               html
-//             }
-//           }
-//         }
-//       }
-//     }
-//     allContentfulCaseStudy {
-//       edges {
-//         node {
-//           id
-//           casestudyTitle {
-//             casestudyTitle
-//           }
-//           casestudyStats
-//           casestudyDescription {
-//             childContentfulRichText{
-//               html
-//             }
-//           }
-//           casestudyPartner{
-//             partnerName
-//             partnerPhoto {
-//               file {
-//                 url
-//               }
-//             }
-//             partnerLogo {
-//               file{
-//                 url
-//               }
-//             }
-//             partnerGoal
-//             partnerIndustry
-//             partnerSuccess
-//             partnerDescription{
-//               content {
-//                 content {
-//                   value
-//                 }
-//               }
-//             }
-//             partnerTestimonial {
-//               content {
-//                 content {
-//                   value
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     allContentfulWebinar(sort:{ fields: updatedAt }) {
-//       edges {
-//         node {
-//           webinarTitle
-//           webinarDescription {
-//             webinarDescription
-//           }
-//           webinarStatus
-//           speakers {
-//             speakers {
-//             	speakerName
-//               speakerPhoto {
-//                 file {
-//                   url
-//                 }
-//               }
-//               speakerLogo {
-//                 file{
-//                   url
-//                 } 
-//               }
-//               speakerDescription {
-//                 content {
-//                   content {
-//                     value
-//                   }
-//                 }
-//               }  
-//             }
-//           }
-//           webinarLearning
-//           webinarDuration
-//           webinarDate
-//           webinarAgenda
-//           webinarJoinLink
+// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  return graphql(`
+  {
+    allContentfulGuides {
+      edges {
+        node {
+          id
+          guideTitle
+          guideCover {
+            file {
+              url
+            }
+          }
+          guideSteps {
+            title
+            description {
+              childContentfulRichText {
+                html
+              }
+            }
+            images{
+              file {
+                url
+              }
+            }
+            meta {
+              meta {
+                type
+                label
+                value
+              }
+            }
+          }
+          videoLink {
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+    allContentfulCaseStudy {
+      edges {
+        node {
+          id
+          casestudyTitle {
+            casestudyTitle
+          }
+          casestudyStats
+          casestudyDescription {
+            childContentfulRichText{
+              html
+            }
+          }
+          casestudyPartner{
+            partnerName
+            partnerPhoto {
+              file {
+                url
+              }
+            }
+            partnerLogo {
+              file{
+                url
+              }
+            }
+            partnerGoal
+            partnerIndustry
+            partnerSuccess
+            partnerDescription{
+              content {
+                content {
+                  value
+                }
+              }
+            }
+            partnerTestimonial {
+              content {
+                content {
+                  value
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    allContentfulWebinar(sort:{ fields: updatedAt }) {
+      edges {
+        node {
+          webinarTitle
+          webinarDescription {
+            webinarDescription
+          }
+          webinarStatus
+          speakers {
+            speakers {
+            	speakerName
+              speakerPhoto {
+                file {
+                  url
+                }
+              }
+              speakerLogo {
+                file{
+                  url
+                } 
+              }
+              speakerDescription {
+                content {
+                  content {
+                    value
+                  }
+                }
+              }  
+            }
+          }
+          webinarLearning
+          webinarDuration
+          webinarDate
+          webinarAgenda
+          webinarJoinLink
           
 //         }
 //       }
