@@ -61,9 +61,12 @@ exports.createPages = ({ graphql, actions }) => {
             casestudyTitle
           }
           casestudyStats
-          casestudyDescription {
-            childContentfulRichText{
-              html
+					caseStudyDescription {
+            title
+            description {
+              childContentfulRichText {
+                html
+              }
             }
           }
           casestudyPartner{

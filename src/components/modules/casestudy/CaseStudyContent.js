@@ -49,7 +49,16 @@ const CaseStudyContent = ({
             </div>
           </div>
         </div>
-        <div className="casestudy_set" dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
+        {
+          description.map((item) => (
+            <ul class="casestudy_set">
+              <li>
+                <h5>{item.title}</h5>
+                <p dangerouslySetInnerHTML={{ __html: item.description.childContentfulRichText.html }} />
+              </li>
+            </ul>
+          ))
+        }
       </div>
     </section>
   )

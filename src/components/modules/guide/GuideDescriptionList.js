@@ -14,22 +14,22 @@ const GuideDescriptionList = ({
             content.map((item, index) => (
               <>
                 <li className="guideTemplate_wrapper">
-                    <div className="guideTemplate_content">
-                        <span>step {index+1}</span>
-                        <h5>{item.title}</h5>
-                        <p dangerouslySetInnerHTML={{ __html: item.description.childContentfulRichText.html }} />
+                  <div className="guideTemplate_content">
+                      <span>step {index+1}</span>
+                      <h5>{item.title}</h5>
+                      <p dangerouslySetInnerHTML={{ __html: item.description.childContentfulRichText.html }} />
+                  </div>
+                  <div className="guideTemplate_block">
+                    <div className="guideTemplate_img">
+                      <figure>
+                        <img
+                          src={item.images[0].file.url}
+                          className="img_fluid"
+                          alt=""
+                        />
+                      </figure>
                     </div>
-                    <div className="guideTemplate_block">
-                      <div className="guideTemplate_img">
-                        <figure>
-                          <img
-                            src={item.images[0].file.url}
-                            className="img_fluid"
-                            alt=""
-                          />
-                        </figure>
-                      </div>
-                    </div>
+                  </div>
                 </li>
                 <Meta meta={item.meta} />
               </>
