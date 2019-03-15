@@ -15,6 +15,11 @@ exports.createPages = ({ graphql, actions }) => {
         node {
           id
           guideTitle
+          guideContent {
+            childContentfulRichText {
+              html
+            }
+          }
           guideCover {
             file {
               url

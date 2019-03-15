@@ -3,11 +3,13 @@ import Meta from './Meta'
 
 const GuideDescriptionList = ({
   content,
+  description,
 }) => (
   <section>
     <div className="container">
       <div className="guideTemplate">
         <div className="guideTemplate_head">
+          <p dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
           {
             content.map((item, index) => (
               <>
