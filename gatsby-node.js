@@ -37,13 +37,6 @@ exports.createPages = ({ graphql, actions }) => {
                 url
               }
             }
-            meta {
-              meta {
-                type
-                label
-                value
-              }
-            }
           }
           videoLink {
             file {

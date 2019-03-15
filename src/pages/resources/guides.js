@@ -31,41 +31,6 @@ export const query = graphql`
         node {
           id
           guideTitle
-          guideContent {
-            childContentfulRichText {
-              html
-            }
-          }
-          guideCover {
-            file {
-              url
-            }
-          }
-          guideSteps {
-            title
-            description {
-              childContentfulRichText {
-                html
-              }
-            }
-            images{
-              file {
-                url
-              }
-            }
-            meta {
-              meta {
-                type
-                label
-                value
-              }
-            }
-          }
-          videoLink {
-            file {
-              url
-            }
-          }
         }
       }
     }
