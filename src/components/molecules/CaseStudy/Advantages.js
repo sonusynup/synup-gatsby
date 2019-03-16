@@ -16,7 +16,7 @@ const Advantages = ({
         <p class="business-card_title"> <b>Industry:</b> {industry}</p>
         <p class="business-card-description">
           <b>Business Goal:</b> 
-            {goal}
+          {goal}
         </p>
       </div>
     </div>
