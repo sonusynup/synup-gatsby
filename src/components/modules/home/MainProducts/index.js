@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ProductCard from './ProductCard'
+import TransparentCard from '../../../atoms/CardTransparent'
 
 const MainProducts = () => (
   <section className="section_product">
@@ -16,35 +16,28 @@ const MainProducts = () => (
           </h4>
         </div>  
         <div className="popCard_wrapper">
-          <ProductCard
-            title="ANALYTICS"
-            description="Understand your customers better with profile, ranking, and review insights."
-            action="SEE ALL FEATURES"
-          />
-          <ProductCard
-            title="ANALYTICS"
-            description="Understand your customers better with profile, ranking, and review insights."
-            action="SEE ALL FEATURES"
-          />
-        </div>
-      </div>
-      <div className="product_wrapper">
-        <div className="product_description">
-          <figure className="floatingCard_img">
-            <img className="img_fluid" alt="" />
-          </figure>
-        </div>  
-        <div className="popCard_wrapper">
-          <ProductCard
-            title="ANALYTICS"
-            description="Understand your customers better with profile, ranking, and review insights."
-            action="SEE ALL FEATURES"
-          />
-          <ProductCard
-            title="ANALYTICS"
-            description="Understand your customers better with profile, ranking, and review insights."
-            action="SEE ALL FEATURES"
-          />
+          <div className="popCard">
+            <TransparentCard
+              title="ANALYTICS"
+              description="Understand your customers better with profile, ranking, and review insights."
+              action="SEE ALL FEATURES"
+            />
+            <TransparentCard
+              title="ANALYTICS"
+              description="Understand your customers better with profile, ranking, and review insights."
+              action="SEE ALL FEATURES"
+            />
+            <TransparentCard
+              title="ANALYTICS"
+              description="Understand your customers better with profile, ranking, and review insights."
+              action="SEE ALL FEATURES"
+            />
+            <TransparentCard
+              title="ANALYTICS"
+              description="Understand your customers better with profile, ranking, and review insights."
+              action="SEE ALL FEATURES"
+            />
+          </div>
         </div>
       </div>
     </div>

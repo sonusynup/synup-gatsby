@@ -1,30 +1,38 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
 import PropTypes from 'prop-types'
 import CardBgTargetImage from '../../images/svgComponents/CardBgTargetImage';
 
 const Card = ({
   title,
-  description
+  description,
+  bgClass,
+  to,
+  actionText,
 }) => (
-  <div className="card card_iconBg">
-    <a href="#">
+  <div className={`card ${bgClass}`}>
+    <Link to={to}>
       <div className="card_body">
         <h5 className="card_title">{title}</h5>
         <p className="card_text">{description}</p>
       </div>
       <div className="card_footer">
         <span className="btn_arrow linkText linkText_span">
-          LEARN MORE
+          {actionText}
           <CardBgTargetImage />
         </span>
       </div>
-    </a>
+    </Link>
   </div>
 );
 
 Card.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  bgClass: PropTypes.string,
+  to: PropTypes.string,
+  actionText: PropTypes.string,
 };
 
 export default Card;

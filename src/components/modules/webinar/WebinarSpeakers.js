@@ -1,6 +1,5 @@
 import React from 'react'
 
-//TODO: Assign classname to speaker and logo
 const WebinarSpeakers = ({
   speakers,
 }) => (
