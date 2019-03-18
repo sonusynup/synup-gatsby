@@ -23,6 +23,15 @@ class Header extends React.Component {
       isMenuExpanded: !this.state.isMenuExpanded,
     })
   }
+
+  setActiveHoverNavItem = (activeHoveredNavItem) => {
+    return (e) => {
+      this.setState({
+        activeHoveredNavItem
+      })
+    }
+  }
+
   render() {
     const {
       isMenuExpanded
@@ -36,11 +45,27 @@ class Header extends React.Component {
             isMenuExpanded={isMenuExpanded}
           />
          <nav id="navbarNavDropdown1" className={isMenuExpanded ? 'collapse nav-collapse show' : 'collapse nav-collapse'}>
-           <ul id="main-menu1" className="navbar-nav">
-             <SolutionNavGroup />
-             <ProductNavGroup />
-             <ResourcesNavGroup />
-             <CompanyNavGroup />
+          <ul id="main-menu1" className="navbar-nav">
+            <SolutionNavGroup
+              onHover={this.setActiveHoverNavItem('solution')}
+              onBlur={this.setActiveHoverNavItem('')}
+              isHovered={this.state.activeHoveredNavItem === 'solution'}
+            />
+            <ProductNavGroup
+              onHover={this.setActiveHoverNavItem('product')}
+              onBlur={this.setActiveHoverNavItem('')}
+              isHovered={this.state.activeHoveredNavItem === 'product'}
+            />
+            <ResourcesNavGroup
+              onHover={this.setActiveHoverNavItem('resource')}
+              onBlur={this.setActiveHoverNavItem('')}
+              isHovered={this.state.activeHoveredNavItem === 'resource'}
+            />
+            <CompanyNavGroup
+              onHover={this.setActiveHoverNavItem('company')}
+              onBlur={this.setActiveHoverNavItem('')}
+              isHovered={this.state.activeHoveredNavItem === 'company'}
+            />
              <li><Link to="/" className="js-scroll-trigger nav-link">CUSTOMERS</Link></li>
              <li><Link to="/" className="btn_link btn_signin">SIGN IN</Link></li>
              <li>
@@ -48,7 +73,6 @@ class Header extends React.Component {
                  <Button
                    type="primary"
                    text="GET STARTED"
-                   
                  />
                </Link>
              </li>

@@ -5,10 +5,14 @@ import Button from '../../atoms/Buttons'
 const resourceList = ['Ebooks', 'Webinars', 'Guides', 'Blog', 'Checklists', 'Free Tools', 'Case Study'];
 
 // TODO: need borderless button component
-const ResourcesNavGroup = () => (
-  <li className="dropdown-accord">
+const ResourcesNavGroup = ({
+  onHover,
+  onBlur,
+  isHovered
+}) => (
+  <li className="dropdown-accord" onMouseOver={onHover} onMouseLeave={onBlur}>
     <a href="#" className="dropdown js-scroll-trigger nav-link">RESOURCES</a>
-    <div className="dropdown-content accordion-content resource-content">
+    <div className={`dropdown-content ${isHovered ? 'active' : ''} accordion-content resource-content`}>
       <div className="resource-submenu arrow_box">
         <div className="tab-block">
           <div className="tabs-left">

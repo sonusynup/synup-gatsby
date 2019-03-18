@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const CompanyNavGroup = () => (
-  <li className="dropdown-accord"><a href="#" className="dropdown js-scroll-trigger nav-link">COMPANY</a>
-    <div className="dropdown-content accordion-content company-content">
+const CompanyNavGroup = ({
+  onHover,
+  isHovered,
+  onBlur
+}) => (
+  <li className="dropdown-accord" onMouseOver={onHover} onMouseLeave={onBlur}>
+    <a href="#" className="dropdown js-scroll-trigger nav-link">COMPANY</a>
+    <div className={`dropdown-content ${isHovered ? 'active' : ''} accordion-content company-content`}>
       <div className="company-submenu arrow_box">
         <ul>
           <li><Link href="#">ABOUT</Link></li>
