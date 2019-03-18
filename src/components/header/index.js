@@ -20,11 +20,7 @@ class Header extends React.Component {
     activeHoveredNavItem: '',
     isMenuExpanded: false,
     scrollBarFixed: false,
-<<<<<<< Updated upstream
-    activeResource: 'ebook'
-=======
     activeResource: 'Ebooks'
->>>>>>> Stashed changes
   }
   
   componentDidMount() {
