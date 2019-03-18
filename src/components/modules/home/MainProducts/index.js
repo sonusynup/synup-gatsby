@@ -16,7 +16,6 @@ const MainProducts = () => (
           </h4>
         </div>  
         <div className="popCard_wrapper">
-          <div className="popCard">
             <TransparentCard
               title="ANALYTICS"
               description="Understand your customers better with profile, ranking, and review insights."
@@ -37,7 +36,6 @@ const MainProducts = () => (
               description="Understand your customers better with profile, ranking, and review insights."
               action="SEE ALL FEATURES"
             />
-          </div>
         </div>
       </div>
     </div>

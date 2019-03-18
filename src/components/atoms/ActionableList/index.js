@@ -14,7 +14,7 @@ const ActionableList = ({
   subTitle,
 }) => (
   <div className={wrapperClass}>
-    <h3>{title}</h3>
+    <h3 className="block_contentWrap">{title}</h3>
     <p className="block_contentText">{subTitle}</p>
     <ul className="list_unstyled">
       {
