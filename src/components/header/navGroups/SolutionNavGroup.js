@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import SolutionNavItem from "../NavItem/SolutionItem";
+import SolutionNavItem from "../navItem/SolutionItem";
 
 const SolutionNavGroup = ({
   onHover,
