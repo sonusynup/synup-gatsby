@@ -27,7 +27,7 @@ const ResourcesNavGroup = () => (
             <div className="tab-pane active">
               <h3>Ebooks</h3>
               <Button 
-                type="secondary"
+                type="borderless"
                 text="READ NOW"
               />
             </div>    

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
 import PropTypes from 'prop-types'
-import CardBgTargetImage from '../../images/svgComponents/CardBgTargetImage';
+
+import Button from '../Buttons'
 
 const Card = ({
   title,
@@ -18,10 +18,10 @@ const Card = ({
         <p className="card_text">{description}</p>
       </div>
       <div className="card_footer">
-        <span className="btn_arrow linkText linkText_span">
-          {actionText}
-          <CardBgTargetImage />
-        </span>
+        <Button
+          type="borderless"
+          text={actionText}
+        />
       </div>
     </Link>
   </div>

@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
           <SynupLogo />
         </Link>
       </h1>
-      {/* Why this */}
+      {/* TODO: Why this */}
       <button
         className="navbar-toggler btn-nav_toggle"
         type="button"
@@ -50,12 +50,12 @@ const Header = ({ siteTitle }) => (
             </Link>
           </li>
           <li>
-          <Link to="/">
-            <Button
-              type="primary"
-              text="GET STARTED"
-            />
-          </Link>
+            <Link to="/">
+              <Button
+                type="primary"
+                text="GET STARTED"
+              />
+            </Link>
           </li>
         </ul>
       </nav>

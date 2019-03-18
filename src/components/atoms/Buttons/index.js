@@ -20,7 +20,14 @@ const Button = ({
             <SecondaryButtonAnimation />
           </span>
         </button>
-      ) 
+      )
+    case 'borderless':
+      return (
+        <span className="btn_arrow linkText linkText_span">
+          {text}
+          <PrimaryButtonAnimation />
+        </span>  
+      )
     default:
       return (
         <button className={`btn btn_primary btn_arrow ${fullWidthClass}`}>
@@ -29,8 +36,7 @@ const Button = ({
             <PrimaryButtonAnimation />
           </span>
         </button>
-      ) 
-
+      )
   }
 }
 
