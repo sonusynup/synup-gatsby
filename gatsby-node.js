@@ -1,4 +1,4 @@
-// const path = require('path')
+const path = require('path')
 // /**
 //  * Implement Gatsby's Node APIs in this file.
 //  *
