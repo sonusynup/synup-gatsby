@@ -64,9 +64,9 @@ const SinglelocationPage = () => (
   <Layout>
     <HeroSub />
     <CardGroup />
-      <ActionableCardList 
-        listItems={listItems}
-      />
+    <ActionableCardList 
+      listItems={listItems}
+    />
     <CaseStudy />
     
   </Layout>
