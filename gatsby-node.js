@@ -196,25 +196,25 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-//     caseStudy.map((study) => {
-//       createPage({
-//         path: `resources/casestudy/${study.node.id}`,
-//         component: path.resolve('./src/templates/CaseStudy/index.js'),
-//         context: {
-//           caseStudyDetails: study.node,
-//         }
-//       });
-//     });
+    caseStudy.map((study) => {
+      createPage({
+        path: `resources/casestudy/${study.node.id}`,
+        component: path.resolve('./src/templates/CaseStudy/index.js'),
+        context: {
+          caseStudyDetails: study.node,
+        }
+      });
+    });
 
-//     guides.map((guide) => {
-//       createPage({
-//         path: `resources/guide/${guide.node.id}`,
-//         component: path.resolve('./src/templates/Guides/index.js'),
-//         context: {
-//           guideDetails: guide.node
-//         }
-//       })
-//     })
-//   })
+    guides.map((guide) => {
+      createPage({
+        path: `resources/guide/${guide.node.id}`,
+        component: path.resolve('./src/templates/Guides/index.js'),
+        context: {
+          guideDetails: guide.node
+        }
+      })
+    })
+  })
   
-// }
+}
