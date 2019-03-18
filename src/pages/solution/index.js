@@ -10,7 +10,7 @@ import ActionableCardList from '../../components/molecules/ActionableCardList'
 
 const listItems = [
   {
-    listItems: [
+    subListItems: [
       'Generate more leads for your agency directly from your website', 
       "Manage your clients' location data from one dashboard", 
       "Automate your agency’s client reporting"
@@ -22,7 +22,7 @@ const listItems = [
     subTitle: 'An end-to-end white label local marketing suite to manage your clients’ location data, reviews, and reporting at scale',
   },
   {
-    listItems: [
+    subListItems: [
       'Generate more leads for your agency directly from your website', 
       "Manage your clients' location data from one dashboard", 
       "Automate your agency’s client reporting"
@@ -34,7 +34,7 @@ const listItems = [
     subTitle: 'An end-to-end white label local marketing suite to manage your clients’ location data, reviews, and reporting at scale',
   },
   {
-    listItems: [
+    subListItems: [
       'Generate more leads for your agency directly from your website', 
       "Manage your clients' location data from one dashboard", 
       "Automate your agency’s client reporting"
@@ -46,7 +46,7 @@ const listItems = [
     subTitle: 'An end-to-end white label local marketing suite to manage your clients’ location data, reviews, and reporting at scale',
   },
   {
-    listItems: [
+    subListItems: [
       'Generate more leads for your agency directly from your website', 
       "Manage your clients' location data from one dashboard", 
       "Automate your agency’s client reporting"

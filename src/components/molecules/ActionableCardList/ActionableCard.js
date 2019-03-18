@@ -4,20 +4,20 @@ import ActionableList from '../../atoms/ActionableList';
 const ActionableCard = ({
   index,
   wrapperClass,
-  listItems,
+  subListItems,
   actionType,
   actionText,
   to,
   title,
   subTitle,
 }) => (
-  <section className="section_wrapper">
+  <section className={`section_wrapper ${subListItems}`}>
     <section>
       <div className="container">
         <div className={`blockWrapper ${(index % 2 !== 0) && 'd-flex_reverse'}`}>
           <ActionableList
             wrapperClass="leftBlock block_contentWrap"
-            listItems={listItems}
+            subListItems={subListItems}
             actionType={actionType}
             actionText={actionText}
             to={to}
