@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import Button from '../Buttons';
 
+// TODO: Make the buttons generic
 const ActionableList = ({
   wrapperClass,
   listItems,
@@ -12,7 +13,8 @@ const ActionableList = ({
   to,
   title,
   subTitle,
-}) => (
+  inverted
+}) => !inverted ? (
   <div className={wrapperClass}>
     <h3>{title}</h3>
     <p className="block_contentText">{subTitle}</p>
@@ -29,6 +31,20 @@ const ActionableList = ({
         text={actionText}
       />
     </Link>
+  </div>
+) : (
+  <div class="leftBlock">
+    <h3 class="whiteTitle">{subTitle}</h3>
+    <ul className="list_enterprise">
+      {
+        listItems.map((listItem) => (
+          <li className="whiteTitle" key={listItem}>{listItem}</li>
+        ))
+      }
+    </ul>
+    <Button type="invert-primary" text="GET STARTED" />
+    <span class="space"></span>
+    <Button type="invert-secondary" text="LEARN MORE" />
   </div>
 )
 

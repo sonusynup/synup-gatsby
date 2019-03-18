@@ -10,6 +10,7 @@ const ActionableCard = ({
   to,
   title,
   subTitle,
+  inverted
 }) => (
   <section className={`section_wrapper ${wrapperClass}`}>
     <section>
@@ -23,6 +24,7 @@ const ActionableCard = ({
             to={to}
             title={title}
             subTitle={subTitle}
+            inverted={inverted}
           />
           <div className="rightBlock">
             <img className="img_fluid" alt="BannerImage" />

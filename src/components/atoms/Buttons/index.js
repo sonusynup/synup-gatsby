@@ -12,6 +12,24 @@ const Button = ({
   const fullWidthClass = fullWidthBtn ? 'btn_fullWidth' : '';
 
   switch (type) {
+    case 'invert-primary':
+      return (
+        <button class="btn btn_white  btn_arrow">
+          <span class="btn_textSpan">
+            GET STARTED
+            <SecondaryButtonAnimation />
+          </span>
+        </button>    
+      )
+    case 'invert-secondary':
+      return (
+        <button class="btn btn_outlineWhite  btn_arrow">
+            <span class="btn_textSpan">
+              LEARN MORE
+              <PrimaryButtonAnimation />
+            </span>
+        </button>
+      )
     case 'secondary':
       return (
         <button className={`btn btn_outlineTransparent btn_arrow ${fullWidthClass}`}>
