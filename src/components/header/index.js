@@ -17,7 +17,7 @@ const ref = React.createRef();
 // Remove hardcoding ebook
 class Header extends React.Component {
   state = {
-    activeHoveredNavItem: '',
+    activeExpandedNavItem: '',
     isMenuExpanded: false,
     scrollBarFixed: false,
     activeResource: 'Ebooks'
@@ -50,10 +50,10 @@ class Header extends React.Component {
     })
   }
 
-  setActiveHoverNavItem = (activeHoveredNavItem) => {
+  setActiveHoverNavItem = (activeExpandedNavItem) => {
     return (e) => {
       this.setState({
-        activeHoveredNavItem,
+        activeExpandedNavItem,
       })
     }
   }
@@ -73,7 +73,7 @@ class Header extends React.Component {
     return (
       <header
         ref={ref}
-        className={`navbar navbar-toggleable-sm ${this.state.scrollBarFixed ? 'header--fixed active' : ''} `}
+        className={`navbar navbar-toggleable-sm ${this.state.scrollBarFixed ? 'header--fixed active' : 'header--fixed'} `}
         id="header"
       >
        <div className="container">
@@ -85,26 +85,26 @@ class Header extends React.Component {
          <nav id="navbarNavDropdown1" className={isMenuExpanded ? 'collapse nav-collapse show' : 'collapse nav-collapse'}>
           <ul id="main-menu1" className="navbar-nav">
             <SolutionNavGroup
-              onHover={this.setActiveHoverNavItem('solution')}
-              onBlur={this.setActiveHoverNavItem('')}
-              isHovered={this.state.activeHoveredNavItem === 'solution'}
+              onExpand={this.setActiveHoverNavItem('solution')}
+              onClose={this.setActiveHoverNavItem('')}
+              isExpanded={this.state.activeExpandedNavItem === 'solution'}
             />
             <ProductNavGroup
-              onHover={this.setActiveHoverNavItem('product')}
-              onBlur={this.setActiveHoverNavItem('')}
-              isHovered={this.state.activeHoveredNavItem === 'product'}
+              onExpand={this.setActiveHoverNavItem('product')}
+              onClose={this.setActiveHoverNavItem('')}
+              isExpanded={this.state.activeExpandedNavItem === 'product'}
             />
             <ResourcesNavGroup
-              onHover={this.setActiveHoverNavItem('resource')}
-              onBlur={this.setActiveHoverNavItem('')}
-              isHovered={this.state.activeHoveredNavItem === 'resource'}
+              onExpand={this.setActiveHoverNavItem('resource')}
+              onClose={this.setActiveHoverNavItem('')}
+              isExpanded={this.state.activeExpandedNavItem === 'resource'}
               onChangeActiveResource={this.onChangeActiveResource}
               activeResource={this.state.activeResource}
             />
             <CompanyNavGroup
-              onHover={this.setActiveHoverNavItem('company')}
-              onBlur={this.setActiveHoverNavItem('')}
-              isHovered={this.state.activeHoveredNavItem === 'company'}
+              onExpand={this.setActiveHoverNavItem('company')}
+              onClose={this.setActiveHoverNavItem('')}
+              isExpanded={this.state.activeExpandedNavItem === 'company'}
             />
              <li><Link to="/" className="js-scroll-trigger nav-link">CUSTOMERS</Link></li>
              <li><Link to="/" className="btn_link btn_signin">SIGN IN</Link></li>
