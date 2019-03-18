@@ -4,7 +4,11 @@ import SolutionNavItem from "../NavItem/SolutionItem";
 
 const SolutionNavGroup = () => (
   <li className="dropdown-accord">
-    <Link to="" className="dropdown js-scroll-trigger nav-link">SOLUTIONS</Link>
+    <Link to="/"
+      className="dropdown js-scroll-trigger nav-link"
+    >
+      SOLUTIONS
+    </Link>
     <div className="dropdown-content accordion-content solutions-content">
       <div className="solutions-submenu arrow_box">
         <SolutionNavItem
