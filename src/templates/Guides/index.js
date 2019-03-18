@@ -7,12 +7,12 @@ import GuideDescriptionList from '../../components/modules/guide/GuideDescriptio
 const Guides = ({
   pathContext: {
     guideDetails: {
-      guideAlert,
       guideContent,
+      guideAlert,
+      guideSteps,
       guideCover,
       guideTip,
       guideTitle,
-      guideDescription
     }
   }
 }) => (
@@ -22,10 +22,10 @@ const Guides = ({
       cover={guideCover}  
     />
     <GuideDescriptionList
-      content={guideContent}
+      content={guideSteps}
+      description={guideContent}
       alert={guideAlert}
       tip={guideTip}
-      description={guideDescription}
     />
   </Layout>
 )

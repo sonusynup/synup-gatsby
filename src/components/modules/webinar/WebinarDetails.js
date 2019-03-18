@@ -15,7 +15,7 @@ const WebinarDetails = ({
   speakers,
   status,
 }) => (
-  <div class="webinar_wrapper">
+  <div className="webinar_wrapper">
     <div className="webinar_wrapperHead">
       <span className="badge badge_secondary">
         {status} Webinars

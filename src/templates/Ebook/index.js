@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Layout from "../../components/layout"
-import EbookDetails from '../../components/modules/ebook/ebookDetails'
-import EbookSubscriptionForm from '../../components/modules/ebook/ebookSubscriptionForm'
+
 import OtherEbooks from '../../components/modules/ebook/otherEbooks'
+import EbookSubscribe from '../../components/modules/ebook/EbookSubscribe'
 
 const Ebook = ({
   pageContext: {
@@ -13,16 +13,9 @@ const Ebook = ({
   }
 }) => (
   <Layout>
-    <section className="section_hero">
-      <div className="container">
-        <div className="blockWrapper">
-          <EbookDetails
-            bookDetails={bookDetails}
-          />
-          <EbookSubscriptionForm />
-        </div>
-      </div>
-    </section>
+    <EbookSubscribe 
+      bookDetails={bookDetails}
+    />
     <OtherEbooks
       latestBooksLimited={latestBooksLimited}
     />

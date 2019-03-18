@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import ContentHoverActionImage from '../../images/svgComponents/contentHoverActionImage'
+import LinkedEbook from '../../molecules/LinkedEbook'
 import Button from '../../atoms/Buttons';
 
 const OtherEbooks = ({
@@ -14,29 +14,22 @@ const OtherEbooks = ({
         <div className="ebook_wrapper">
           <div className="ebook_lists">
             {
-              latestBooksLimited.reverse().map((ebook) => (
-                <Link to={`/resources/ebook/${ebook.node.bookTitle}`} className="ebook_anchor">
-                  <div className="overlay_content">
-                    <div className="content-overlay"></div>
-                      <figure>
-                        <img
-                          src={ebook.node.bookCoverImage.file.url}
-                          className="img_fluid"
-                          alt=""
-                        />
-                      </figure>
-                    <div className="content-details">
-                      <ContentHoverActionImage />
-                    </div>
-                  </div>
-                </Link>  
+              latestBooksLimited
+                .reverse()
+                .map((ebook) => (
+                <LinkedEbook
+                  to={`/resources/ebook/${ebook.node.id} `}
+                  thumbnail={ebook.node.bookCoverImage.file.url}
+                />
               ))
             }  
           </div>
-          <Button
-            type="secondary"
-            text="VIEW ALL EBOOKS"
-          />
+            <Link to={'/resources/ebooks'}>
+              <Button
+                type="secondary"
+                text="VIEW ALL EBOOKS"
+              >
+              </Button></Link>
         </div>
       </div>
     </div>

@@ -1,23 +1,24 @@
 import React from 'react';
 
-import Button from '../../../atoms/Buttons';
+import ActionableCard from '../../../molecules/ActionableCardList/ActionableCard'
 
 const HeroEnterprise = () => (
   <section class="paddingControl">
   <div class="container">
-      <div class="enterprise_blockWrapper">
-          <div class="leftBlock">
-              <h3 class="whiteTitle">Manage all your business <br></br> locations with ease</h3>
-              <ul class="list_enterprise">
-                  <li class="whiteTitle">Automate data management for all your locations</li>
-                  <li class="whiteTitle">Track and measure the growth of your business locations</li>
-                  <li class="whiteTitle">Compare customer engagement metrics across your business locations</li>
-              </ul>
-              <Button type="secondary" text="GET STARTED" />
-              <span class="space"></span>
-              <Button type="secondary" text="LEARN MORE" />
-          </div>
-      </div>
+    <div class="enterprise_blockWrapper">
+      <ActionableCard
+        index={0}
+        inverted
+        title="Manage all your business locations with ease"
+        subListItems={
+          [
+            'Automate data management for all your locations',
+            'Track and measure the growth of your business locations',
+            'Compare customer engagement metrics across your business locations',
+          ]
+        }
+      />
+    </div>
   </div>
 </section>
 )

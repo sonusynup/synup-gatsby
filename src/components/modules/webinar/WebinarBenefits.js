@@ -7,9 +7,9 @@ const WebinarBenefits = ({
   learning,
 }) => (
   <>
-    <section class="section_learn">
-      <div class="container">
-        <div class="blockWrapper">
+    <section className="section_learn">
+      <div className="container">
+        <div className="blockWrapper">
           <WebinarLearnings learning={learning} />
           <WebinarAgenda agenda={agenda} />
         </div>
