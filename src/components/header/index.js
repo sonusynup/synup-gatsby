@@ -11,13 +11,37 @@ import SolutionNavGroup from './navGroups/SolutionNavGroup'
 import CompanyNavGroup from "./navGroups/CompanyNavGroup";
 import ProductNavGroup from "./navGroups/ProductNavGroup";
 
+const ref = React.createRef();
+
 // TODO: Refactor this as per new layout
 class Header extends React.Component {
   state = {
     activeHoveredNavItem: '',
     isMenuExpanded: false,
+    scrollBarFixed: false,
   }
   
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    if (window.pageYOffset === 0) {
+      this.setState({
+        scrollBarFixed: false
+      })
+    } else {
+      this.setState({
+        scrollBarFixed: true
+      })
+    }
+    
+  }
+
   toggleHamburgerMenu = () => {
     this.setState({
       isMenuExpanded: !this.state.isMenuExpanded,
@@ -37,7 +61,11 @@ class Header extends React.Component {
       isMenuExpanded
     } = this.state;
     return (
-      <header className="navbar navbar-toggleable-sm" id="header">
+      <header
+        ref={ref}
+        className={`navbar navbar-toggleable-sm ${this.state.scrollBarFixed ? 'header--fixed active' : ''} `}
+        id="header"
+      >
        <div className="container">
          <h1><Link to="/"><SynupLogo /></Link></h1>
          <HamburgerIcon
