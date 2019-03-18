@@ -29,7 +29,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <Helmet>
           <meta charset="utf-8" />
           <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -43,7 +43,9 @@ const Layout = ({ children }) => (
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         </Helmet>
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
         <Footer />
       </>
     )}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import EbookDetails from './ebookDetails'
-import EbookSubscriptionForm from './EbookSubscriptionForm'
+import EbookSubscriptionForm from './ebookSubscriptionForm'
 
 const EbookSubscribe = ({
   bookDetails,
