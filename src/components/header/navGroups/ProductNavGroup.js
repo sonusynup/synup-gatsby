@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ProductItem from "./ProductItem";
+import ProductItem from "../navItem/ProductItem";
 
 const ProductNavGroup = () => (
   <li className="dropdown-accord"><a href="#" className="dropdown js-scroll-trigger nav-link">PRODUCTS</a>

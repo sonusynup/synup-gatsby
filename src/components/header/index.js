@@ -5,10 +5,10 @@ import { Link } from 'gatsby'
 import Button from '../atoms/Buttons'
 import SynupLogo from '../../components/images/svgComponents/synupLogo';
 
-import ResourcesNavGroup from './ResourcesNavGroup'
-import SolutionNavGroup from './SolutionNavGroup'
-import CompanyNavGroup from "./CompanyNavGroup";
-import ProductNavGroup from "./ProductNavGroup";
+import ResourcesNavGroup from './navGroups/ResourcesNavGroup'
+import SolutionNavGroup from './navGroups/SolutionNavGroup'
+import CompanyNavGroup from "./navGroups/CompanyNavGroup";
+import ProductNavGroup from "./navGroups/ProductNavGroup";
 
 // TODO: Refactor this as per new layout
 const Header = ({ siteTitle }) => (

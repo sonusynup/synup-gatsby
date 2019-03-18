@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../atoms/Buttons'
+import Button from '../../atoms/Buttons'
 
 const resourceList = ['Ebooks', 'Webinars', 'Guides', 'Blog', 'Checklists', 'Free Tools', 'Case Study'];
 
@@ -24,17 +24,13 @@ const ResourcesNavGroup = () => (
             </ul>
           </div>
           <div className="tab-content">
-            {
-              resourceList.map((resource) => (
-                <div className="tab-pane active" key={resource}>
-                  <h3>{resource}</h3>
-                  <Button 
-                    type="secondary"
-                    text="READ NOW"
-                  />
-                </div>
-              ))    
-            }
+            <div className="tab-pane active">
+              <h3>Ebooks</h3>
+              <Button 
+                type="secondary"
+                text="READ NOW"
+              />
+            </div>    
           </div>
         </div>
         <div className="tab-support">

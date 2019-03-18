@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import SolutionBgImage from '../../components/images/svgComponents/solutionBgImage';
+import SolutionBgImage from '../../images/svgComponents/solutionBgImage';
 
 const SolutionNavItem = ({
   title,

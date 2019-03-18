@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import ProductItemImage from '../images/svgComponents/ProductItemImage'
+import ProductItemImage from '../../images/svgComponents/ProductItemImage'
 
 const ProductItem = ({
   title,

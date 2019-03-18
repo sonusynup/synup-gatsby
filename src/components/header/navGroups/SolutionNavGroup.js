@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import SolutionNavItem from "./SolutionItem";
+import SolutionNavItem from "../NavItem/SolutionItem";
 
 const SolutionNavGroup = () => (
   <li className="dropdown-accord">
