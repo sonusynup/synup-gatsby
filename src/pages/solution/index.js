@@ -3,8 +3,6 @@ import React from "react"
 import Layout from "../../components/layout"
 
 import HeroSub from '../../components/modules/solution/HeroSub'
-import WrapperBlock from '../../components/modules/solution/WrapperBlock'
-import WrapperBlockReverse from '../../components/modules/solution/WrapperBlockReverse'
 import CardGroup from '../../components/modules/solution/CardGroup'
 import CaseStudy from "../../components/modules/solution/CaseStudy";
 
@@ -66,11 +64,9 @@ const SinglelocationPage = () => (
   <Layout>
     <HeroSub />
     <CardGroup />
-    <section className="section_wrapper">
       <ActionableCardList 
         listItems={listItems}
       />
-    </section>
     <CaseStudy />
     
   </Layout>
