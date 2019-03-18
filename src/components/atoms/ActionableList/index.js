@@ -6,7 +6,7 @@ import Button from '../Buttons';
 
 const ActionableList = ({
   wrapperClass,
-  subListItems,
+  listItems,
   actionType,
   actionText,
   to,
@@ -18,9 +18,9 @@ const ActionableList = ({
     <p className="block_contentText">{subTitle}</p>
     <ul className="list_unstyled">
       {
-        // subListItems.map((listItem) => (
-        //   <li key={listItem}>{listItem}</li>
-        // ))
+        listItems.map((listItem) => (
+          <li key={listItem}>{listItem}</li>
+        ))
       }
     </ul>
     <Link to={to}>

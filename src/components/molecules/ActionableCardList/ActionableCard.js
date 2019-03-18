@@ -11,13 +11,13 @@ const ActionableCard = ({
   title,
   subTitle,
 }) => (
-  <section className={`section_wrapper ${subListItems}`}>
+  <section className={`section_wrapper ${wrapperClass}`}>
     <section>
       <div className="container">
         <div className={`blockWrapper ${(index % 2 !== 0) && 'd-flex_reverse'}`}>
           <ActionableList
             wrapperClass="leftBlock block_contentWrap"
-            subListItems={subListItems}
+            listItems={subListItems}
             actionType={actionType}
             actionText={actionText}
             to={to}
