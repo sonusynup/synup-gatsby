@@ -14,12 +14,17 @@ import ProductNavGroup from "./navGroups/ProductNavGroup";
 const ref = React.createRef();
 
 // TODO: Refactor this as per new layout
+// Remove hardcoding ebook
 class Header extends React.Component {
   state = {
     activeHoveredNavItem: '',
     isMenuExpanded: false,
     scrollBarFixed: false,
+<<<<<<< Updated upstream
     activeResource: 'ebook'
+=======
+    activeResource: 'Ebooks'
+>>>>>>> Stashed changes
   }
   
   componentDidMount() {
@@ -52,7 +57,7 @@ class Header extends React.Component {
   setActiveHoverNavItem = (activeHoveredNavItem) => {
     return (e) => {
       this.setState({
-        activeHoveredNavItem
+        activeHoveredNavItem,
       })
     }
   }

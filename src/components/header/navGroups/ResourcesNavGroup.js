@@ -14,7 +14,7 @@ const ResourcesNavGroup = ({
 }) => (
   <li className="dropdown-accord" onMouseOver={onHover} onMouseLeave={onBlur}>
     <a href="#" className="dropdown js-scroll-trigger nav-link">RESOURCES</a>
-    <div className={`dropdown-content ${isHovered ? 'active' : ''} accordion-content resource-content`} style={{ display: 'block' }}>
+    <div className={`dropdown-content ${isHovered ? 'active' : ''} accordion-content resource-content`}>
       <div className="resource-submenu arrow_box">
         <div className="tab-block">
           <div className="tabs-left">
