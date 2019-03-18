@@ -19,6 +19,7 @@ class Header extends React.Component {
     activeHoveredNavItem: '',
     isMenuExpanded: false,
     scrollBarFixed: false,
+    activeResource: 'ebook'
   }
   
   componentDidMount() {
@@ -56,6 +57,14 @@ class Header extends React.Component {
     }
   }
 
+  onChangeActiveResource = (activeResource) => {
+    return (e) => {
+      this.setState({
+        activeResource,
+      })
+    }  
+  }
+
   render() {
     const {
       isMenuExpanded
@@ -88,6 +97,8 @@ class Header extends React.Component {
               onHover={this.setActiveHoverNavItem('resource')}
               onBlur={this.setActiveHoverNavItem('')}
               isHovered={this.state.activeHoveredNavItem === 'resource'}
+              onChangeActiveResource={this.onChangeActiveResource}
+              activeResource={this.state.activeResource}
             />
             <CompanyNavGroup
               onHover={this.setActiveHoverNavItem('company')}

@@ -8,19 +8,25 @@ const resourceList = ['Ebooks', 'Webinars', 'Guides', 'Blog', 'Checklists', 'Fre
 const ResourcesNavGroup = ({
   onHover,
   onBlur,
-  isHovered
+  isHovered,
+  onChangeActiveResource,
+  activeResource,
 }) => (
   <li className="dropdown-accord" onMouseOver={onHover} onMouseLeave={onBlur}>
     <a href="#" className="dropdown js-scroll-trigger nav-link">RESOURCES</a>
-    <div className={`dropdown-content ${isHovered ? 'active' : ''} accordion-content resource-content`}>
+    <div className={`dropdown-content ${isHovered ? 'active' : ''} accordion-content resource-content`} style={{ display: 'block' }}>
       <div className="resource-submenu arrow_box">
         <div className="tab-block">
           <div className="tabs-left">
             <ul className="nav nav-tabs nav-stacked">
               {
                 resourceList.map((resource) => (
-                <li>
-                  <a href="#item-one" className="active" data-toggle="tab">
+                <li key={resource}>
+                  <a
+                    onClick={onChangeActiveResource(resource)} 
+                    data-toggle="tab"
+                    className={`${activeResource === resource ? 'active' : ''}`}
+                  >
                     {resource}
                   </a>
                 </li>  
@@ -29,7 +35,7 @@ const ResourcesNavGroup = ({
           </div>
           <div className="tab-content">
             <div className="tab-pane active">
-              <h3>Ebooks</h3>
+              <h3>{activeResource}</h3>
               <Button 
                 type="borderless"
                 text="READ NOW"
