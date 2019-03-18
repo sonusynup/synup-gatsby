@@ -11,23 +11,25 @@ const ActionableCard = ({
   title,
   subTitle,
 }) => (
-  <section>
-    <div className="container">
-      <div className={`blockWrapper ${(index % 2 !== 0) && 'd-flex_reverse'}`}>
-        <ActionableList
-          wrapperClass="leftBlock block_contentWrap"
-          listItems={listItems}
-          actionType={actionType}
-          actionText={actionText}
-          to={to}
-          title={title}
-          subTitle={subTitle}
-        />
-        <div className="rightBlock">
-          <img className="img_fluid" alt="BannerImage" />
+  <section className="section_wrapper">
+    <section>
+      <div className="container">
+        <div className={`blockWrapper ${(index % 2 !== 0) && 'd-flex_reverse'}`}>
+          <ActionableList
+            wrapperClass="leftBlock block_contentWrap"
+            listItems={listItems}
+            actionType={actionType}
+            actionText={actionText}
+            to={to}
+            title={title}
+            subTitle={subTitle}
+          />
+          <div className="rightBlock">
+            <img className="img_fluid" alt="BannerImage" />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
 )
 
