@@ -6,6 +6,7 @@ import Layout from "../../components/layout"
 import OtherEbooks from '../../components/modules/ebook/otherEbooks'
 import EbookSubscribe from '../../components/modules/ebook/EbookSubscribe'
 
+// Ebook Template for the dynamic page generated
 const Ebook = ({
   pageContext: {
     bookDetails,

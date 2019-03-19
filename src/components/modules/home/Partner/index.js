@@ -10,7 +10,7 @@ const Partner = ({
     <div className="container">
       <div className="banner_wrapper">
         <h4>
-          We power location intelligence for over 
+          We power location intelligence for over
             <span className="primary_text"> 150,000 </span>
             businesses
         </h4>
