@@ -173,7 +173,7 @@ exports.createPages = ({ graphql, actions }) => {
     ebooks.map((ebook) => {
       createPage({
         path: `resources/ebook/${ebook.node.id}`,
-        component: path.resolve('./src/templates/ebook/index.js'),
+        component: path.resolve('./src/templates/ebook.js'),
         context: {
           bookDetails: ebook.node,
           latestBooksLimited: ebooks.length < 4 ? ebooks : ebooks.slice(ebooks.length - 4) // Max paginated count being 4
@@ -185,7 +185,7 @@ exports.createPages = ({ graphql, actions }) => {
     webinars.map((webinar) => {
       createPage({
         path: `resources/webinar/${webinar.node.id}`,
-        component: path.resolve('./src/templates/webinar/index.js'),
+        component: path.resolve('./src/templates/webinar.js'),
         context: {
           webinarDetails: webinar.node,
         }
@@ -196,7 +196,7 @@ exports.createPages = ({ graphql, actions }) => {
     caseStudy.map((study) => {
       createPage({
         path: `resources/casestudy/${study.node.id}`,
-        component: path.resolve('./src/templates/caseStudy/index.js'),
+        component: path.resolve('./src/templates/caseStudy.js'),
         context: {
           caseStudyDetails: study.node,
         }
@@ -207,7 +207,7 @@ exports.createPages = ({ graphql, actions }) => {
     guides.map((guide) => {
       createPage({
         path: `resources/guide/${guide.node.id}`,
-        component: path.resolve('./src/templates/guides/index.js'),
+        component: path.resolve('./src/templates/guides.js'),
         context: {
           guideDetails: guide.node
         }

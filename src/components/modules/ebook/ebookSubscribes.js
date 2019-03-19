@@ -3,6 +3,7 @@ import React from 'react'
 import EbookDetails from './ebookDetails'
 import EbookSubscriptionForm from './ebookSubscriptionForm'
 
+// Handles ebook subscription screen
 const EbookSubscribe = ({
   bookDetails,
 }) => (
