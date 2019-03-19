@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Renders Guide Header component
 const GuideHeader = ({
   title,
   cover

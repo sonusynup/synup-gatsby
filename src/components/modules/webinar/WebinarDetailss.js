@@ -1,5 +1,5 @@
 import React from 'react'
-import WebinarSpeakers from './WebinarSpeakers';
+import WebinarSpeakers from './WebinarSpeakerss';
 
 // Todo bring this to the right format 
 // January 15, 2019 / 9:00AM EST</pre>
@@ -7,6 +7,7 @@ const parseTime = (date) => {
   return date;
 }
 
+// Renders the webinar details
 const WebinarDetails = ({
   title,
   date,

@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Renders the webinar Agenda
 const WebinarAgenda = ({
   agenda
 }) => (

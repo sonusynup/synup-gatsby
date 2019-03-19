@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Renders the Webinar Learnings
 const WebinarLearnings = ({
   learning
 }) => (

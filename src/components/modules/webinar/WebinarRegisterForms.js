@@ -4,7 +4,8 @@ import Button from '../../atoms/Buttons'
 import FormInput from '../../atoms/FormInput'
 import FormButtonGroup from '../../atoms/FormButtonGroup'
 
-class EbookSubscriptionForm extends React.Component {
+// Renders the Webinar Subscription form
+class WebinarSubscriptionForm extends React.Component {
 
   state = {
     fullName: '',
@@ -90,4 +91,4 @@ class EbookSubscriptionForm extends React.Component {
   }
 }
 
-export default EbookSubscriptionForm
+export default WebinarSubscriptionForm

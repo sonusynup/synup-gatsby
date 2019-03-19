@@ -1,6 +1,7 @@
 import React from 'react'
 import Meta from './Meta'
 
+// Renders Guide description list component
 const GuideDescriptionList = ({
   content,
   description,

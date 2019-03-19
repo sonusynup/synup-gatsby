@@ -1,10 +1,11 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import WebinarDetails from '../components/modules/webinar/WebinarDetails'
-import WebinarRegisterForm from '../components/modules/webinar/WebinarRegisterForm'
-import WebinarBenefits from '../components/modules/webinar/WebinarBenefits'
+import WebinarDetails from '../components/modules/webinar/WebinarDetailss'
+import WebinarRegisterForm from '../components/modules/webinar/WebinarRegisterForms'
+import WebinarBenefits from '../components/modules/webinar/WebinarBenefitss'
 
+// Renders Webinar component
 const Webinar = ({
   pathContext: {
     webinarDetails: {
@@ -16,7 +17,7 @@ const Webinar = ({
       webinarDuration,
       webinarLearning,
       speakers,
-      webinarJoinLink,
+      webinarJoinLink, // What to do with this
     }
   }
 }) => (
