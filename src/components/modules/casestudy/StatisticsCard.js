@@ -1,5 +1,6 @@
 import React from 'react'
 
+// A simple statistic card component
 const StatisticsCard = ({
   value,
   description,

@@ -1,9 +1,10 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import GuideHeader from '../components/modules/guide/GuideHeader'
-import GuideDescriptionList from '../components/modules/guide/GuideDescriptionList.js'
+import GuideHeader from '../components/modules/guide/guideHeader'
+import GuideDescriptionList from '../components/modules/guide/guideDescriptionList.js'
 
+// Renders the root guides page
 const Guides = ({
   pathContext: {
     guideDetails: {

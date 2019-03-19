@@ -2,9 +2,10 @@ import React from 'react'
 
 import Layout from '../components/layout';
 
-import CaseStudyHeader from '../components/modules/casestudy/CaseStudyHeader'
-import CaseStudyContent from '../components/modules/casestudy/CaseStudyContent'
+import CaseStudyHeader from '../components/modules/casestudy/caseStudyHeader'
+import CaseStudyContent from '../components/modules/casestudy/caseStudyContent'
 
+// Renders the case study component
 const CaseStudy = ({
   pageContext: {
     caseStudyDetails: {
