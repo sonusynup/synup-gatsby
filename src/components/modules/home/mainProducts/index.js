@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TransparentCard from '../../../atoms/CardTransparent'
+import TransparentCard from '../../../atoms/cardTransparent'
 
 // Main products section of the home page
 const MainProducts = () => (
@@ -9,7 +9,7 @@ const MainProducts = () => (
       <div className="product_wrapper">
         <div className="product_description">
           <h4>
-            Gain complete control over your business’ local marketing.
+            Gain  complete control over your business’ local marketing.
             Manage your online profiles, interactions, insights, and posts. 
             <span className="primary_text">
               All from one dashboard.

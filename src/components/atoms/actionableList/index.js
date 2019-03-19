@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Button from '../Buttons';
+import Button from '../button';
 
 // TODO: Make the buttons generic
 const ActionableList = ({

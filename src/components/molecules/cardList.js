@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Card from '../atoms/Card'
+import Card from '../atoms/card'
 
 const CardList = ({
   listItems

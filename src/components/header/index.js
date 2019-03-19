@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Link } from 'gatsby'
 
-import Button from '../atoms/Buttons'
+import Button from '../atoms/button'
 import SynupLogo from '../../components/images/svgComponents/synupLogo';
 import HamburgerIcon from './navItem/HamburgerItem'
 

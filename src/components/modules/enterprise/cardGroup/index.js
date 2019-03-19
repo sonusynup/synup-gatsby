@@ -16,7 +16,7 @@ const Product = () => (
                               viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
                               xmlnsxlink="http://www.w3.org/1999/xlink">
                               <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g id="UI/Components/Buttons/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
+                                  <g id="UI/Components/button/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
                                       fill="#FFFFFF">
                                       <g id="Arrow/white" transform="translate(119.000000, 15.000000)">
                                           <polygon id="Rectangle-Copy-2" opacity="0.305966332" points="-1.33226763e-14 0 9.52941176 9 -1.33226763e-14 18"></polygon>
@@ -41,7 +41,7 @@ const Product = () => (
                               viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
                               xmlnsxlink="http://www.w3.org/1999/xlink">
                               <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g id="UI/Components/Buttons/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
+                                  <g id="UI/Components/button/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
                                       fill="#FFFFFF">
                                       <g id="Arrow/white" transform="translate(119.000000, 15.000000)">
                                           <polygon id="Rectangle-Copy-2" opacity="0.305966332" points="-1.33226763e-14 0 9.52941176 9 -1.33226763e-14 18"></polygon>
@@ -66,7 +66,7 @@ const Product = () => (
                               viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
                               xmlns xlink="http://www.w3.org/1999/xlink">
                               <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <g id="UI/Components/Buttons/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
+                                  <g id="UI/Components/button/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)"
                                       fill="#FFFFFF">
                                       <g id="Arrow/white" transform="translate(119.000000, 15.000000)">
                                           <polygon id="Rectangle-Copy-2" opacity="0.305966332" points="-1.33226763e-14 0 9.52941176 9 -1.33226763e-14 18"></polygon>

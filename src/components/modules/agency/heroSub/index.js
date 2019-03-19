@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ActionableList from '../../../atoms/ActionableList';
+import ActionableList from '../../../atoms/actionableList';
 
 const listItems = [
   "Generate more leads for your agency directly from your website",

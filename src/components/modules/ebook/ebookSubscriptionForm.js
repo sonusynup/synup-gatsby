@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Button from '../../atoms/Buttons'
-import FormInput from '../../atoms/FormInput'
+import Button from '../../atoms/button'
+import FormInput from '../../atoms/formInput'
 import FormButtonGroup from '../../atoms/FormButtonGroup'
 
 // Handles the entire state of the form

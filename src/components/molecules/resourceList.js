@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import ContentHoverActionImage from '../images/svgComponents/contentHoverActionImage'
-import Button from '../atoms/Buttons'
+import Button from '../atoms/button'
 import Layout from '../layout'
 
 const EachItem = ({

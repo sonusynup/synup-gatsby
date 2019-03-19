@@ -1,5 +1,4 @@
 import React from 'react'
-import Card from '../../../atoms/Card'
 import CardList from '../../../molecules/cardList';
 
 const listItems = [

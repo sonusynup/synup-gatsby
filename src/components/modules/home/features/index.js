@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../../../atoms/Buttons'
+import Button from '../../../atoms/button'
 
 // Component handling the features section
 const Features = () => (
