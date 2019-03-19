@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Testimonial from './Testimonial'
-import Advantages from './Advantages';
-import BusinessDetails from './BusinessDetails'
+import Testimonial from './testimonial'
+import Advantages from './advantages';
+import BusinessDetails from './businessDetails'
 
 /* 
  * Case Study Molecule

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ActionableCard from '../../../molecules/ActionableCardList/ActionableCard'
+import ActionableCard from '../../../molecules/actionableCardList/actionableCard'
 
 const HeroEnterprise = () => (
   <section class="paddingControl">

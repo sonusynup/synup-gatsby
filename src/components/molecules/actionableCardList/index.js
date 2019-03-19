@@ -1,5 +1,5 @@
 import React from 'react'
-import ActionableCard from './ActionableCard';
+import ActionableCard from './actionableCard';
 
 const ActionableCardList = ({
   listItems

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import ContentHoverActionImage from '../../components/images/svgComponents/contentHoverActionImage'
-import Button from '../../components/atoms/Buttons'
-import Layout from '../../components/layout'
+import ContentHoverActionImage from '../images/svgComponents/contentHoverActionImage'
+import Button from '../atoms/Buttons'
+import Layout from '../layout'
 
 const EachItem = ({
   heading,

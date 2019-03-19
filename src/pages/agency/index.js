@@ -7,7 +7,7 @@ import CardGroup from '../../components/modules/agency/cardGroup'
 import CaseStudy from "../../components/modules/agency/caseStudy";
 import Whitelabel from "../../components/modules/agency/whitelabel";
 
-import ActionableCardList from '../../components/molecules/ActionableCardList'
+import ActionableCardList from '../../components/molecules/actionableCardList'
 
 const listItems = [
   {
