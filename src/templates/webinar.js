@@ -1,9 +1,9 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import WebinarDetails from '../components/modules/webinar/WebinarDetailss'
-import WebinarRegisterForm from '../components/modules/webinar/WebinarRegisterForms'
-import WebinarBenefits from '../components/modules/webinar/WebinarBenefitss'
+import WebinarDetails from '../components/modules/webinar/WebinarDetails'
+import WebinarRegisterForm from '../components/modules/webinar/WebinarRegisterForm'
+import WebinarBenefits from '../components/modules/webinar/WebinarBenefits'
 
 // Renders Webinar component
 const Webinar = ({

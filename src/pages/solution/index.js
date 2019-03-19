@@ -2,11 +2,11 @@ import React from "react"
 
 import Layout from "../../components/layout"
 
-import HeroSub from '../../components/modules/solution/HeroSub'
-import CardGroup from '../../components/modules/solution/CardGroup'
-import CaseStudy from "../../components/modules/solution/CaseStudy";
+import HeroSub from '../../components/modules/solution/heroSub'
+import CardGroup from '../../components/modules/solution/cardGroup'
+import CaseStudy from "../../components/modules/solution/caseStudy";
 
-import ActionableCardList from '../../components/molecules/ActionableCardList'
+import ActionableCardList from '../../components/molecules/actionableCardList'
 
 const listItems = [
   {
