@@ -1,5 +1,5 @@
 import React from 'react'
-import WebinarSpeakers from './WebinarSpeakerss';
+import WebinarSpeakers from './webinarSpeakers';
 
 // Todo bring this to the right format 
 // January 15, 2019 / 9:00AM EST</pre>

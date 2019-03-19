@@ -1,6 +1,6 @@
 import React from 'react'
-import WebinarLearnings from './WebinarLearningss';
-import WebinarAgenda from './WebinarAgendas';
+import WebinarLearnings from './webinarLearnings';
+import WebinarAgenda from './webinarAgenda';
 
 // Renders the Webinar Benefits
 const WebinarBenefits = ({
