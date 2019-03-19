@@ -1,5 +1,6 @@
 import React from 'react';
 
+//TODO: Refactor this
 const Whitelabel = () => (
     <section class="section_whitelabel">
             <div class="container">

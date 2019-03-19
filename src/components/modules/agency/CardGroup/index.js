@@ -1,5 +1,6 @@
 import React from 'react'
 
+//TODO: Replace this with the reusable component
 const Product = () => (
   <section className="section_card">
    <div class="container">

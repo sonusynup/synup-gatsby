@@ -1,5 +1,6 @@
 import React from 'react'
 
+//TODO: Replace this with the reusable component
 const Testimonials = () => (
   <section class="section_testimonial">
   <div class="container">

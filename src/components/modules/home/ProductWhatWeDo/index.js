@@ -23,6 +23,7 @@ const listItems = [
   }
 ]
 
+// Component handling what we do section
 const Product = () => (
   <section>
     <div className="container">

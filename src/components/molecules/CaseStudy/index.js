@@ -4,6 +4,11 @@ import Testimonial from './Testimonial'
 import Advantages from './Advantages';
 import BusinessDetails from './BusinessDetails'
 
+/* 
+ * Case Study Molecule
+ * Renders a testimonial component
+ * Renders the advantage or business details of the case study
+ */
 const CaseStudy = ({
   isImageContained,
   isAdvantage,

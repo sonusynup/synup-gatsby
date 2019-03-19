@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
+// Component Handling partner section
 const Partner = ({
   videos,
 }) => (
@@ -15,6 +16,7 @@ const Partner = ({
         </h4>
         <div className="banner_logoWrapper">
           {
+            // Loop all banner videos
             videos.map((video) => (
               <Link to={''} className="banner_logo">
                 <img

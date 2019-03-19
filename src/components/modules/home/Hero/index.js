@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from '../../../atoms/Buttons';
 
+// Hero component of the home page
 const Hero = () => (
   <section className="section_homepage">
     <div className="container">

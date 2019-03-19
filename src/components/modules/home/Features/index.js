@@ -2,6 +2,7 @@ import React from 'react'
 
 import Button from '../../../atoms/Buttons'
 
+// Component handling the features section
 const Features = () => (
   <section className="section_network">
     <div className="container">

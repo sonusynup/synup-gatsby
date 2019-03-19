@@ -2,6 +2,7 @@ import React from 'react'
 
 import TransparentCard from '../../../atoms/CardTransparent'
 
+// Main products section of the home page
 const MainProducts = () => (
   <section className="section_product">
     <div className="container">

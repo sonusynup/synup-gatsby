@@ -63,20 +63,38 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 Site is already integrated with netlfiy.
 Look for tick marks near the commits for the latest deployments.
 
-Ebook 
-CSS - stack as per the count
+File Structure
 
-Webinar
-Speakers, What you'll learn - CSS for stacking
-Change day format
+/
+|-- /.cache
+|-- /plugins
+|-- /public
+|-- /src
+    |-- /components
+    |-- /images
+    |-- /pages
+    |-- /templates
+    
+|-- /static
+|-- gatsby-config.js
+|-- gatsby-node.js
+|-- gatsby-ssr.js
+|-- gatsby-browser.js
 
-Case Study 
-Advantage section is not proper
+/.cache Automatically generated. This folder is an internal cache created automatically by Gatsby. The files inside this folder are not meant for modification. Should be added to the .gitignore file.
 
-Guide
-Day format
-Change description as needed
+/public Automatically generated. The output of the build process will be exposed inside this folder. Should be added to the .gitignore file if not added already.
 
-General
-Helper functions
-Navbar updated
+/plugins This folder hosts any project-specific (“local”) plugins that aren’t published as an npm package. Check out the plugin docs for more detail.
+
+/src This directory will contain all of the code related to what you will see on the frontend of your site (what you see in the browser), like your site header, or a page template. 
+  contains - components that has all reusable components
+  images - all static assets
+  templates - all dynamic pages
+
+/pages Components under src/pages become pages automatically with paths based on their file name.
+
+/templates Contains templates for programmatically creating pages. Check out the templates docs for more detail.
+html.js For custom configuration of default .cache/default_html.js. Check out the custom html docs for more detail.
+
+/static If you put a file into the static folder, it will not be processed by Webpack. Instead it will be copied into the public folder untouched.
