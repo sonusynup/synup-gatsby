@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import ResourceList from '../../components/molecules/ResourceList';
+import ResourceList from '../../components/molecules/resourceList';
 
 const EbookList = ({
   data: {

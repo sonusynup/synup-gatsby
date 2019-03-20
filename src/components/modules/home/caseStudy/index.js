@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CaseStudy from '../../../molecules/CaseStudy'
+import CaseStudy from '../../../molecules/caseStudy'
 
 // Testimonial Section
 const Testimonials = ({
