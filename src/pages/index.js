@@ -6,7 +6,7 @@ import Hero from '../components/modules/home/hero'
 import Partner from '../components/modules/home/partner'
 import ProductWhatWeDo from '../components/modules/home/productWhatWeDo'
 import MainProducts from '../components/modules/home/mainProducts'
-import Features from '../components/modules/home/features'
+import FeatureList from '../components/modules/home/featureList'
 import CaseStudy from "../components/modules/home/caseStudy";
 
 // Renders the home page of the app

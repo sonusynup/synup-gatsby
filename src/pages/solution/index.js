@@ -6,7 +6,7 @@ import HeroSub from '../../components/modules/solution/heroSub'
 import CardGroup from '../../components/modules/solution/cardGroup'
 import CaseStudy from "../../components/modules/solution/caseStudy";
 
-import ActionableCardList from '../../components/molecules/actionableCardList'
+import FeatureList from '../../components/molecules/featureList'
 
 const listItems = [
   {
@@ -64,7 +64,7 @@ const SinglelocationPage = () => (
   <Layout>
     <HeroSub />
     <CardGroup />
-    <ActionableCardList 
+    <FeatureList 
       listItems={listItems}
     />
     <CaseStudy />

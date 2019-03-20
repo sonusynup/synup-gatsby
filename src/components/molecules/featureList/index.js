@@ -1,10 +1,10 @@
 import React from 'react'
-import ActionableCard from './actionableCard';
+import Feature from './feature';
 
-const ActionableCardList = ({
+const Features = ({
   listItems
 }) => listItems.map((item, index) => (
-  <ActionableCard
+  <Feature
     key={index}
     index={index}
     wrapperClass={item.wrapperClass}
@@ -17,4 +17,4 @@ const ActionableCardList = ({
   />
 ))
 
-export default ActionableCardList
+export default Features

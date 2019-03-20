@@ -7,7 +7,7 @@ import CardGroup from '../../components/modules/agency/cardGroup'
 import CaseStudy from "../../components/modules/agency/caseStudy";
 import Whitelabel from "../../components/modules/agency/whitelabel";
 
-import ActionableCardList from '../../components/molecules/actionableCardList'
+import FeatureList from '../../components/molecules/featureList'
 
 const listItems = [
   {
@@ -46,9 +46,7 @@ const listItems = [
 const AgencyPage = () => (
   <Layout>
     <HeroSub />
-    <ActionableCardList 
-      listItems={listItems}
-    />
+    <FeatureList listItems={listItems} />
     <Whitelabel />
     <CardGroup />
     <CaseStudy />

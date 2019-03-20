@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ActionableCard from '../../../molecules/actionableCardList/actionableCard'
+import FeatureList from '../../../molecules/featureList/feature'
 
 const HeroEnterprise = () => (
   <section class="paddingControl">
   <div class="container">
     <div class="enterprise_blockWrapper">
-      <ActionableCard
+      <FeatureList
         index={0}
         inverted
         title="Manage all your business locations with ease"
