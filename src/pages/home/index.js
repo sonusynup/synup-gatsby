@@ -166,6 +166,11 @@ export const query = graphql`
             id
             featureName
             featureTitle
+            featureImage {
+              file {
+                url
+              }
+            }
             contentAlignment
             featureDescription{
               childContentfulRichText {

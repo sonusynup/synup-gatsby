@@ -1,12 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import TransparentCard from '../../../atoms/cardTransparent'
 
 // Main products section of the home page
+// TODO: Change layout of the image
 const MainProducts = ({
   productSectionDescription,
   productFeatures,
-
+  productSectionImage,
 }) => (
   <section className="section_product">
     <div className="container">
@@ -15,6 +17,9 @@ const MainProducts = ({
           className="product_description"
           dangerouslySetInnerHTML={{ __html: productSectionDescription.childContentfulRichText.html }}
         />
+        <figure class="floatingCard_img">
+          <img src={productSectionImage.file.url} class="img_fluid" alt="" />
+        </figure>
         <div className="popCard_wrapper">
           {
             productFeatures.map(feature => (
@@ -32,5 +37,10 @@ const MainProducts = ({
     </div>
   </section>
 )
+
+MainProducts.propTypes = {
+  productSectionDescription: PropTypes.string.isRequired,
+  productFeatures: PropTypes.string.isRequired,
+}
 
 export default MainProducts
