@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 
 import Layout from "../../components/layout"
 
@@ -9,11 +10,10 @@ import MainProducts from '../../components/modules/home/mainProducts'
 import Features from '../../components/modules/home/features'
 import CaseStudy from "../../components/modules/home/caseStudy";
 
+import filterFromMultipleItems from '../../helpers/filterFromMultipleItems'
+
 // Renders the home page of the app
 // Will be rendered at route 'synp.com'
-
-const filterFromMultipleItems = (dataGroup, key, value) => dataGroup.edges.filter(data => data.node[key] === value)[0].node;
-
 const IndexPage = ({
   data: {
     allContentfulCaseStudySection,
@@ -24,17 +24,28 @@ const IndexPage = ({
   }
 }) => (
   <Layout>
-    <Hero data={contentfulHeroSection} />
-    <Partner data={filterFromMultipleItems(allContentfulPartnerSection, 'partnerSectionTitle', 'We power location intelligence for over 150,000 businesses')} />
-    <ProductWhatWeDo />
-    <MainProducts />
-    <Features />
-    <CaseStudy />
+    <Hero {...contentfulHeroSection} />
+    <Partner {...filterFromMultipleItems(allContentfulPartnerSection, 'partnerSectionTitle', 'We power location intelligence for over 150,000 businesses')} />
+    <ProductWhatWeDo {...filterFromMultipleItems(allContentfulProductSection, 'productSectionTitle', 'What we do')} />
+    <MainProducts {...filterFromMultipleItems(allContentfulProductSection, 'productSectionTitle', 'Main products')} />
+    <Features {...filterFromMultipleItems(allContentfulFeaturesSection, 'featureTitle', 'Synup Premium Network')} />
+    <CaseStudy {...filterFromMultipleItems(allContentfulCaseStudySection, 'caseSectionType', 'Type 1')} />
   </Layout>
 )
 
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allContentfulCaseStudySection: PropTypes.object.isRequired,
+    allContentfulFeaturesSection: PropTypes.object.isRequired,
+    allContentfulPartnerSection: PropTypes.object.isRequired,
+    allContentfulProductSection: PropTypes.object.isRequired,
+    contentfulHeroSection: PropTypes.object.isRequired,
+  })
+}
+
 export default IndexPage
 
+// Graphql queries for the entire page
 export const query = graphql`
   query {
     contentfulHeroSection(webpage:{
