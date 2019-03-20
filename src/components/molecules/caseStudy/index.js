@@ -19,6 +19,7 @@ const CaseStudy = ({
   advantageImage,
   advantageIndustry,
   advantageGoal,
+  details
 }) => (
   <>
     <Testimonial
@@ -36,7 +37,9 @@ const CaseStudy = ({
             goal={advantageGoal}
           />
         ) : (
-          <BusinessDetails />
+          <BusinessDetails
+            details={details}
+          />
         )
       }
     </Testimonial>

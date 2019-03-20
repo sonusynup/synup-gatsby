@@ -229,6 +229,18 @@ export const query = graphql`
               }
             }
             caseSectionButtonType
+            metricValue1
+            metricValue2
+            metricImage1 {
+              file {
+                url
+              }
+            }
+            metricImage2 {
+              file {
+                url
+              }
+            }
           }
         }
       }
