@@ -10,12 +10,20 @@ const Card = ({
   bgClass,
   to,
   actionText,
+  isHtml
 }) => (
   <div className={`card ${bgClass}`}>
     <Link to={to}>
       <div className="card_body">
         <h5 className="card_title">{title}</h5>
-        <p className="card_text">{description}</p>
+        {
+          isHtml ? (
+            <p className="card_text" dangerouslySetInnerHTML={{ __html: description }} />
+          ) : (
+            <p className="card_text">{description}</p>
+          )         
+        }
+        
       </div>
       <div className="card_footer">
         <Button

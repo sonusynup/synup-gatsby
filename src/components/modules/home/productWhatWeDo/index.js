@@ -21,9 +21,18 @@ const listItems = [
     actionText: "LEARN MORE",
   }
 ]
+const generateCardItemFromDescription = (title, description, actionText, isHtml = false, bgClass) => ({
+  title,
+  description,
+  actionText,
+  isHtml,
+  bgClass,
+})
 
 // Component handling what we do section
-const Product = () => (
+const Product = ({
+  productFeatures,
+}) => (
   <section>
     <div className="container">
       <div className="card_block">
@@ -31,7 +40,13 @@ const Product = () => (
         <p>Select your business type to get started</p>
       </div>
       <CardList
-        listItems={listItems}
+        listItems={productFeatures.map(feature => generateCardItemFromDescription(
+            feature.featureTitle, 
+            feature.featureDescription.childContentfulRichText.html,
+            'LEARN MORE',
+            true,
+            'card_iconBg'
+          ))}
       />
     </div>
   </section>

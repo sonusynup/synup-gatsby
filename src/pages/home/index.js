@@ -132,6 +132,7 @@ export const query = graphql`
               }
             }
             productFeatures {
+              featureTitle
               featureDescription {
                 childContentfulRichText {
                   html
