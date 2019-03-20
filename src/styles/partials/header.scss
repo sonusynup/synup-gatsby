@@ -757,6 +757,7 @@ header.navbar.header--top {
 
 .dropdown-accord {
     position: relative;
+    cursor: pointer;
 
     &:hover .dropdown-content {
         display: block;

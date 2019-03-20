@@ -2249,6 +2249,7 @@ tbody.collapse.show {
 }
 .card:hover .card_title,
 .card:hover .card_text,
+.card:hover .card_text p,
 .card:hover .linkText_span {
   color: #fff;
 }
@@ -2567,6 +2568,7 @@ tbody.collapse.show {
   }
   .card_deck .card_title,
 .card_deck .card_text,
+.card_deck .card_text p,
 .card_deck .linkText_span {
     color: #fff;
   }
@@ -4663,6 +4665,7 @@ header.navbar.header--top {
 
 .dropdown-accord {
   position: relative;
+  cursor: pointer;
 }
 
 .dropdown-accord .nav-link.active:after {
@@ -4937,7 +4940,9 @@ ul {
 .footer_secondaryLinks li:last-child {
   margin-right: 0px;
 }
-
+main {
+  padding-top: 80px;
+}
 section {
   padding: 6rem 0px;
 }
@@ -5524,7 +5529,6 @@ section {
 .section_homepage {
   position: relative;
   padding-bottom: 26rem;
-  background-image: url(./images/svg/homepagebg.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
@@ -5747,6 +5751,7 @@ section {
   padding-right: 7.5rem;
   -webkit-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s;
+  cursor: pointer;
 }
 .testimonialWrapper-customer:hover {
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
@@ -5799,7 +5804,7 @@ section {
   margin: 0px;
 }
 
-.testimonialContentOutline {
+.testimonialContentOutline p{
   font-size: 1.25rem;
   color: #657EFF;
   line-height: 1.5;
@@ -5818,6 +5823,19 @@ section {
   color: #060E3D;
   letter-spacing: 0em;
   line-height: 1.28;
+
+  h6 {
+    font-size: 1.125rem;
+    color: #060E3D;
+    line-height: 2;
+  }
+  p{
+    opacity: 0.6;
+    font-size: 14px;
+    color: #060E3D;
+    letter-spacing: 0em;
+    line-height: 1.28;
+  }
 }
 
 .testimonialAuthorShadeimg {
@@ -5907,13 +5925,17 @@ section {
 
 .va_set {
   margin-right: 15px;
+  img {
+    max-width: 120px;
+    height: 40px;
+  }
 }
 .va_set:last-child {
   margin-right: 0px;
 }
 
 .va_text {
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
 .primary_text {
@@ -6010,11 +6032,12 @@ section {
 
 .popCard {
   max-width: 350px;
-  margin: 3.5rem 20px;
+  margin: 2.5rem 20px;
   -webkit-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s;
   cursor: pointer;
   border-radius: 4px;
+  margin-bottom: 8rem;
 }
 .popCard:hover {
   background: #fff;
@@ -6026,19 +6049,15 @@ section {
 }
 @media only screen and (max-width: 1199px) {
   .popCard {
-    margin-left: 0px;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  .popCard {
     max-width: 320px;
+    margin-left: 0px;
+    margin-bottom: 2.5rem;
   }
 }
 @media only screen and (max-width: 767px) {
   .popCard {
     background: #fff;
     box-shadow: 0 3px 1px 0 rgba(152, 168, 255, 0.31);
-    margin-bottom: 6.25rem;
   }
   .popCard:last-child {
     margin-bottom: 0px;

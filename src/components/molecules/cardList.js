@@ -13,6 +13,7 @@ const CardList = ({
           description={list.description}
           bgClass={list.bgClass}
           actionText={list.actionText}
+          isHtml={list.isHtml}
         />
       ))
     }

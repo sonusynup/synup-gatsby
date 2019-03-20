@@ -13,14 +13,13 @@ const BusinessDetails = ({
           <div className="va_set">
             <a href={detail.to}>
               <img
-                src={detail.image}
+                src={detail.metricImage.file.url}
                 className="img_fluid"
                 alt=""
               />
             </a>
             <p className="va_text">
-              increased client leads by 
-              <span className="primary_text">{detail.increase}</span>
+              <span className="primary_text">{detail.metricValue}</span>
             </p>
           </div>
         ))

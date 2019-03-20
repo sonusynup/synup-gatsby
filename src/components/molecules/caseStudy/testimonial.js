@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Testimonial = ({
   isImageContained,
@@ -22,11 +23,11 @@ const Testimonial = ({
           </figure>
         </div>
       </div>
-      <p className="testimonialContentOutline">{partnerTestimonial}</p>
+      <div className="testimonialContentOutline" dangerouslySetInnerHTML={{ __html: partnerTestimonial }} />
       <div className="testimonialAuthor">
         <div className="testimonialAuthor_details">
           <h6 className="testimonialAuthor_name">{partnerName}</h6>
-          <p className="testimonialAuthor_position">{partnerPosition}</p>
+          <p className="testimonialAuthor_position" dangerouslySetInnerHTML={{ __html: partnerPosition }} />
         </div>
       </div>
     </div>
@@ -49,4 +50,11 @@ const Testimonial = ({
     </div>
 )
 
+Testimonial.propTypes = {
+  isImageContained: PropTypes.bool.isRequired,
+  partnerImage: PropTypes.string.isRequired,
+  partnerTestimonial: PropTypes.string.isRequired,
+  partnerName: PropTypes.string.isRequired,
+  partnerPosition: PropTypes.string.isRequired,
+}
 export default Testimonial

@@ -1,6 +1,8 @@
 import React from 'react'
 import CardList from '../../../molecules/cardList';
 
+import generateCardItem from '../../../../helpers/generateCardItem'
+
 const listItems = [
   {
     title: "WIDGETS",
@@ -22,8 +24,11 @@ const listItems = [
   }
 ]
 
+
 // Component handling what we do section
-const Product = () => (
+const Product = ({
+  productFeatures,
+}) => (
   <section>
     <div className="container">
       <div className="card_block">
@@ -31,7 +36,13 @@ const Product = () => (
         <p>Select your business type to get started</p>
       </div>
       <CardList
-        listItems={listItems}
+        listItems={productFeatures.map(feature => generateCardItem(
+            feature.featureTitle, 
+            feature.featureDescription.childContentfulRichText.html,
+            'LEARN MORE',
+            true,
+            'card_iconBg'
+          ))}
       />
     </div>
   </section>

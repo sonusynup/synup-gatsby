@@ -4,25 +4,23 @@ import { Link } from 'gatsby'
 
 // Component Handling partner section
 const Partner = ({
-  videos,
+  partnerList,
+  partnerSectionTitle
 }) => (
   <section className="section_banner">
     <div className="container">
       <div className="banner_wrapper">
-        <h4>
-          We power location intelligence for over
-            <span className="primary_text"> 150,000 </span>
-            businesses
-        </h4>
+        <h4>{partnerSectionTitle}</h4>
         <div className="banner_logoWrapper">
           {
             // Loop all banner videos
-            videos.map((video) => (
+            partnerList.map((partner) => (
               <Link to={''} className="banner_logo">
                 <img
-                  src="images/svg/v-icon.svg"
+                  src={partner.partnerLogo.file.url}
                   className="img_fluid"
                   alt="VideoBanner"
+                  style={{ maxWidth: '100px' }}
                 />
               </Link>
             ))
@@ -34,11 +32,8 @@ const Partner = ({
 )
 
 Partner.propTypes = {
-  videos: PropTypes.array,
-}
-
-Partner.defaultProps = {
-  videos: ['vimeo', 'vimeo', 'vimeo']
+  partnerList: PropTypes.array.isRequired,
+  partnerSectionTitle: PropTypes.string.isRequired
 }
 
 export default Partner

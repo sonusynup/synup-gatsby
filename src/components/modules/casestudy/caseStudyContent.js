@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import CaseStudy from '../../molecules/CaseStudy'
+import CaseStudy from '../../molecules/caseStudy'
 
 const CaseStudyContent = ({
   partner: {
