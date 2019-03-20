@@ -1,0 +1,86 @@
+//product
+.product_description h4 {
+    max-width: 440px;
+}
+
+.product_wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include bp-lg {
+        display: block;
+    }
+}
+
+.product_description {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0.5;
+
+    @include bp-lg {
+        margin-bottom: 6rem;
+    }
+}
+
+.popCard {
+    max-width: 350px;
+    margin: 3.5rem 20px;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    cursor: pointer;
+    border-radius: $common-border-radius;
+
+    &:hover {
+        background: $white;
+        box-shadow: 0 3px 1px 0 rgba(152, 168, 255, 0.31);
+    }
+
+    &:hover svg {
+        opacity: 1;
+        right: -1.5rem;
+    }
+
+    @include bp-lg {
+        margin-left: 0px;
+    }
+    @include bp-lg {
+        max-width: 320px;
+    }
+
+    @include bp-sm {
+        background: $white;
+        box-shadow: 0 3px 1px 0 rgba(152, 168, 255, 0.31);
+        margin-bottom: 6.25rem;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        svg {
+            opacity: 1;
+            right: -1.5rem;
+
+        }
+    }
+}
+
+.popCard_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1;
+
+    @include bp-lg {
+        justify-content: flex-start;
+        margin-top: 3rem;
+
+    }
+
+    @include bp-sm {
+        flex-wrap: wrap;
+    }
+}
+
+.floatingCard_img {
+    max-width: 400px;
+}

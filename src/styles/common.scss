@@ -1,0 +1,36 @@
+$grid-columns: 12;
+//----------------------------------*\
+// SCSS bootstrap
+//----------------------------------*/
+@import "bootstrap";
+@import 'modules/variables.scss';
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+@import 'mixins/breakpoints.scss';
+@import 'mixins/color';
+//----------------------------------*\
+// SCSS MODULES
+//----------------------------------*/
+@import 'modules/defaults.scss';
+@import 'modules/colors.scss';
+@import 'modules/typography.scss';
+@import 'modules/button.scss';
+
+html {
+  body {
+      font-size: $base-font-size;
+  }
+
+  @include bp-md {
+      font-size: 100%;
+  }
+
+  @include bp-sm {
+      font-size: 90%;
+  }
+
+  @include bp-xs {
+      font-size: 85%;
+  }
+}

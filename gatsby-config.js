@@ -3,9 +3,8 @@ const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Synp`,
+    description: `Webpage for Synp`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,12 +38,11 @@ module.exports = {
         renderOptions: {
           /*
            * Defines custom html string for each node type like heading, embedded entries etc..
+           * This is required to parse and style richtext
            */
           renderNode: {
             // Example
             [BLOCKS.EMBEDDED_ASSET]: node => {
-              console.log('inside gatsby confg found an asset ')
-              
               return `<img class='custom-asset img_fluid' src="${
                 node.data.target.fields.file['en-US'].url
               }"/>`

@@ -1,11 +1,13 @@
 import React from 'react'
 
-import Button from '../../atoms/Buttons'
-import FormInput from '../../atoms/FormInput'
-import FormButtonGroup from '../../atoms/FormButtonGroup'
+import Button from '../../atoms/button'
+import FormInput from '../../atoms/formInput'
+import FormButtonGroup from '../../atoms/formButtonGroup'
 
+// Handles the entire state of the form
 class EbookSubscriptionForm extends React.Component {
 
+  // State holding the form data
   state = {
     fullName: '',
     email: '',
@@ -14,19 +16,23 @@ class EbookSubscriptionForm extends React.Component {
     employeeCount: null,
   }
   
+  // Field type options
   typeButtons = [
     { labelFirst: 'Single', labelSecond: 'Location', value: 'single' },
     { labelFirst: 'Multi', labelSecond: 'Location', value: 'multi' },
     { labelFirst: 'Marketing', labelSecond: 'Agency', value: 'agency'}
   ];
 
+  // Field count options
   countButtons = [
     { labelFirst: '1 - 10', labelSecond: null, value: '1-10'},
     { labelFirst: '11 - 50', labelSecond: null, value: '11-50'},
     { labelFirst: '50+', labelSecond: null, value: '50+'}
   ];
 
+  // Handler for form field change
   onChangeFormField = (fieldName, fromEvent) => {
+    // event can be triggered from an event or a value
     return (eventOrValue) => {
       if (fromEvent) {
         this.setState({

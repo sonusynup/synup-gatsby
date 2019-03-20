@@ -1,0 +1,99 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $base-font-family;
+    color: $heading-color;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    line-height: $h1-line-height;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    line-height: $h2-line-height;
+    font-weight: $medium-font;
+
+    @include bp-sm {
+        font-size: $font-size-h2-sm;
+    }
+
+    @include bp-xs {
+        font-size: $font-size-h2-xs;
+    }
+}
+
+h3 {
+    font-size: $font-size-h3;
+    line-height: $h3-line-height;
+    font-weight: $medium-font;
+    letter-spacing: $h3-letter-spacing;
+
+    @include bp-sm {
+        font-size: $font-size-h3-sm;
+    }
+
+    @include bp-xs {
+        font-size: $font-size-h3-xs;
+    }
+}
+
+
+h4 {
+    font-size: $font-size-h4;
+    line-height: $h4-line-height;
+    font-weight: $regular-font;
+    letter-spacing: $h4-letter-spacing;
+
+    @include bp-sm {
+        font-size: $font-size-h4-sm;
+    }
+
+    @include bp-xs {
+        font-size: $font-size-h4-xs;
+    }
+}
+
+h5 {
+    font-size: $font-size-h5;
+    line-height: $h4-line-height;
+    font-weight: $medium-font;
+    letter-spacing: $h5-letter-spacing;
+}
+
+
+
+
+h6 {
+    font-weight: $regular-font;
+    font-size: $font-size-h6;
+    letter-spacing: $h6-letter-spacing;
+    line-height: $h6-line-height;
+}
+
+
+p {
+    font-size: $base-font-size;
+    color: $base-font-color;
+    line-height: $lead-line-height;
+    letter-spacing: $p-letter-spacing;
+
+}
+
+small {
+    display: block;
+    font-size: $base-font-size;
+    color: $pre-font-color;
+    letter-spacing: $no-letter-spacing;
+    text-transform: unset;
+    font-weight: $regular-font;
+    margin-bottom: 12px;
+
+    @include bp-sm {
+        font-size: $font-medium-size;
+    }
+}

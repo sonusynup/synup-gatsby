@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import LinkedEbook from '../../molecules/LinkedEbook'
-import Button from '../../atoms/Buttons';
+import Button from '../../atoms/button';
 
+// Component which handles other ebooks
 const OtherEbooks = ({
   latestBooksLimited
 }) => (
@@ -14,6 +15,8 @@ const OtherEbooks = ({
         <div className="ebook_wrapper">
           <div className="ebook_lists">
             {
+              // Latest 4 ebooks (order is reversed from graphql query)
+              // Count of 4 is limited from the query itself
               latestBooksLimited
                 .reverse()
                 .map((ebook) => (
@@ -28,8 +31,8 @@ const OtherEbooks = ({
               <Button
                 type="secondary"
                 text="VIEW ALL EBOOKS"
-              >
-              </Button></Link>
+              />
+            </Link>
         </div>
       </div>
     </div>

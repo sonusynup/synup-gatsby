@@ -1,0 +1,93 @@
+// font
+$heading-font-family: 'Sailec',
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Oxygen,
+Ubuntu;
+$base-font-family: 'Sailec',
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Oxygen,
+Ubuntu,
+Cantarell,
+"Open Sans",
+"Helvetica Neue",
+sans-serif;
+// typography
+$font-size-small: 13px;
+$font-medium-size: 15px;
+$base-font-size: 1.125rem;
+$lg-font-size: 18px;
+$nav-font-size: 14px;
+$btn-font-size: 12px;
+$btn-lg-font-size: 14px;
+$normal-font-size: 16px;
+$pre-font-size: 1.5rem;
+$blockquote-font-size: 1.25rem;
+$blockquote-font-size-sm: 1.875rem;
+$font-size-h1: 4rem;
+$font-size-h2: 3rem;
+$font-size-h3: 2.625rem;
+$font-size-h4: 2rem;
+$font-size-h5: 1.5rem;
+$font-size-h6: 18px;
+$font-size-h2-sm: 2.75rem;
+$font-size-h2-xs: 2.25rem;
+$font-size-h3-sm: 2rem;
+$font-size-h3-xs: 1.875rem;
+$font-size-h4-sm: 1.875rem;
+$font-size-h4-xs: 1.75rem;
+// line-height
+$blockquote-line-height: 1.03;
+$h1-line-height: 0;
+$h2-line-height: 1.444;
+$h3-line-height: 1.095;
+$h4-line-height: 1.375;
+$h6-line-height: 1.27;
+$lead-line-height: 1.4;
+$common-line-height: 1.777;
+// letter-spacing
+$h2-letter-spacing: -0.02em;
+$h3-letter-spacing: -1px;
+$h4-letter-spacing: -0.02em;
+$h5-letter-spacing:  0em;
+$h6-letter-spacing: -0.005em;
+$btn-letter-spacing: 0.05em;
+$pre-letter-spacing: 0.02em;
+$small-letter-spacing: 0.1em;
+$p-letter-spacing: -0.03em;
+$common-letter-spacing: -0.02em;
+$no-letter-spacing: 0em;
+// color
+$brand-blue: #4865FF;
+$primary-color: #657EFF;
+$base-font-color: #060E3D;
+$nav-font-color: #535B62;
+$pre-font-color: #060E3D;
+$body-bg: #F7F8FA;
+$base-body-color: #F2F4FE;
+$case-font-color: #4A4A4A;
+$btn_primary-color: #4865FF;
+$btn-inverse-color: #fff !default;
+$heading-color: #060E3D;
+$fill-grey: #5b616e;
+$brand-orange: #FD6200;
+$fill-grey-hover: darken($fill-grey,
+15%) !default;
+// font-weight
+$regular-font: 400;
+$medium-font: 500;
+$semibold-font: 600;
+$bold-font: 700;
+// Border-radius 
+$common-border-radius: 4px;
+$btn-border-radius: 4px;
+$btn-lg-border-radius: 8px;
+$border-radius-base: 6px;
+
+
+

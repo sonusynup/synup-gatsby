@@ -1,0 +1,215 @@
+// guideTemplate
+.guideTemplate {
+    margin-left: 5%;
+    @include bp-lg {
+        margin-left: 0%;
+    }
+}
+
+.guideTemplate_head {
+    // max-width: 640px;
+}
+
+.guideTemplate_pre {
+    font-size: $pre-font-size;
+    color: $base-font-color;
+    line-height: $h2-line-height;
+    margin: 2rem 0rem;
+}
+
+.guideTemplate_head p {
+    font-size: $lg-font-size;
+    color: $case-font-color;
+    line-height: 1.875;
+    margin-top: 30px;
+    letter-spacing: 0.02em;
+}
+.guideTemplate_content p {
+    font-size: $lg-font-size;
+    color: $case-font-color;
+    line-height: 1.875;
+    margin-top: 30px;
+    letter-spacing: 0.02em;
+
+}
+.guideTemplate_content span {
+    font-weight: $medium-font;
+    font-size: $normal-font-size;
+    color: $blue;
+    letter-spacing: $no-letter-spacing;
+    text-transform: uppercase;
+}
+
+.guideTemplate_video {
+    font-weight: $medium-font;
+    font-size: $normal-font-size;
+    color: $red;
+    letter-spacing: $no-letter-spacing;
+    text-transform: uppercase;
+    @include bp-xs {
+        margin-top: 2.75rem;
+    }
+}
+
+.guideTemplate_content h5 {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+}
+
+.guideTemplate_head {
+    margin-bottom: 5rem;
+}
+
+.guideTemplate_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3.75rem;
+    @include bp-lg {
+        flex-wrap: wrap;
+    }
+    @include bp-xs {
+        margin-bottom: 1.75rem;
+    }
+}
+
+.guideTemplate_block {
+    flex: 0.3;
+    @include bp-lg {
+        // flex: auto;
+    }
+}
+
+.guideTemplate_block {
+    max-width: 600px;
+}
+
+.guideTemplate_img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    img {
+        max-width: 430px;
+    }
+    @include bp-lg {
+        flex: auto;
+    }
+}
+
+.guideTemplate_content {
+    max-width: 700px;
+    flex: 1;
+    @include bp-lg {
+        margin-bottom: 30px;
+        flex: auto;
+    }
+}
+
+.pointer {
+    border: 2px solid $blue;
+    width: 18px;
+    height: 18px;
+    background: rgba(74, 144, 226, 0.2);
+}
+
+.secoundaryColor_block {
+    background: rgba(0, 208, 156, 0.05);
+    border: 1px solid $green;
+    border-radius: $common-border-radius;
+    padding: 1.875rem 3.125rem;
+    margin-bottom: 3.75rem;
+    @include bp-sm {
+        padding: 20px;
+    }
+}
+
+.secoundaryColor_block p {
+    opacity: 0.75;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    letter-spacing: $no-letter-spacing;
+    line-height: $common-line-height;
+    margin: 1rem 0;
+}
+
+.secoundaryColor_block h6 {
+    font-weight: $medium-font;
+    font-size: 1rem;
+    color: $green;
+    letter-spacing: $no-letter-spacing;
+    position: relative;
+}
+
+.secoundaryColor_block h6:before {
+    position: absolute;
+    content: "url(images/svg/)";
+    color: rgba(0, 208, 156, 0.05);
+    font-size: 1rem;
+    border: 1px solid $green;
+    border-radius: 50%;
+    background: rgba(0, 208, 156, 0.05);
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: -30px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    @include bp-sm {
+        display: none;
+    }
+}
+
+.primaryColor_block {
+    background: rgba(72, 101, 255, 0.10);
+    border: 1px solid $blue;
+    border-radius: $common-border-radius;
+    padding: 1.875rem 3.125rem;
+    margin-bottom: 3.75rem;
+    @include bp-sm {
+        padding: 20px;
+    }
+}
+
+.primaryColor_block p {
+    font-weight: $medium-font;
+    font-size: 1rem;
+    color: $case-font-color;
+    margin: 1rem 0;
+    line-height: $common-line-height;
+}
+
+.primaryColor_block h6 {
+    font-weight: $medium-font;
+    font-size: 1rem;
+    color: $blue;
+    letter-spacing: $no-letter-spacing;
+    position: relative;
+}
+
+.primaryColor_block h6:before {
+    position: absolute;
+    content: "url(images/svg/)";
+    color: rgba(0, 208, 156, 0.05);
+    font-size: 1rem;
+    border: 1px solid $blue;
+    background: rgba(72, 101, 255, 0.10);
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: -30px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    @include bp-sm {
+        display: none;
+    }
+}
+
+.heroGuide_pre {
+    opacity: 0.6;
+    font-size: $pre-font-size;
+    color: $base-font-color;
+    margin: 2.5rem auto!important;
+}

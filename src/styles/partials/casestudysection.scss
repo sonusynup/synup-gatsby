@@ -1,0 +1,130 @@
+// case-study
+.casecard_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+
+    @include bp-sm {
+        margin-top: 2rem;
+    }
+}
+
+.casecard {
+    background-color: $green;
+    border-radius: $common-border-radius;
+    padding: 1.875rem 1rem;
+    margin-right: 24px;
+    min-width: 230px;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.casecard_title {
+    font-weight: $medium-font;
+    font-size: 2.5rem;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+    text-align: center;
+}
+
+.casecard_description {
+    font-weight: $medium-font;
+    font-size: $normal-font-size;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+    text-align: center;
+}
+
+.casestudy_block {
+    max-width: 800px;
+}
+
+.casestudyTemplate {
+    margin-left: 5%;
+}
+
+.casestudy_set p {
+    margin: 2rem 0px;
+    letter-spacing: $no-letter-spacing;
+    line-height: $common-line-height;
+    opacity: 0.75;
+    padding: 0px 2.75rem;
+
+    @include bp-md {
+        padding: 0px;
+    }
+}
+
+.casestudy_set h5 {
+    position: relative;
+    padding-left: 2.75rem;
+
+}
+
+.casestudy_set h5:before {
+    position: absolute;
+    content: "";
+    color: rgba(0, 208, 156, 0.05);
+    background: rgba(0, 208, 156, 0.05);
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 0px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 2px solid $green;
+}
+
+
+.casestudy_set li{
+    margin: 4rem 20px;
+
+    small{
+        font-family: Helvetica;
+        font-size: 16px;
+        color: #00D09C;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    @include bp-xs {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.casestudy_img {
+    padding: 0px 22px;
+}
+
+.casestudy_pre {
+    display: block;
+    font-size: $normal-font-size;
+    color: $green;
+    letter-spacing: $no-letter-spacing;
+    text-align: center;
+}
+
+iframe.embed-responsive-item {
+    border: none;
+    min-height: 650px;
+
+    @include bp-md {
+        min-height: 350px;
+    }
+
+    @include bp-xs {
+        min-height: 300px;
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../../atoms/Buttons'
+import Button from '../../atoms/button'
 
 const resourceList = ['Ebooks', 'Webinars', 'Guides', 'Blog', 'Checklists', 'Free Tools', 'Case Study'];
 

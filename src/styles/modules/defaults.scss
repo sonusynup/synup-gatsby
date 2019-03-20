@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/Sailec.eot');
+    src: url('../fonts/Sailec.eot?#iefix') format('embedded-opentype'), url('../fonts/Sailec.woff') format('woff'), url('../fonts/Sailec.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/Sailec-Medium.eot');
+    src: url('../fonts/Sailec-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Sailec-Medium.woff') format('woff'), url('../fonts/Sailec-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sailec';
+    src: url('../fonts/Sailec-Bold.eot');
+    src: url('../fonts/Sailec-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Sailec-Bold.woff') format('woff'), url('../fonts/Sailec-Bold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+::selection {
+    background: #000000;
+    color: $white;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #000000;
+    color: $white;
+    text-shadow: none;
+}
+
+::-webkit-selection {
+    background: #000000;
+    color: $white;
+    text-shadow: none;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $normal-font-size;
+}
+
+body {
+    background-color: #FAFAFF;
+    color: $base-font-color;
+    font-weight: $regular-font;
+    font-family: $base-font-family !important;
+    margin: 0;
+}
+
+a:hover,
+a:focus,
+a:active {
+    outline: none;
+    text-decoration: none;
+    // color: #000000;
+}
+
+blockquote {
+    font-size: $blockquote-font-size;
+    color: $primary-color;
+    line-height: $blockquote-line-height;
+}
+
+.badge {
+    font-weight: $medium-font;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    padding: 8px;
+    max-height: 28px;
+    margin-bottom: 1rem;
+}
+
+.badge_secondary {
+    color: $green;
+    background: rgba(255, 194, 6, 0.05);
+    border: 1px solid $green;
+}
+
+.badge_yellow {
+    color: $yellow;
+    border: 1px solid $yellow;
+    background: rgba(255, 194, 6, 0.05);
+}
+
+a {
+    display: inline-block;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+b {
+    font-weight: $medium-font;
+}
+
+.anchorlink {
+    font-size: 12px;
+    color: $blue;
+    letter-spacing: $no-letter-spacing;
+    line-height: 11px;
+}
+
+.heading {
+    font-size: 42px;
+    color: $heading-color;
+    letter-spacing: -1px;
+    text-align: center;
+    line-height: 46px;
+}
+
+.heading {
+    font-size: 42px;
+    color: $heading-color;
+    letter-spacing: -1px;
+    line-height: 46px;
+}
+
+.d-flex_reverse {
+    flex-direction: row-reverse;
+}
+
+.tagsWrapper {
+    .tagList {
+        margin: 2.125rem 0;
+        list-style: decimal;
+        padding-left: 25px;
+    }
+    .tagListLink {
+        font-size: 1.125rem;
+        color: #060E3D;
+        letter-spacing: -0.02em;
+        margin: 5px 0px;
+    }
+}
+
+.linkText_white {
+    position: relative;
+    font-weight: $medium-font;
+    font-size: 15px;
+    color: $white;
+    cursor: pointer;
+}

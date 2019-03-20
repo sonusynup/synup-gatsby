@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Handles render of Ebook Detail screen
 const EbookDetails = ({
   bookDetails: {
     bookCoverImage,

@@ -1,0 +1,236 @@
+// ebook
+.ebook_block {
+    max-width: 650px;
+
+    @include bp-sm {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.ebook_title {
+    position: relative;
+    padding-left: 20px;
+
+    @include bp-sm {
+        display: flex;
+        order: 1;
+    }
+}
+
+.ebook_img {
+    margin-bottom: 1rem;
+
+    img {
+        -webkit-box-shadow: 0px 12px 26px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 12px 26px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 12px 26px 0px rgba(0, 0, 0, 0.16);
+
+    }
+
+    @include bp-sm {
+        margin-bottom: 0px;
+        display: flex;
+        order: 2;
+        margin-top: 2rem;
+    }
+}
+
+.ebook_title:before {
+    position: absolute;
+    content: "";
+    background: $brand-orange;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    left: 0px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.ebook_describtion {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+
+    @include bp-sm {
+        display: flex;
+        order: 3;
+        padding-left: 0px;
+    }
+}
+
+.ebook_describtion:before {
+    height: 90%;
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 0px;
+    border: 2.5px solid $brand-orange;
+    border-radius: 2.5px;
+
+    @include bp-sm {
+        top: -10px;
+        height: 5px;
+        width: 10%;
+        background: $brand-orange;
+    }
+
+}
+
+.ebook_describtion_pre {
+    opacity: 0.75;
+    line-height: $common-line-height;
+    letter-spacing: 0px;
+    margin: 0px;
+}
+
+// ebook
+.ebook_lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.125rem 0;
+
+    @include bp-md {
+        flex-wrap: wrap;
+        margin: 2rem 0;
+
+    }
+
+    @include bp-sm {
+        justify-content: center;
+    }
+}
+
+.ebook_wrapper {
+    text-align: center;
+}
+
+.ebook-downloadlink {
+    font-weight: $medium-font;
+    font-size: $font-medium-size;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 80px;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    text-transform: uppercase;
+}
+
+.ebook_anchor {
+    position: relative;
+    max-width: 300px;
+    -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.16);
+    margin: 0 15px;
+
+    &:first-child {
+        margin-left: 0px;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    @include bp-md {
+        margin: 15px;
+
+        &:first-child {
+            margin-left: 15px;
+        }
+
+        &:last-child {
+            margin-right: 15px;
+        }
+    }
+
+    @include bp-sm {
+        max-width: 240px;
+
+        &:first-child {
+            margin-left: 15px;
+        }
+
+        &:last-child {
+            margin-right: 15px;
+        }
+    }
+
+
+    &:hover {
+        transform: translateY(-2px);
+
+        .ebook-downloadlink {
+            opacity: 1;
+        }
+
+        svg {
+            opacity: 1;
+            right: -1.5rem;
+        }
+    }
+}
+
+.overlay_content {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border-radius: 5px;
+}
+
+.overlay_content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-image {
+    width: 100%;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+
+}
+
+.overlay_content:hover .content-details {
+    opacity: 1;
+}

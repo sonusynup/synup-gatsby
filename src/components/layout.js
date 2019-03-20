@@ -13,9 +13,12 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from './footer'
 
+// TODO: Split these files as per indiviual scss
 import "./layout.scss"
 
-// TODO: Refactor both header and footer
+// Handles the layout of the app
+// Layout includes headers, app and footer.
+// Each route will replace the app as it is there
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -30,6 +33,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header />
+        {/* Dynamic injection of page meta */}
         <Helmet>
           <meta charset="utf-8" />
           <meta http-equiv="x-ua-compatible" content="ie=edge" />

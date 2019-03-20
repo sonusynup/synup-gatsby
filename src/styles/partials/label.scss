@@ -1,0 +1,38 @@
+//label
+.labelBlock {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 20px 40px;
+    border-radius: $common-border-radius;
+    text-align: center;
+    color: $white;
+    background-image: url(../images/svg/shape-bg.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+}
+.bgBlue{
+    background: $blue;
+}
+.bgRed {
+    background: $red;
+}
+.bgGreen {
+    background: $green;
+}
+.bgYellow {
+    background: $yellow;
+}
+
+.labelTitle {
+    font-size: $font-size-h2;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+    line-height: 1.041;
+}
+
+.labelDescription {
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+    margin-top: 1rem;
+}

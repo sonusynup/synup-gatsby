@@ -1,0 +1,64 @@
+// section_whitelabel
+.whitelabel_primaryWrapper {
+    background: linear-gradient(90deg, rgba(72, 101, 255, 1) 0%, rgba(72, 101, 255, 0.57) 100%), url(../images/mapbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2.5rem;
+    border-radius: $border-radius-base;
+    background-size: cover;
+
+    @include bp-sm {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+.whitelabel_pre {
+    font-size: $pre-font-size;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+    line-height: 1.416;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+
+    @include bp-lg {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.whitelabel_block {
+    max-width: 680px;
+}
+
+.floating_card {
+    position: absolute;
+    -webkit-box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include bp-lg {
+        display: none;
+    }
+}
+
+.position_top {
+    top: -12%;
+    right: 3%;
+}
+
+.position_left {
+    top: 20%;
+    right: 15%;
+}
+
+.position_right {
+    right: 10%;
+    top: 50%;
+}
+
+.position_bottom {
+    bottom: -10%;
+    right: 25%;
+}

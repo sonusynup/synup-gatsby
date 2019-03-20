@@ -1,7 +1,8 @@
 import React from 'react'
 
-import StatisticsCard from './StatisticsCard'
+import StatisticsCard from './statisticsCard'
 
+// Renders the case study header
 const CaseStudyHeader = ({
   title,
   stats,
