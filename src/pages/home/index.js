@@ -12,10 +12,20 @@ import CaseStudy from "../../components/modules/home/caseStudy";
 // Renders the home page of the app
 // Will be rendered at route 'synp.com'
 
-const IndexPage = () => (
+const filterFromMultipleItems = (dataGroup, key, value) => dataGroup.edges.filter(data => data.node[key] === value)[0].node;
+
+const IndexPage = ({
+  data: {
+    allContentfulCaseStudySection,
+    allContentfulFeaturesSection,
+    allContentfulPartnerSection,
+    allContentfulProductSection,
+    contentfulHeroSection
+  }
+}) => (
   <Layout>
-    <Hero />
-    <Partner />
+    <Hero data={contentfulHeroSection} />
+    <Partner data={filterFromMultipleItems(allContentfulPartnerSection, 'partnerSectionTitle', 'We power location intelligence for over 150,000 businesses')} />
     <ProductWhatWeDo />
     <MainProducts />
     <Features />
