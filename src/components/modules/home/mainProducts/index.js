@@ -3,40 +3,30 @@ import React from 'react'
 import TransparentCard from '../../../atoms/cardTransparent'
 
 // Main products section of the home page
-const MainProducts = () => (
+const MainProducts = ({
+  productSectionDescription,
+  productFeatures,
+
+}) => (
   <section className="section_product">
     <div className="container">
       <div className="product_wrapper">
-        <div className="product_description">
-          <h4>
-            Gain  complete control over your business’ local marketing.
-            Manage your online profiles, interactions, insights, and posts. 
-            <span className="primary_text">
-              All from one dashboard.
-            </span>
-          </h4>
-        </div>  
+        <div
+          className="product_description"
+          dangerouslySetInnerHTML={{ __html: productSectionDescription.childContentfulRichText.html }}
+        />
         <div className="popCard_wrapper">
-            <TransparentCard
-              title="ANALYTICS"
-              description="Understand your customers better with profile, ranking, and review insights."
-              action="SEE ALL FEATURES"
-            />
-            <TransparentCard
-              title="ANALYTICS"
-              description="Understand your customers better with profile, ranking, and review insights."
-              action="SEE ALL FEATURES"
-            />
-            <TransparentCard
-              title="ANALYTICS"
-              description="Understand your customers better with profile, ranking, and review insights."
-              action="SEE ALL FEATURES"
-            />
-            <TransparentCard
-              title="ANALYTICS"
-              description="Understand your customers better with profile, ranking, and review insights."
-              action="SEE ALL FEATURES"
-            />
+          {
+            productFeatures.map(feature => (
+              <TransparentCard
+                title={feature.featureTitle}
+                description={feature.featureDescription}
+                image={feature.featureIcon.file.url}
+                isDescriptionRichText
+                action="SEE ALL FEATURES"
+              />
+            ))
+          }
         </div>
       </div>
     </div>

@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import ContentHoverableSecondaryImage from '../../images/svgComponents/conventHoverSecondaryActionImage';
 
-const ProductCard = ({
+const CardTransparent = ({
   title,
   description,
-  action
+  isDescriptionRichText,
+  action,
+  image
 }) => (
   <div className="popCard">
     <Link to=""></Link>
@@ -14,13 +17,19 @@ const ProductCard = ({
       <div className="card_body">
         <img
           className="card_imgTop"
-          src={''}
+          src={image}
           alt="FeatureCard"
         />
         <h5 className="card_title">{title}</h5>
-        <p className="card_text">
-          {description}
-        </p>
+        {
+          isDescriptionRichText ? (
+            <p className="card_text" dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
+          ) : (
+            <p className="card_text">
+              {description}
+            </p>
+          )
+        }
       </div>
       <div className="card_footer">
         <span className="btn_arrow linkText linkText_span">
@@ -32,4 +41,12 @@ const ProductCard = ({
   </div>
 )
 
-export default ProductCard
+CardTransparent.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  isDescriptionRichText: PropTypes.string.isRequired,
+  action: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+}
+
+export default CardTransparent

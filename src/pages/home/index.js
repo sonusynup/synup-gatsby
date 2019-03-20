@@ -126,6 +126,11 @@ export const query = graphql`
           node {
             id
             productSectionTitle
+            productSectionDescription {
+              childContentfulRichText {
+                html
+              }
+            }
             productSectionImage {
               file {
                 url
@@ -133,6 +138,11 @@ export const query = graphql`
             }
             productFeatures {
               featureTitle
+              featureIcon {
+                file {
+                  url
+                }
+              }
               featureDescription {
                 childContentfulRichText {
                   html
