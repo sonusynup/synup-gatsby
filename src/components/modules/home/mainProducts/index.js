@@ -14,12 +14,15 @@ const MainProducts = ({
     <div className="container">
       <div className="product_wrapper">
         <div
-          className="product_description"
+          className="product_description">
+        <div
+          className=""
           dangerouslySetInnerHTML={{ __html: productSectionDescription.childContentfulRichText.html }}
         />
         <figure class="floatingCard_img">
           <img src={productSectionImage.file.url} class="img_fluid" alt="" />
         </figure>
+      </div>
         <div className="popCard_wrapper">
           {
             productFeatures.map(feature => (

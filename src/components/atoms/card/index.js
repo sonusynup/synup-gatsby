@@ -18,9 +18,9 @@ const Card = ({
         <h5 className="card_title">{title}</h5>
         {
           isHtml ? (
-            <p className="card_text" dangerouslySetInnerHTML={{ __html: description }} />
+            <div className="card_text" dangerouslySetInnerHTML={{ __html: description }} />
           ) : (
-            <p className="card_text">{description}</p>
+            <div className="card_text">{description}</div>
           )         
         }
         

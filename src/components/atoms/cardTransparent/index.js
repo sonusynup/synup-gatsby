@@ -23,11 +23,11 @@ const CardTransparent = ({
         <h5 className="card_title">{title}</h5>
         {
           isDescriptionRichText ? (
-            <p className="card_text" dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
+            <div className="card_text" dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
           ) : (
-            <p className="card_text">
+            <div className="card_text">
               {description}
-            </p>
+            </div>
           )
         }
       </div>
