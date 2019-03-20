@@ -23,7 +23,7 @@ const Testimonial = ({
           </figure>
         </div>
       </div>
-      <p className="testimonialContentOutline" dangerouslySetInnerHTML={{ __html: partnerTestimonial }} />
+      <div className="testimonialContentOutline" dangerouslySetInnerHTML={{ __html: partnerTestimonial }} />
       <div className="testimonialAuthor">
         <div className="testimonialAuthor_details">
           <h6 className="testimonialAuthor_name">{partnerName}</h6>
