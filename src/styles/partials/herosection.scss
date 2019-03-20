@@ -1,0 +1,112 @@
+//hero-section
+.section_homepage {
+    position: relative;
+    // height: 100vh;
+    padding-bottom: 26rem;
+    background-image: url(../images/svg/homepagebg.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+
+    @include bp-md {
+        padding-bottom: 18rem;
+
+    }
+
+    @include bp-sm {
+        padding-bottom: 15rem;
+
+    }
+
+    @include bp-xs {
+        padding-bottom: 12rem;
+
+    }
+}
+
+.heroblock {
+    text-align: center;
+}
+
+.heroblock_icon {
+    max-width: 85px;
+    margin-bottom: 1.25rem;
+}
+
+.heroblock p {
+    opacity: 0.6;
+    font-size: $pre-font-size;
+    color: $base-font-color;
+    letter-spacing: $p-letter-spacing;
+    text-align: center;
+    line-height: 1.416;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 5rem;
+
+    @include bp-md {
+        margin-bottom: 3rem;
+
+    }
+
+    @include bp-xs {
+        margin-bottom: 1.5rem;
+
+    }
+}
+.heroblock_features p {
+    opacity: 0.6;
+    font-size: $pre-font-size;
+    color: $base-font-color;
+    letter-spacing: $p-letter-spacing;
+    text-align: center;
+    line-height: 1.416;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+    @include bp-md {
+        margin-bottom: 3rem;
+
+    }
+
+    @include bp-xs {
+        margin-bottom: 1.5rem;
+
+    }
+}
+
+.heroblockImg {
+    margin-top: 3.1245rem;
+    text-align: center
+}
+
+.block_icon {
+    margin-bottom: 1.5rem;
+}
+
+.block_contentText {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+
+    @include bp-lg {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @include bp-sm {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.block_contentWrap {
+    max-width: 500px;
+}
+
+.block_flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}

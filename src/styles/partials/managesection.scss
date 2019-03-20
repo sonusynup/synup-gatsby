@@ -1,0 +1,20 @@
+// manage-section
+.manage_wrapper {
+    background: #F2F4FE;
+    border: 1px solid $blue;
+    padding: 5rem 2rem;
+    padding-bottom: 7.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.manage_wrapperContent {
+    font-size: $font-size-h4;
+    color: $base-font-color;
+    letter-spacing: $p-letter-spacing;
+    text-align: center;
+    line-height: 1.375;
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+}

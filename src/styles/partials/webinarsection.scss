@@ -1,0 +1,102 @@
+// webinar
+.webinar_wrapper {
+    max-width: 520px;
+}
+
+.date_wrapper {
+    margin-top: 1.125rem;
+}
+
+.webinar_description {
+    position: relative;
+    opacity: 0.75;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    letter-spacing: $common-letter-spacing;
+    line-height: $common-line-height;
+    margin: 4rem 0rem;
+
+    &:before {
+        height: 100%;
+        position: absolute;
+        content: "";
+        top: 0px;
+        left: -16px;
+        border: 2.5px solid $green;
+
+        @include bp-sm {
+            top: -10px;
+            left: 0px;
+            height: 5px;
+            width: 10%;
+            background: $green;
+        }
+    }
+}
+
+// speakers
+.speakers_title {
+    position: relative;
+}
+
+.speakers_block {
+    margin: 1.875rem 0;
+}
+
+.speakers_wrapperBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.speakers_title:before {
+    position: absolute;
+    content: "";
+    border: 2px solid $green;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    left: -16px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @include bp-sm {
+        top: -10px;
+        left: 0px;
+    }
+}
+
+.speaker_name {
+    font-weight: $medium-font;
+    font-size: $nav-font-size;
+    color: $base-font-color;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.speaker_position {
+    opacity: 0.45;
+    font-weight: $medium-font;
+    font-size: $nav-font-size;
+    color: $base-font-color;
+    letter-spacing: $no-letter-spacing;
+    line-height: $common-line-height;
+}
+
+.speakers_block {
+    margin-top: 30px;
+
+    img {
+        width: 80px;
+    }
+}
+
+.speaker_details {
+    margin: 1rem 0;
+
+}
+
+.speakers_img {
+    min-width: 100px;
+}

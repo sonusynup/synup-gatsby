@@ -1,0 +1,91 @@
+// learn
+.learn_title {
+    position: relative
+}
+
+.learn_title:before {
+    position: absolute;
+    content: "";
+    background: $green;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    left: -16px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    @include bp-sm {
+        top: -10px;
+        left: 0px;
+    }
+}
+
+.learn_cardBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.875rem;
+
+    @include bp-md {
+        &:last-child {
+            margin-top: 0px;
+        }
+    }
+}
+
+.learn_cardCount {
+    font-weight: $bold-font;
+    font-size: $font-size-h3;
+    color: $blue;
+    letter-spacing: $no-letter-spacing;
+}
+
+.learn_cardPre {
+    font-size: $base-font-size;
+    color: $base-font-color;
+    letter-spacing: $common-letter-spacing;
+    margin: 2rem 0px;
+}
+
+.learn_block {
+    max-width: 640px;
+}
+
+.learn_card {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.agenda_block {
+    padding: 2.5rem;
+    border-radius: $border-radius-base;
+    background: $blue;
+    color: $white;
+    width: 100%;
+    max-width: 620px;
+    background-image: url(../images/svg/pale-uploading.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.agenda_list {
+    padding-left: 20px;
+    list-style-type: decimal;
+    margin-top: 30px;
+}
+
+.agenda_title {
+    font-size: $font-size-h4;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+}
+
+.agenda_li {
+    font-size: $base-font-size;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
+    line-height: $h2-line-height;
+    margin: 20px 0px;
+}

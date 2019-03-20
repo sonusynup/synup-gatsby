@@ -1,0 +1,25 @@
+//banner
+.banner_wrapper h4 {
+    text-align: center;
+}
+
+.banner_logoWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 3.5rem 0px;
+
+    @include bp-md {
+        margin-top: 1.25rem;
+        margin-bottom: 0px;
+    }
+}
+
+.banner_logo {
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25rem;
+}

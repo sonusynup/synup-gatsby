@@ -1,0 +1,458 @@
+//
+// Base styles
+//
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  box-shadow: 0 3px 1px 0 rgba(152, 168, 255, 0.31);
+  padding: 1.5rem;
+  @include border-radius($card-border-radius);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+  min-height: 245px;
+  max-width: 420px;
+  cursor: pointer;
+
+  &:hover {
+    background: $blue;
+
+    .card_title,
+    .card_text,
+    .linkText_span {
+      color: $white;
+    }
+
+    svg {
+      opacity: 1;
+      right: -1.5rem;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 6.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 145px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &.card_iconBg {
+      margin-bottom: 1.875rem;
+    }
+  }
+}
+
+.card_transparent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  padding: 1.5rem;
+  @include border-radius($card-border-radius);
+}
+
+.card_block {
+  text-align: center;
+}
+
+.card_block p {
+  opacity: 0.6;
+  font-size: $font-size-h5;
+  color: $heading-color;
+  letter-spacing: $p-letter-spacing;
+  text-align: center;
+  line-height: $lead-line-height;
+  margin: 3rem 0;
+  margin-bottom: 5rem;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 3rem;
+
+  }
+}
+
+.card_title {
+  font-weight: $medium-font;
+  font-size: $nav-font-size;
+  color: $blue;
+  letter-spacing: $no-letter-spacing;
+  line-height: 1.16;
+  margin: 0px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.card-subtitle {
+  margin-top: -($card-spacer-y / 2);
+  margin-bottom: 0;
+}
+
+.card_text:last-child {
+  margin-bottom: 2rem;
+}
+
+.card-link {
+  @include hover {
+    text-decoration: none;
+  }
+
+  +.card-link {
+    margin-left: $card-spacer-x;
+  }
+}
+
+.card {
+  >.list-group:first-child {
+    .list-group-item:first-child {
+      @include border-top-radius($card-border-radius);
+    }
+  }
+
+  >.list-group:last-child {
+    .list-group-item:last-child {
+      @include border-bottom-radius($card-border-radius);
+    }
+  }
+}
+
+
+//
+// Optional textual caps
+//
+
+.card-header {
+  padding: $card-spacer-y $card-spacer-x;
+  margin-bottom: 0; // Removes the default margin-bottom of <hN>
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+
+  &:first-child {
+    @include border-radius($card-border-radius-inner $card-border-radius-inner 0 0);
+  }
+}
+
+.card_footer {
+
+  &:last-child {
+    @include border-radius(0 0 $card-border-radius-inner $card-border-radius-inner);
+  }
+}
+
+
+//
+// Header navs
+//
+
+.card-header-tabs {
+  margin-right: -($card-spacer-x / 2);
+  margin-bottom: -$card-spacer-y;
+  margin-left: -($card-spacer-x / 2);
+  border-bottom: 0;
+}
+
+.card-header-pills {
+  margin-right: -($card-spacer-x / 2);
+  margin-left: -($card-spacer-x / 2);
+}
+
+
+//
+// Background variations
+//
+
+.card-primary {
+  @include card-variant($brand-primary, $brand-primary);
+}
+
+.card-success {
+  @include card-variant($brand-success, $brand-success);
+}
+
+.card-info {
+  @include card-variant($brand-info, $brand-info);
+}
+
+.card-warning {
+  @include card-variant($brand-warning, $brand-warning);
+}
+
+.card-danger {
+  @include card-variant($brand-danger, $brand-danger);
+}
+
+// Remove all backgrounds
+.card-outline-primary {
+  @include card-outline-variant($btn_primary-bg);
+}
+
+.card-outline-secondary {
+  @include card-outline-variant($btn-secondary-border);
+}
+
+.card-outline-info {
+  @include card-outline-variant($btn-info-bg);
+}
+
+.card-outline-success {
+  @include card-outline-variant($btn-success-bg);
+}
+
+.card-outline-warning {
+  @include card-outline-variant($btn-warning-bg);
+}
+
+.card-outline-danger {
+  @include card-outline-variant($btn-danger-bg);
+}
+
+//
+// Inverse text within a card for use with dark backgrounds
+//
+
+.card-inverse {
+  @include card-inverse;
+}
+
+//
+// Blockquote
+//
+
+.card_blockquote {
+  padding: 0;
+  margin-bottom: 0;
+  border-left: 0;
+}
+
+// Card image
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $card-img-overlay-padding;
+}
+
+
+
+// Card image caps
+.card_imgTop {
+  max-width: 100px;
+  margin-top: -100px;
+  -webkit-box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
+
+  @include media-breakpoint-up(xs) {
+    // box-shadow: none;
+  }
+}
+
+.card-img-bottom {
+  @include border-bottom-radius($card-border-radius-inner);
+}
+
+
+// Card deck
+
+.card_iconBg {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url(../images/svg/card-icon.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-image: url(../images/svg/card-icon-white.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .card_deck {
+    display: flex;
+    flex-flow: row wrap;
+
+    .card_icon {
+      display: flex;
+      flex: 1 0 0;
+      flex-direction: column;
+      justify-content: space-between;
+
+      // Selectively apply horizontal margins to cards to avoid doing the
+      // negative margin dance like our grid. This differs from the grid
+      // due to the use of margins as gutters instead of padding.
+      &:not(:first-child) {
+        margin-left: $card_deck-margin;
+      }
+
+      &:not(:last-child) {
+        margin-right: $card_deck-margin;
+      }
+    }
+
+    .card_iconBg {
+      display: flex;
+      flex: 1 0 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-image: url(../images/svg/card-icon.svg);
+      background-position: right bottom;
+      background-repeat: no-repeat;
+
+      &:hover {
+        background-image: url(../images/svg/card-icon-white.svg);
+      }
+
+      // Selectively apply horizontal margins to cards to avoid doing the
+      // negative margin dance like our grid. This differs from the grid
+      // due to the use of margins as gutters instead of padding.
+      &:not(:first-child) {
+        margin-left: $card_deck-margin;
+      }
+
+      &:not(:last-child) {
+        margin-right: $card_deck-margin;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card_deck {
+    margin-top: 3.25rem;
+
+    .card_iconBg {
+      background: $blue;
+      background-image: url(../images/svg/card-icon-white.svg);
+      background-position: right bottom;
+      background-repeat: no-repeat;
+    }
+
+    .card_title,
+    .card_text,
+    .linkText_span {
+      color: $white;
+    }
+
+    .btn_arrow svg {
+      opacity: 1;
+      right: -1.5rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card_deck {
+    .card_icon {
+      background: $blue;
+    }
+
+    .card_title,
+    .card_text,
+    .linkText_span {
+      color: $white;
+    }
+
+    .btn_arrow svg {
+      opacity: 1;
+      right: -1.5rem;
+    }
+  }
+}
+
+
+//
+// Card groups
+//
+
+@include media-breakpoint-up(sm) {
+  .card-group {
+    display: flex;
+    flex-flow: row wrap;
+
+    .card {
+      flex: 1 0 0;
+
+      +.card {
+        margin-left: 0;
+        border-left: 0;
+      }
+
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &:first-child {
+          @include border-right-radius(0);
+
+          .card_imgTop {
+            border-top-right-radius: 0;
+          }
+
+          .card-img-bottom {
+            border-bottom-right-radius: 0;
+          }
+        }
+
+        &:last-child {
+          @include border-left-radius(0);
+
+          .card_imgTop {
+            border-top-left-radius: 0;
+          }
+
+          .card-img-bottom {
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+
+          .card_imgTop,
+          .card-img-bottom {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//
+// Columns
+//
+
+@include media-breakpoint-up(sm) {
+  .card-columns {
+    column-count: $card-columns-count;
+    column-gap: $card-columns-gap;
+
+    .card {
+      display: inline-block; // Don't let them vertically span multiple columns
+      width: 100%; // Don't let their width change
+      margin-bottom: $card-columns-margin;
+    }
+  }
+}
+
+.card_text {
+  font-size: $base-font-size;
+  color: $heading-color;
+  letter-spacing: $no-letter-spacing;
+  line-height: $lead-line-height;
+  margin: 2rem 0;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
