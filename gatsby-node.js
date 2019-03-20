@@ -1,5 +1,26 @@
 const path = require('path')
 
+// Connects the page under home folder with index page
+exports.onCreatePage = ({ page, actions }) => {
+  const { deletePage, createPage } = actions
+
+  return new Promise(resolve => {
+    
+    if (page.componentPath === `${__dirname}/src/pages/home/index.js`) {
+      // Delete that route
+      deletePage(page)
+
+      // create a new page but with '/' as path
+      createPage({
+        ...page,
+        path: '/',
+      })
+    }
+
+    resolve()
+  })
+}
+
 // Handles dynamic pages which essentialy creates all the resource pages
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
