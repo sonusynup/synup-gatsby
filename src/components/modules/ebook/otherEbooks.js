@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import LinkedEbook from '../../molecules/LinkedEbook'
+import LinkedEbook from '../../molecules/linkedEbook'
 import Button from '../../atoms/button';
 
 // Component which handles other ebooks
