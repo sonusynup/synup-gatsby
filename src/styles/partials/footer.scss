@@ -8,18 +8,18 @@
     border-bottom: 1px solid #ccc;
     padding-bottom: 4rem;
 
-    @include bp-lg {
+    @media only screen and (max-width: 1199px) {
         padding-bottom: 4rem;
     }
-    @include bp-md {
+   @media only screen and (max-width: 991px){
         flex-wrap: wrap;
     }
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
         padding-bottom: 3rem;
     }
 
-    @include bp-xs {
+    @media only screen and (max-width: 575px) {
         padding-bottom: 2rem;
     }
 
@@ -29,40 +29,40 @@
 .footer_linksWrapper {
     flex: 1;
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
         flex: inherit;
         max-width: 50%;
         width: 100%;
         margin-bottom: 2rem;
     }
 
-    @include bp-xs {
+    @media only screen and (max-width: 575px) {
         // max-width: 100%;
     }
 }
 
 .footer_link {
     opacity: 0.8;
-    font-size: $nav-font-size;
-    color: $base-font-color;
+    // font-size: $nav-font-size;
+    // color: $base-font-color;
     letter-spacing: -0.2px;
     margin: 12px 0;
 
     &:hover {
         opacity: 1;
-        color: $brand-blue;
+        // color: $brand-blue;
     }
 
-    @include bp-md {
+   @media only screen and (max-width: 991px){
         letter-spacing: 0px;
         margin: 10px 0;
     }
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
         margin: 8px 0;
     }
 
-    @include bp-xs {
+    @media only screen and (max-width: 575px) {
         font-size: 12px;
         margin: 5px 0;
     }
@@ -77,14 +77,14 @@ ul {
 .footer_linksheading {
     display: flex;
     align-items: center;
-    font-size: $nav-font-size;
-    font-weight: $medium-font;
-    color: $heading-color;
-    letter-spacing: $no-letter-spacing;
+    // font-size: $nav-font-size;
+    // font-weight: $medium-font;
+    // color: $heading-color;
+    // letter-spacing: $no-letter-spacing;
     min-height: 33px;
     margin-bottom: 20px;
 
-    @include bp-md {
+   @media only screen and (max-width: 991px){
         font-size: 13px;
         margin-bottom: 0px;
         letter-spacing: 0.02em;
@@ -100,7 +100,7 @@ ul {
     margin-right: 8px;
     padding-top: 15px;
 
-    @include bp-md {
+   @media only screen and (max-width: 991px){
         margin-right: 5px;
         padding-top: 5px;
     }
@@ -114,7 +114,7 @@ ul {
         svg {
             circle {
                 opacity: 1;
-                fill: $brand-blue;
+                // fill: $brand-blue;
             }
         }
     }
@@ -124,8 +124,8 @@ ul {
 .label_caption {
     background: radial-gradient(circle at top left, #18acbd 0%, #00d09c 100%);
     font-size: 10px;
-    color: $white;
-    letter-spacing: $no-letter-spacing;
+    // color: $white;
+    // letter-spacing: $no-letter-spacing;
     text-align: center;
     line-height: 8px;
     padding: 2px 10px;
@@ -138,7 +138,7 @@ ul {
     flex-wrap: wrap;
     flex-direction: row-reverse;
 
-    @include bp-xs {
+    @media only screen and (max-width: 575px) {
         padding-top: 1rem;
         align-items: center;
         justify-content: space-between;
@@ -148,7 +148,7 @@ ul {
 
         margin: 0 1rem;
 
-        @include bp-xs {
+        @media only screen and (max-width: 575px) {
             font-size: 10px;
             margin: 0;
             white-space: nowrap;

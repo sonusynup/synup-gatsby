@@ -16,6 +16,7 @@ import Footer from './footer'
 // TODO: Split these files as per indiviual scss
 import "./layout.scss"
 
+
 // Handles the layout of the app
 // Layout includes headers, app and footer.
 // Each route will replace the app as it is there
