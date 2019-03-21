@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 
 import TransparentCard from '../../../atoms/cardTransparent'
 
-// Main products section of the home page
-// TODO: Change layout of the image
+// Product section with image (Example Home page)
 const ProductSectionWithImage = ({
   productSectionDescription,
   productFeatures,
