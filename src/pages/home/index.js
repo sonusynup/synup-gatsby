@@ -24,12 +24,12 @@ const IndexPage = ({
   }
 }) => (
   <Layout>
-    <Hero {...contentfulHeroSection} />
-    <Partner {...filterFromMultipleItems(allContentfulPartnerSection, 'partnerSectionTitle', 'We power location intelligence for over 150,000 businesses')} />
-    <ProductWhatWeDo {...filterFromMultipleItems(allContentfulProductSection, 'productSectionTitle', 'What we do')} />
-    <MainProducts {...filterFromMultipleItems(allContentfulProductSection, 'productSectionTitle', 'Main products')} />
-    <Features {...filterFromMultipleItems(allContentfulFeaturesSection, 'featureTitle', 'Synup Premium Network')} />
-    <CaseStudy {...filterFromMultipleItems(allContentfulCaseStudySection, 'caseSectionType', 'Type 1')} />
+    {/* <Hero {...contentfulHeroSection} /> */}
+    {/* <Partner {...filterFromMultipleItems(allContentfulPartnerSection, 'partnerSectionTitle', 'We power location intelligence for over 150,000 businesses')} /> */}
+    {/* <ProductWhatWeDo {...filterFromMultipleItems(allContentfulProductSection, 'productSectionTitle', 'What we do')} /> */}
+    {/* <MainProducts {...filterFromMultipleItems(allContentfulProductSection, 'productSectionTitle', 'Main products')} /> */}
+    {/* <Features {...filterFromMultipleItems(allContentfulFeaturesSection, 'featureTitle', 'Synup Premium Network')} /> */}
+    {/* <CaseStudy {...filterFromMultipleItems(allContentfulCaseStudySection, 'caseSectionType', 'Type 1')} /> */}
   </Layout>
 )
 

@@ -26,6 +26,158 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
   {
+    allContentfulWebpage(limit: 100) {
+      edges{
+        node {
+          webpageName
+          webpageSections {
+            __typename
+            ... on ContentfulPartnerSection {
+              partnerSectionTitle
+              partnerList {
+                partnerIndustry
+                partnerPhoto {
+                  file {
+                    url
+                  }
+                }
+                partnerLogo {
+                  file {
+                    url
+                  }
+                }
+                partnerName
+                partnerGoal
+                partnerSuccess
+                partnerIndustry
+                partnerDescription {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+                partnerTestimonial {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+              }
+            }
+            ... on ContentfulHeroSection {
+              id,
+              heroTitle
+              heroButtonType
+              heroButtonText
+              heroButtonLink
+              heroBackground {
+                file{
+                  url
+                }
+              }
+              heroDescription {
+                childContentfulRichText {
+                  html
+                }
+              }   
+            }
+            ... on ContentfulProductSection {
+               id
+              productSectionTitle
+              productSectionDescription {
+                childContentfulRichText {
+                  html
+                }
+              }
+              productSectionImage {
+                file {
+                  url
+                }
+              }
+              productFeatures {
+                featureTitle
+                featureIcon {
+                  file {
+                    url
+                  }
+                }
+                featureDescription {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+              }
+            }
+            ... on ContentfulFeaturesSection {
+              id
+              featureName
+              featureTitle
+              featureImage {
+                file {
+                  url
+                }
+              }
+              contentAlignment
+              featureDescription{
+                childContentfulRichText {
+                  html
+                }
+              }
+              featureButton
+              featureButtonType
+              featureUrl
+              featureImage{
+                file {
+                  url
+                }
+              }
+            }
+            ... on ContentfulCaseStudySection {
+              id
+              caseSectionType
+              caseSectionUrl
+              caseSectionButton
+              caseSectionPartner {
+                partnerName
+                partnerGoal
+                partnerLogo {
+                  file{
+                    url
+                  }
+                }
+                partnerPhoto{
+                  file {
+                    url
+                  }
+                }
+                partnerIndustry
+                partnerDescription {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+                partnerTestimonial {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+              }
+              caseSectionButtonType
+              metricValue1
+              metricValue2
+              metricImage1 {
+                file {
+                  url
+                }
+              }
+              metricImage2 {
+                file {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     allContentfulGuides {
       edges {
         node {
@@ -190,6 +342,16 @@ exports.createPages = ({ graphql, actions }) => {
     const caseStudy = result.data.allContentfulCaseStudy.edges;
     const guides = result.data.allContentfulGuides.edges;
 
+    const allWebpages = result.data.allContentfulWebpage.edges;
+    allWebpages.map((page) => {
+      createPage({
+        path: page.node.webpageName,
+        component: path.resolve('./src/templates/content.js'),
+        context: {
+          sections: page.node.webpageSections
+        }
+      })
+    })
     // Create dynamic pages for ebook
     ebooks.map((ebook) => {
       createPage({
@@ -234,5 +396,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
     })
-  }) 
+  })
+
+  // Logic for generating all dynamic pages
+  
 }
