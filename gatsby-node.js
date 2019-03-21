@@ -80,7 +80,8 @@ exports.createPages = ({ graphql, actions }) => {
               }   
             }
             ... on ContentfulProductSection {
-               id
+              id
+              productSectionType
               productSectionTitle
               productSectionDescription {
                 childContentfulRichText {
