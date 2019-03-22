@@ -21,6 +21,7 @@ const ProductSectionWithTitle = ({
             true,
             feature.featureBackgroundImage,
             feature.featureBackgroundHoverImage,
+            feature.featureIcon,
             'card_iconBg'
           ))}
       />

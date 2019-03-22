@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Button from '../button'
+import isNull from '../../../helpers/isNull';
 
 class Card extends React.Component {
   state = {
@@ -15,7 +16,7 @@ class Card extends React.Component {
     })
   }
 
-  onMouseLeave = () => {
+  onMouseLeaveCard = () => {
     this.setState({
       isHovered: false,
     })
@@ -30,7 +31,8 @@ class Card extends React.Component {
       actionText,
       isHtml,
       bgImage,
-      bgHoverImage
+      bgHoverImage,
+      featureIcon,
     } = this.props;
     const image = !this.state.isHovered ? (bgImage && bgImage.file.url) : (bgHoverImage && bgHoverImage.file.url);
     return (
@@ -42,6 +44,11 @@ class Card extends React.Component {
       >
         <Link to={to}>
           <div className="card_body">
+            {
+              !isNull(featureIcon) && (
+                <img class="card_imgTop" src={featureIcon.file.url} alt=""></img>
+              )
+            }
             <h5 className="card_title">{title}</h5>
             {
               isHtml ? (
