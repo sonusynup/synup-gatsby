@@ -7,18 +7,13 @@ import BusinessDetails from './businessDetails'
 /* 
  * Case Study Molecule
  * Renders a testimonial component
- * Renders the advantage or business details of the case study
  */
 const CaseStudy = ({
   caseSectionType,
-  isAdvantage,
   partnerImage,
   partnerTestimonial,
   partnerName,
   partnerPosition,
-  advantageImage,
-  advantageIndustry,
-  advantageGoal,
   details
 }) => (
   <>
@@ -30,19 +25,9 @@ const CaseStudy = ({
       partnerName={partnerName}
       partnerPosition={partnerPosition}
     >
-      {
-        isAdvantage ? (
-          <Advantages
-            image={advantageImage}
-            industry={advantageIndustry}
-            goal={advantageGoal}
-          />
-        ) : (
-          <BusinessDetails
-            details={details}
-          />
-        )
-      }
+      <BusinessDetails
+        details={details}
+      />
     </Testimonial>
   </>
 )

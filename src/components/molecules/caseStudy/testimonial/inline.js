@@ -7,7 +7,8 @@ const Type2 = ({
   partnerPosition,
   children
 }) => (
-  <div class="testimonialWrapper">
+  <div className="blockWrapper">
+    <div class="testimonialWrapper">
       <p class="testimonialContent" dangerouslySetInnerHTML={{ __html: partnerTestimonial }} />
       <div class="testimonialAuthor">
         <div class="testimonialAuthor_img">
@@ -21,6 +22,10 @@ const Type2 = ({
         </div>
       </div>
     </div>
+    <div className="testimonial_wrapperCard">
+      {children}
+    </div>
+  </div>
 )
 
 export default Type2

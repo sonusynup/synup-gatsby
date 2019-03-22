@@ -2,22 +2,22 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-import Type1 from './type1'
-import Type2 from './type2'
+import DefaultTestimonial from './default'
+import InlineTestimonial from './inline'
 
 const Testimonial = ({
   type,
   ...props,
 }) => {
   switch (type) {
-    case 'Type 1':
+    case 'default':
       return (
-        <Type1 {...props} />
+        <DefaultTestimonial {...props} />
       )
       break;
-    case 'Type 2':
+    case 'inline':
       return (
-        <Type2 {...props} />
+        <InlineTestimonial {...props} />
       )
       break;
     default: 
