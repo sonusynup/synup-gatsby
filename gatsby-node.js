@@ -42,8 +42,14 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
             ... on ContentfulHeroSection {
-              id,
+              id
               heroTitle
+              heroType
+              heroIcon {
+                file {
+                  url
+                }
+              }
               heroButtonType
               heroButtonText
               heroButtonLink
@@ -56,7 +62,7 @@ exports.createPages = ({ graphql, actions }) => {
                 childContentfulRichText {
                   html
                 }
-              }   
+              }
             }
             ... on ContentfulProductSection {
               id
