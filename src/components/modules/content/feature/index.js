@@ -7,7 +7,7 @@ import FeatureWhitelabel from './FeatureWhitelabel'
 
 import Button from '../../../atoms/button';
 
-// TODO: Make the buttons generic
+// TODO: Make Wrapper class working well
 const Feature = ({
   featureType,
   ...props,
@@ -30,7 +30,7 @@ const Feature = ({
       break;
     case 'whitelabelType':
       FeatureContent = (
-        <FeatureDefault
+        <FeatureWhitelabel
           {...props}
         />
       )
