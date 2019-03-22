@@ -40,7 +40,7 @@ const Feature = ({
   return (
     <section class="section_wrapper">
       <div className="container">
-        <div class="blockWrapper">
+        <div class={`blockWrapper ${props.contentAlignment === 'Right align content' ? ' d-flex_reverse' : null}`}>
           {FeatureContent}
         </div>
       </div>
