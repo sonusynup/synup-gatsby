@@ -1,14 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const Testimonial = ({
-  isImageContained,
+const Type1 = ({
   partnerImage,
   partnerTestimonial,
   partnerName,
   partnerPosition,
   children
-}) => !isImageContained ? (
+}) => (
   <div className="blockWrapper">
     <div className="testimonialWrapper-customer">
       <div className="testimonialAuthorShadeimg">
@@ -33,28 +31,6 @@ const Testimonial = ({
     </div>
     {children}
   </div>
-  ) : (
-    <div class="testimonialWrapper">
-      <p class="testimonialContent">{partnerTestimonial}</p>
-      <div class="testimonialAuthor">
-        <div class="testimonialAuthor_img">
-          <figure>
-            <img src={partnerImage} class="avartar-img" alt="" />
-          </figure>
-        </div>
-        <div class="testimonialAuthor_details">
-          <h6 class="testimonialAuthor_name">{partnerName}</h6>
-          <p class="testimonialAuthor_position">{partnerPosition}</p>
-        </div>
-      </div>
-    </div>
 )
 
-Testimonial.propTypes = {
-  isImageContained: PropTypes.bool.isRequired,
-  partnerImage: PropTypes.string.isRequired,
-  partnerTestimonial: PropTypes.string.isRequired,
-  partnerName: PropTypes.string.isRequired,
-  partnerPosition: PropTypes.string.isRequired,
-}
-export default Testimonial
+export default Type1

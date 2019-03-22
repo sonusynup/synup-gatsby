@@ -10,7 +10,7 @@ import BusinessDetails from './businessDetails'
  * Renders the advantage or business details of the case study
  */
 const CaseStudy = ({
-  isImageContained,
+  caseSectionType,
   isAdvantage,
   partnerImage,
   partnerTestimonial,
@@ -23,7 +23,8 @@ const CaseStudy = ({
 }) => (
   <>
     <Testimonial
-      isImageContained={isImageContained}
+      type={caseSectionType}
+      caseSectionType={caseSectionType}
       partnerImage={partnerImage}
       partnerTestimonial={partnerTestimonial}
       partnerName={partnerName}

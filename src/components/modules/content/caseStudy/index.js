@@ -10,6 +10,7 @@ const CaseStudy = ({
     partnerTestimonial,
     partnerDescription
   },
+  caseSectionType,
   caseSectionUrl,
   metricImage1,
   metricImage2,
@@ -20,6 +21,7 @@ const CaseStudy = ({
     <div class="container">
       <CaseStudyMolecule
         partnerImage={partnerPhoto.file.url}
+        caseSectionType={caseSectionType}
         partnerTestimonial={partnerTestimonial.childContentfulRichText.html}
         partnerName={partnerName}
         partnerPosition={partnerDescription.childContentfulRichText.html}
