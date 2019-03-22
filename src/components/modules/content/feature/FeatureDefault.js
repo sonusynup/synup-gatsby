@@ -13,20 +13,18 @@ const FeatureDefault = ({
   featureTitle,
   featureName,
   featureDescription,
-  featureImage
+  featureImage,
+  featureIcon,
 }) => (
   <>
     <div className="leftBlock block_contentWrap">
-      <h3 className="block_contentWrap">{featureTitle}</h3>
-      <p className="block_contentText">{featureName}</p>
-      {
-        !isNull(featureDescription) && (
-          <ul
-            className="list_unstyled"
-            dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} 
-          />
-        )
-      }
+      {!isNull(featureIcon) && <img class="block_icon" src={featureIcon.file.url} alt="" />}
+      <h5 class="card_title">{featureName}</h5>
+      <h3 className="block_contentText">{featureTitle}</h3>  
+      <ul
+        className="list_unstyled"
+        dangerouslySetInnerHTML={{ __html: !isNull(featureDescription) ? featureDescription.childContentfulRichText.html : null }} 
+      />
       {
         !isNull(featureButton) && (
           <Link to={to}>

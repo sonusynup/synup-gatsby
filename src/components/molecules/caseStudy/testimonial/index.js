@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import DefaultTestimonial from './default'
 import InlineTestimonial from './inline'
+import CenteredTestimonial from './centered'
 
 const Testimonial = ({
   type,
@@ -20,6 +21,10 @@ const Testimonial = ({
         <InlineTestimonial {...props} />
       )
       break;
+    case 'centered':
+      return (
+        <CenteredTestimonial {...props} />
+      )
     default: 
         return null
   }

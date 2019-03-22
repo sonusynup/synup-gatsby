@@ -11,9 +11,11 @@ import BusinessDetails from './businessDetails'
 const CaseStudy = ({
   caseSectionType,
   partnerImage,
+  partnerLogo,
   partnerTestimonial,
   partnerName,
   partnerPosition,
+  partnerSuccess,
   details
 }) => (
   <>
@@ -24,6 +26,8 @@ const CaseStudy = ({
       partnerTestimonial={partnerTestimonial}
       partnerName={partnerName}
       partnerPosition={partnerPosition}
+      partnerLogo={partnerLogo}
+      partnerSuccess={partnerSuccess}
     >
       <BusinessDetails
         details={details}

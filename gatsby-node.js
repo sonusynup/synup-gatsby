@@ -107,6 +107,11 @@ exports.createPages = ({ graphql, actions }) => {
               featureName
               featureTitle
               featureType
+              featureIcon {
+                file {
+                  url
+                }
+              }
               featureImage {
                 file {
                   url
@@ -130,6 +135,7 @@ exports.createPages = ({ graphql, actions }) => {
               caseSectionPartner {
                 partnerName
                 partnerGoal
+                partnerSuccess
                 partnerLogo {
                   file{
                     url
