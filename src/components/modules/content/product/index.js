@@ -1,7 +1,7 @@
-import React from 'React'
+import React from 'react'
 
-import ProductSectionWithImage from './ProductSectionWithImage'
-import ProductSectionWithTitle from './ProductSectionWithTitle'
+import ProductSectionWithImage from './ProductSectionWithImages'
+import ProductSectionWithTitle from './ProductSectionWithTitles'
 
 const Product = ({
   productSectionType,
