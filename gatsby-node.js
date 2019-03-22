@@ -329,6 +329,7 @@ exports.createPages = ({ graphql, actions }) => {
     const guides = result.data.allContentfulGuides.edges;
 
     const allWebpages = result.data.allContentfulWebpage.edges;
+    // Creates all the pages as in the webpage section of contentful
     allWebpages.map((page) => {
       createPage({
         path: page.node.webpageName === 'home' ? '/' : page.node.webpageName,
@@ -383,7 +384,4 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
   })
-
-  // Logic for generating all dynamic pages
-  
 }
