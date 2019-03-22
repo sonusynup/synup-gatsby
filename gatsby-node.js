@@ -111,6 +111,7 @@ exports.createPages = ({ graphql, actions }) => {
               id
               featureName
               featureTitle
+              featureType
               featureImage {
                 file {
                   url

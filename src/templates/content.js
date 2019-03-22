@@ -21,7 +21,7 @@ const Content = (props) => {
                 <Hero {...section} />
               )
               break;
-            case 'ContentfulFeatureSection':
+            case 'ContentfulFeaturesSection':
               return (
                 <Feature {...section} />
               )
