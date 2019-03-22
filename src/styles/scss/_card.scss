@@ -268,12 +268,12 @@
   flex: 1 0 0;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: url(../images/svg/card-icon.svg);
+  // background-image: url(../images/svg/card-icon.svg);
   background-position: right bottom;
   background-repeat: no-repeat;
 
   &:hover {
-    background-image: url(../images/svg/card-icon-white.svg);
+    // background-image: url(../images/svg/card-icon-white.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
   }
@@ -307,12 +307,12 @@
       flex: 1 0 0;
       flex-direction: column;
       justify-content: flex-start;
-      background-image: url(../images/svg/card-icon.svg);
+      // background-image: url(../images/svg/card-icon.svg);
       background-position: right bottom;
       background-repeat: no-repeat;
 
       &:hover {
-        background-image: url(../images/svg/card-icon-white.svg);
+        // background-image: url(../images/svg/card-icon-white.svg);
       }
 
       // Selectively apply horizontal margins to cards to avoid doing the
@@ -335,7 +335,7 @@
 
     .card_iconBg {
       background: $blue;
-      background-image: url(../images/svg/card-icon-white.svg);
+      // background-image: url(../images/svg/card-icon-white.svg);
       background-position: right bottom;
       background-repeat: no-repeat;
     }

@@ -2496,12 +2496,12 @@ tbody.collapse.show {
   flex: 1 0 0;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: url(./images/svg/card-icon.svg);
+  // background-image: url(./images/svg/card-icon.svg);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
 .card_iconBg:hover {
-  background-image: url(./images/svg/card-icon-white.svg);
+  // background-image: url(./images/svg/card-icon-white.svg);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -2528,12 +2528,12 @@ tbody.collapse.show {
     flex: 1 0 0;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url(./images/svg/card-icon.svg);
+    // background-image: url(./images/svg/card-icon.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
   }
   .card_deck .card_iconBg:hover {
-    background-image: url(./images/svg/card-icon-white.svg);
+    // background-image: url(./images/svg/card-icon-white.svg);
   }
   .card_deck .card_iconBg:not(:first-child) {
     margin-left: 15px;
@@ -2548,7 +2548,7 @@ tbody.collapse.show {
   }
   .card_deck .card_iconBg {
     background: #4865FF;
-    background-image: url(./images/svg/card-icon-white.svg);
+    // background-image: url(./images/svg/card-icon-white.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
   }

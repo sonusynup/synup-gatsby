@@ -100,6 +100,16 @@ exports.createPages = ({ graphql, actions }) => {
                     url
                   }
                 }
+                featureBackgroundImage {
+                  file {
+                    url
+                  }
+                }
+                featureBackgroundHoverImage {
+                  file {
+                    url
+                  }
+                }
                 featureDescription {
                   childContentfulRichText {
                     html
@@ -126,11 +136,6 @@ exports.createPages = ({ graphql, actions }) => {
               featureButton
               featureButtonType
               featureUrl
-              featureImage{
-                file {
-                  url
-                }
-              }
             }
             ... on ContentfulCaseStudySection {
               id

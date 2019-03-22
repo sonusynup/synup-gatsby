@@ -22,7 +22,12 @@ const Product = ({
         />
       )
       break;
-
+    case 'section with none':
+      return (
+        <ProductSectionWithTitle
+          {...props}
+        />
+      )
     default:
       return null;
   }

@@ -11,6 +11,8 @@ const CardList = ({
         <Card
           title={list.title}
           description={list.description}
+          bgImage={list.bgImage}
+          bgHoverImage={list.bgHoverImage}
           bgClass={list.bgClass}
           actionText={list.actionText}
           isHtml={list.isHtml}
