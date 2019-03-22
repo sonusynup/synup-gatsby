@@ -1,6 +1,15 @@
 import React from 'react'
 
-const FeaturInverted = () => (
+import Button from '../../../atoms/button'
+
+const FeatureInverted = ({
+  actionType,
+  featureButton,
+  to,
+  featureTitle,
+  featureName,
+  featureDescription,
+}) => (
   <div class="leftBlock">
     <h3 class="whiteTitle">{featureTitle}</h3>
     {

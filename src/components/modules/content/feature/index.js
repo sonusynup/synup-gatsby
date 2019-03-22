@@ -1,6 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+
+import FeatureDefault from './FeatureDefault'
+import FeatureInverted from './FeatureInverted'
+import FeatureWhitelabel from './FeatureWhitelabel'
 
 import Button from '../../../atoms/button';
 
@@ -9,29 +12,40 @@ const Feature = ({
   featureType,
   ...props,
 }) => {
+  let FeatureContent = null;
   switch (featureType) {
     case 'default':
-      return (
+      FeatureContent = (
         <FeatureDefault
           {...props}
         />
       )
       break;
     case 'inverted':
-      return (
+      FeatureContent = (
         <FeatureInverted
           {...props}
         />
       )
       break;
     case 'whitelabelType':
-      return (
+      FeatureContent = (
         <FeatureDefault
           {...props}
         />
       )
       break;
   }
+
+  return (
+    <section class="section_wrapper">
+      <div className="container">
+        <div class="blockWrapper">
+          {FeatureContent}
+        </div>
+      </div>
+    </section>
+  )
 }
 
 Feature.propTypes = {
