@@ -11,12 +11,13 @@ const HeroDefault = ({
   heroButtonText,
   heroButtonLink,
   heroBackground,
+  heroDescription,
 }) => (
   <section className="section_homepage" style={{ backgroundImage: `url(${heroBackground.file.url})` }}>
     <div className="container">
       <div className="heroblock">
         <h2>{heroTitle}</h2>
-        <p dangerouslySetInnerHTML={{ __html: heroTitle }}/>
+        <p dangerouslySetInnerHTML={{ __html: heroDescription.childContentfulRichText.html }}/>
         <Link to={heroButtonLink}>
           <Button type="primary" text={heroButtonText}/>
         </Link>

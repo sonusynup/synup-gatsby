@@ -10,19 +10,21 @@ const FeatureInverted = ({
   featureName,
   featureDescription,
 }) => (
-  <div class="leftBlock">
-    <h3 class="whiteTitle">{featureTitle}</h3>
-    {
-      featureDescription !== null && (
-        <ul
-          className="list_unstyled"
-          dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} 
-        />
-      )
-    }
-    <Button type="invert-primary" text="GET STARTED" />
-    <span class="space"></span>
-    <Button type="invert-secondary" text="LEARN MORE" />
+  <div className="enterprise_blockWrapper">
+    <div className="leftBlock">
+      <h3 className="whiteTitle">{featureTitle}</h3>
+      {
+        featureDescription !== null && (
+          <ul
+            className="list_unstyled whiteTitle"
+            dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} 
+          />
+        )
+      }
+      <Button type="invert-primary" text="GET STARTED" />
+      <span class="space"></span>
+      <Button type="invert-secondary" text="LEARN MORE" />
+    </div>
   </div>
 )
 

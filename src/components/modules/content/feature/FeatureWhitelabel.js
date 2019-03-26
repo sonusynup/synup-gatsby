@@ -16,27 +16,29 @@ const FeatureWhitelabel = ({
   featureImage
 }) => (
   <>
+  <div className="whitelabel_primaryWrapper">
     <div className="leftBlock block_contentWrap">
-      <h3 className="block_contentWrap">{featureTitle}</h3>
+      <h3 className="block_contentWrap whiteTitle">{featureTitle}</h3>
       <p className="block_contentText">{featureName}</p>
-      {
-        !isNull(featureDescription) && (
-          <ul
-            className="list_unstyled"
-            dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} 
-          />
-        )
-      }
-      {
-        !isNull(featureButton) && (
-          <Link to={to}>
-            <Button
-              type={getButtonClass(featureButtonType)}
-              text={featureButton}
+        {
+          !isNull(featureDescription) && (
+            <p
+              className="list_unstyled"
+              dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} 
             />
-          </Link>
-        )
-      }      
+          )
+        }
+        {
+          !isNull(featureButton) && (
+            <Link to={to}>
+              <Button
+                type={getButtonClass(featureButtonType)}
+                text={featureButton}
+              />
+            </Link>
+          )
+        }      
+      </div>
     </div>
     {
       !isNull(featureImage) && (

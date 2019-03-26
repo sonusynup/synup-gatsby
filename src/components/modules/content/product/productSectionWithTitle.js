@@ -6,12 +6,23 @@ import generateCardItem from '../../../../helpers/generateCardItem'
 // Component handling what we do section
 const ProductSectionWithTitle = ({
   productFeatures,
+  productSectionTitle,
+  productSectionDescription
 }) => (
   <section>
     <div className="container">
       <div className="card_block">
-        <h3>What we do</h3>
-        <p>Select your business type to get started</p>
+        {
+          productSectionTitle !== null ? (
+            <h3>{productSectionTitle}</h3>
+          ) : null
+        }
+        {
+          productSectionDescription !== null ? (
+            <p dangerouslySetInnerHTML={{ __html: productSectionDescription.childContentfulRichText.html }}/>
+          ) : null
+        }
+
       </div>
       <CardList
         listItems={productFeatures.map(feature => generateCardItem(

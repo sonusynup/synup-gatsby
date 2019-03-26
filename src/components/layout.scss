@@ -5081,6 +5081,23 @@ section {
   padding: 5rem;
   border-radius: 10px;
   background-image: linear-gradient(-235deg, #071563 0%, #4865FF 100%);
+  width: 100%;
+
+  li {
+      padding-left: 3rem;
+      background-image: url(./images/svg/whitetick.svg);
+      background-repeat: no-repeat;
+      background-position: left top 2px;
+      margin-bottom: 1.875rem;
+      line-height: 1.444;
+      list-style-type: none;
+      min-height: 30px;
+      font-size: 1.125rem;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+    }
 }
 @media only screen and (max-width: 991px) {
   .enterprise_blockWrapper {
@@ -6610,6 +6627,11 @@ iframe.embed-responsive-item {
   padding: 2.5rem;
   border-radius: 6px;
   background-size: cover;
+  width: 100%;
+
+  p {
+      color: #ffffff;
+  }
 }
 @media only screen and (max-width: 767px) {
   .whitelabel_primaryWrapper {
