@@ -40,9 +40,16 @@ section {
     margin-bottom: 3.75rem;
     max-width: 480px;
 
+    ul {
+        margin-top: 5rem;
+    }
+
     @include bp-lg {
         margin-top: 2rem;
         margin-bottom: 2rem;
+    ul {
+        margin-top: 2rem;
+        }
     }
 }
 
@@ -166,6 +173,9 @@ section {
     }
     p{
         color: $white;
+    }
+    h3 {
+        max-width: 550px;
     }
 }
 
