@@ -132,6 +132,24 @@ exports.createPages = ({ graphql, actions }) => {
                   url
                 }
               }
+              featuredCaseStudy {
+              	partnerTestimonial {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+                partnerName
+                partnerDescription {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+                partnerPhoto {
+                  file {
+                    url
+                  }
+                }
+              }
             }
             ... on ContentfulCaseStudySection {
               id
