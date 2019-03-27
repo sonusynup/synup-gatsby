@@ -50,6 +50,7 @@ exports.createPages = ({ graphql, actions }) => {
                   url
                 }
               }
+              heroCaption
               heroButtonType
               heroButtonText
               heroButtonLink
