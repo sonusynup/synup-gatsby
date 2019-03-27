@@ -143,7 +143,7 @@ nav {
         &:after {
             position: absolute;
             top: 50%;
-            background-image: url(../images/svg/Arrow/downarrowblack.svg);
+            // background-image: url(../images/svg/Arrow/downarrowblack.svg);
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -180,7 +180,7 @@ nav {
         color: $blue;
 
         &:after {
-            background-image: url(../images/svg/Arrow/downarrowblue.svg);
+            // background-image: url(../images/svg/Arrow/downarrowblue.svg);
         }
 
         &:last-child {
@@ -378,7 +378,7 @@ header.navbar.header--top {
         }
 
         &:after {
-            background-image: url(../images/svg/Arrow/downarrowwhite.svg)
+            // background-image: url(../images/svg/Arrow/downarrowwhite.svg)
         }
 
         &:last-child:after {
@@ -772,7 +772,7 @@ header.navbar.header--top {
 
     .nav-link.active {
         &:after {
-            background-image: url(../images/svg/Arrow/uparrowblue.svg);
+            // background-image: url(../images/svg/Arrow/uparrowblue.svg);
         }
     }
 

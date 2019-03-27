@@ -1,36 +1,35 @@
-$grid-columns: 12;
 //----------------------------------*\
 // SCSS bootstrap
 //----------------------------------*/
-@import "bootstrap";
-@import 'modules/variables.scss';
-//----------------------------------*\
-// SCSS MIXINS
-//----------------------------------*/
-@import 'mixins/breakpoints.scss';
-@import 'mixins/color';
-//----------------------------------*\
-// SCSS MODULES
-//----------------------------------*/
-@import 'modules/defaults.scss';
-@import 'modules/colors.scss';
-@import 'modules/typography.scss';
-@import 'modules/button.scss';
+@import "./bootstrap.scss";
+@import './modules/variables.scss';
+// //----------------------------------*\
+// // SCSS MIXINS
+// //----------------------------------*/
+@import './mixins/breakpoints.scss';
+@import './mixins/color.scss';
+// //----------------------------------*\
+// // SCSS MODULES
+// //----------------------------------*/
+@import './modules/defaults.scss';
+@import './modules/colors.scss';
+@import './modules/typography.scss';
+@import './modules/buttons.scss';
 
-html {
-  body {
-      font-size: $base-font-size;
-  }
-
-  @include bp-md {
-      font-size: 100%;
-  }
-
-  @include bp-sm {
-      font-size: 90%;
-  }
-
-  @include bp-xs {
-      font-size: 85%;
-  }
-}
+@import './partials/header.scss';
+@import './partials/footer.scss';
+@import './partials/home-page.scss';
+@import './partials/herosection.scss';
+@import './partials/label.scss';
+@import './partials/testimonial.scss';
+@import './partials/productsection.scss';
+@import './partials/grandientsection.scss';
+@import './partials/bannersection.scss';
+@import './partials/form.scss';
+@import './partials/managesection.scss';
+@import './partials/learnsection.scss';
+@import './partials/webinarsection.scss';
+@import './partials/casestudysection.scss';
+@import './partials/whitelabel.scss';
+@import './partials/guidetemplate.scss';
+@import './partials/ebooksection.scss';

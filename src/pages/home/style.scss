@@ -1,20 +1,17 @@
+@import "../../styles/common.scss";
 //Home page styles
-// main {
-//     padding-top: 5rem;
-// }
-
 section {
     padding: 6rem 0px;
 
-    @include bp-lg {
+    @media only screen and (max-width: 1199px) {
         padding: 4rem 0px;
     }
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
         padding: 3rem 0px;
     }
 
-    @include bp-xs {
+    @media only screen and (max-width: 575px) {
         padding: 2rem 0px;
     }
 }
@@ -28,7 +25,7 @@ section {
     justify-content: space-between;
     align-content: center;
 
-    @include bp-lg {
+    @media only screen and (max-width: 1199px) {
         display: block;
     }
 }
@@ -40,16 +37,9 @@ section {
     margin-bottom: 3.75rem;
     max-width: 480px;
 
-    ul {
-        margin-top: 5rem;
-    }
-
-    @include bp-lg {
+    @media only screen and (max-width: 1199px) {
         margin-top: 2rem;
         margin-bottom: 2rem;
-    ul {
-        margin-top: 2rem;
-        }
     }
 }
 
@@ -59,11 +49,11 @@ section {
     background-repeat: no-repeat;
     background-position: left top 2px;
     margin-bottom: 1.875rem;
-    line-height: $h2-line-height;
+    // line-height: $h2-line-height;
     list-style-type: none;
     min-height: 30px;
-    font-size: $base-font-size;
-    color: $base-font-color;
+    // font-size: $base-font-size;
+    // color: $base-font-color;
 }
 
 //network
@@ -72,7 +62,7 @@ section {
     max-width: 520px;
     align-self: center;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         min-width: auto;
     }
 }
@@ -83,7 +73,7 @@ section {
     letter-spacing: 0px;
     line-height: $h2-line-height;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
     }
@@ -97,11 +87,11 @@ section {
     top: 0px;
     z-index: 999;
 
-    @include bp-lg {
+    @media only screen and (max-width: 1199px) {
         padding: 5px;
     }
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
         // display: none;
     }
 }
@@ -120,7 +110,7 @@ section {
     letter-spacing: $no-letter-spacing;
     line-height: 1.44;
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
 
         line-height: normal;
     }
@@ -149,33 +139,13 @@ section {
     padding: 5rem;
     border-radius: 10px;
     background-image: linear-gradient(-235deg, #071563 0%, #4865FF 100%);
-    width: 100%;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         padding: 2.5rem;
     }
 
-    @include bp-xs {
+    @media only screen and (max-width: 575px) {
         padding: 2.5rem 15px;
-    }
-
-    li {
-        padding-left: 3rem;
-        // background-image: url(../images/svg/whitetick.svg);
-        background-repeat: no-repeat;
-        background-position: left top 2px;
-        margin-bottom: 1.875rem;
-        line-height: $h2-line-height;
-        list-style-type: none;
-        min-height: 30px;
-        font-size: $base-font-size;
-        color: $white;
-    }
-    p{
-        color: $white;
-    }
-    h3 {
-        max-width: 550px;
     }
 }
 
@@ -186,14 +156,14 @@ section {
     margin-bottom: 3.75rem;
     max-width: 480px;
 
-    @include bp-lg {
+    @media only screen and (max-width: 1199px) {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
 }
 
 .space {
-    @include bp-xs {
+    @media only screen and (max-width: 575px) {
         display: none;
     }
 }
@@ -211,22 +181,10 @@ section {
     color: $white;
 }
 
-// .section_rectangularWrapperRight {
-//     background-image: url(../images/fullwidth-rectangleRight.png);
-//     background-repeat: no-repeat;
-//     background-position: right center;
-//     background-size: contain;
-// }
-// .section_rectangularWrapperLeft {
-//     background-image: url(../images/fullwidth-rectangleLeft.png);
-//     background-repeat: no-repeat;
-//     background-position: left center;
-//     background-size: contain;
-// }
 .block_body {
     align-self: flex-end;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         margin-top: 15px;
     }
 }
@@ -270,7 +228,7 @@ section {
     flex-wrap: wrap;
     margin: 4.5rem 0;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         margin: 2.5rem 0;
     }
 }
@@ -285,7 +243,7 @@ section {
     max-width: 735px;
     margin-right: 30px;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         flex: auto;
         margin-right: 0px;
         margin-bottom: 30px;
@@ -295,7 +253,7 @@ section {
 .blogWrapper_right {
     flex: 0.4;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         flex: auto;
     }
 
@@ -315,7 +273,7 @@ section {
     margin-right: 30px;
     text-align: center;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         flex: auto;
         margin-right: 0px;
         margin-bottom: 30px;
@@ -335,7 +293,7 @@ section {
     min-height: 200px;
     margin-bottom: 30px;
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
         padding: 15px;
     }
 
@@ -473,11 +431,11 @@ section {
     display: flex;
     flex-wrap: wrap;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         padding: 24px;
     }
 
-    @include bp-sm {
+    @media only screen and (max-width: 767px) {
         padding: 15px;
     }
 
@@ -531,7 +489,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         padding: 24px;
     }
 
@@ -633,7 +591,7 @@ section {
 }
 
 .blogWrapper_reverse {
-    flex-direction: row-reverse
+    flex-direction: row-reverse 
 }
 
 .blogWrapper_img {
@@ -643,7 +601,7 @@ section {
     max-width: 735px;
     margin-left: 30px;
 
-    @include bp-md {
+    @media only screen and (max-width: 991px) {
         flex: auto;
         margin-left: 0px;
         margin-bottom: 30px;

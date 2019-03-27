@@ -6,30 +6,28 @@
  */
 
 // Core variables and mixins
-@import "scss/variables";
-@import "scss/mixins";
+@import "./scss/variables.scss";
+@import "./scss/mixins.scss";
 
 // Reset and dependencies
 // Core CSS
-@import "scss/reboot";
+@import "./scss/reboot.scss";
 
-@import "scss/grid";
+@import "./scss/grid.scss";
 
-@import "scss/button";
+@import "./scss/buttons.scss";
 
-// Components
-@import "scss/transitions";
+// // Components
+@import "./scss/transitions.scss";
 
-@import "scss/nav";
-@import "scss/navbar";
-@import "scss/card";
+@import "./scss/nav.scss";
+@import "./scss/navbar.scss";
+@import "./scss/card.scss";
 
 
-// Components w/ JavaScript
+// // Components w/ JavaScript
 
-/*@import "scss/modal";*/
+@import "./scss/tooltip.scss";
 
-@import "scss/tooltip";
-
-// Utility classes
-@import "scss/utilities";
+// // Utility classes
+@import "./scss/utilities.scss";
