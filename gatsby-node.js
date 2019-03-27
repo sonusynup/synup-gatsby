@@ -1,31 +1,181 @@
 const path = require('path')
 
-// Connects the page under home folder with index page
-exports.onCreatePage = ({ page, actions }) => {
-  const { deletePage, createPage } = actions
-
-  return new Promise(resolve => {
-    
-    if (page.componentPath === `${__dirname}/src/pages/home/index.js`) {
-      // Delete that route
-      deletePage(page)
-
-      // create a new page but with '/' as path
-      createPage({
-        ...page,
-        path: '/',
-      })
-    }
-
-    resolve()
-  })
-}
-
 // Handles dynamic pages which essentialy creates all the resource pages
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   return graphql(`
   {
+    allContentfulWebpage(limit: 100) {
+      edges{
+        node {
+          webpageName
+          webpageSections {
+            __typename
+            ... on ContentfulPartnerSection {
+              partnerSectionTitle
+              partnerList {
+                partnerIndustry
+                partnerPhoto {
+                  file {
+                    url
+                  }
+                }
+                partnerLogo {
+                  file {
+                    url
+                  }
+                }
+                partnerName
+                partnerGoal
+                partnerSuccess
+                partnerIndustry
+                partnerDescription {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+                partnerTestimonial {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+              }
+            }
+            ... on ContentfulHeroSection {
+              id
+              heroTitle
+              heroType
+              heroIcon {
+                file {
+                  url
+                }
+              }
+              heroButtonType
+              heroButtonText
+              heroButtonLink
+              heroBackground {
+                file{
+                  url
+                }
+              }
+              heroDescription {
+                childContentfulRichText {
+                  html
+                }
+              }
+            }
+            ... on ContentfulProductSection {
+              id
+              productSectionType
+              productSectionTitle
+              productSectionDescription {
+                childContentfulRichText {
+                  html
+                }
+              }
+              productSectionImage {
+                file {
+                  url
+                }
+              }
+              productFeatures {
+                featureTitle
+                featureIcon {
+                  file {
+                    url
+                  }
+                }
+                featureBackgroundImage {
+                  file {
+                    url
+                  }
+                }
+                featureBackgroundHoverImage {
+                  file {
+                    url
+                  }
+                }
+                featureDescription {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+              }
+            }
+            ... on ContentfulFeaturesSection {
+              id
+              featureName
+              featureTitle
+              featureType
+              featureIcon {
+                file {
+                  url
+                }
+              }
+              featureImage {
+                file {
+                  url
+                }
+              }
+              contentAlignment
+              featureDescription{
+                childContentfulRichText {
+                  html
+                }
+              }
+              featureButton
+              featureButtonType
+              featureUrl
+            }
+            ... on ContentfulCaseStudySection {
+              id
+              caseSectionType
+              caseSectionUrl
+              caseSectionButton
+              caseSectionPartner {
+                partnerName
+                partnerGoal
+                partnerSuccess
+                partnerLogo {
+                  file{
+                    url
+                  }
+                }
+                partnerPhoto{
+                  file {
+                    url
+                  }
+                }
+                partnerIndustry
+                partnerDescription {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+                partnerTestimonial {
+                  childContentfulRichText {
+                    html
+                  }
+                }
+              }
+              caseSectionButtonType
+              metricValue1
+              metricValue2
+              metricImage1 {
+                file {
+                  url
+                }
+              }
+              metricImage2 {
+                file {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     allContentfulGuides {
       edges {
         node {
@@ -190,6 +340,17 @@ exports.createPages = ({ graphql, actions }) => {
     const caseStudy = result.data.allContentfulCaseStudy.edges;
     const guides = result.data.allContentfulGuides.edges;
 
+    const allWebpages = result.data.allContentfulWebpage.edges;
+    // Creates all the pages as in the webpage section of contentful
+    allWebpages.map((page) => {
+      createPage({
+        path: page.node.webpageName === 'home' ? '/' : page.node.webpageName,
+        component: path.resolve('./src/templates/content.js'),
+        context: {
+          sections: page.node.webpageSections
+        }
+      })
+    })
     // Create dynamic pages for ebook
     ebooks.map((ebook) => {
       createPage({
@@ -234,5 +395,5 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
     })
-  }) 
+  })
 }

@@ -7,41 +7,31 @@ import BusinessDetails from './businessDetails'
 /* 
  * Case Study Molecule
  * Renders a testimonial component
- * Renders the advantage or business details of the case study
  */
 const CaseStudy = ({
-  isImageContained,
-  isAdvantage,
+  caseSectionType,
   partnerImage,
+  partnerLogo,
   partnerTestimonial,
   partnerName,
   partnerPosition,
-  advantageImage,
-  advantageIndustry,
-  advantageGoal,
+  partnerSuccess,
   details
 }) => (
   <>
     <Testimonial
-      isImageContained={isImageContained}
+      type={caseSectionType}
+      caseSectionType={caseSectionType}
       partnerImage={partnerImage}
       partnerTestimonial={partnerTestimonial}
       partnerName={partnerName}
       partnerPosition={partnerPosition}
+      partnerLogo={partnerLogo}
+      partnerSuccess={partnerSuccess}
     >
-      {
-        isAdvantage ? (
-          <Advantages
-            image={advantageImage}
-            industry={advantageIndustry}
-            goal={advantageGoal}
-          />
-        ) : (
-          <BusinessDetails
-            details={details}
-          />
-        )
-      }
+      <BusinessDetails
+        details={details}
+      />
     </Testimonial>
   </>
 )

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Button from '../../atoms/button'
+import isNull from '../../../helpers/isNull'
 
 const BusinessDetails = ({
   details
@@ -12,11 +13,15 @@ const BusinessDetails = ({
         details.map((detail) => (
           <div className="va_set">
             <a href={detail.to}>
-              <img
-                src={detail.metricImage.file.url}
-                className="img_fluid"
-                alt=""
-              />
+              {
+                !isNull(detail.metricImage) && (
+                  <img
+                    src={detail.metricImage.file.url}
+                    className="img_fluid"
+                    alt=""
+                  />
+                )
+              }
             </a>
             <p className="va_text">
               <span className="primary_text">{detail.metricValue}</span>

@@ -34,7 +34,7 @@
 }
 
 .heroblock p {
-    opacity: 0.6;
+    opacity: 0.75;
     font-size: $pre-font-size;
     color: $base-font-color;
     letter-spacing: $p-letter-spacing;
@@ -103,6 +103,9 @@
 
 .block_contentWrap {
     max-width: 500px;
+    ul {
+        margin-top: 3.75rem;
+    }
 }
 
 .block_flexWrap {

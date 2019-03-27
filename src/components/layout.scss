@@ -2496,12 +2496,12 @@ tbody.collapse.show {
   flex: 1 0 0;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: url(./images/svg/card-icon.svg);
+  // background-image: url(./images/svg/card-icon.svg);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
 .card_iconBg:hover {
-  background-image: url(./images/svg/card-icon-white.svg);
+  // background-image: url(./images/svg/card-icon-white.svg);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -2528,12 +2528,12 @@ tbody.collapse.show {
     flex: 1 0 0;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url(./images/svg/card-icon.svg);
+    // background-image: url(./images/svg/card-icon.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
   }
   .card_deck .card_iconBg:hover {
-    background-image: url(./images/svg/card-icon-white.svg);
+    // background-image: url(./images/svg/card-icon-white.svg);
   }
   .card_deck .card_iconBg:not(:first-child) {
     margin-left: 15px;
@@ -2548,7 +2548,7 @@ tbody.collapse.show {
   }
   .card_deck .card_iconBg {
     background: #4865FF;
-    background-image: url(./images/svg/card-icon-white.svg);
+    // background-image: url(./images/svg/card-icon-white.svg);
     background-position: right bottom;
     background-repeat: no-repeat;
   }
@@ -5081,6 +5081,23 @@ section {
   padding: 5rem;
   border-radius: 10px;
   background-image: linear-gradient(-235deg, #071563 0%, #4865FF 100%);
+  width: 100%;
+
+  li {
+      padding-left: 3rem;
+      background-image: url(./images/svg/whitetick.svg);
+      background-repeat: no-repeat;
+      background-position: left top 2px;
+      margin-bottom: 1.875rem;
+      line-height: 1.444;
+      list-style-type: none;
+      min-height: 30px;
+      font-size: 1.125rem;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+    }
 }
 @media only screen and (max-width: 991px) {
   .enterprise_blockWrapper {
@@ -5559,7 +5576,7 @@ section {
 }
 
 .heroblock p {
-  opacity: 0.6;
+  opacity: 0.75;
   font-size: 1.5rem;
   color: #060E3D;
   letter-spacing: -0.03em;
@@ -5631,6 +5648,9 @@ section {
 
 .block_contentWrap {
   max-width: 500px;
+  ul {
+      margin-top: 3.75rem;
+  }
 }
 
 .block_flexWrap {
@@ -6610,6 +6630,11 @@ iframe.embed-responsive-item {
   padding: 2.5rem;
   border-radius: 6px;
   background-size: cover;
+  width: 100%;
+
+  p {
+      color: #ffffff;
+  }
 }
 @media only screen and (max-width: 767px) {
   .whitelabel_primaryWrapper {

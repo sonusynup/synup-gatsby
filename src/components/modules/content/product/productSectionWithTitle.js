@@ -4,16 +4,25 @@ import CardList from '../../../molecules/cardList';
 import generateCardItem from '../../../../helpers/generateCardItem'
 
 // Component handling what we do section
-const Product = ({
-  productSectionTitle,
-  productSectionDescription,
+const ProductSectionWithTitle = ({
   productFeatures,
+  productSectionTitle,
+  productSectionDescription
 }) => (
   <section>
     <div className="container">
       <div className="card_block">
-        <h3>{productSectionTitle}</h3>
-        <p>{productSectionDescription}</p>
+        {
+          productSectionTitle !== null ? (
+            <h3>{productSectionTitle}</h3>
+          ) : null
+        }
+        {
+          productSectionDescription !== null ? (
+            <p dangerouslySetInnerHTML={{ __html: productSectionDescription.childContentfulRichText.html }}/>
+          ) : null
+        }
+
       </div>
       <CardList
         listItems={productFeatures.map(feature => generateCardItem(
@@ -21,6 +30,9 @@ const Product = ({
             feature.featureDescription.childContentfulRichText.html,
             'LEARN MORE',
             true,
+            feature.featureBackgroundImage,
+            feature.featureBackgroundHoverImage,
+            feature.featureIcon,
             'card_iconBg'
           ))}
       />
@@ -28,4 +40,4 @@ const Product = ({
   </section>
 )
 
-export default Product
+export default ProductSectionWithTitle
