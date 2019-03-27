@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import FeatureDefault from './FeatureDefault'
 import FeatureInverted from './FeatureInverted'
 import FeatureWhitelabel from './FeatureWhitelabel'
+import FeatureTitleWithImage from './FeatureTitleWithImage'
 
 import Button from '../../../atoms/button';
 
@@ -35,6 +36,12 @@ const Feature = ({
         />
       )
       break;
+    case 'titleWithImage':
+      FeatureContent = (
+        <FeatureTitleWithImage
+          {...props}
+        />
+      )
   }
 
   return (
