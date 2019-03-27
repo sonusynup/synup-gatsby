@@ -57,7 +57,7 @@ const FeatureDefault = ({
         }
         {
           (!isNull(featuredCaseStudy)) ? (
-            <>
+            <div className="feature-testimonial">
               <p
                 className="block_contentText testimonialContentOutline"
                 dangerouslySetInnerHTML={{ __html: featuredCaseStudy.partnerTestimonial.childContentfulRichText.html }}
@@ -81,7 +81,7 @@ const FeatureDefault = ({
                     </div>
                   </div>
               </div>
-            </>
+            </div>
           ) : null        
         }
       </div>
