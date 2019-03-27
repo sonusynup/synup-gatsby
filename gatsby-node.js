@@ -126,6 +126,12 @@ exports.createPages = ({ graphql, actions }) => {
               featureButton
               featureButtonType
               featureUrl
+              metricValue
+              metricImage {
+                file {
+                  url
+                }
+              }
             }
             ... on ContentfulCaseStudySection {
               id

@@ -15,26 +15,42 @@ const FeatureDefault = ({
   featureDescription,
   featureImage,
   featureIcon,
+  metricValue,
+  metricImage,
 }) => (
   <>
-    <div className="leftBlock block_contentWrap">
-      {!isNull(featureIcon) && <img class="block_icon" src={featureIcon.file.url} alt="" />}
-      <h5 class="card_title">{featureName}</h5>
-      <h3 className="block_contentText">{featureTitle}</h3>  
-      <ul
-        className="list_unstyled"
-        dangerouslySetInnerHTML={{ __html: !isNull(featureDescription) ? featureDescription.childContentfulRichText.html : null }} 
-      />
+    <div className="leftBlock block_flexWrap">
+      <div class="block_head">
+        {!isNull(featureIcon) && <img class="block_icon" src={featureIcon.file.url} alt="" />}
+        <h5 class="card_title">{featureName}</h5>
+        <h3 className="block_contentText">{featureTitle}</h3>  
+        <ul
+          className="list_unstyled"
+          dangerouslySetInnerHTML={{ __html: !isNull(featureDescription) ? featureDescription.childContentfulRichText.html : null }} 
+        />
+        {
+          !isNull(featureButton) && (
+            <Link to={to}>
+              <Button
+                type={getButtonClass(featureButtonType)}
+                text={featureButton}
+              />
+            </Link>
+          )
+        }      
+      </div>
       {
-        !isNull(featureButton) && (
-          <Link to={to}>
-            <Button
-              type={getButtonClass(featureButtonType)}
-              text={featureButton}
-            />
-          </Link>
-        )
-      }      
+        !isNull(metricImage) && !isNull(metricValue) ? (
+          <div class="block_body">
+            <div class="va_set">
+              <Link to="">
+                <img src={metricImage.file.url} class="img_fluid" alt="" />
+              </Link>
+              <p class="va_text">{metricValue}</p>
+            </div>
+          </div>
+        ) : null
+      }
     </div>
     {
       !isNull(featureImage) && (
@@ -43,6 +59,7 @@ const FeatureDefault = ({
         </div>
       )
     }
+    
   </>
 )
 
