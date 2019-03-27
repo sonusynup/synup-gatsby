@@ -63,6 +63,8 @@ exports.createPages = ({ graphql, actions }) => {
                   html
                 }
               }
+              metricValue
+              metricText
             }
             ... on ContentfulProductSection {
               id
