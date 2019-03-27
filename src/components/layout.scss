@@ -5576,7 +5576,7 @@ section {
 }
 
 .heroblock p {
-  opacity: 0.6;
+  opacity: 0.75;
   font-size: 1.5rem;
   color: #060E3D;
   letter-spacing: -0.03em;
@@ -5648,6 +5648,9 @@ section {
 
 .block_contentWrap {
   max-width: 500px;
+  ul {
+      margin-top: 3.75rem;
+  }
 }
 
 .block_flexWrap {
