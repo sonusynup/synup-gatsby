@@ -2286,7 +2286,7 @@ tbody.collapse.show {
 }
 
 .card_block p {
-  opacity: 0.6;
+  opacity: 0.75;
   font-size: 1.5rem;
   color: #060E3D;
   letter-spacing: -0.03em;
@@ -5098,6 +5098,9 @@ section {
     p {
       color: #fff;
     }
+    h3 {
+      max-width: 550px;
+  }
 }
 @media only screen and (max-width: 991px) {
   .enterprise_blockWrapper {
@@ -5656,7 +5659,8 @@ section {
 .block_flexWrap {
   display: flex;
   flex-wrap: wrap;
-  max-width: 500px;
+  max-width: 520px;
+  min-width: 520px;
 }
 
 .labelBlock {
@@ -5815,7 +5819,7 @@ section {
   height: 64px;
 }
 
-.testimonialContent {
+.testimonialContent p{
   opacity: 0.75;
   font-size: 1.125rem;
   color: #060E3D;
@@ -5829,6 +5833,15 @@ section {
   color: #657EFF;
   line-height: 1.5;
   letter-spacing: 0em;
+}
+.feature-testimonial {
+  overflow: hidden;
+
+  .testimonialContentOutline p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+  }
 }
 
 .testimonialAuthor_name {
@@ -6642,7 +6655,7 @@ iframe.embed-responsive-item {
   }
 }
 
-.whitelabel_pre {
+.whitelabel_pre p{
   font-size: 1.5rem;
   color: #fff;
   letter-spacing: 0em;
@@ -6651,7 +6664,7 @@ iframe.embed-responsive-item {
   margin-bottom: 5rem;
 }
 @media only screen and (max-width: 1199px) {
-  .whitelabel_pre {
+  .whitelabel_pre p{
     margin-top: 2rem;
     margin-bottom: 2rem;
   }

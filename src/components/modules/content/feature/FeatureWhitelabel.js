@@ -19,11 +19,11 @@ const FeatureWhitelabel = ({
   <div className="whitelabel_primaryWrapper">
     <div className="leftBlock block_contentWrap">
       <h3 className="block_contentWrap whiteTitle">{featureTitle}</h3>
-      <p className="block_contentText">{featureName}</p>
+      <p className="block_contentText ">{featureName}</p>
         {
           !isNull(featureDescription) && (
             <p
-              className="list_unstyled"
+              className="whitelabel_pre"
               dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} 
             />
           )

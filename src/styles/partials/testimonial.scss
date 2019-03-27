@@ -100,7 +100,7 @@
     border-radius: 50%;
 }
 
-.testimonialContent {
+.testimonialContent p{
     opacity: 0.75;
     font-size: $base-font-size;
     color: $base-font-color;
@@ -114,6 +114,15 @@
     color: $primary-color;
     line-height: 1.5;
     letter-spacing: $no-letter-spacing;
+}
+.feature-testimonial {
+    overflow: hidden;
+
+    .testimonialContentOutline p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 }
 
 .testimonialAuthor_name {
