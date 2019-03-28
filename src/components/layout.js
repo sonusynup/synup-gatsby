@@ -15,6 +15,7 @@ import Footer from "./footer"
 
 // TODO: Split these files as per indiviual scss
 import "./layout.scss"
+import "./additionals.css"
 
 // Handles the layout of the app
 // Layout includes headers, app and footer.
