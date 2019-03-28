@@ -6,12 +6,7 @@ import getButtonClass from "../../../../helpers/getButtonClass"
 import isNull from "../../../../helpers/isNull"
 
 const FeatureWhitelabel = ({
-  actionType,
-  featureButtonType,
-  featureButton,
-  to,
   featureTitle,
-  featureName,
   featureDescription,
   featureImage,
   featureBackground
