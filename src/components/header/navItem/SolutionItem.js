@@ -1,12 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import SolutionBgImage from '../../images/svgComponents/solutionBgImage';
+import SolutionBgImage from "../../images/svgComponents/solutionBgImage"
 
-const SolutionNavItem = ({
-  title,
-  description
-}) => (
+const SolutionNavItem = ({ title, description }) => (
   <Link to="/" className="flex-submenu">
     <figure>
       <SolutionBgImage />

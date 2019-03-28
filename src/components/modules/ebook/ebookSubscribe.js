@@ -1,18 +1,14 @@
-import React from 'react'
+import React from "react"
 
-import EbookDetails from './ebookDetails'
-import EbookSubscriptionForm from './ebookSubscriptionForm'
+import EbookDetails from "./ebookDetails"
+import EbookSubscriptionForm from "./ebookSubscriptionForm"
 
 // Handles ebook subscription screen
-const EbookSubscribe = ({
-  bookDetails,
-}) => (
+const EbookSubscribe = ({ bookDetails }) => (
   <section>
     <div className="container">
       <div className="blockWrapper">
-        <EbookDetails
-          bookDetails={bookDetails}
-        />
+        <EbookDetails bookDetails={bookDetails} />
         <EbookSubscriptionForm />
       </div>
     </div>
@@ -20,5 +16,3 @@ const EbookSubscribe = ({
 )
 
 export default EbookSubscribe
-
-

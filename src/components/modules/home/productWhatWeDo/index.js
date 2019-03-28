@@ -1,7 +1,7 @@
-import React from 'react'
-import CardList from '../../../molecules/cardList';
+import React from "react"
+import CardList from "../../../molecules/cardList"
 
-import generateCardItem from '../../../../helpers/generateCardItem'
+import generateCardItem from "../../../../helpers/generateCardItem"
 
 // Component handling what we do section
 const Product = ({
@@ -16,13 +16,15 @@ const Product = ({
         <p>{productSectionDescription}</p>
       </div>
       <CardList
-        listItems={productFeatures.map(feature => generateCardItem(
-            feature.featureTitle, 
+        listItems={productFeatures.map(feature =>
+          generateCardItem(
+            feature.featureTitle,
             feature.featureDescription.childContentfulRichText.html,
-            'LEARN MORE',
+            "LEARN MORE",
             true,
-            'card_iconBg'
-          ))}
+            "card_iconBg"
+          )
+        )}
       />
     </div>
   </section>

@@ -1,50 +1,48 @@
-import React from 'react'
+import React from "react"
 
-import PropTypes from 'prop-types'
-import PrimaryButtonAnimation from '../../images/svgComponents/primaryButtonAnimation';
-import SecondaryButtonAnimation from '../../images/svgComponents/secondaryButtonAnimation';
+import PropTypes from "prop-types"
+import PrimaryButtonAnimation from "../../images/svgComponents/primaryButtonAnimation"
+import SecondaryButtonAnimation from "../../images/svgComponents/secondaryButtonAnimation"
 
-const Button = ({ 
-  type,
-  text,
-  fullWidthBtn
-}) => {
-  const fullWidthClass = fullWidthBtn ? 'btn_fullWidth' : '';
+const Button = ({ type, text, fullWidthBtn }) => {
+  const fullWidthClass = fullWidthBtn ? "btn_fullWidth" : ""
 
   switch (type) {
-    case 'invert-primary':
+    case "invert-primary":
       return (
         <button class="btn btn_white  btn_arrow">
           <span class="btn_textSpan">
             GET STARTED
             <SecondaryButtonAnimation />
           </span>
-        </button>    
-      )
-    case 'invert-secondary':
-      return (
-        <button class="btn btn_outlineWhite  btn_arrow">
-            <span class="btn_textSpan">
-              LEARN MORE
-              <PrimaryButtonAnimation />
-            </span>
         </button>
       )
-    case 'secondary':
+    case "invert-secondary":
       return (
-        <button className={`btn btn_outlineTransparent btn_arrow ${fullWidthClass}`}>
+        <button class="btn btn_outlineWhite  btn_arrow">
+          <span class="btn_textSpan">
+            LEARN MORE
+            <PrimaryButtonAnimation />
+          </span>
+        </button>
+      )
+    case "secondary":
+      return (
+        <button
+          className={`btn btn_outlineTransparent btn_arrow ${fullWidthClass}`}
+        >
           <span className="btn_textSpan">
             {text}
             <SecondaryButtonAnimation />
           </span>
         </button>
       )
-    case 'borderless':
+    case "borderless":
       return (
         <span className="btn_arrow linkText linkText_span">
           {text}
           <PrimaryButtonAnimation />
-        </span>  
+        </span>
       )
     default:
       return (

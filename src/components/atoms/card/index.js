@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+import React from "react"
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
-import Button from '../button'
-import isNull from '../../../helpers/isNull';
+import Button from "../button"
+import isNull from "../../../helpers/isNull"
 
 class Card extends React.Component {
   state = {
-    isHovered: false
+    isHovered: false,
   }
 
   onMouseEnterCard = () => {
@@ -33,8 +33,10 @@ class Card extends React.Component {
       bgImage,
       bgHoverImage,
       featureIcon,
-    } = this.props;
-    const image = !this.state.isHovered ? (bgImage && bgImage.file.url) : (bgHoverImage && bgHoverImage.file.url);
+    } = this.props
+    const image = !this.state.isHovered
+      ? bgImage && bgImage.file.url
+      : bgHoverImage && bgHoverImage.file.url
     return (
       <div
         className={`card ${bgClass}`}
@@ -44,26 +46,21 @@ class Card extends React.Component {
       >
         <Link to={to}>
           <div className="card_body">
-            {
-              !isNull(featureIcon) && (
-                <img class="card_imgTop" src={featureIcon.file.url} alt=""></img>
-              )
-            }
+            {!isNull(featureIcon) && (
+              <img class="card_imgTop" src={featureIcon.file.url} alt="" />
+            )}
             <h5 className="card_title">{title}</h5>
-            {
-              isHtml ? (
-                <div className="card_text" dangerouslySetInnerHTML={{ __html: description }} />
-              ) : (
-                <div className="card_text">{description}</div>
-              )         
-            }
-            
+            {isHtml ? (
+              <div
+                className="card_text"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
+            ) : (
+              <div className="card_text">{description}</div>
+            )}
           </div>
           <div className="card_footer">
-            <Button
-              type="borderless"
-              text={actionText}
-            />
+            <Button type="borderless" text={actionText} />
           </div>
         </Link>
       </div>
@@ -77,6 +74,6 @@ Card.propTypes = {
   bgClass: PropTypes.string,
   to: PropTypes.string,
   actionText: PropTypes.string,
-};
+}
 
-export default Card;
+export default Card

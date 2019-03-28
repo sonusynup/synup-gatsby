@@ -1,12 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import ProductItemImage from '../../images/svgComponents/ProductItemImage'
+import ProductItemImage from "../../images/svgComponents/ProductItemImage"
 
-const ProductItem = ({
-  title,
-  description
-}) => (
+const ProductItem = ({ title, description }) => (
   <Link to="/" className="flex-submenu">
     <figure>
       <ProductItemImage />

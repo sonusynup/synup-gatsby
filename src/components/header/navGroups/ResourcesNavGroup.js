@@ -1,8 +1,16 @@
-import React from 'react'
+import React from "react"
 
-import Button from '../../atoms/button'
+import Button from "../../atoms/button"
 
-const resourceList = ['Ebooks', 'Webinars', 'Guides', 'Blog', 'Checklists', 'Free Tools', 'Case Study'];
+const resourceList = [
+  "Ebooks",
+  "Webinars",
+  "Guides",
+  "Blog",
+  "Checklists",
+  "Free Tools",
+  "Case Study",
+]
 
 // TODO: need borderless button component
 const ResourcesNavGroup = ({
@@ -16,7 +24,6 @@ const ResourcesNavGroup = ({
     if (window.outerWidth > 992) {
       isExpanded ? onClose() : onExpand()
     }
-    
   }
 
   const onTapOnOrOff = () => {
@@ -25,45 +32,48 @@ const ResourcesNavGroup = ({
     }
   }
   return (
-    <li className="dropdown-accord"
+    <li
+      className="dropdown-accord"
       onMouseEnter={onMouseEnterOrExit}
       onClick={onTapOnOrOff}
       onMouseLeave={onMouseEnterOrExit}
     >
-      <span href="#" className="dropdown js-scroll-trigger nav-link">RESOURCES</span>
-      <div className={`dropdown-content ${isExpanded ? 'active' : ''} accordion-content resource-content`}>
+      <span href="#" className="dropdown js-scroll-trigger nav-link">
+        RESOURCES
+      </span>
+      <div
+        className={`dropdown-content ${
+          isExpanded ? "active" : ""
+        } accordion-content resource-content`}
+      >
         <div className="resource-submenu arrow_box">
           <div className="tab-block">
             <div className="tabs-left">
               <ul className="nav nav-tabs nav-stacked">
-                {
-                  resourceList.map((resource) => (
+                {resourceList.map(resource => (
                   <li key={resource}>
                     <a
-                      onClick={onChangeActiveResource(resource)} 
+                      onClick={onChangeActiveResource(resource)}
                       data-toggle="tab"
-                      className={`${activeResource === resource ? 'active' : ''}`}
+                      className={`${
+                        activeResource === resource ? "active" : ""
+                      }`}
                     >
                       {resource}
                     </a>
-                  </li>  
+                  </li>
                 ))}
               </ul>
             </div>
             <div className="tab-content">
               <div className="tab-pane active">
                 <h3>{activeResource}</h3>
-                <Button 
-                  type="borderless"
-                  text="READ NOW"
-                />
-              </div>    
+                <Button type="borderless" text="READ NOW" />
+              </div>
             </div>
           </div>
           <div className="tab-support">
-            <a href="#">
-              SUPPORT and product FAQ
-            </a>
+            <a href="#">SUPPORT and product FAQ</a>
           </div>
         </div>
       </div>

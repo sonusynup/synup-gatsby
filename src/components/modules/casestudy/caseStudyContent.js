@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import CaseStudy from '../../molecules/caseStudy'
+import CaseStudy from "../../molecules/caseStudy"
 
 const CaseStudyContent = ({
   partner: {
@@ -28,16 +28,18 @@ const CaseStudyContent = ({
           advantageIndustry={partnerIndustry}
           advantageGoal={partnerGoal}
         />
-        {
-          description.map((item) => (
-            <ul class="casestudy_set">
-              <li>
-                <h5>{item.title}</h5>
-                <span dangerouslySetInnerHTML={{ __html: item.description.childContentfulRichText.html }} />
-              </li>
-            </ul>
-          ))
-        }
+        {description.map(item => (
+          <ul class="casestudy_set">
+            <li>
+              <h5>{item.title}</h5>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: item.description.childContentfulRichText.html,
+                }}
+              />
+            </li>
+          </ul>
+        ))}
       </div>
     </section>
   )
@@ -47,29 +49,29 @@ CaseStudyContent.propTypes = {
   partner: PropTypes.shape({
     partnerPhoto: PropTypes.shape({
       file: PropTypes.shape({
-        url: PropTypes.string
-      })
+        url: PropTypes.string,
+      }),
     }),
     partnerLogo: PropTypes.shape({
       file: PropTypes.shape({
-        url: PropTypes.string
-      })
-    })
-  })
+        url: PropTypes.string,
+      }),
+    }),
+  }),
 }
 
 CaseStudyContent.defaultProps = {
   partner: {
     partnerLogo: {
       file: {
-        url: ''
-      }
+        url: "",
+      },
     },
     partnerPhoto: {
       file: {
-        url: ''
-      }
+        url: "",
+      },
     },
-  }
+  },
 }
 export default CaseStudyContent
