@@ -37,20 +37,20 @@
     }
 
     @media only screen and (max-width: 575px) {
-        // max-width: 100%;
+        max-width: 100%;
     }
 }
 
 .footer_link {
     opacity: 0.8;
-    // font-size: $nav-font-size;
-    // color: $base-font-color;
+    font-size: $nav-font-size;
+    color: $base-font-color;
     letter-spacing: -0.2px;
     margin: 12px 0;
 
     &:hover {
         opacity: 1;
-        // color: $brand-blue;
+        color: $brand-blue;
     }
 
    @media only screen and (max-width: 991px){
@@ -77,10 +77,10 @@ ul {
 .footer_linksheading {
     display: flex;
     align-items: center;
-    // font-size: $nav-font-size;
-    // font-weight: $medium-font;
-    // color: $heading-color;
-    // letter-spacing: $no-letter-spacing;
+    font-size: $nav-font-size;
+    font-weight: $medium-font;
+    color: $heading-color;
+    letter-spacing: $no-letter-spacing;
     min-height: 33px;
     margin-bottom: 20px;
 
@@ -114,7 +114,7 @@ ul {
         svg {
             circle {
                 opacity: 1;
-                // fill: $brand-blue;
+                fill: $brand-blue;
             }
         }
     }
@@ -124,8 +124,8 @@ ul {
 .label_caption {
     background: radial-gradient(circle at top left, #18acbd 0%, #00d09c 100%);
     font-size: 10px;
-    // color: $white;
-    // letter-spacing: $no-letter-spacing;
+    color: $white;
+    letter-spacing: $no-letter-spacing;
     text-align: center;
     line-height: 8px;
     padding: 2px 10px;
