@@ -40,11 +40,13 @@ const CenteredTestimonial = ({
       <div className="testimonialAuthor_details">
         {!isNull(partnerName) ? <h6 className="testimonialAuthor_name">{partnerName}</h6> : null}
         {!isNull(partnerDescription) ? (
-          <p
+          <div
             className="testimonialAuthor_position"
             dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
           />
-        ) : null}
+          ) : null
+        }
+
       </div>
     </div>
     <Button type="secondary" text="SEE CASE STUDY" />
