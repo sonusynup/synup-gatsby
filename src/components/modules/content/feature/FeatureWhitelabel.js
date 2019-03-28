@@ -20,8 +20,8 @@ const FeatureWhitelabel = ({
     <div class="whitelabel_primaryWrapper" style={{ background: `linear-gradient(90deg, #4865ff 0%, rgba(72, 101, 255, 0.57) 100%), url(${featureBackground.file.url})`}}>
       <div class="blockWrapper">
         <div class="whitelabel_block">
-          <h3 class="whiteTitle">{featureTitle}</h3>
-          <p class="whitelabel_pre" dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} />
+          {!isNull(featureTitle) ? <h3 class="whiteTitle">{featureTitle}</h3> : null}
+          {!isNull(featureDescription) ? <p class="whitelabel_pre" dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} /> : null}
         </div>
       </div>
     </div>
