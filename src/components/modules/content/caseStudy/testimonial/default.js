@@ -9,49 +9,52 @@ const DefaultTestimonial = ({
   partnerName,
   partnerDescription,
   children,
-}) => (
-  <div className="blockWrapper">
-    <div className="testimonialWrapper-customer">
-      <div className="testimonialAuthorShadeimg">
-        <div className="overlay_content">
-          <div className="testimonial_overlay green-overlay" />
-          <figure>
-            {
-              !isNull(partnerPhoto) ? (
-                <img
-                  src={partnerPhoto.file.url}
-                  className="img_fluid"
-                  alt=""
-                />
+}) => { 
+  console.log('partner description ', partnerDescription)
+  return (
+    <div className="blockWrapper">
+      <div className="testimonialWrapper-customer">
+        <div className="testimonialAuthorShadeimg">
+          <div className="overlay_content">
+            <div className="testimonial_overlay green-overlay" />
+            <figure>
+              {
+                !isNull(partnerPhoto) ? (
+                  <img
+                    src={partnerPhoto.file.url}
+                    className="img_fluid"
+                    alt=""
+                  />
+                ) : null
+              }
+            </figure>
+          </div>
+        </div>
+        {
+          !isNull(partnerTestimonial) ? (
+            <div
+              className="testimonialContentOutline"
+              dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
+            />
+          ) : null
+        }
+        <div className="testimonialAuthor">
+          <div className="testimonialAuthor_details">
+            {!isNull(partnerName) ? <h6 className="testimonialAuthor_name">{partnerName}</h6> : null}
+            {!isNull(partnerDescription) ? (
+              <p
+                className="testimonialAuthor_position"
+                dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
+              />
               ) : null
             }
-          </figure>
+          </div>
         </div>
       </div>
-      {
-        !isNull(partnerTestimonial) ? (
-          <div
-            className="testimonialContentOutline"
-            dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
-          />
-        ) : null
-      }
-      <div className="testimonialAuthor">
-        <div className="testimonialAuthor_details">
-          {!isNull(partnerName) ? <h6 className="testimonialAuthor_name">{partnerName}</h6> : null}
-          {!isNull(partnerDescription) ? (
-            <p
-              className="testimonialAuthor_position"
-              dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
-            />
-            ) : null
-          }
-        </div>
-      </div>
+      {children}
     </div>
-    {children}
-  </div>
-)
+  )
+}
 
 DefaultTestimonial.propTypes = {
   partnerPhoto: PropTypes.shape({
