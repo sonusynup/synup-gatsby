@@ -40,7 +40,11 @@ HeroDefault.propTypes = {
   heroButtonText: PropTypes.string,
   heroButtonLink: PropTypes.string,
   heroBackground: PropTypes.string,
-  heroBackground: PropTypes.string,
+  heroDescription: PropTypes.shape({
+    childContentfulRichText: PropTypes.shape({
+      html: PropTypes.string,
+    })
+  }),
 }
 
 HeroDefault.defaultProps = {
@@ -48,7 +52,11 @@ HeroDefault.defaultProps = {
   heroButtonText: null,
   heroButtonLink: null,
   heroBackground: null,
-  heroBackground: null,
+  heroDescription: {
+    childContentfulRichText: {
+      html: ''
+    }
+  },
 }
 
 export default HeroDefault

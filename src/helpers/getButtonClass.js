@@ -1,9 +1,9 @@
 export default (buttonType) => {
   let className = null;
-  if (buttonType === 'Full button') {
+  if (buttonType === 'Full') {
     className = 'primary'
   }
-  if (buttonType === 'Border button') {
+  if (buttonType === 'Border') {
     className = 'secondary'
   }
   return className
