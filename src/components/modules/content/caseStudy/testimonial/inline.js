@@ -61,18 +61,18 @@ InlineTestimonial.propTypes = {
 InlineTestimonial.defaultProps = {
   partnerPhoto: {
     file: {
-      url: ,
+      url: '',
     },
   },
   partnerTestimonial: {
     childContentfulRichText: {
-      html: ,
+      html: '',
     }
   },
-  partnerName: ,
+  partnerName: '',
   partnerDescription: {
     childContentfulRichText: {
-      html: ,
+      html: '',
     }
   },
   children: PropTypes.node,
