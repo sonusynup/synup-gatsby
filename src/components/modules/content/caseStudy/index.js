@@ -1,8 +1,11 @@
 import React from "react"
 
-import CaseStudyMolecule from "../../../molecules/caseStudy"
+import Testimonial from "./testimonial"
+import PartnerGrowth from "./partnerGrowth"
 
-// Testimonial Section
+
+// Case Study section
+// Testimonial can have multiple types.
 const CaseStudy = ({
   caseSectionPartner: {
     partnerPhoto,
@@ -21,19 +24,30 @@ const CaseStudy = ({
 }) => (
   <section class="section_testimonial">
     <div class="container">
-      <CaseStudyMolecule
-        partnerImage={partnerPhoto ? partnerPhoto.file.url : null}
+      <Testimonial
+        type={caseSectionType}
+        
         caseSectionType={caseSectionType}
-        partnerTestimonial={partnerTestimonial.childContentfulRichText.html}
+        partnerPhoto={partnerPhoto}
         partnerName={partnerName}
-        partnerSuccess={partnerSuccess}
+        partnerDescription={partnerDescription}
         partnerLogo={partnerLogo}
-        partnerPosition={partnerDescription.childContentfulRichText.html}
+        partnerSuccess={partnerSuccess}
+        partnerTestimonial={partnerTestimonial}
+      
+  
         details={[
           { metricValue: metricValue1, metricImage: metricImage1 },
           { metricValue: metricValue2, metricImage: metricImage2 },
         ]}
-      />
+      >
+        <PartnerGrowth
+          details={[
+            { metricValue: metricValue1, metricImage: metricImage1 },
+            { metricValue: metricValue2, metricImage: metricImage2 },
+          ]}
+        />
+      </Testimonial>
     </div>
   </section>
 )
