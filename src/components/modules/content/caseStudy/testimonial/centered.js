@@ -21,10 +21,14 @@ const CenteredTestimonial = ({
       />
     </Link>
     <h3 className="testimonialTitle">{partnerSuccess}</h3>
-    <p
-      className="testimonialContent"
-      dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
-    />
+      {
+        !isNull(partnerTestimonial) ? (
+          <div
+            className="testimonialContent"
+            dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
+          />
+        ) : null
+      }
     <div className="testimonialAuthor_single">
       <figure>
         <img src={commaImg} className="" alt="comma" />

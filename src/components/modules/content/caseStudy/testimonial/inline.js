@@ -11,10 +11,14 @@ const InlineTestimonial = ({
 }) => (
   <div className="blockWrapper">
     <div class="testimonialWrapper">
-      <p
-        class="testimonialContent"
-        dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
-      />
+      {
+        !isNull(partnerTestimonial) ? (
+          <div
+            className="testimonialContent"
+            dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
+          />
+        ) : null
+      }
       <div class="testimonialAuthor">
         <div class="testimonialAuthor_img">
           <figure>
@@ -57,18 +61,18 @@ InlineTestimonial.propTypes = {
 InlineTestimonial.defaultProps = {
   partnerPhoto: {
     file: {
-      url: '',
+      url: ,
     },
   },
   partnerTestimonial: {
     childContentfulRichText: {
-      html: '',
+      html: ,
     }
   },
-  partnerName: '',
+  partnerName: ,
   partnerDescription: {
     childContentfulRichText: {
-      html: '',
+      html: ,
     }
   },
   children: PropTypes.node,
