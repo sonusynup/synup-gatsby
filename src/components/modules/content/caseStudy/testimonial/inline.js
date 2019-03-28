@@ -11,7 +11,7 @@ const InlineTestimonial = ({
   children,
 }) => (
   <div className="blockWrapper">
-    <div class="testimonialWrapper">
+    <div className="testimonialWrapper">
       {
         !isNull(partnerTestimonial) ? (
           <div
@@ -20,22 +20,26 @@ const InlineTestimonial = ({
           />
         ) : null
       }
-      <div class="testimonialAuthor">
-        <div class="testimonialAuthor_img">
+      <div className="testimonialAuthor">
+        <div className="testimonialAuthor_img">
           {
             !isNull(partnerTestimonial) ? (
               <figure>
-                <img src={partnerPhoto.file.url} class="avartar-img" alt="" />
+                <img src={partnerPhoto.file.url} className="avartar-img" alt="" />
               </figure>
             ) : null
           }
         </div>
-        <div class="testimonialAuthor_details">
-          <h6 class="testimonialAuthor_name">{partnerName}</h6>
-          <p
-            class="testimonialAuthor_position"
-            dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
-          />
+        <div className="testimonialAuthor_details">
+          {!isNull(partnerName) ? <h6 className="testimonialAuthor_name">{partnerName}</h6> : null}
+          {
+            !isNull(partnerDescription) ? (
+              <p
+                className="testimonialAuthor_position"
+                dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
+              />
+            ) : null
+          }
         </div>
       </div>
     </div>

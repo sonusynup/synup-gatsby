@@ -13,13 +13,17 @@ const CenteredTestimonial = ({
   partnerDescription,
 }) => (
   <div className="testimonialWrapper_comma">
-    <Link to="">
-      <img
-        src={partnerLogo.file.url}
-        className="img_fluid"
-        alt=""
-      />
-    </Link>
+    {
+      !isNull(partnerLogo) ? (
+        <Link to="">
+          <img
+            src={partnerLogo.file.url}
+            className="img_fluid"
+            alt=""
+          />
+        </Link>
+      ) : null
+    }
     <h3 className="testimonialTitle">{partnerSuccess}</h3>
       {
         !isNull(partnerTestimonial) ? (
@@ -34,11 +38,13 @@ const CenteredTestimonial = ({
         <img src={commaImg} className="" alt="comma" />
       </figure>
       <div className="testimonialAuthor_details">
-        <h6 className="testimonialAuthor_name">{partnerName}</h6>
-        <p
-          className="testimonialAuthor_position"
-          dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
-        />
+        {!isNull(partnerName) ? <h6 className="testimonialAuthor_name">{partnerName}</h6> : null}
+        {!isNull(partnerDescription) ? (
+          <p
+            className="testimonialAuthor_position"
+            dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
+          />
+        ) : null}
       </div>
     </div>
     <Button type="secondary" text="SEE CASE STUDY" />
