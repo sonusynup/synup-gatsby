@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from 'prop-types'
-
+import isNull from '../../../../../helpers/isNull'
 import Button from "../../../../atoms/button"
 import commaImg from '../../../../images/svg/comma.svg'
 

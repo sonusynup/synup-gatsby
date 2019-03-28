@@ -1,6 +1,7 @@
 import React from "react"
 
 import PropTypes from 'prop-types'
+import isNull from '../../../../../helpers/isNull'
 
 const InlineTestimonial = ({
   partnerPhoto,
@@ -21,9 +22,13 @@ const InlineTestimonial = ({
       }
       <div class="testimonialAuthor">
         <div class="testimonialAuthor_img">
-          <figure>
-            <img src={partnerPhoto.file.url} class="avartar-img" alt="" />
-          </figure>
+          {
+            !isNull(partnerTestimonial) ? (
+              <figure>
+                <img src={partnerPhoto.file.url} class="avartar-img" alt="" />
+              </figure>
+            ) : null
+          }
         </div>
         <div class="testimonialAuthor_details">
           <h6 class="testimonialAuthor_name">{partnerName}</h6>
