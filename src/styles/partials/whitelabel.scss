@@ -2,11 +2,11 @@
 .whitelabel_primaryWrapper {
     background: linear-gradient(90deg, rgba(72, 101, 255, 1) 0%, rgba(72, 101, 255, 0.57) 100%);
     // background-image:  url(../images/mapbg.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     padding: 2.5rem;
     border-radius: $border-radius-base;
-    background-size: cover;
+    background-size: cover !important;
     width: 100%;
 
     @include bp-sm {
