@@ -76,21 +76,21 @@ DefaultTestimonial.propTypes = {
 DefaultTestimonial.defaultProps = {
   partnerPhoto: {
     file: {
-      url: PropTypes.string,
+      url: '',
     },
   },
   partnerTestimonial: {
     childContentfulRichText: {
-      html: PropTypes.string,
+      html: '',
     }
   },
-  partnerName: PropTypes.string,
+  partnerName: '',
   partnerDescription: {
     childContentfulRichText: {
-      html: PropTypes.string,
+      html: '',
     }
   },
-  children: PropTypes.node,
+
 }
 
 export default DefaultTestimonial
