@@ -1,12 +1,8 @@
-import React from 'react'
+import React from "react"
 
 // Handles render of Ebook Detail screen
 const EbookDetails = ({
-  bookDetails: {
-    bookCoverImage,
-    bookTitle,
-    bookDescription,
-  }
+  bookDetails: { bookCoverImage, bookTitle, bookDescription },
 }) => (
   <div className="ebook_block">
     <div className="ebook_img">
@@ -23,8 +19,6 @@ const EbookDetails = ({
       </p>
     </div>
   </div>
-);
+)
 
-
-export default EbookDetails;
-
+export default EbookDetails

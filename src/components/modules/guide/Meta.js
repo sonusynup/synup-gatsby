@@ -1,31 +1,36 @@
-import React from 'react'
+import React from "react"
 
-import Button from '../../atoms/button'
+import Button from "../../atoms/button"
 
 const Meta = ({ meta }) => {
-  console.log('meta ', meta)
-  if (meta === null) return null;
-  switch(meta.type) {
-    case 'tip': 
+  console.log("meta ", meta)
+  if (meta === null) return null
+  switch (meta.type) {
+    case "tip":
       return (
         <div class="secoundaryColor_block">
           <h6>{meta.title}</h6>
-          <p dangerouslySetInnerHTML={{ __html: meta.description.childContentfulRichText.html }} />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: meta.description.childContentfulRichText.html,
+            }}
+          />
         </div>
       )
-      break;
-    case 'alert':
+      break
+    case "alert":
       return (
         <div class="primaryColor_block">
           <h6>{meta.title}</h6>
-          <p dangerouslySetInnerHTML={{ __html: meta.description.childContentfulRichText.html }} />
-          <Button
-            type="secondary"
-            text="LEARN MORE"
+          <p
+            dangerouslySetInnerHTML={{
+              __html: meta.description.childContentfulRichText.html,
+            }}
           />
+          <Button type="secondary" text="LEARN MORE" />
         </div>
       )
   }
 }
 
-export default Meta;
+export default Meta

@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
-import Button from '../../../atoms/button';
+import Button from "../../../atoms/button"
 
 // Hero component of the home page
 const Hero = ({
@@ -12,13 +12,16 @@ const Hero = ({
   heroButtonLink,
   heroBackground,
 }) => (
-  <section className="section_homepage" style={{ backgroundImage: `url(${heroBackground.file.url})` }}>
+  <section
+    className="section_homepage"
+    style={{ backgroundImage: `url(${heroBackground.file.url})` }}
+  >
     <div className="container">
       <div className="heroblock">
         <h2>{heroTitle}</h2>
-        <p dangerouslySetInnerHTML={{ __html: heroTitle }}/>
+        <p dangerouslySetInnerHTML={{ __html: heroTitle }} />
         <Link to={heroButtonLink}>
-          <Button type="primary" text={heroButtonText}/>
+          <Button type="primary" text={heroButtonText} />
         </Link>
       </div>
     </div>

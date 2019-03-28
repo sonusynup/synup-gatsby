@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import Testimonial from './testimonial'
-import Advantages from './advantages';
-import BusinessDetails from './businessDetails'
+import Testimonial from "./testimonial"
+import Advantages from "./advantages"
+import BusinessDetails from "./businessDetails"
 
-/* 
+/*
  * Case Study Molecule
  * Renders a testimonial component
  */
@@ -16,7 +16,7 @@ const CaseStudy = ({
   partnerName,
   partnerPosition,
   partnerSuccess,
-  details
+  details,
 }) => (
   <>
     <Testimonial
@@ -29,9 +29,7 @@ const CaseStudy = ({
       partnerLogo={partnerLogo}
       partnerSuccess={partnerSuccess}
     >
-      <BusinessDetails
-        details={details}
-      />
+      <BusinessDetails details={details} />
     </Testimonial>
   </>
 )

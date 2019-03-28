@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../components/layout'
-import GuideHeader from '../components/modules/guide/guideHeader'
-import GuideDescriptionList from '../components/modules/guide/guideDescriptionList.js'
+import Layout from "../components/layout"
+import GuideHeader from "../components/modules/guide/guideHeader"
+import GuideDescriptionList from "../components/modules/guide/guideDescriptionList.js"
 
 // Renders the root guides page
 const Guides = ({
@@ -14,14 +14,11 @@ const Guides = ({
       guideCover,
       guideTip,
       guideTitle,
-    }
-  }
+    },
+  },
 }) => (
   <Layout>
-    <GuideHeader
-      title={guideTitle}
-      cover={guideCover}  
-    />
+    <GuideHeader title={guideTitle} cover={guideCover} />
     <GuideDescriptionList
       content={guideSteps}
       description={guideContent}

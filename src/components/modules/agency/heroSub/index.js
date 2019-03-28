@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react"
 
-import ActionableList from '../../../atoms/actionableList';
+import ActionableList from "../../../atoms/actionableList"
 
 const listItems = [
   "Generate more leads for your agency directly from your website",
@@ -18,7 +18,7 @@ const HeroSub = () => (
           actionText="GET STARTED"
           to=""
           title="Accelerate your agency's growth"
-        />  
+        />
         <div class="rightBlock">
           <img src="" className="img_fluid" alt="" />
         </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-import ActionableList from '../../atoms/actionableList';
+import React from "react"
+import ActionableList from "../../atoms/actionableList"
 
 const ActionableCard = ({
   index,
@@ -10,12 +10,12 @@ const ActionableCard = ({
   to,
   title,
   subTitle,
-  inverted
+  inverted,
 }) => (
   <section className={`section_wrapper ${wrapperClass}`}>
     <section>
       <div className="container">
-        <div className={`blockWrapper ${(index % 2 !== 0) && 'd-flex_reverse'}`}>
+        <div className={`blockWrapper ${index % 2 !== 0 && "d-flex_reverse"}`}>
           <ActionableList
             wrapperClass="leftBlock block_contentWrap"
             listItems={subListItems}

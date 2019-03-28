@@ -1,21 +1,18 @@
-import React from 'react';
+import React from "react"
 
-import HeroDefault from './HeroDefault'
-import HeroContinuousBlock from './HeroContinuousBlock'
-import HeroWithoutImage from './HeroWithoutImage';
+import HeroDefault from "./HeroDefault"
+import HeroContinuousBlock from "./HeroContinuousBlock"
+import HeroWithoutImage from "./HeroWithoutImage"
 
-const Hero = ({
-  heroType,
-  ...props,
-}) => {
+const Hero = ({ heroType, ...props }) => {
   switch (heroType) {
-    case 'default':
+    case "default":
       return <HeroDefault {...props} />
-    case 'Continuous block':
+    case "Continuous block":
       return <HeroContinuousBlock {...props} />
-    case 'Without Image':
+    case "Without Image":
       return <HeroWithoutImage {...props} />
   }
 }
 
-export default Hero;
+export default Hero

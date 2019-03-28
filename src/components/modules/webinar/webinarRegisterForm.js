@@ -1,34 +1,33 @@
-import React from 'react'
+import React from "react"
 
-import Button from '../../atoms/button'
-import FormInput from '../../atoms/formInput'
-import FormButtonGroup from '../../atoms/formButtonGroup'
+import Button from "../../atoms/button"
+import FormInput from "../../atoms/formInput"
+import FormButtonGroup from "../../atoms/formButtonGroup"
 
 // Renders the Webinar Subscription form
 class WebinarSubscriptionForm extends React.Component {
-
   state = {
-    fullName: '',
-    email: '',
-    businessName: '',
-    businessType: '',
+    fullName: "",
+    email: "",
+    businessName: "",
+    businessType: "",
     employeeCount: null,
   }
-  
+
   typeButtons = [
-    { labelFirst: 'Single', labelSecond: 'Location', value: 'single' },
-    { labelFirst: 'Multi', labelSecond: 'Location', value: 'multi' },
-    { labelFirst: 'Marketing', labelSecond: 'Agency', value: 'agency'}
-  ];
+    { labelFirst: "Single", labelSecond: "Location", value: "single" },
+    { labelFirst: "Multi", labelSecond: "Location", value: "multi" },
+    { labelFirst: "Marketing", labelSecond: "Agency", value: "agency" },
+  ]
 
   countButtons = [
-    { labelFirst: '1 - 10', labelSecond: null, value: '1-10'},
-    { labelFirst: '11 - 50', labelSecond: null, value: '11-50'},
-    { labelFirst: '50+', labelSecond: null, value: '50+'}
-  ];
+    { labelFirst: "1 - 10", labelSecond: null, value: "1-10" },
+    { labelFirst: "11 - 50", labelSecond: null, value: "11-50" },
+    { labelFirst: "50+", labelSecond: null, value: "50+" },
+  ]
 
   onChangeFormField = (fieldName, fromEvent) => {
-    return (eventOrValue) => {
+    return eventOrValue => {
       if (fromEvent) {
         this.setState({
           [fieldName]: eventOrValue.target.value,
@@ -50,19 +49,19 @@ class WebinarSubscriptionForm extends React.Component {
             name="name"
             label="FULL NAME"
             placeholder="Your full name"
-            onChange={this.onChangeFormField('fullName', true)}
+            onChange={this.onChangeFormField("fullName", true)}
           />
           <FormInput
             name="exampleInputEmail1"
             label="WORK EMAIL"
             placeholder="you@yourcompany.com"
-            onChange={this.onChangeFormField('email', true)}
+            onChange={this.onChangeFormField("email", true)}
           />
           <FormInput
             name="name"
             label="BUSINESS NAME"
             placeholder="Your business name"
-            onChange={this.onChangeFormField('businessName', true)}
+            onChange={this.onChangeFormField("businessName", true)}
           />
           <FormButtonGroup
             name="name"
@@ -70,7 +69,7 @@ class WebinarSubscriptionForm extends React.Component {
             wrapperClass="btn_group"
             buttonGroupWrapperClass="btn_groupWrapper"
             buttons={this.typeButtons}
-            onChange={this.onChangeFormField('businessType')}
+            onChange={this.onChangeFormField("businessType")}
           />
           <FormButtonGroup
             name="name"
@@ -78,13 +77,9 @@ class WebinarSubscriptionForm extends React.Component {
             wrapperClass="btn_group"
             buttonGroupWrapperClass="btn_groupWrapper"
             buttons={this.countButtons}
-            onChange={this.onChangeFormField('employeeCount')}
+            onChange={this.onChangeFormField("employeeCount")}
           />
-          <Button
-            type="primary"
-            text="RESERVE YOUR SEAT"
-            fullWidthBtn
-          />
+          <Button type="primary" text="RESERVE YOUR SEAT" fullWidthBtn />
         </form>
       </div>
     )

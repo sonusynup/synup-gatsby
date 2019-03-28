@@ -1,17 +1,12 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import SolutionNavItem from "../navItem/SolutionItem";
+import React from "react"
+import { Link } from "gatsby"
+import SolutionNavItem from "../navItem/SolutionItem"
 
-const SolutionNavGroup = ({
-  onExpand,
-  onClose,
-  isExpanded
-}) => {
+const SolutionNavGroup = ({ onExpand, onClose, isExpanded }) => {
   const onMouseEnterOrExit = () => {
     if (window.outerWidth > 992) {
       isExpanded ? onClose() : onExpand()
     }
-    
   }
 
   const onTapOnOrOff = () => {
@@ -20,15 +15,18 @@ const SolutionNavGroup = ({
     }
   }
   return (
-    <li className="dropdown-accord"
+    <li
+      className="dropdown-accord"
       onMouseEnter={onMouseEnterOrExit}
       onClick={onTapOnOrOff}
       onMouseLeave={onMouseEnterOrExit}
     >
-      <span className="dropdown js-scroll-trigger nav-link">
-        SOLUTIONS
-      </span>
-      <div className={`dropdown-content ${isExpanded ? 'active' : ''} accordion-content solutions-content`}>
+      <span className="dropdown js-scroll-trigger nav-link">SOLUTIONS</span>
+      <div
+        className={`dropdown-content ${
+          isExpanded ? "active" : ""
+        } accordion-content solutions-content`}
+      >
         <div className="solutions-submenu arrow_box">
           <SolutionNavItem
             title="SINGLE - LOCATION BUSINESS"
@@ -47,6 +45,5 @@ const SolutionNavGroup = ({
     </li>
   )
 }
-
 
 export default SolutionNavGroup

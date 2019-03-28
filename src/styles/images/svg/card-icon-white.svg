@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="130px" viewBox="0 0 106 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI/Components/Cards/Primary/hover" transform="translate(-300.000000, -116.000000)">
+            <g id="icon">
+                <g transform="translate(301.000000, 117.000000)">
+                    <g id="Group-2" stroke="#EFF0F6">
+                        <ellipse id="Oval" cx="54" cy="54.1487603" rx="54" ry="54.1487603"></ellipse>
+                        <ellipse id="Oval" cx="54" cy="54.1487603" rx="23.5384615" ry="23.6033058"></ellipse>
+                        <path d="M0.792534839,54.6487603 L54,166.173464 L107.207465,54.6487603 L0.792534839,54.6487603 Z" id="Rectangle"></path>
+                    </g>
+                    <g id="Group-2-Copy" opacity="0.101249" transform="translate(2.000000, 4.000000)" fill="#FFFFFF">
+                        <path d="M31.3275928,53.2770601 C31.3275928,66.2981159 41.884326,76.8537672 54.9067164,76.8537672 C67.9291068,76.8537672 78.48584,66.2981159 78.48584,53.2770601 C78.48584,40.2560043 67.9291068,29.700353 54.9067164,29.700353 C41.884326,29.700353 31.3275928,40.2560043 31.3275928,53.2770601 Z M108.180615,53.2770601 L109,53.2770601 L108.179149,54.9926906 C107.91128,71.3200298 100.408038,85.8878805 88.7360919,95.6298912 L54.9067164,166.335395 L22.0544218,97.6720512 C8.67877925,87.8251157 0,71.9698426 0,54.0877397 C0,24.2159059 24.218388,2.55795385e-13 54.0932836,2.55795385e-13 C83.6974558,2.55795385e-13 107.747173,23.7790102 108.180615,53.2770601 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

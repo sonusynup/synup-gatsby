@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-import CaseStudyMolecule from '../../../molecules/caseStudy'
+import CaseStudyMolecule from "../../../molecules/caseStudy"
 
 // Testimonial Section
 const CaseStudy = ({
@@ -30,8 +30,8 @@ const CaseStudy = ({
         partnerLogo={partnerLogo}
         partnerPosition={partnerDescription.childContentfulRichText.html}
         details={[
-          { metricValue: metricValue1, metricImage: metricImage1 }, 
-          { metricValue: metricValue2, metricImage: metricImage2 }
+          { metricValue: metricValue1, metricImage: metricImage1 },
+          { metricValue: metricValue2, metricImage: metricImage2 },
         ]}
       />
     </div>

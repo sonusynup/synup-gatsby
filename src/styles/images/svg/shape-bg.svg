@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="503px" height="139px" viewBox="0 0 503 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="-2.22044605e-14%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Product-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.0841471354">
+        <g id="Locations" transform="translate(-469.000000, -1068.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-2" transform="translate(469.000000, 1051.000000)">
+                <g id="Group-3" transform="translate(0.000000, 17.000000)">
+                    <path d="M100.22393,68.6931891 C147.522058,68.6931891 176.874886,110.764736 218.479693,110.764736 C260.0845,110.764736 298.427882,-2.60148627e-14 347.668542,-2.84217094e-14 C396.909202,-2.84217094e-14 414.159248,56.8944109 448.817488,56.8944109 C483.475727,56.8944109 485.645587,28.0722462 502.736595,28.0722462 L502.736595,137.770709 L2.84217094e-14,138.764736 C35.2838682,92.0503713 68.6918449,68.6931891 100.22393,68.6931891 Z" id="Path-2"></path>
+                    <path d="M100.22393,90.7729828 C150.082985,90.7729828 176.874886,37 218.479693,37 C260.0845,37 298.427882,98.6364005 347.668542,98.6364005 C396.909202,98.6364005 414.159248,43.9723724 448.817488,43.9723724 C483.475727,43.9723724 485.645587,80.5651139 502.736595,80.5651139 L502.736595,137.543692 L0,138.537719 C33.5765834,106.694561 66.9845601,90.7729828 100.22393,90.7729828 Z" id="Path-2-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

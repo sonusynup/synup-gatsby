@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
 const Input = ({
   wrapperClass,
@@ -32,9 +32,9 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
-  wrapperClass: 'form_field',
-  inputType: 'text',
-  inputClass: 'form_inputField form_control'
+  wrapperClass: "form_field",
+  inputType: "text",
+  inputClass: "form_inputField form_control",
 }
 
 export default Input

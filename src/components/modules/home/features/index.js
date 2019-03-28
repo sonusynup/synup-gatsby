@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-import Button from '../../../atoms/button'
+import Button from "../../../atoms/button"
 
 // Component handling the features section
 const Features = ({
@@ -18,17 +18,15 @@ const Features = ({
           <h3>{featureTitle}</h3>
           <p
             className="network_text"
-            dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }}
+            dangerouslySetInnerHTML={{
+              __html: featureDescription.childContentfulRichText.html,
+            }}
           />
           <Button type="primary" text={featureButton} />
         </div>
         <div className="rightBlock">
           <figure>
-            <img
-              src={featureImage.file.url}
-              className="img_fluid"
-              alt=""
-            />
+            <img src={featureImage.file.url} className="img_fluid" alt="" />
           </figure>
         </div>
       </div>
