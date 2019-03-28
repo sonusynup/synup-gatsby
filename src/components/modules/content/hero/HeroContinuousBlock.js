@@ -7,7 +7,7 @@ import Button from '../../../atoms/button';
 import isNull from '../../../../helpers/isNull';
 import getButtonClass from '../../../../helpers/getButtonClass';
 
-// Renders Hero Component
+// Renders Hero Continuos block Component
 const HeroContinuousBlock = ({
   heroIcon,
   heroTitle,
@@ -63,7 +63,11 @@ HeroContinuousBlock.propTypes = {
   heroTitle: PropTypes.string,
   heroButtonText: PropTypes.string,
   heroButtonLink: PropTypes.string,
-  heroBackground: PropTypes.string,
+  heroBackground: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
   heroButtonType: PropTypes.string,
   heroDescription: PropTypes.shape({
     childContentfulRichText: PropTypes.shape({
@@ -78,7 +82,11 @@ HeroContinuousBlock.defaultProps = {
   heroTitle: null,
   heroButtonText: null,
   heroButtonLink: null,
-  heroBackground: null,
+  heroBackground: {
+    file: {
+      url: '',
+    }
+  },
   heroButtonType: null,
   heroDescription: {
     childContentfulRichText: {
