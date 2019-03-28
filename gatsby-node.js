@@ -126,6 +126,11 @@ exports.createPages = ({ graphql, actions }) => {
                   html
                 }
               }
+              featureBackground {
+                file {
+                  url
+                }
+              }
               featureButton
               featureButtonType
               featureUrl

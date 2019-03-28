@@ -1,6 +1,7 @@
 import React from "react"
 
 import PropTypes from 'prop-types'
+import isNull from '../../../../../helpers/isNull'
 
 const InlineTestimonial = ({
   partnerPhoto,
@@ -10,23 +11,34 @@ const InlineTestimonial = ({
   children,
 }) => (
   <div className="blockWrapper">
-    <div class="testimonialWrapper">
-      <p
-        class="testimonialContent"
-        dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
-      />
-      <div class="testimonialAuthor">
-        <div class="testimonialAuthor_img">
-          <figure>
-            <img src={partnerPhoto.file.url} class="avartar-img" alt="" />
-          </figure>
-        </div>
-        <div class="testimonialAuthor_details">
-          <h6 class="testimonialAuthor_name">{partnerName}</h6>
-          <p
-            class="testimonialAuthor_position"
-            dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
+    <div className="testimonialWrapper">
+      {
+        !isNull(partnerTestimonial) ? (
+          <div
+            className="testimonialContent"
+            dangerouslySetInnerHTML={{ __html: partnerTestimonial.childContentfulRichText.html }}
           />
+        ) : null
+      }
+      <div className="testimonialAuthor">
+        <div className="testimonialAuthor_img">
+          {
+            !isNull(partnerTestimonial) ? (
+              <figure>
+                <img src={partnerPhoto.file.url} className="avartar-img" alt="" />
+              </figure>
+            ) : null
+          }
+        </div>
+        <div className="testimonialAuthor_details">
+          {!isNull(partnerName) ? <h6 className="testimonialAuthor_name">{partnerName}</h6> : null}
+          {!isNull(partnerDescription) ? (
+            <div
+              className="testimonialAuthor_position"
+              dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
+            />
+            ) : null
+          }
         </div>
       </div>
     </div>

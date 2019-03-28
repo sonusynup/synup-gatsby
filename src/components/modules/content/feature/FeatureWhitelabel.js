@@ -14,28 +14,15 @@ const FeatureWhitelabel = ({
   featureName,
   featureDescription,
   featureImage,
+  featureBackground
 }) => (
   <>
-    <div className="whitelabel_primaryWrapper">
-      <div className="leftBlock block_contentWrap">
-        <h3 className="block_contentWrap whiteTitle">{featureTitle}</h3>
-        <p className="block_contentText ">{featureName}</p>
-        {!isNull(featureDescription) && (
-          <p
-            className="whitelabel_pre"
-            dangerouslySetInnerHTML={{
-              __html: featureDescription.childContentfulRichText.html,
-            }}
-          />
-        )}
-        {!isNull(featureButton) && (
-          <Link to={to}>
-            <Button
-              type={getButtonClass(featureButtonType)}
-              text={featureButton}
-            />
-          </Link>
-        )}
+    <div class="whitelabel_primaryWrapper" style={{ background: `linear-gradient(90deg, #4865ff 0%, rgba(72, 101, 255, 0.57) 100%), url(${featureBackground.file.url})`}}>
+      <div class="blockWrapper">
+        <div class="whitelabel_block">
+          <h3 class="whiteTitle">{featureTitle}</h3>
+          <p class="whitelabel_pre" dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} />
+        </div>
       </div>
     </div>
     {!isNull(featureImage) && (
