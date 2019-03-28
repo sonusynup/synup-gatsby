@@ -41,13 +41,7 @@ const DefaultTestimonial = ({
         <div className="testimonialAuthor">
           <div className="testimonialAuthor_details">
             {!isNull(partnerName) ? <h6 className="testimonialAuthor_name">{partnerName}</h6> : null}
-            {!isNull(partnerDescription) ? (
-              <p
-                className="testimonialAuthor_position"
-                dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }}
-              />
-              ) : null
-            }
+            {!isNull(partnerDescription) ? <div dangerouslySetInnerHTML={{ __html: partnerDescription.childContentfulRichText.html }} /> : null}
           </div>
         </div>
       </div>
