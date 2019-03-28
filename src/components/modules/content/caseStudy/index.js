@@ -1,39 +1,26 @@
 import React from "react"
 
-import CaseStudyMolecule from "../../../molecules/caseStudy"
+import Testimonial from "./testimonial"
+import PartnerGrowth from "./partnerGrowth"
 
-// Testimonial Section
+// Case Study section
+// Testimonial can have multiple types.
 const CaseStudy = ({
   caseSectionPartner: {
-    partnerPhoto,
-    partnerName,
-    partnerTestimonial,
-    partnerDescription,
-    partnerSuccess,
-    partnerLogo,
+    ...partnerProps
   },
-  caseSectionType,
-  caseSectionUrl,
-  metricImage1,
-  metricImage2,
-  metricValue1,
-  metricValue2,
+  ...props,
 }) => (
   <section class="section_testimonial">
     <div class="container">
-      <CaseStudyMolecule
-        partnerImage={partnerPhoto ? partnerPhoto.file.url : null}
-        caseSectionType={caseSectionType}
-        partnerTestimonial={partnerTestimonial.childContentfulRichText.html}
-        partnerName={partnerName}
-        partnerSuccess={partnerSuccess}
-        partnerLogo={partnerLogo}
-        partnerPosition={partnerDescription.childContentfulRichText.html}
-        details={[
-          { metricValue: metricValue1, metricImage: metricImage1 },
-          { metricValue: metricValue2, metricImage: metricImage2 },
-        ]}
-      />
+      <Testimonial
+        {...props}
+        {...partnerProps}
+      >
+        <PartnerGrowth
+          {...props}
+        />
+      </Testimonial>
     </div>
   </section>
 )
