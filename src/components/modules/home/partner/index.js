@@ -16,7 +16,6 @@ const Partner = ({ partnerList, partnerSectionTitle }) => (
                 src={partner.partnerLogo.file.url}
                 className="img_fluid"
                 alt="VideoBanner"
-                style={{ maxWidth: "100px" }}
               />
             </Link>
           ))}
