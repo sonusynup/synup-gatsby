@@ -1,15 +1,16 @@
 import React from "react"
 
+import { Link } from 'gatsby'
 import Button from "../../atoms/button"
 
 const resourceList = [
-  "Ebooks",
-  "Webinars",
-  "Guides",
-  "Blog",
-  "Checklists",
-  "Free Tools",
-  "Case Study",
+  { title: 'Ebooks', link: '/resources' },
+  { title: 'Webinars', link: '/resources' },
+  { title: 'Guides', link: '/resources' },
+  { title: 'Blog', link: '/resources' },
+  { title: 'Checklists', link: '/resources/checklists' },
+  { title: 'Free Tools', link: '/resources/free-tools' },
+  { title: 'Case Study', link: '/resources/case-study' }
 ]
 
 // TODO: need borderless button component
@@ -51,17 +52,18 @@ const ResourcesNavGroup = ({
             <div className="tabs-left">
               <ul className="nav nav-tabs nav-stacked">
                 {resourceList.map(resource => (
-                  <li key={resource}>
-                    <a
-                      onClick={onChangeActiveResource(resource)}
+                  <Link key={resource.title} to={resource.link}>
+                    <li
+                      onClick={onChangeActiveResource(resource.title)}
                       data-toggle="tab"
                       className={`${
-                        activeResource === resource ? "active" : ""
+                        activeResource === resource.title ? "active" : ""
                       }`}
                     >
-                      {resource}
-                    </a>
-                  </li>
+                      {resource.title}
+                    </li>
+                  </Link>
+                  
                 ))}
               </ul>
             </div>
