@@ -14,7 +14,7 @@ const FeatureWhitelabel = ({
       <div class="blockWrapper">
         <div class="whitelabel_block">
           {!isNull(featureTitle) ? <h3 class="whiteTitle">{featureTitle}</h3> : null}
-          {!isNull(featureDescription) ? <p class="whitelabel_pre" dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} /> : null}
+          {!isNull(featureDescription) ? <div class="whitelabel_pre" dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} /> : null}
         </div>
       </div>
     </div>
