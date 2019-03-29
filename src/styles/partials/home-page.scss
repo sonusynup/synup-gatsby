@@ -193,8 +193,9 @@ section {
 }
 
 .space {
+        padding:0.625rem;
     @include bp-xs {
-        display: none;
+        padding:2px;
     }
 }
 
@@ -211,18 +212,6 @@ section {
     color: $white;
 }
 
-// .section_rectangularWrapperRight {
-//     background-image: url(../images/fullwidth-rectangleRight.png);
-//     background-repeat: no-repeat;
-//     background-position: right center;
-//     background-size: contain;
-// }
-// .section_rectangularWrapperLeft {
-//     background-image: url(../images/fullwidth-rectangleLeft.png);
-//     background-repeat: no-repeat;
-//     background-position: left center;
-//     background-size: contain;
-// }
 .block_body {
     align-self: flex-end;
 
@@ -261,6 +250,9 @@ section {
 
 .featuresCard {
     max-width: 440px;
+    @include bp-sm {
+        max-width: 100%;
+    }
 }
 
 // blogWrapper

@@ -44,6 +44,7 @@
 
     &.card_iconBg {
       margin-bottom: 1.875rem;
+      // margin-top: 6.25rem;
     }
   }
 }
@@ -251,6 +252,10 @@
   -moz-box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 3px 3px 18px 0px rgba(0, 0, 0, 0.16);
 
+  @include media-breakpoint-down(md) {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
   @include media-breakpoint-up(xs) {
     // box-shadow: none;
   }
@@ -271,6 +276,7 @@
   // background-image: url(../images/svg/card-icon.svg);
   background-position: right bottom;
   background-repeat: no-repeat;
+  // margin-top: 20px;
 
   &:hover {
     // background-image: url(../images/svg/card-icon-white.svg);
@@ -332,43 +338,6 @@
 @include media-breakpoint-down(sm) {
   .card_deck {
     margin-top: 3.25rem;
-
-    .card_iconBg {
-      background: $blue;
-      // background-image: url(../images/svg/card-icon-white.svg);
-      background-position: right bottom;
-      background-repeat: no-repeat;
-    }
-
-    .card_title,
-    .card_text,
-    .linkText_span {
-      color: $white;
-    }
-
-    .btn_arrow svg {
-      opacity: 1;
-      right: -1.5rem;
-    }
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .card_deck {
-    .card_icon {
-      background: $blue;
-    }
-
-    .card_title,
-    .card_text,
-    .linkText_span {
-      color: $white;
-    }
-
-    .btn_arrow svg {
-      opacity: 1;
-      right: -1.5rem;
-    }
   }
 }
 

@@ -56,7 +56,7 @@
     }
 }
 .heroblock_features p {
-    opacity: 0.6;
+    opacity: 0.75;
     font-size: $pre-font-size;
     color: $base-font-color;
     letter-spacing: $p-letter-spacing;
@@ -113,4 +113,11 @@
     flex-wrap: wrap;
     max-width: 500px;
     min-width: 520px;
+    @include bp-lg {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    @include bp-sm {
+        min-width: unset;
+    }
 }

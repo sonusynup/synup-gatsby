@@ -212,7 +212,14 @@ nav {
     @include bp-md {
         flex-direction: column;
         width: 100%;
+
+        a.btn.btn_primary.btn_arrow {
+            width: 100%;
+            margin-right: 0px;
+            text-align: center;
+        }
     }
+
 }
 
 .btn_signin {
@@ -308,6 +315,11 @@ header.navbar {
         }
 
         @include bp-md {
+            a {
+                width: 100%;
+                text-align: center;
+            }
+
             .btn {
                 width: 100%;
                 text-align: center;
