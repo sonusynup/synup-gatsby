@@ -67,6 +67,7 @@ class Header extends React.Component {
 
   render() {
     const { isMenuExpanded } = this.state
+    const filterItemsByGroup = group => this.props.data.allContentfulWebpage.edges.filter((edge) => edge.node.navbarGroup === group);
     return (
       <header
         ref={ref}
@@ -98,11 +99,13 @@ class Header extends React.Component {
                 onExpand={this.setActiveHoverNavItem("solution")}
                 onClose={this.setActiveHoverNavItem("")}
                 isExpanded={this.state.activeExpandedNavItem === "solution"}
+                items={filterItemsByGroup('solutions')}
               />
               <ProductNavGroup
                 onExpand={this.setActiveHoverNavItem("product")}
                 onClose={this.setActiveHoverNavItem("")}
                 isExpanded={this.state.activeExpandedNavItem === "product"}
+                items={filterItemsByGroup('products')}
               />
               <ResourcesNavGroup
                 onExpand={this.setActiveHoverNavItem("resource")}
