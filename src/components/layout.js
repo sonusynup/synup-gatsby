@@ -37,7 +37,6 @@ const companyList = [
   { title: 'Synp Network', link: '/synp-network' }
 ]
 
-
 // Handles the layout of the app
 // Layout includes headers, app and footer.
 // Each route will replace the app as it is there
@@ -102,7 +101,11 @@ const Layout = ({ children }) => (
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" />
         </Helmet>
         <main>{children}</main>
-        <Footer />
+        <Footer
+          data={data}
+          resourceList={resourceList}
+          companyList={companyList}
+        />
       </>
     )}
   />
