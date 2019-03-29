@@ -113,11 +113,13 @@ class Header extends React.Component {
                 isExpanded={this.state.activeExpandedNavItem === "resource"}
                 onChangeActiveResource={this.onChangeActiveResource}
                 activeResource={this.state.activeResource}
+                resourceList={this.props.resourceList}
               />
               <CompanyNavGroup
                 onExpand={this.setActiveHoverNavItem("company")}
                 onClose={this.setActiveHoverNavItem("")}
                 isExpanded={this.state.activeExpandedNavItem === "company"}
+                companyList={this.props.companyList}
               />
               <li>
                 <Link to="/" className="js-scroll-trigger nav-link">

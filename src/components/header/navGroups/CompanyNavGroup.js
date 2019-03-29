@@ -1,17 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const resourceList = [
-  { title: 'About', link: '/about' },
-  { title: 'Press', link: '/press' },
-  { title: 'Careers', link: '/careers' },
-  { title: 'Contact', link: '/contact' },
-  { title: 'Customers', link: '/customers' },
-  { title: 'Free Tools', link: '/free-tools' },
-  { title: 'Synp Network', link: '/synp-network' }
-]
 
-const CompanyNavGroup = ({ onExpand, isExpanded, onClose }) => {
+const CompanyNavGroup = ({ 
+  onExpand,
+  isExpanded,
+  onClose,
+  ...props
+}) => {
   const onMouseEnterOrExit = () => {
     if (window.outerWidth > 992) {
       isExpanded ? onClose() : onExpand()
@@ -42,7 +38,7 @@ const CompanyNavGroup = ({ onExpand, isExpanded, onClose }) => {
         <div className="company-submenu arrow_box">
           <ul>
             {
-              resourceList.map(resource => (
+              props.companyList.map(resource => (
               <Link key={resource.title} to={resource.link}>
                 <li
                   data-toggle="tab"

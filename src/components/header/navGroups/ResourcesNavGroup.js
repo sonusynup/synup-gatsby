@@ -3,15 +3,7 @@ import React from "react"
 import { Link } from 'gatsby'
 import Button from "../../atoms/button"
 
-const resourceList = [
-  { title: 'Ebooks', link: '/resources/ebooks' },
-  { title: 'Webinars', link: '/resources/webinars' },
-  { title: 'Guides', link: '/resources/guides' },
-  { title: 'Blog', link: '/resources/blogs' },
-  { title: 'Checklists', link: '/resources/checklists' },
-  { title: 'Free Tools', link: '/resources/free-tools' },
-  { title: 'Case Study', link: '/resources/case-study' }
-]
+
 
 // TODO: need borderless button component
 const ResourcesNavGroup = ({
@@ -20,6 +12,7 @@ const ResourcesNavGroup = ({
   isExpanded,
   onChangeActiveResource,
   activeResource,
+  ...props
 }) => {
   const onMouseEnterOrExit = () => {
     if (window.outerWidth > 992) {
@@ -32,7 +25,7 @@ const ResourcesNavGroup = ({
       isExpanded ? onClose() : onExpand()
     }
   }
-  console.log('active resource ', resourceList.find(resource => resource.title === activeResource).link)
+  
   return (
     <li
       className="dropdown-accord"
@@ -52,7 +45,7 @@ const ResourcesNavGroup = ({
           <div className="tab-block">
             <div className="tabs-left">
               <ul className="nav nav-tabs nav-stacked">
-                {resourceList.map(resource => (
+                {props.resourceList.map(resource => (
                   <li key={resource.title} to={resource.link}>
                     <a
                       onClick={onChangeActiveResource(resource.title)}
@@ -70,7 +63,7 @@ const ResourcesNavGroup = ({
             <div className="tab-content">
               <div className="tab-pane active">
                 <h3>{activeResource}</h3>
-                <Link to={resourceList.find(resource => resource.title === activeResource).link}>
+                <Link to={props.resourceList.find(resource => resource.title === activeResource).link}>
                   <Button type="borderless" text="READ NOW" />
                 </Link>
               </div>
