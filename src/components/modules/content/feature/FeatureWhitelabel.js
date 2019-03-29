@@ -1,8 +1,6 @@
 import React from "react"
 
-import Button from "../../../atoms/button"
-import { Link } from "gatsby"
-import getButtonClass from "../../../../helpers/getButtonClass"
+import PropTypes from 'prop-types'
 import isNull from "../../../../helpers/isNull"
 
 const FeatureWhitelabel = ({
@@ -29,5 +27,24 @@ const FeatureWhitelabel = ({
     )}
   </>
 )
+
+FeatureWhitelabel.propTypes = {
+  featureImage: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
+  featureBackground: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
+  featureDescription: PropTypes.shape({
+    childContentfulRichText: PropTypes.shape({
+      html: PropTypes.string,
+    })
+  }),
+  featureTitle: PropTypes.string,
+}
 
 export default FeatureWhitelabel

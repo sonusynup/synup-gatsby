@@ -1,12 +1,12 @@
 import React from "react"
 
+import PropTypes from 'prop-types'
 import Button from "../../../atoms/button"
 import { Link } from "gatsby"
 import getButtonClass from "../../../../helpers/getButtonClass"
 import isNull from "../../../../helpers/isNull"
 
 const FeatureDefault = ({
-  actionType,
   featureButtonType,
   featureButton,
   to,
@@ -106,6 +106,40 @@ const FeatureDefault = ({
       )}
     </>
   )
+}
+
+FeatureDefault.propTypes = {
+  featureButtonType: PropTypes.string,
+  featureButton: PropTypes.string,
+  to: PropTypes.string,
+  featureTitle: PropTypes.string,
+  featureName: PropTypes.string,
+  featureDescription: PropTypes.shape({
+    childContentfulRichText: PropTypes.shape({
+      html: PropTypes.string,
+    })
+  }),
+  featureImage: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
+  featureIcon: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
+  metricValue: PropTypes.string,
+  metricImage: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
+  featuredCaseStudy: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
 }
 
 export default FeatureDefault
