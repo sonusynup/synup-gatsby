@@ -29,11 +29,31 @@ const Layout = ({ children }) => (
             title
           }
         }
+        allContentfulWebpage(limit: 100) {
+          edges{
+            node {
+              webpageName
+              navbarTitle
+              navbarGroup
+              navbarTitle
+              navbarImage {
+                file {
+                  url
+                }
+              }
+              navbarDescription{
+                childContentfulRichText{
+                  html
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
       <>
-        <Header />
+        <Header data={data}/>
         {/* Dynamic injection of page meta */}
         <Helmet>
           <meta charset="utf-8" />
