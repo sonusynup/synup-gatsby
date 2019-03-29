@@ -63,45 +63,16 @@ const PrimaryFooter = ({
             }
           </ul>
         </div>
-        
         <div className="footer_linksWrapper">
           <ul>
             <li className="footer_linksheading">RESOURCES</li>
-            <li>
-              <a href="" className="footer_link">
-                Ebooks
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Webinars
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Guides
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Blogs
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Case studies
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Free Tools
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Checklists
-              </a>
-            </li>
+            {resourceList.map(resource => (
+              <li key={resource.title}>
+                <Link to={resource.link} className="footer_link">
+                  {resource.title}
+                </Link>
+              </li>
+            ))}  
           </ul>
         </div>
         <div className="footer_linksWrapper">
