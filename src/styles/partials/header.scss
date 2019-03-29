@@ -239,6 +239,16 @@ nav {
     }
 }
 
+.btn_full {
+    @include bp-md {
+        width: 100%;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
 header.navbar {
     padding: 15px 0;
     transition: all 0.25s;

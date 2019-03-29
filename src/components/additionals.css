@@ -5,3 +5,6 @@
 .enterprise_blockWrapper li {
   background-image: url(./images/svg/whitetick.svg);
 }
+.webinar_resourceBlock{
+  background:url(./images/FeaturedWebinar-bg.png);
+}
