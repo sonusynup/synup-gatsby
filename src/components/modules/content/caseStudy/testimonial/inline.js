@@ -5,7 +5,6 @@ import isNull from '../../../../../helpers/isNull'
 
 const InlineTestimonial = ({
   partnerPhoto,
-  partnerLogo,
   partnerTestimonial,
   partnerName,
   partnerDescription,
