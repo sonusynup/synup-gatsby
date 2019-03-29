@@ -1,17 +1,10 @@
 import React from "react"
 
-import Button from "../../../atoms/button"
-import { Link } from "gatsby"
-import getButtonClass from "../../../../helpers/getButtonClass"
+import PropTypes from 'prop-types'
 import isNull from "../../../../helpers/isNull"
 
 const FeatureWhitelabel = ({
-  actionType,
-  featureButtonType,
-  featureButton,
-  to,
   featureTitle,
-  featureName,
   featureDescription,
   featureImage,
   featureBackground
@@ -20,8 +13,8 @@ const FeatureWhitelabel = ({
     <div class="whitelabel_primaryWrapper" style={{ background: `linear-gradient(90deg, #4865ff 0%, rgba(72, 101, 255, 0.57) 100%), url(${featureBackground.file.url})`}}>
       <div class="blockWrapper">
         <div class="whitelabel_block">
-          <h3 class="whiteTitle">{featureTitle}</h3>
-          <p class="whitelabel_pre" dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} />
+          {!isNull(featureTitle) ? <h3 class="whiteTitle">{featureTitle}</h3> : null}
+          {!isNull(featureDescription) ? <p class="whitelabel_pre" dangerouslySetInnerHTML={{ __html: featureDescription.childContentfulRichText.html }} /> : null}
         </div>
       </div>
     </div>
@@ -34,5 +27,24 @@ const FeatureWhitelabel = ({
     )}
   </>
 )
+
+FeatureWhitelabel.propTypes = {
+  featureImage: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
+  featureBackground: PropTypes.shape({
+    file: PropTypes.shape({
+      url: PropTypes.string,
+    })
+  }),
+  featureDescription: PropTypes.shape({
+    childContentfulRichText: PropTypes.shape({
+      html: PropTypes.string,
+    })
+  }),
+  featureTitle: PropTypes.string,
+}
 
 export default FeatureWhitelabel

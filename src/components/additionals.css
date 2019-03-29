@@ -1,3 +1,7 @@
 .list_unstyled li {
   background-image: url(./images/svg/tick.svg);
 }
+
+.enterprise_blockWrapper li {
+  background-image: url(./images/svg/whitetick.svg);
+}
