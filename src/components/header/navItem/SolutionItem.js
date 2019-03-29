@@ -3,8 +3,12 @@ import { Link } from "gatsby"
 
 import SolutionBgImage from "../../images/svgComponents/solutionBgImage"
 
-const SolutionNavItem = ({ title, description }) => (
-  <Link to="/" className="flex-submenu">
+const SolutionNavItem = ({ 
+  title,
+  description,
+  webpageName,
+}) => (
+  <Link to={webpageName} className="flex-submenu">
     <figure>
       <SolutionBgImage />
     </figure>

@@ -35,6 +35,7 @@ const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {
               <SolutionNavItem
                 title={item.node.navbarTitle}
                 description={item.node.navbarDescription}
+                webpageName={item.node.webpageName}
               />
             ))
           }
