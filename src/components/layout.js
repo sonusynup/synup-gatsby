@@ -34,6 +34,7 @@ const Layout = ({ children }) => (
             node {
               webpageName
               navbarTitle
+              navbarOrder
               navbarGroup
               navbarTitle
               navbarImage {

@@ -29,25 +29,15 @@ const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {
       >
         <div className="solutions-submenu arrow_box">
           {
-            items.map((item) => (
+            items
+              .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
+              .map((item) => (
               <SolutionNavItem
                 title={item.node.navbarTitle}
                 description={item.node.navbarDescription}
               />
             ))
           }
-          {/* <SolutionNavItem
-            title="SINGLE - LOCATION BUSINESS"
-            description="Manage all your business locations and whatever comes here"
-          />
-          <SolutionNavItem
-            title="MULTI - LOCATION BUSINESS"
-            description="Manage all your business locations and whatever comes here"
-          />
-          <SolutionNavItem
-            title="MARKETING AGENCY"
-            description="Manage all your business locations and whatever comes here"
-          /> */}
         </div>
       </div>
     </li>
