@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 import Button from "../../atoms/button"
 
 const resourceList = [
-  { title: 'Ebooks', link: '/resources' },
-  { title: 'Webinars', link: '/resources' },
-  { title: 'Guides', link: '/resources' },
-  { title: 'Blog', link: '/resources' },
+  { title: 'Ebooks', link: '/resources/ebooks' },
+  { title: 'Webinars', link: '/resources/webinars' },
+  { title: 'Guides', link: '/resources/guides' },
+  { title: 'Blog', link: '/resources/blogs' },
   { title: 'Checklists', link: '/resources/checklists' },
   { title: 'Free Tools', link: '/resources/free-tools' },
   { title: 'Case Study', link: '/resources/case-study' }
@@ -32,6 +32,7 @@ const ResourcesNavGroup = ({
       isExpanded ? onClose() : onExpand()
     }
   }
+  console.log('active resource ', resourceList.find(resource => resource.title === activeResource).link)
   return (
     <li
       className="dropdown-accord"
@@ -52,8 +53,8 @@ const ResourcesNavGroup = ({
             <div className="tabs-left">
               <ul className="nav nav-tabs nav-stacked">
                 {resourceList.map(resource => (
-                  <Link key={resource.title} to={resource.link}>
-                    <li
+                  <li key={resource.title} to={resource.link}>
+                    <a
                       onClick={onChangeActiveResource(resource.title)}
                       data-toggle="tab"
                       className={`${
@@ -61,16 +62,17 @@ const ResourcesNavGroup = ({
                       }`}
                     >
                       {resource.title}
-                    </li>
-                  </Link>
-                  
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>
             <div className="tab-content">
               <div className="tab-pane active">
                 <h3>{activeResource}</h3>
-                <Button type="borderless" text="READ NOW" />
+                <Link to={resourceList.find(resource => resource.title === activeResource).link}>
+                  <Button type="borderless" text="READ NOW" />
+                </Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
 
+const resourceList = [
+  { title: 'About', link: '/about' },
+  { title: 'Press', link: '/press' },
+  { title: 'Careers', link: '/careers' },
+  { title: 'Contact', link: '/contact' },
+  { title: 'Customers', link: '/customers' },
+  { title: 'Free Tools', link: '/free-tools' },
+  { title: 'Synp Network', link: '/synp-network' }
+]
+
 const CompanyNavGroup = ({ onExpand, isExpanded, onClose }) => {
   const onMouseEnterOrExit = () => {
     if (window.outerWidth > 992) {
@@ -31,24 +41,16 @@ const CompanyNavGroup = ({ onExpand, isExpanded, onClose }) => {
       >
         <div className="company-submenu arrow_box">
           <ul>
-            <li>
-              <Link href="#">ABOUT</Link>
-            </li>
-            <li>
-              <Link href="#">PRESS</Link>
-            </li>
-            <li>
-              <Link href="#">CAREERS</Link>
-            </li>
-            <li>
-              <Link href="#">CONTACT</Link>
-            </li>
-            <li>
-              <Link href="#">CUSTOMERS</Link>
-            </li>
-            <li>
-              <Link href="#">SYNUP NETWORK</Link>
-            </li>
+            {
+              resourceList.map(resource => (
+              <Link key={resource.title} to={resource.link}>
+                <li
+                  data-toggle="tab"
+                >
+                  {resource.title}
+                </li>
+              </Link>
+            ))}
           </ul>
         </div>
       </div>
