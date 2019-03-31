@@ -79,50 +79,46 @@ const PrimaryFooter = ({
           <ul>
             <li className="footer_linksheading">COMPARE</li>
             <li>
-              <a href="" className="footer_link">
+              <Link to="" className="footer_link">
                 Yext
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="footer_link">
+              <Link to="" className="footer_link">
                 MozLocal
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="footer_link">
+              <Link to="" className="footer_link">
                 Brightlocal
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="footer_link">
+              <Link to="" className="footer_link">
                 Podium
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="footer_link">
+              <Link to="" className="footer_link">
                 Godaddy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="footer_linksWrapper">
           <ul>
             <li className="footer_linksheading">SOLUTIONS</li>
-            <li>
-              <a href="" className="footer_link">
-                Single Location Business
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Multi-Location Business
-              </a>
-            </li>
-            <li>
-              <a href="" className="footer_link">
-                Marketing Agency
-              </a>
-            </li>
+            {
+              filterItemsByGroup('solutions')
+                .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
+                .map((item) => (
+                  <li>
+                    <Link to={item.node.webpageName} className="footer_link">
+                      {item.node.navbarTitle}
+                    </Link>
+                  </li>
+              ))
+            }
           </ul>
         </div>
       </div>
