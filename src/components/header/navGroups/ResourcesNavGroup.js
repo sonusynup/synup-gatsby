@@ -1,16 +1,9 @@
 import React from "react"
 
+import { Link } from 'gatsby'
 import Button from "../../atoms/button"
 
-const resourceList = [
-  "Ebooks",
-  "Webinars",
-  "Guides",
-  "Blog",
-  "Checklists",
-  "Free Tools",
-  "Case Study",
-]
+
 
 // TODO: need borderless button component
 const ResourcesNavGroup = ({
@@ -19,6 +12,7 @@ const ResourcesNavGroup = ({
   isExpanded,
   onChangeActiveResource,
   activeResource,
+  ...props
 }) => {
   const onMouseEnterOrExit = () => {
     if (window.outerWidth > 992) {
@@ -31,6 +25,7 @@ const ResourcesNavGroup = ({
       isExpanded ? onClose() : onExpand()
     }
   }
+  
   return (
     <li
       className="dropdown-accord"
@@ -50,16 +45,16 @@ const ResourcesNavGroup = ({
           <div className="tab-block">
             <div className="tabs-left">
               <ul className="nav nav-tabs nav-stacked">
-                {resourceList.map(resource => (
-                  <li key={resource}>
+                {props.resourceList.map(resource => (
+                  <li key={resource.title} to={resource.link}>
                     <a
-                      onClick={onChangeActiveResource(resource)}
+                      onClick={onChangeActiveResource(resource.title)}
                       data-toggle="tab"
                       className={`${
-                        activeResource === resource ? "active" : ""
+                        activeResource === resource.title ? "active" : ""
                       }`}
                     >
-                      {resource}
+                      {resource.title}
                     </a>
                   </li>
                 ))}
@@ -68,7 +63,9 @@ const ResourcesNavGroup = ({
             <div className="tab-content">
               <div className="tab-pane active">
                 <h3>{activeResource}</h3>
-                <Button type="borderless" text="READ NOW" />
+                <Link to={props.resourceList.find(resource => resource.title === activeResource).link}>
+                  <Button type="borderless" text="READ NOW" />
+                </Link>
               </div>
             </div>
           </div>

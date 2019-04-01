@@ -17,6 +17,26 @@ import Footer from "./footer"
 import "./layout.scss"
 import "./additionals.css"
 
+const resourceList = [
+  { title: 'Ebooks', link: '/resources/ebooks' },
+  { title: 'Webinars', link: '/resources/webinars' },
+  { title: 'Guides', link: '/resources/guides' },
+  { title: 'Blog', link: '/resources/blogs' },
+  { title: 'Checklists', link: '/resources/checklists' },
+  { title: 'Free Tools', link: '/resources/free-tools' },
+  { title: 'Case Study', link: '/resources/case-study' }
+]
+
+const companyList = [
+  { title: 'About', link: '/about' },
+  { title: 'Press', link: '/press' },
+  { title: 'Careers', link: '/careers' },
+  { title: 'Contact', link: '/contact' },
+  { title: 'Customers', link: '/customers' },
+  { title: 'Free Tools', link: '/free-tools' },
+  { title: 'Synp Network', link: '/synp-network' }
+]
+
 // Handles the layout of the app
 // Layout includes headers, app and footer.
 // Each route will replace the app as it is there
@@ -29,11 +49,36 @@ const Layout = ({ children }) => (
             title
           }
         }
+        allContentfulWebpage(limit: 100) {
+          edges{
+            node {
+              webpageName
+              navbarTitle
+              navbarOrder
+              navbarGroup
+              navbarTitle
+              navbarImage {
+                file {
+                  url
+                }
+              }
+              navbarDescription{
+                childContentfulRichText{
+                  html
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
       <>
-        <Header />
+        <Header
+          data={data}
+          resourceList={resourceList}
+          companyList={companyList}
+        />
         {/* Dynamic injection of page meta */}
         <Helmet>
           <meta charset="utf-8" />
@@ -56,7 +101,11 @@ const Layout = ({ children }) => (
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" />
         </Helmet>
         <main>{children}</main>
-        <Footer />
+        <Footer
+          data={data}
+          resourceList={resourceList}
+          companyList={companyList}
+        />
       </>
     )}
   />

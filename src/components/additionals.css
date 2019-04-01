@@ -8,3 +8,6 @@
 .webinar_resourceBlock{
   background:url(./images/FeaturedWebinar-bg.png);
 }
+.testimonialWrapper {
+  background-image: url(./images/svg/testimonial-icon.svg);
+}
