@@ -67,6 +67,7 @@ class Header extends React.Component {
 
   render() {
     const { isMenuExpanded } = this.state
+    const filterItemsByGroup = group => this.props.data.allContentfulWebpage.edges.filter((edge) => edge.node.navbarGroup === group);
     return (
       <header
         ref={ref}
@@ -98,11 +99,13 @@ class Header extends React.Component {
                 onExpand={this.setActiveHoverNavItem("solution")}
                 onClose={this.setActiveHoverNavItem("")}
                 isExpanded={this.state.activeExpandedNavItem === "solution"}
+                items={filterItemsByGroup('solutions')}
               />
               <ProductNavGroup
                 onExpand={this.setActiveHoverNavItem("product")}
                 onClose={this.setActiveHoverNavItem("")}
                 isExpanded={this.state.activeExpandedNavItem === "product"}
+                items={filterItemsByGroup('products')}
               />
               <ResourcesNavGroup
                 onExpand={this.setActiveHoverNavItem("resource")}
@@ -110,11 +113,13 @@ class Header extends React.Component {
                 isExpanded={this.state.activeExpandedNavItem === "resource"}
                 onChangeActiveResource={this.onChangeActiveResource}
                 activeResource={this.state.activeResource}
+                resourceList={this.props.resourceList}
               />
               <CompanyNavGroup
                 onExpand={this.setActiveHoverNavItem("company")}
                 onClose={this.setActiveHoverNavItem("")}
                 isExpanded={this.state.activeExpandedNavItem === "company"}
+                companyList={this.props.companyList}
               />
               <li>
                 <Link to="/" className="js-scroll-trigger nav-link">

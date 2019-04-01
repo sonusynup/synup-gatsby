@@ -4,6 +4,13 @@ import PropTypes from 'prop-types'
 import Button from "../../../atoms/button"
 import isNull from "../../../../helpers/isNull";
 
+const getInvertedButtonType = (buttonType) => {
+  if (buttonType === 'Border') {
+    return 'invert-secondary';
+  }
+  return 'invert-primary';
+}
+
 // TODO: Change schema as required
 // Button style should change
 const FeatureInverted = ({
@@ -11,6 +18,9 @@ const FeatureInverted = ({
   featureDescription,
   featureButtonType,
   featureButton,
+  featureSecondaryButtonType,
+  featureSecondaryButton,
+  featureSecondaryUrl,
 }) => (
   <div className="enterprise_blockWrapper">
     <div className="leftBlock">
@@ -23,9 +33,22 @@ const FeatureInverted = ({
           }}
         />
       )}
-      {!isNull(featureButton) ? <Button type="invert-primary" text={featureButton} /> : null}
-      <span class="space" />
-      <Button type="invert-secondary" text="LEARN MORE" />
+      {!isNull(featureButton) ? (
+        <Button 
+          type={getInvertedButtonType(featureButtonType)}
+          text={featureButton} /> 
+        ) : null
+      }
+      {!isNull(featureSecondaryButton) ? (
+        <>
+          <span class="space" />
+          <Button
+            type={getInvertedButtonType(featureSecondaryButtonType)}
+            text={featureSecondaryButton}
+          />
+        </>
+        ) : null
+      }
     </div>
   </div>
 )

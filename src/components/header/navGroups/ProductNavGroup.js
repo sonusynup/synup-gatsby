@@ -2,7 +2,7 @@ import React from "react"
 
 import ProductItem from "../navItem/ProductItem"
 
-const ProductNavGroup = ({ onExpand, isExpanded, onClose }) => {
+const ProductNavGroup = ({ onExpand, isExpanded, onClose, items }) => {
   const onMouseEnterOrExit = () => {
     if (window.outerWidth > 992) {
       isExpanded ? onClose() : onExpand()
@@ -30,7 +30,18 @@ const ProductNavGroup = ({ onExpand, isExpanded, onClose }) => {
         }  accordion-content product-content`}
       >
         <div className="product-submenu arrow_box">
-          <ProductItem
+          {
+            items
+              .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
+              .map((item) => (
+              <ProductItem
+                title={item.node.navbarTitle}
+                description={item.node.navbarDescription}
+                webpageName={item.node.webpageName}
+              />
+            ))
+          }
+          {/* <ProductItem
             title="LOCATIONS"
             description="Manage all your business locations"
           />
@@ -45,7 +56,7 @@ const ProductNavGroup = ({ onExpand, isExpanded, onClose }) => {
           <ProductItem
             title="Agency Tools"
             description="Manage all your business locations"
-          />
+          /> */}
         </div>
       </div>
     </li>

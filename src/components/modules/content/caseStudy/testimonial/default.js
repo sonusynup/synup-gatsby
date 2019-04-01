@@ -10,7 +10,6 @@ const DefaultTestimonial = ({
   partnerDescription,
   children,
 }) => { 
-  console.log('partner description ', partnerDescription)
   return (
     <div className="blockWrapper">
       <div className="testimonialWrapper-customer">

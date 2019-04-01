@@ -1,175 +1,129 @@
 import React from "react"
+import { Link } from 'gatsby'
+
 import SynupLogo from "../images/svgComponents/synupLogo"
 import FacebookImage from "../images/svgComponents/FacebookImage"
 import LinkedInImage from "../images/svgComponents/LinkedInImage"
 import TwitterImage from "../images/svgComponents/TwitterImage"
 import InstagramImage from "../images/svgComponents/InstagramImage"
 
-const introSection = [
-  { label: "About Us", value: "aboutUs" },
-  { label: "Careers", value: "careers" },
-  { label: "Press", value: "press" },
-  { label: "Contact Us", value: "contactUs" },
+const socialIcons = [
+  { title: LinkedInImage, link: 'www.linkedin.com'},
+  { title: FacebookImage , link: 'www.facebook.com'},
+  { title: TwitterImage , link: 'www.twitter.com'},
+  { title: InstagramImage , link: 'www.facebook.com'},
 ]
-
-const PrimaryFooter = () => (
-  <div class="footer_primary">
-    <div class="container footer_wrapper">
-      <div class="footer_linksWrapper">
-        <ul>
-          <li class="footer_linksheading">
-            <a href="">
-              <SynupLogo />
-            </a>
-          </li>
-          {introSection.map(section => (
-            <li key={section.value}>
-              <a href="" class="footer_link">
-                About Us
+const PrimaryFooter = ({
+  data,
+  resourceList,
+  companyList,
+}) => {
+  const filterItemsByGroup = group => data.allContentfulWebpage.edges.filter((edge) => edge.node.navbarGroup === group);
+  return (
+    <div className="footer_primary">
+      <div className="container footer_wrapper">
+        <div className="footer_linksWrapper">
+          <ul>
+            <li className="footer_linksheading">
+              <a href="">
+                <SynupLogo />
               </a>
             </li>
-          ))}
-        </ul>
-        <ul class="socialicon_wrapper">
-          <li>
-            <a href="" class="socialIcon">
-              <LinkedInImage />
-            </a>
-          </li>
-          <li>
-            <a href="" class="socialIcon">
-              <FacebookImage />
-            </a>
-          </li>
-          <li>
-            <a href="" class="socialIcon">
-              <TwitterImage />
-            </a>
-          </li>
-          <li>
-            <a href="" class="socialIcon">
-              <InstagramImage />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer_linksWrapper">
-        <ul>
-          <li class="footer_linksheading">PRODUCTS</li>
-          <li>
-            <a href="" class="footer_link">
-              Locations
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Reviews
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Analytics
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Agency Tools<span class="label_caption">NEW</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer_linksWrapper">
-        <ul>
-          <li class="footer_linksheading">RESOURCES</li>
-          <li>
-            <a href="" class="footer_link">
-              Ebooks
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Webinars
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Guides
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Blogs
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Case studies
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Free Tools
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Checklists
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer_linksWrapper">
-        <ul>
-          <li class="footer_linksheading">COMPARE</li>
-          <li>
-            <a href="" class="footer_link">
-              Yext
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              MozLocal
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Brightlocal
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Podium
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Godaddy
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer_linksWrapper">
-        <ul>
-          <li class="footer_linksheading">SOLUTIONS</li>
-          <li>
-            <a href="" class="footer_link">
-              Single Location Business
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Multi-Location Business
-            </a>
-          </li>
-          <li>
-            <a href="" class="footer_link">
-              Marketing Agency
-            </a>
-          </li>
-        </ul>
+            {companyList.map(section => (
+              <li>
+                <Link to={section.link} className="footer_link">
+                  {section.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="socialicon_wrapper">
+            {socialIcons.map((icon) => (
+              <li className="socialIcon">
+                <Link to={icon.link}>
+                  <icon.title />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="footer_linksWrapper">
+          <ul>
+            <li className="footer_linksheading">PRODUCTS</li>
+            {
+              filterItemsByGroup('products')
+                .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
+                .map((item) => (
+                  <li>
+                    <Link to={item.node.webpageName} className="footer_link">
+                      {item.node.navbarTitle}
+                    </Link>
+                  </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div className="footer_linksWrapper">
+          <ul>
+            <li className="footer_linksheading">RESOURCES</li>
+            {resourceList.map(resource => (
+              <li key={resource.title}>
+                <Link to={resource.link} className="footer_link">
+                  {resource.title}
+                </Link>
+              </li>
+            ))}  
+          </ul>
+        </div>
+        <div className="footer_linksWrapper">
+          <ul>
+            <li className="footer_linksheading">COMPARE</li>
+            <li>
+              <Link to="" className="footer_link">
+                Yext
+              </Link>
+            </li>
+            <li>
+              <Link to="" className="footer_link">
+                MozLocal
+              </Link>
+            </li>
+            <li>
+              <Link to="" className="footer_link">
+                Brightlocal
+              </Link>
+            </li>
+            <li>
+              <Link to="" className="footer_link">
+                Podium
+              </Link>
+            </li>
+            <li>
+              <Link to="" className="footer_link">
+                Godaddy
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="footer_linksWrapper">
+          <ul>
+            <li className="footer_linksheading">SOLUTIONS</li>
+            {
+              filterItemsByGroup('solutions')
+                .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
+                .map((item) => (
+                  <li>
+                    <Link to={item.node.webpageName} className="footer_link">
+                      {item.node.navbarTitle}
+                    </Link>
+                  </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default PrimaryFooter

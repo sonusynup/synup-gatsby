@@ -5,3 +5,7 @@
 .enterprise_blockWrapper li {
   background-image: url(./images/svg/whitetick.svg);
 }
+
+.testimonialWrapper {
+  background-image: url(./images/svg/testimonial-icon.svg);
+}

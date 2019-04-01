@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import SolutionNavItem from "../navItem/SolutionItem"
 
-const SolutionNavGroup = ({ onExpand, onClose, isExpanded }) => {
+const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {
   const onMouseEnterOrExit = () => {
     if (window.outerWidth > 992) {
       isExpanded ? onClose() : onExpand()
@@ -28,18 +28,17 @@ const SolutionNavGroup = ({ onExpand, onClose, isExpanded }) => {
         } accordion-content solutions-content`}
       >
         <div className="solutions-submenu arrow_box">
-          <SolutionNavItem
-            title="SINGLE - LOCATION BUSINESS"
-            description="Manage all your business locations and whatever comes here"
-          />
-          <SolutionNavItem
-            title="MULTI - LOCATION BUSINESS"
-            description="Manage all your business locations and whatever comes here"
-          />
-          <SolutionNavItem
-            title="MARKETING AGENCY"
-            description="Manage all your business locations and whatever comes here"
-          />
+          {
+            items
+              .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
+              .map((item) => (
+              <SolutionNavItem
+                title={item.node.navbarTitle}
+                description={item.node.navbarDescription}
+                webpageName={item.node.webpageName}
+              />
+            ))
+          }
         </div>
       </div>
     </li>
