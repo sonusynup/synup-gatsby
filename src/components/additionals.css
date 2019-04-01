@@ -5,7 +5,11 @@
 .enterprise_blockWrapper li {
   background-image: url(./images/svg/whitetick.svg);
 }
-
+.webinar_resourceBlock{
+  background:url(./images/FeaturedWebinar-bg.png);
+  background-position: right ;
+  background-repeat: no-repeat;
+}
 .testimonialWrapper {
   background-image: url(./images/svg/testimonial-icon.svg);
 }

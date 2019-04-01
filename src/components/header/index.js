@@ -132,8 +132,8 @@ class Header extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="btn btn_primary btn_arrow">
-                  GET STARTED
+                <Link to="/" className="btn_full">
+                  <Button type="primary" text="GET STARTED" />
                 </Link>
               </li>
             </ul>

@@ -44,6 +44,13 @@ const Button = ({ type, text, fullWidthBtn }) => {
           <PrimaryButtonAnimation />
         </span>
       )
+      case "borderlessArrow":
+      return (
+        <span className="btn_arrow linkText linkText_span">
+          {text}
+          <SecondaryButtonAnimation />
+        </span>
+      )
     default:
       return (
         <button className={`btn btn_primary btn_arrow ${fullWidthClass}`}>

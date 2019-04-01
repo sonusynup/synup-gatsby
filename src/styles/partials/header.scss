@@ -239,6 +239,16 @@ nav {
     }
 }
 
+.btn_full {
+    @include bp-md {
+        width: 100%;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
 header.navbar {
     padding: 15px 0;
     transition: all 0.25s;
@@ -487,7 +497,7 @@ header.navbar.header--top {
     }
 
     p {
-        opacity: 0.6;
+        opacity: 0.75;
         font-size: $nav-font-size;
         color: $base-font-color;
         letter-spacing: $no-letter-spacing;
@@ -549,7 +559,7 @@ header.navbar.header--top {
         font-size: $btn-font-size;
         color: $base-font-color !important;
         letter-spacing: $no-letter-spacing;
-        padding: 7px 30px;
+        padding: 0px;
         transition: all 0.25s ease-in-out 0s;
         white-space: pre;
 
@@ -563,6 +573,8 @@ header.navbar.header--top {
         cursor: pointer;
         outline: none;
         margin: 0;
+        padding: 7px 30px;
+        text-transform: uppercase;
 
         @include bp-md {
             text-align: left;
@@ -574,7 +586,7 @@ header.navbar.header--top {
 
         &:hover {
             background: $base-body-color;
-
+            color: $brand-blue !important;
             a {
                 color: $brand-blue !important;
             }
