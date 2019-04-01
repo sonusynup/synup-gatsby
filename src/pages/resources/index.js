@@ -15,7 +15,7 @@ const Resources = (props) => (
     <WebinarSection webinarData={props.data.allContentfulWebinar} />
     <Ebook ebookData={props.data.allContentfulEbooks}/>
     <BlogBlock />
-    <CustomersBlock />
+    <CustomersBlock casestudyData={props.data.allContentfulCaseStudy}/>
     <ToolsBlock />
   </Layout>
 )
@@ -58,6 +58,15 @@ query {
         }
       }
     }
-  } 
+  }
+  allContentfulCaseStudy(limit:2) {
+    edges {
+      node{
+        casestudyTitle {
+          casestudyTitle
+        }
+      }
+    }
+  }  
 }
 `

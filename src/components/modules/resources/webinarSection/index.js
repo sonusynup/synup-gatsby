@@ -15,6 +15,7 @@ const WebinarSection = (props) => (
                     <div className="resourcesHeading">
                         <div className="blogInnerTool-overlay"></div>
                             <h5 class>{props.webinarData.edges[0].node.webinarTitle}</h5>
+                            <p class>{props.webinarData.edges[0].node.webinarDate}</p>
                     </div>
                     <div className="resource_inner">
                         <img className="webinarAvartar" src= {props.webinarData.edges[0].node.speakers.speakers[0].speakerPhoto.file.url} ></img>

@@ -232,8 +232,14 @@ section {
 }
 
 .resourcesHeading {
-    margin-bottom: 2rem;
     position: relative;
+    padding: 2.5rem;
+    P{
+        color: #fff;
+        margin-top: 15px;
+        position: relative;
+        letter-spacing: 0.02em;
+    }
 }
 
 //features
@@ -327,7 +333,9 @@ section {
     cursor: pointer;
     min-height: 200px;
     margin-bottom: 30px;
-
+    @include bp-lg {
+        min-height: auto;        
+    }
     @include bp-sm {
         padding: 15px;
     }
@@ -614,6 +622,10 @@ section {
     letter-spacing: 0;
     line-height: 1.416;
     margin-bottom: 4.75rem;
+
+    @include bp-lg {
+         margin-bottom: 2rem;
+    }
 }
 
 .blogcard_textWhite {
