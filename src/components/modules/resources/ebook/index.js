@@ -2,44 +2,35 @@ import React from "react"
 import Button from '../../../atoms/button'
 import { Link } from "gatsby";
 
+import ContentHoverActionImage from "../../../images/svgComponents/contentHoverActionImage"
 
 const Ebook = (props) =>  (
     
 <section class="ebook">
-    <div class="container">
-        <div class="ebook_other">
-            <h3>other Ebooks</h3>
-                <div class="ebook_wrapper">
-                    <div class="ebook_lists">
-                        {props.ebookData.edges.map (Ebook => (
-                            <Link to ="/modules/ebook" className="ebook_anchor">
-                                <div class="overlay_content">
-                                    <div class="content-overlay"></div>
-                                        <figure>
-                                            <img src={Ebook.node.bookCoverImage.file.url} class="img_fluid" alt="" />
-                                        </figure>
-                                        <div class="content-details">
-                                            <span class="ebook-downloadlink btn_arrow linkText_span">download<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns xlink="http://www.w3.org/1999/xlink">
-                                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <g id="UI/Components/Buttons/PrimaryBig/hover" transform="translate(-119.000000, -15.000000)" fill="#FFFFFF">
-                                                            <g id="Arrow/white" transform="translate(119.000000, 15.000000)">
-                                                                <polygon id="Rectangle-Copy-2" opacity="0.305966332" points="-1.33226763e-14 0 9.52941176 9 -1.33226763e-14 18"></polygon>
-                                                                <polygon id="Rectangle-Copy-3" points="5.29411765 0 14.8235294 9 5.29411765 18"></polygon>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                    <Link to ="/resources/ebooks">
-                        <Button type="secondary" text="VIEW ALL EBOOKS" />
-                    </Link>
-            </div>
+  <div class="container">
+    <div class="ebook_other">
+        <h3>other Ebooks</h3>
+        <div class="ebook_wrapper">
+        <div class="ebook_lists">
+          {props.ebookData.edges.map (Ebook => (
+            <Link to ="/modules/ebook" className="ebook_anchor">
+              <div class="overlay_content">
+                <div class="content-overlay"></div>
+                  <figure>
+                    <img src={Ebook.node.bookCoverImage.file.url} class="img_fluid" alt="" />
+                  </figure>
+                  <div class="content-details">
+                    <ContentHoverActionImage />
+                  </div>
+              </div>
+            </Link>
+          ))}
         </div>
+          <Link to ="/resources/ebooks">
+            <Button type="secondary" text="VIEW ALL EBOOKS" />
+          </Link>
+        </div>
+      </div>
     </div>
 </section>
 )

@@ -14,9 +14,10 @@ const Resources = (props) => (
   <Layout>
     <WebinarSection webinarData={props.data.allContentfulWebinar}/>
     <Ebook ebookData={props.data.allContentfulEbooks}/>
-    <BlogBlock />
+    {/* <BlogBlock /> */}
     <CustomersBlock casestudyData={props.data.allContentfulCaseStudy}/>
-    <ToolsBlock />
+    {/* <GuidesBlock casestudyData={props.data.allContentfulCaseStudy}/> */}
+    {/* <ToolsBlock /> */}
   </Layout>
 )
 
