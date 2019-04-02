@@ -31,7 +31,8 @@ const ProductSectionWithTitle = ({
             feature.featureBackgroundImage,
             feature.featureBackgroundHoverImage,
             feature.featureIcon,
-            "card_iconBg"
+            "card_iconBg",
+            feature.featureLink
           )
         )}
       />

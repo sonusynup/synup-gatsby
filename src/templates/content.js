@@ -10,9 +10,11 @@ import Partner from "../components/modules/content/partner"
 
 const Content = props => {
   const sections = props.pageContext.sections
-
   return (
-    <Layout>
+    <Layout
+      announcementMessage={props.pageContext.announcementMessage}
+      announcementUrl={props.pageContext.announcementUrl}
+    >
       {sections.map(section => {
         switch (section.__typename) {
           case "ContentfulHeroSection":

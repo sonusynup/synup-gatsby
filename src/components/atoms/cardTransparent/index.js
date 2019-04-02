@@ -10,31 +10,33 @@ const CardTransparent = ({
   isDescriptionRichText,
   action,
   image,
+  to
 }) => (
   <div className="popCard">
-    <Link to="" />
-    <div className="card_transparent">
-      <div className="card_body">
-        <img className="card_imgTop" src={image} alt="FeatureCard" />
-        <h5 className="card_title">{title}</h5>
-        {isDescriptionRichText ? (
-          <div
-            className="card_text"
-            dangerouslySetInnerHTML={{
-              __html: description.childContentfulRichText.html,
-            }}
-          />
-        ) : (
-          <div className="card_text">{description}</div>
-        )}
+    <Link to={to}>
+      <div className="card_transparent">
+        <div className="card_body">
+          <img className="card_imgTop" src={image} alt="FeatureCard" />
+          <h5 className="card_title">{title}</h5>
+          {isDescriptionRichText ? (
+            <div
+              className="card_text"
+              dangerouslySetInnerHTML={{
+                __html: description.childContentfulRichText.html,
+              }}
+            />
+          ) : (
+            <div className="card_text">{description}</div>
+          )}
+        </div>
+        <div className="card_footer">
+          <span className="btn_arrow linkText linkText_span">
+            {action}
+            <ContentHoverableSecondaryImage />
+          </span>
+        </div>
       </div>
-      <div className="card_footer">
-        <span className="btn_arrow linkText linkText_span">
-          {action}
-          <ContentHoverableSecondaryImage />
-        </span>
-      </div>
-    </div>
+    </Link>
   </div>
 )
 

@@ -5,7 +5,7 @@ import isNull from '../../../../helpers/isNull'
 const FeatureTitleWithImage = ({ 
   featureTitle, 
   featureName, 
-  featureImage
+  featureImage,
 }) => (
   <>
     <div class="leftBlock block_contentWrap">

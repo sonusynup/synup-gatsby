@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import Button from "../../../atoms/button"
 import isNull from "../../../../helpers/isNull";
@@ -18,6 +18,7 @@ const FeatureInverted = ({
   featureDescription,
   featureButtonType,
   featureButton,
+  featureUrl,
   featureSecondaryButtonType,
   featureSecondaryButton,
   featureSecondaryUrl,
@@ -34,18 +35,22 @@ const FeatureInverted = ({
         />
       )}
       {!isNull(featureButton) ? (
-        <Button 
-          type={getInvertedButtonType(featureButtonType)}
-          text={featureButton} /> 
-        ) : null
+        <Link to={featureUrl}>
+          <Button 
+            type={getInvertedButtonType(featureButtonType)}
+            text={featureButton} /> 
+        </Link>
+        ) : null 
       }
       {!isNull(featureSecondaryButton) ? (
         <>
           <span class="space" />
-          <Button
-            type={getInvertedButtonType(featureSecondaryButtonType)}
-            text={featureSecondaryButton}
-          />
+          <Link to={featureSecondaryUrl}>
+            <Button
+              type={getInvertedButtonType(featureSecondaryButtonType)}
+              text={featureSecondaryButton}
+            />
+          </Link>
         </>
         ) : null
       }

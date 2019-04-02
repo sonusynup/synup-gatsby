@@ -13,7 +13,7 @@ const ProductItem = ({
       <ProductItemImage />
     </figure>
     <h5>{title}</h5>
-    <p dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
+    <div dangerouslySetInnerHTML={{ __html: description.childContentfulRichText.html }} />
   </Link>
 )
 

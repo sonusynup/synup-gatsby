@@ -31,6 +31,7 @@ const ProductSectionWithImage = ({
               image={feature.featureIcon.file.url}
               isDescriptionRichText
               action="SEE ALL FEATURES"
+              to={feature.featureLink}
             />
           ))}
         </div>

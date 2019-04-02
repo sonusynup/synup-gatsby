@@ -40,7 +40,7 @@ const companyList = [
 // Handles the layout of the app
 // Layout includes headers, app and footer.
 // Each route will replace the app as it is there
-const Layout = ({ children }) => (
+const Layout = ({ children, announcementMessage, announcementUrl }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -78,6 +78,8 @@ const Layout = ({ children }) => (
           data={data}
           resourceList={resourceList}
           companyList={companyList}
+          announcementMessage={announcementMessage}
+          announcementUrl={announcementUrl}
         />
         {/* Dynamic injection of page meta */}
         <Helmet>
