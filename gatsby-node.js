@@ -29,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
                 partnerGoal
                 partnerSuccess
                 partnerIndustry
+                partnerUrl
                 partnerDescription {
                   childContentfulRichText {
                     html

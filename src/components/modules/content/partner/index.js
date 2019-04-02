@@ -19,7 +19,7 @@ const Partner = ({
           {
             (!isNull(partnerList)) ? (
               partnerList.map(partner => (
-                <Link to={""} className="banner_logo">
+                <Link to={partner.partnerUrl} className="banner_logo">
                   {
                     !isNull(partner.partnerLogo) ? (
                       <img
