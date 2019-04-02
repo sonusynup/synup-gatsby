@@ -24,7 +24,7 @@ const resourceList = [
   { title: "Blog", link: "/resources/blogs" },
   { title: "Checklists", link: "/resources/checklists" },
   { title: "Free Tools", link: "/resources/free-tools" },
-  { title: "Case Study", link: "/resources/case-study" },
+  { title: "Case Study", link: "/resources/casestudy" },
 ]
 
 const companyList = [

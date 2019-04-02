@@ -10,13 +10,14 @@ const CustomersBlock = props => (
       <div className="blogWrapper blogWrapper_reverse">
         <div className="blogWrapper_img">
           <figure>
+            Static image
             <img src={Image} className="img_fluid" alt="" />
           </figure>
         </div>
         <div className="blogWrapper_right">
           <div className="card_deck">
             <div className="blogWrapper_inner">
-              <a href="#" className="blogcard_anchor">
+              <Link to={`resources/casestudy/${props.casestudyData.edges[0].node.id}`} className="blogcard_anchor">
                 <p className="blogcard_text">
                   {
                     props.casestudyData.edges[0].node.casestudyTitle
@@ -24,23 +25,23 @@ const CustomersBlock = props => (
                   }
                 </p>
                 <Button type="borderlessArrow" text="READ STORY" />
-              </a>
+              </Link>
             </div>
             <div className="blogWrapper_inner">
-              <a href="#" className="blogcard_anchor">
+              <Link to={`resources/casestudy/${props.casestudyData.edges[1].node.id}`} className="blogcard_anchor">
                 <p className="blogcard_text">
                   {
-                    props.casestudyData.edges[0].node.casestudyTitle
+                    props.casestudyData.edges[1].node.casestudyTitle
                       .casestudyTitle
                   }
                 </p>
                 <Button type="borderlessArrow" text="READ STORY" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <Link to="/resources/caseStudy">
+      <Link to="/resources/casestudies">
         <Button type="secondary" text="VIEW ALL STORIES" />
       </Link>
     </div>
