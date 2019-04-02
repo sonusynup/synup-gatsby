@@ -73,6 +73,7 @@ class Header extends React.Component {
       announcementUrl,
     } = this.props;
     const filterItemsByGroup = group => this.props.data.allContentfulWebpage.edges.filter((edge) => edge.node.navbarGroup === group);
+    const withAnnouncementClass = !isNull(announcementMessage) && !isNull(announcementUrl) ? 'with-announcement' : null;
     return (
       <>
         {
@@ -89,7 +90,7 @@ class Header extends React.Component {
         
         <header
           ref={ref}
-          className={`navbar navbar-toggleable-sm ${
+          className={`navbar ${withAnnouncementClass} navbar-toggleable-sm ${
             this.state.scrollBarFixed ? "header--fixed active" : "header--fixed"
           } `}
           id="header"
