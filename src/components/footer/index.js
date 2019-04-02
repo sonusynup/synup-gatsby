@@ -2,6 +2,7 @@ import React from "react"
 
 import PrimaryFooter from "./Primary"
 import SecondaryFooter from "./Secondary"
+import Prefooter from "./Prefooter";
 
 // TODO: Refactor this, replace gatsby link
 const Footer = ({
@@ -9,6 +10,8 @@ const Footer = ({
   resourceList,
   companyList,
 }) => (
+  <>
+  <Prefooter />
   <footer>
     <section class="footer">
       <PrimaryFooter
@@ -19,6 +22,7 @@ const Footer = ({
       <SecondaryFooter />
     </section>
   </footer>
+  </>
 )
 
 export default Footer
