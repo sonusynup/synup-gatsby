@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Button from "../../components/atoms/button"
+import Layout from "../../components/layout";
 
 const CaseStudyList = ({
   data: {
@@ -16,36 +17,36 @@ const CaseStudyList = ({
     }
   })
   return (
-    <section className="section_blog">
-    <div className="container">
-      <h3>Customer Stories</h3>
-      <div className="blogWrapper">
-        {
-          edges.map((edge) => (
-            <div className="blogWrapper_right">
-              <div className="card_deck">
-                <div className="blogWrapper_inner">
-                  <Link to={`resources/casestudy/${edge.node.id}`} className="blogcard_anchor">
-                    <p className="blogcard_text">
-                      {
-                        edge.node.casestudyTitle
-                          .casestudyTitle
-                      }
-                    </p>
-                    <Button type="borderlessArrow" text="READ STORY" />
-                  </Link>
-                </div>
-              </div>
+    <Layout>
+      <div className="container">
+        <section className="section_blog">
+          <div className="container">
+            <h3>Customer Stories</h3>
+            <div className="blogWrapper">
+              {
+                edges.map((edge) => (
+                  <div className="blogWrapper_right">
+                    <div className="card_deck">
+                      <div className="blogWrapper_inner">
+                        <Link to={`resources/casestudy/${edge.node.id}`} className="blogcard_anchor">
+                          <p className="blogcard_text">
+                            {
+                              edge.node.casestudyTitle
+                                .casestudyTitle
+                            }
+                          </p>
+                          <Button type="borderlessArrow" text="READ STORY" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
             </div>
-          ))
-        }
-        
+          </div>
+        </section>
       </div>
-      <Link to="/resources/caseStudy">
-        <Button type="secondary" text="VIEW ALL STORIES" />
-      </Link>
-    </div>
-  </section>
+    </Layout>
   )
 }
 
