@@ -30,7 +30,7 @@ const BusinessDetails = ({
               )}
             </a>
             <p className="va_text">
-              <span className="primary_text">{detail.metricValue}</span>
+              <span>{detail.metricValue}</span>
             </p>
           </div>
         ))}

@@ -77,6 +77,9 @@
     }
     &.with-announcement {
       top: 40px;
+      @include bp-md {
+        top: 25px;
+      }
     }
 }
 
@@ -824,11 +827,13 @@ header.navbar.header--top {
     z-index: 1;
 
     @include bp-md {
-        display: block;
-        position: static;
-        width: 100%;
-        box-shadow: none;
+      display: block;
+      position: static;
+      width: 100%;
+      box-shadow: none;
     }
+    
+    
 }
 
 .arrow_box {
@@ -888,6 +893,10 @@ header.navbar.header--top {
 
     &.default {
         display: block;
+    }
+
+    &.active {
+      display: block !important;
     }
 }
 
