@@ -15,6 +15,7 @@ const CardList = ({ listItems }) => (
         bgClass={list.bgClass}
         actionText={list.actionText}
         isHtml={list.isHtml}
+        to={list.to}
       />
     ))}
   </div>

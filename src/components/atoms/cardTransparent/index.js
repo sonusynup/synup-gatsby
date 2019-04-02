@@ -10,9 +10,10 @@ const CardTransparent = ({
   isDescriptionRichText,
   action,
   image,
+  to
 }) => (
   <div className="popCard">
-    <Link to="" />
+    <Link to={to}>
     <div className="card_transparent">
       <div className="card_body">
         <img className="card_imgTop" src={image} alt="FeatureCard" />
@@ -35,6 +36,7 @@ const CardTransparent = ({
         </span>
       </div>
     </div>
+    </Link>
   </div>
 )
 

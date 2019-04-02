@@ -84,6 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               productFeatures {
                 featureTitle
+                featureLink
                 featureIcon {
                   file {
                     url
