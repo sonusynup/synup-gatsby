@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from 'gatsby'
 
 import Button from "../../atoms/button"
 import isNull from "../../../helpers/isNull"
@@ -9,22 +10,22 @@ const BusinessDetails = ({ details }) => (
     <div className="va_list">
       {details.map(detail => (
         <div className="va_set">
-          <a href={detail.to}>
-            {!isNull(detail.metricImage) && (
-              <img
-                src={detail.metricImage.file.url}
-                className="img_fluid"
-                alt=""
-              />
-            )}
-          </a>
+          {!isNull(detail.metricImage) && (
+            <img
+              src={detail.metricImage.file.url}
+              className="img_fluid"
+              alt=""
+            />
+          )}
           <p className="va_text">
             <span className="primary_text">{detail.metricValue}</span>
           </p>
         </div>
       ))}
     </div>
-    <Button type="secondary" text="READ MORE" />
+    <Link to="/rs">
+      <Button type="secondary" text="READ MORE" />
+    </Link>
   </div>
 )
 
