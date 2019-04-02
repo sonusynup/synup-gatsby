@@ -41,22 +41,6 @@ const ProductNavGroup = ({ onExpand, isExpanded, onClose, items }) => {
               />
             ))
           }
-          {/* <ProductItem
-            title="LOCATIONS"
-            description="Manage all your business locations"
-          />
-          <ProductItem
-            title="LOCATIONS1"
-            description="Manage all your business locations"
-          />
-          <ProductItem
-            title="MAnalytics"
-            description="Manage all your business locations"
-          />
-          <ProductItem
-            title="Agency Tools"
-            description="Manage all your business locations"
-          /> */}
         </div>
       </div>
     </li>
