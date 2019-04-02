@@ -138,6 +138,7 @@ exports.createPages = ({ graphql, actions }) => {
               featureSecondaryButtonType
               featureSecondaryUrl
               metricValue
+              metricUrl
               metricImage {
                 file {
                   url

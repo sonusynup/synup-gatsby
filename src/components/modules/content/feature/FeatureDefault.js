@@ -18,6 +18,7 @@ const FeatureDefault = ({
   featureIcon,
   metricValue,
   metricImage,
+  metricUrl,
   featuredCaseStudy,
 }) => {
   return (
@@ -49,7 +50,7 @@ const FeatureDefault = ({
         {!isNull(metricImage) && !isNull(metricValue) ? (
           <div className="block_body">
             <div className="va_set">
-              <Link to="">
+              <Link to={metricUrl}>
                 <img src={metricImage.file.url} className="img_fluid" alt="" />
               </Link>
               <p className="va_text">{metricValue}</p>
