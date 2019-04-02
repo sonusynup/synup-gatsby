@@ -103,6 +103,9 @@
     @include bp-sm {
         justify-content: center;
     }
+    img {
+        max-height: 420px;
+    }
 }
 
 .ebook_wrapper {

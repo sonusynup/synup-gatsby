@@ -2,7 +2,7 @@
 import React from "react"
 import Button from '../../../atoms/button'
 import Image from '../../../images/customerstatic.png'
-
+import { Link } from "gatsby";
 
 
 const CustomersBlock = (props) =>  (
@@ -37,9 +37,9 @@ const CustomersBlock = (props) =>  (
                 </div>
             </div>
         </div>
-        <p>
-            <Button type="secondary" text="VIEW ALL STORIES" />            
-        </p>
+        <Link to ="/resources/caseStudy">
+            <Button type="secondary" text="VIEW ALL STORIES" />             
+        </Link>
     </div>
 </section>
 

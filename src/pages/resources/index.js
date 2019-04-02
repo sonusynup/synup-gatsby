@@ -12,7 +12,7 @@ import ToolsBlock from '../../components/modules/resources/toolsBlock'
 
 const Resources = (props) => (
   <Layout>
-    <WebinarSection webinarData={props.data.allContentfulWebinar} />
+    <WebinarSection webinarData={props.data.allContentfulWebinar}/>
     <Ebook ebookData={props.data.allContentfulEbooks}/>
     <BlogBlock />
     <CustomersBlock casestudyData={props.data.allContentfulCaseStudy}/>

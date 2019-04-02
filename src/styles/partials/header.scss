@@ -496,6 +496,7 @@ header.navbar.header--top {
         letter-spacing: $no-letter-spacing;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        text-transform: uppercase;
 
         @include bp-md {
             margin: 12px 0;
