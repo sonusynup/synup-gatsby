@@ -24,7 +24,7 @@ const solutionBgImage = () => (
           <g id="Group-3" transform="translate(260.000000, 39.000000)">
             <g id="Front">
               <g id="Group">
-                <g id="Group-5" class="solutionnav-icon" stroke="#060E3D">
+                <g id="Group-5" className="solutionnav-icon" stroke="#060E3D">
                   <ellipse
                     id="Oval"
                     cx="22.1356837"
@@ -45,7 +45,7 @@ const solutionBgImage = () => (
                   />
                 </g>
                 <g
-                  class="solutionnav-icon"
+                  className="solutionnav-icon"
                   id="Group-5-Copy"
                   opacity="0.19687035"
                   transform="translate(0.941944, 1.909444)"
@@ -59,12 +59,12 @@ const solutionBgImage = () => (
               </g>
               <g
                 id="Shadow"
-                class="solutionnav-icon"
+                className="solutionnav-icon"
                 transform="translate(11.494910, 74.341028)"
               >
                 <ellipse
                   id="Oval"
-                  class="solutionnav-icon"
+                  className="solutionnav-icon"
                   stroke="#060E3D"
                   cx="10.9278275"
                   cy="1.85852569"
@@ -73,7 +73,7 @@ const solutionBgImage = () => (
                 />
                 <ellipse
                   id="Oval-Copy"
-                  class="solutionnav-icon"
+                  className="solutionnav-icon"
                   fill="#060E3D"
                   opacity="0.203999256"
                   cx="12.8283192"

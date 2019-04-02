@@ -8,7 +8,7 @@ const Meta = ({ meta }) => {
   switch (meta.type) {
     case "tip":
       return (
-        <div class="secoundaryColor_block">
+        <div className="secoundaryColor_block">
           <h6>{meta.title}</h6>
           <p
             dangerouslySetInnerHTML={{
@@ -20,7 +20,7 @@ const Meta = ({ meta }) => {
       break
     case "alert":
       return (
-        <div class="primaryColor_block">
+        <div className="primaryColor_block">
           <h6>{meta.title}</h6>
           <p
             dangerouslySetInnerHTML={{

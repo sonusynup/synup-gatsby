@@ -4,18 +4,18 @@ import isNull from "../../../../helpers/isNull"
 
 const FeatureTitleWithImage = ({ featureTitle, featureName, featureImage }) => (
   <>
-    <div class="leftBlock block_contentWrap">
-      {!isNull(featureName) ? <h5 class="card_title">{featureName}</h5> : null}
+    <div className="leftBlock block_contentWrap">
+      {!isNull(featureName) ? <h5 className="card_title">{featureName}</h5> : null}
       {!isNull(featureTitle) ? (
-        <p class="featurePre block_contentText">{featureTitle}</p>
+        <p className="featurePre block_contentText">{featureTitle}</p>
       ) : null}
     </div>
     {!isNull(featureImage) ? (
-      <div class="rightBlock">
+      <div className="rightBlock">
         <figure>
           <img
             src={featureImage.file.url}
-            class="featuresCard img_fluid"
+            className="featuresCard img_fluid"
             alt=""
           />
         </figure>

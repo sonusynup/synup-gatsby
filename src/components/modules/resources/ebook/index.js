@@ -5,24 +5,24 @@ import { Link } from "gatsby"
 import ContentHoverActionImage from "../../../images/svgComponents/contentHoverActionImage"
 
 const Ebook = props => (
-  <section class="ebook">
-    <div class="container">
-      <div class="ebook_other">
+  <section className="ebook">
+    <div className="container">
+      <div className="ebook_other">
         <h3>other Ebooks</h3>
-        <div class="ebook_wrapper">
-          <div class="ebook_lists">
+        <div className="ebook_wrapper">
+          <div className="ebook_lists">
             {props.ebookData.edges.map(Ebook => (
               <Link to="/modules/ebook" className="ebook_anchor">
-                <div class="overlay_content">
-                  <div class="content-overlay" />
+                <div className="overlay_content">
+                  <div className="content-overlay" />
                   <figure>
                     <img
                       src={Ebook.node.bookCoverImage.file.url}
-                      class="img_fluid"
+                      className="img_fluid"
                       alt=""
                     />
                   </figure>
-                  <div class="content-details">
+                  <div className="content-details">
                     <ContentHoverActionImage />
                   </div>
                 </div>

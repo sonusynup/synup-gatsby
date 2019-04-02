@@ -33,7 +33,7 @@ const CaseStudyContent = ({
         ) : null}
         {description
           ? description.map(item => (
-              <ul class="casestudy_set">
+              <ul className="casestudy_set">
                 <li>
                   <h5>{item.title}</h5>
                   <span

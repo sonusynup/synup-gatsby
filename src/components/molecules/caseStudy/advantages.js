@@ -1,15 +1,15 @@
 import React from "react"
 
 const Advantages = ({ image, industry, goal }) => (
-  <div class="testimonial_wrapperCard">
-    <div class="va_list">
-      <div class="business-card">
+  <div className="testimonial_wrapperCard">
+    <div className="va_list">
+      <div className="business-card">
         <img className="business-card-logo" src={image} alt="" />
-        <p class="business-card_title">
+        <p className="business-card_title">
           {" "}
           <b>Industry:</b> {industry}
         </p>
-        <p class="business-card-description">
+        <p className="business-card-description">
           <b>Business Goal:</b>
           {goal}
         </p>

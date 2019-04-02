@@ -19,8 +19,8 @@ const ProductSectionWithImage = ({
               __html: productSectionDescription.childContentfulRichText.html,
             }}
           />
-          <figure class="floatingCard_img">
-            <img src={productSectionImage.file.url} class="img_fluid" alt="" />
+          <figure className="floatingCard_img">
+            <img src={productSectionImage.file.url} className="img_fluid" alt="" />
           </figure>
         </div>
         <div className="popCard_wrapper">

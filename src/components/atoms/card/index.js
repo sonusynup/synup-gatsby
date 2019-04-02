@@ -47,7 +47,7 @@ class Card extends React.Component {
         <Link to={to}>
           <div className="card_body">
             {!isNull(featureIcon) && (
-              <img class="card_imgTop" src={featureIcon.file.url} alt="" />
+              <img className="card_imgTop" src={featureIcon.file.url} alt="" />
             )}
             <h5 className="card_title">{title}</h5>
             {isHtml ? (

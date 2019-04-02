@@ -1,26 +1,26 @@
 import React from "react"
 
 const SecondaryFooter = () => (
-  <div class="footer_secondary">
-    <div class="container">
-      <ul class="footer_secondaryLinks">
+  <div className="footer_secondary">
+    <div className="container">
+      <ul className="footer_secondaryLinks">
         <li>
-          <a href="" class="footer_link">
+          <a href="" className="footer_link">
             Support
           </a>
         </li>
         <li>
-          <a href="" class="footer_link">
+          <a href="" className="footer_link">
             Privacy
           </a>
         </li>
         <li>
-          <a href="" class="footer_link">
+          <a href="" className="footer_link">
             Terms and Conditions
           </a>
         </li>
         <li>
-          <a href="" class="footer_link">
+          <a href="" className="footer_link">
             Cookies
           </a>
         </li>

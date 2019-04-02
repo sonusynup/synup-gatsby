@@ -20,12 +20,12 @@ const HeroContinuousBlock = ({
   metricText,
 }) => (
   <div className="hero-continuous-block">
-    <section class="section_hero paddingControl">
-      <div class="container">
-        <div class="heroblock">
+    <section className="section_hero paddingControl">
+      <div className="container">
+        <div className="heroblock">
           {!isNull(heroIcon) ? (
             <img
-              class="heroblock_icon"
+              className="heroblock_icon"
               src={heroIcon.file.url}
               alt="hero-block"
             />
@@ -50,19 +50,19 @@ const HeroContinuousBlock = ({
           ) : null}
         </div>
         {!isNull(heroBackground) ? (
-          <div class="heroblockImg">
+          <div className="heroblockImg">
             <figure>
-              <img src={heroBackground.file.url} class="img_fluid" alt="" />
+              <img src={heroBackground.file.url} className="img_fluid" alt="" />
             </figure>
           </div>
         ) : null}
       </div>
     </section>
     {!isNull(metricValue) && !isNull(metricText) && (
-      <div class="container">
-        <div class="labelBlock bgBlue">
-          <h3 class="labelTitle">{metricValue}</h3>
-          <p class="labelDescription">{metricText}</p>
+      <div className="container">
+        <div className="labelBlock bgBlue">
+          <h3 className="labelTitle">{metricValue}</h3>
+          <p className="labelDescription">{metricText}</p>
         </div>
       </div>
     )}

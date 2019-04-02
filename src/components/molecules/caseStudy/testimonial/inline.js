@@ -8,21 +8,21 @@ const Type2 = ({
   children,
 }) => (
   <div className="blockWrapper">
-    <div class="testimonialWrapper">
+    <div className="testimonialWrapper">
       <p
-        class="testimonialContent"
+        className="testimonialContent"
         dangerouslySetInnerHTML={{ __html: partnerTestimonial }}
       />
-      <div class="testimonialAuthor">
-        <div class="testimonialAuthor_img">
+      <div className="testimonialAuthor">
+        <div className="testimonialAuthor_img">
           <figure>
-            <img src={partnerImage} class="avartar-img" alt="" />
+            <img src={partnerImage} className="avartar-img" alt="" />
           </figure>
         </div>
-        <div class="testimonialAuthor_details">
-          <h6 class="testimonialAuthor_name">{partnerName}</h6>
+        <div className="testimonialAuthor_details">
+          <h6 className="testimonialAuthor_name">{partnerName}</h6>
           <p
-            class="testimonialAuthor_position"
+            className="testimonialAuthor_position"
             dangerouslySetInnerHTML={{ __html: partnerPosition }}
           />
         </div>

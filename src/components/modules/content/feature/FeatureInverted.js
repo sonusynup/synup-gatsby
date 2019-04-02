@@ -46,7 +46,7 @@ const FeatureInverted = ({
       ) : null}
       {!isNull(featureSecondaryButton) ? (
         <>
-          <span class="space" />
+          <span className="space" />
           <Link to={featureSecondaryUrl}>
             <Button
               type={getInvertedButtonType(featureSecondaryButtonType)}

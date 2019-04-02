@@ -3,17 +3,17 @@ import ResourcesImg from "../../../images/svg/cube.svg"
 import { Link } from "gatsby"
 
 const WebinarSection = props => (
-  <section class="section_resource">
-    <div class="container">
-      <div class="blockWrapper">
-        <div class="leftBlock">
-          <img class="heroblock_icon" src={ResourcesImg} alt="" />
-          <h3 class="resourcesTitle">Resources</h3>
-          <p class="resourcesPre">
+  <section className="section_resource">
+    <div className="container">
+      <div className="blockWrapper">
+        <div className="leftBlock">
+          <img className="heroblock_icon" src={ResourcesImg} alt="" />
+          <h3 className="resourcesTitle">Resources</h3>
+          <p className="resourcesPre">
             Free ebooks, guides, tools and more to help you grow
           </p>
         </div>
-        <div class="rightBlock webinar_resourceBlock">
+        <div className="rightBlock webinar_resourceBlock">
           <Link to="/resources/webinars">
             <div className="blogTool-overlay" />
             <div className="resourcesHeading">
@@ -30,14 +30,14 @@ const WebinarSection = props => (
                 }
               />
               <div className>
-                <p class="speaker">
+                <p className="speaker">
                   {
                     props.webinarData.edges[0].node.speakers.speakers[0]
                       .speakerName
                   }
                 </p>
                 <p
-                  class="position"
+                  className="position"
                   dangerouslySetInnerHTML={{
                     __html:
                       props.webinarData.edges[0].node.speakers.speakers[0]

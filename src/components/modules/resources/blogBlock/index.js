@@ -1,14 +1,14 @@
 import React from "react"
 
 const BlogBlock = () => (
-  <section class="section_blog">
-    <div class="container">
+  <section className="section_blog">
+    <div className="container">
       <h3>From our blog</h3>
-      <div class="blogWrapper">
-        <div class="blogWrapper_left">
-          <div class="blogWrapper_main">
-            <div class="blog-overlay" />
-            <div class="blogWrapper_content">
+      <div className="blogWrapper">
+        <div className="blogWrapper_left">
+          <div className="blogWrapper_main">
+            <div className="blog-overlay" />
+            <div className="blogWrapper_content">
               <h4>
                 Your marketing agency needs a customer success team – and here’s
                 why
@@ -21,9 +21,9 @@ const BlogBlock = () => (
                 SaaS… circles, even today.
               </p>
             </div>
-            <div class="blogWrapper_contentLink">
+            <div className="blogWrapper_contentLink">
               <small>~ 5 min read</small>
-              <span class="btn_arrow linkText_white linkText_span">
+              <span className="btn_arrow linkText_white linkText_span">
                 READ FULL BLOG
                 <svg
                   width="15px"
@@ -66,15 +66,15 @@ const BlogBlock = () => (
             </div>
           </div>
         </div>
-        <div class="blogWrapper_right">
-          <div class="card_deck">
-            <div class="blogWrapper_inner">
-              <a href="#" class="blogcard_anchor">
-                <p class="blogcard_text">
+        <div className="blogWrapper_right">
+          <div className="card_deck">
+            <div className="blogWrapper_inner">
+              <a href="#" className="blogcard_anchor">
+                <p className="blogcard_text">
                   Your Marketing Agency Needs a Customer Success Team – And
                   Here’s Why
                 </p>
-                <span class="btn_arrow linkText">
+                <span className="btn_arrow linkText">
                   READ STORY
                   <svg
                     width="15px"
@@ -116,12 +116,12 @@ const BlogBlock = () => (
                 </span>
               </a>
             </div>
-            <div class="blogWrapper_inner">
-              <a href="#" class="blogcard_anchor">
-                <p class="blogcard_text">
+            <div className="blogWrapper_inner">
+              <a href="#" className="blogcard_anchor">
+                <p className="blogcard_text">
                   Convince clients that it’s a marathon, not a sprint!
                 </p>
-                <span class="btn_arrow linkText">
+                <span className="btn_arrow linkText">
                   READ STORY
                   <svg
                     width="15px"
@@ -167,8 +167,8 @@ const BlogBlock = () => (
         </div>
       </div>
       <p>
-        <button class="btn btn_outlineTransparent  btn_arrow">
-          <span class="btn_textSpan">
+        <button className="btn btn_outlineTransparent  btn_arrow">
+          <span className="btn_textSpan">
             VIEW ALL STORIES
             <svg
               width="15px"

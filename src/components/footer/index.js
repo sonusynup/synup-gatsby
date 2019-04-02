@@ -9,7 +9,7 @@ const Footer = ({ data, resourceList, companyList }) => (
   <>
     <Prefooter />
     <footer>
-      <section class="footer">
+      <section className="footer">
         <PrimaryFooter
           data={data}
           resourceList={resourceList}
