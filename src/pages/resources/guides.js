@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
-import ResourceList from "../../components/molecules/resourceList"
+import { graphql, Link } from "gatsby"
+import Button from "../../components/atoms/button"
+import Layout from '../../components/layout'
 
 const GuidesList = ({
   data: {
@@ -15,7 +16,37 @@ const GuidesList = ({
       noImage: true,
     }
   })
-  return <ResourceList resources={guides} />
+  return (
+    <Layout>
+      <div className="container">
+        <section className="section_blog">
+          <div className="container">
+            <h3>Customer Stories</h3>
+            <div className="blogWrapper">
+              {
+                edges.map((edge) => (
+                  <div className="blogWrapper_right">
+                    <div className="card_deck">
+                      <div className="blogWrapper_inner">
+                        <Link to={`resources/guide/${edge.node.id}`} className="blogcard_anchor">
+                          <p className="blogcard_text">
+                            {
+                              edge.node.guideTitle
+                            }
+                          </p>
+                          <Button type="borderlessArrow" text="READ STORY" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  )
 }
 
 export const query = graphql`
