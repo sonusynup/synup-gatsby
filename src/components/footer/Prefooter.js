@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 import Button from '../atoms/button'
 
 const Prefooter = () => (
-  <section class="section_grandient">
-    <div class="container">
-      <div class="grandientWrapper">
-        <h3 class="whiteTitle">See Synup in action</h3>
+  <section className="section_grandient">
+    <div className="container">
+      <div className="grandientWrapper">
+        <h3 className="whiteTitle">See Synup in action</h3>
         <p>Take a closer look at the product, and how it can change your local
             marketing game</p>
         <Link to="/" >

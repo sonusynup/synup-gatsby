@@ -9,6 +9,8 @@ exports.createPages = ({ graphql, actions }) => {
       edges{
         node {
           webpageName
+          announcementMessage
+          announcementUrl
           webpageSections {
             __typename
             ... on ContentfulPartnerSection {
@@ -385,7 +387,9 @@ exports.createPages = ({ graphql, actions }) => {
         path: page.node.webpageName === 'home' ? '/' : page.node.webpageName,
         component: path.resolve('./src/templates/content.js'),
         context: {
-          sections: page.node.webpageSections
+          sections: page.node.webpageSections,
+          announcementMessage: page.node.announcementMessage,
+          announcementUrl: page.node.announcementUrl,
         }
       })
     })
