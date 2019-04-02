@@ -1,14 +1,14 @@
 import React from "react"
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import Button from "../../../atoms/button"
-import isNull from "../../../../helpers/isNull";
+import isNull from "../../../../helpers/isNull"
 
-const getInvertedButtonType = (buttonType) => {
-  if (buttonType === 'Border') {
-    return 'invert-secondary';
+const getInvertedButtonType = buttonType => {
+  if (buttonType === "Border") {
+    return "invert-secondary"
   }
-  return 'invert-primary';
+  return "invert-primary"
 }
 
 // TODO: Change schema as required
@@ -25,7 +25,9 @@ const FeatureInverted = ({
 }) => (
   <div className="enterprise_blockWrapper">
     <div className="leftBlock">
-      {!isNull(featureTitle) ? <h3 className="whiteTitle">{featureTitle}</h3> : null}
+      {!isNull(featureTitle) ? (
+        <h3 className="whiteTitle">{featureTitle}</h3>
+      ) : null}
       {!isNull(featureDescription) && (
         <ul
           className="list_unstyled whiteTitle"
@@ -36,12 +38,12 @@ const FeatureInverted = ({
       )}
       {!isNull(featureButton) ? (
         <Link to={featureUrl}>
-          <Button 
+          <Button
             type={getInvertedButtonType(featureButtonType)}
-            text={featureButton} /> 
+            text={featureButton}
+          />
         </Link>
-        ) : null 
-      }
+      ) : null}
       {!isNull(featureSecondaryButton) ? (
         <>
           <span class="space" />
@@ -52,8 +54,7 @@ const FeatureInverted = ({
             />
           </Link>
         </>
-        ) : null
-      }
+      ) : null}
     </div>
   </div>
 )
@@ -66,12 +67,12 @@ FeatureInverted.propTypes = {
   featureDescription: PropTypes.shape({
     childContentfulRichText: PropTypes.shape({
       html: PropTypes.string,
-    })
+    }),
   }),
   featuredCaseStudy: PropTypes.shape({
     file: PropTypes.shape({
       url: PropTypes.string,
-    })
+    }),
   }),
 }
 

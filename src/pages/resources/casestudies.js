@@ -1,15 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import ResourceList from '../../components/molecules/resourceList';
+import React from "react"
+import { graphql } from "gatsby"
+import ResourceList from "../../components/molecules/resourceList"
 
 const CaseStudyList = ({
   data: {
-    allContentfulCaseStudy: {
-      edges,
-    }
-  }
+    allContentfulCaseStudy: { edges },
+  },
 }) => {
-  const caseStudies = edges.map((edge) => {
+  const caseStudies = edges.map(edge => {
     return {
       title: edge.node.casestudyTitle.casestudyTitle,
       id: edge.node.id,
@@ -17,11 +15,7 @@ const CaseStudyList = ({
       noImage: true,
     }
   })
-  return (
-    <ResourceList
-      resources={caseStudies} 
-    />
-  )
+  return <ResourceList resources={caseStudies} />
 }
 
 export const query = graphql`
@@ -34,7 +28,7 @@ export const query = graphql`
             casestudyTitle
           }
           casestudyStats
-					caseStudyDescription {
+          caseStudyDescription {
             title
             description {
               childContentfulRichText {
@@ -42,7 +36,7 @@ export const query = graphql`
               }
             }
           }
-          casestudyPartner{
+          casestudyPartner {
             partnerName
             partnerPhoto {
               file {
@@ -50,14 +44,14 @@ export const query = graphql`
               }
             }
             partnerLogo {
-              file{
+              file {
                 url
               }
             }
             partnerGoal
             partnerIndustry
             partnerSuccess
-            partnerDescription{
+            partnerDescription {
               content {
                 content {
                   value

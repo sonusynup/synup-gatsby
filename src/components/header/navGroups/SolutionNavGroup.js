@@ -28,17 +28,15 @@ const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {
         } accordion-content solutions-content`}
       >
         <div className="solutions-submenu arrow_box">
-          {
-            items
-              .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
-              .map((item) => (
+          {items
+            .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
+            .map(item => (
               <SolutionNavItem
                 title={item.node.navbarTitle}
                 description={item.node.navbarDescription}
                 webpageName={item.node.webpageName}
               />
-            ))
-          }
+            ))}
         </div>
       </div>
     </li>

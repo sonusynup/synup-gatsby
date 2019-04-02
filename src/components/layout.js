@@ -18,23 +18,23 @@ import "./layout.scss"
 import "./additionals.css"
 
 const resourceList = [
-  { title: 'Ebooks', link: '/resources/ebooks' },
-  { title: 'Webinars', link: '/resources/webinars' },
-  { title: 'Guides', link: '/resources/guides' },
-  { title: 'Blog', link: '/resources/blogs' },
-  { title: 'Checklists', link: '/resources/checklists' },
-  { title: 'Free Tools', link: '/resources/free-tools' },
-  { title: 'Case Study', link: '/resources/case-study' }
+  { title: "Ebooks", link: "/resources/ebooks" },
+  { title: "Webinars", link: "/resources/webinars" },
+  { title: "Guides", link: "/resources/guides" },
+  { title: "Blog", link: "/resources/blogs" },
+  { title: "Checklists", link: "/resources/checklists" },
+  { title: "Free Tools", link: "/resources/free-tools" },
+  { title: "Case Study", link: "/resources/case-study" },
 ]
 
 const companyList = [
-  { title: 'About', link: '/about' },
-  { title: 'Press', link: '/press' },
-  { title: 'Careers', link: '/careers' },
-  { title: 'Contact', link: '/contact' },
-  { title: 'Customers', link: '/customers' },
-  { title: 'Free Tools', link: '/free-tools' },
-  { title: 'Synp Network', link: '/synp-network' }
+  { title: "About", link: "/about" },
+  { title: "Press", link: "/press" },
+  { title: "Careers", link: "/careers" },
+  { title: "Contact", link: "/contact" },
+  { title: "Customers", link: "/customers" },
+  { title: "Free Tools", link: "/free-tools" },
+  { title: "Synp Network", link: "/synp-network" },
 ]
 
 // Handles the layout of the app
@@ -50,7 +50,7 @@ const Layout = ({ children, announcementMessage, announcementUrl }) => (
           }
         }
         allContentfulWebpage(limit: 100) {
-          edges{
+          edges {
             node {
               webpageName
               navbarTitle
@@ -62,8 +62,8 @@ const Layout = ({ children, announcementMessage, announcementUrl }) => (
                   url
                 }
               }
-              navbarDescription{
-                childContentfulRichText{
+              navbarDescription {
+                childContentfulRichText {
                   html
                 }
               }

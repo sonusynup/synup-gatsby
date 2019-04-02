@@ -10,7 +10,7 @@ import ResourcesNavGroup from "./navGroups/ResourcesNavGroup"
 import SolutionNavGroup from "./navGroups/SolutionNavGroup"
 import CompanyNavGroup from "./navGroups/CompanyNavGroup"
 import ProductNavGroup from "./navGroups/ProductNavGroup"
-import isNull from "../../helpers/isNull";
+import isNull from "../../helpers/isNull"
 
 const ref = React.createRef()
 
@@ -68,26 +68,30 @@ class Header extends React.Component {
 
   render() {
     const { isMenuExpanded } = this.state
-    const {
-      announcementMessage,
-      announcementUrl,
-    } = this.props;
-    const filterItemsByGroup = group => this.props.data.allContentfulWebpage.edges.filter((edge) => edge.node.navbarGroup === group);
-    const withAnnouncementClass = !isNull(announcementMessage) && !isNull(announcementUrl) ? 'with-announcement' : null;
+    const { announcementMessage, announcementUrl } = this.props
+    const filterItemsByGroup = group =>
+      this.props.data.allContentfulWebpage.edges.filter(
+        edge => edge.node.navbarGroup === group
+      )
+    const withAnnouncementClass =
+      !isNull(announcementMessage) && !isNull(announcementUrl)
+        ? "with-announcement"
+        : null
     return (
       <>
-        {
-          !isNull(announcementMessage) && !isNull(announcementUrl) ? (
-            <Link to={announcementUrl}>
-              <div className="annoucement_bar primary_bg">
-                <div className="container">
-                  <p className="annoucement_pre" dangerouslySetInnerHTML={{ __html: announcementMessage }} />
-                </div>
+        {!isNull(announcementMessage) && !isNull(announcementUrl) ? (
+          <Link to={announcementUrl}>
+            <div className="annoucement_bar primary_bg">
+              <div className="container">
+                <p
+                  className="annoucement_pre"
+                  dangerouslySetInnerHTML={{ __html: announcementMessage }}
+                />
               </div>
-            </Link>
-          ) : null
-        }
-        
+            </div>
+          </Link>
+        ) : null}
+
         <header
           ref={ref}
           className={`navbar ${withAnnouncementClass} navbar-toggleable-sm ${
@@ -118,13 +122,13 @@ class Header extends React.Component {
                   onExpand={this.setActiveHoverNavItem("solution")}
                   onClose={this.setActiveHoverNavItem("")}
                   isExpanded={this.state.activeExpandedNavItem === "solution"}
-                  items={filterItemsByGroup('solutions')}
+                  items={filterItemsByGroup("solutions")}
                 />
                 <ProductNavGroup
                   onExpand={this.setActiveHoverNavItem("product")}
                   onClose={this.setActiveHoverNavItem("")}
                   isExpanded={this.state.activeExpandedNavItem === "product"}
-                  items={filterItemsByGroup('products')}
+                  items={filterItemsByGroup("products")}
                 />
                 <ResourcesNavGroup
                   onExpand={this.setActiveHoverNavItem("resource")}

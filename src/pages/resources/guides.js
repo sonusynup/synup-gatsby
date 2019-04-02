@@ -1,15 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import ResourceList from '../../components/molecules/resourceList';
+import React from "react"
+import { graphql } from "gatsby"
+import ResourceList from "../../components/molecules/resourceList"
 
 const GuidesList = ({
   data: {
-    allContentfulGuides: {
-      edges,
-    }
-  }
+    allContentfulGuides: { edges },
+  },
 }) => {
-  const guides = edges.map((edge) => {
+  const guides = edges.map(edge => {
     return {
       title: edge.node.guideTitle,
       id: edge.node.id,
@@ -17,11 +15,7 @@ const GuidesList = ({
       noImage: true,
     }
   })
-  return (
-    <ResourceList
-      resources={guides} 
-    />
-  )
+  return <ResourceList resources={guides} />
 }
 
 export const query = graphql`

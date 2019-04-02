@@ -11,12 +11,14 @@ const CaseStudyHeader = ({ title, stats }) => (
           <span className="secondary_text">{title.casestudyTitle}</span>
         </h3>
         <ul className="casecard_wrapper">
-          {stats ? stats.map(stat => (
-            <StatisticsCard
-              value={stat}
-              description="increase in website visits"
-            />
-          )) : null}
+          {stats
+            ? stats.map(stat => (
+                <StatisticsCard
+                  value={stat}
+                  description="increase in website visits"
+                />
+              ))
+            : null}
         </ul>
       </div>
     </div>

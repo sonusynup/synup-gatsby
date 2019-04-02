@@ -10,7 +10,7 @@ const CardTransparent = ({
   isDescriptionRichText,
   action,
   image,
-  to
+  to,
 }) => (
   <div className="popCard">
     <Link to={to}>

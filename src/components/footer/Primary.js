@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
 import SynupLogo from "../images/svgComponents/synupLogo"
 import FacebookImage from "../images/svgComponents/FacebookImage"
@@ -8,17 +8,16 @@ import TwitterImage from "../images/svgComponents/TwitterImage"
 import InstagramImage from "../images/svgComponents/InstagramImage"
 
 const socialIcons = [
-  { title: LinkedInImage, link: 'www.linkedin.com'},
-  { title: FacebookImage , link: 'www.facebook.com'},
-  { title: TwitterImage , link: 'www.twitter.com'},
-  { title: InstagramImage , link: 'www.facebook.com'},
+  { title: LinkedInImage, link: "www.linkedin.com" },
+  { title: FacebookImage, link: "www.facebook.com" },
+  { title: TwitterImage, link: "www.twitter.com" },
+  { title: InstagramImage, link: "www.facebook.com" },
 ]
-const PrimaryFooter = ({
-  data,
-  resourceList,
-  companyList,
-}) => {
-  const filterItemsByGroup = group => data.allContentfulWebpage.edges.filter((edge) => edge.node.navbarGroup === group);
+const PrimaryFooter = ({ data, resourceList, companyList }) => {
+  const filterItemsByGroup = group =>
+    data.allContentfulWebpage.edges.filter(
+      edge => edge.node.navbarGroup === group
+    )
   return (
     <div className="footer_primary">
       <div className="container footer_wrapper">
@@ -38,7 +37,7 @@ const PrimaryFooter = ({
             ))}
           </ul>
           <ul className="socialicon_wrapper">
-            {socialIcons.map((icon) => (
+            {socialIcons.map(icon => (
               <li className="socialIcon">
                 <Link to={icon.link}>
                   <icon.title />
@@ -50,17 +49,15 @@ const PrimaryFooter = ({
         <div className="footer_linksWrapper">
           <ul>
             <li className="footer_linksheading">PRODUCTS</li>
-            {
-              filterItemsByGroup('products')
-                .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
-                .map((item) => (
-                  <li>
-                    <Link to={item.node.webpageName} className="footer_link">
-                      {item.node.navbarTitle}
-                    </Link>
-                  </li>
-              ))
-            }
+            {filterItemsByGroup("products")
+              .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
+              .map(item => (
+                <li>
+                  <Link to={item.node.webpageName} className="footer_link">
+                    {item.node.navbarTitle}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
         <div className="footer_linksWrapper">
@@ -72,7 +69,7 @@ const PrimaryFooter = ({
                   {resource.title}
                 </Link>
               </li>
-            ))}  
+            ))}
           </ul>
         </div>
         <div className="footer_linksWrapper">
@@ -108,17 +105,15 @@ const PrimaryFooter = ({
         <div className="footer_linksWrapper">
           <ul>
             <li className="footer_linksheading">SOLUTIONS</li>
-            {
-              filterItemsByGroup('solutions')
-                .sort((x, y) => (x.node.navbarOrder - y.node.navbarOrder))
-                .map((item) => (
-                  <li>
-                    <Link to={item.node.webpageName} className="footer_link">
-                      {item.node.navbarTitle}
-                    </Link>
-                  </li>
-              ))
-            }
+            {filterItemsByGroup("solutions")
+              .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
+              .map(item => (
+                <li>
+                  <Link to={item.node.webpageName} className="footer_link">
+                    {item.node.navbarTitle}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
       </div>
