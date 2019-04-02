@@ -1,9 +1,7 @@
 import React from "react"
 
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 import Button from "../../atoms/button"
-
-
 
 // TODO: need borderless button component
 const ResourcesNavGroup = ({
@@ -25,7 +23,7 @@ const ResourcesNavGroup = ({
       isExpanded ? onClose() : onExpand()
     }
   }
-  
+
   return (
     <li
       className="dropdown-accord"
@@ -63,7 +61,13 @@ const ResourcesNavGroup = ({
             <div className="tab-content">
               <div className="tab-pane active">
                 <h3>{activeResource}</h3>
-                <Link to={props.resourceList.find(resource => resource.title === activeResource).link}>
+                <Link
+                  to={
+                    props.resourceList.find(
+                      resource => resource.title === activeResource
+                    ).link
+                  }
+                >
                   <Button type="borderless" text="READ NOW" />
                 </Link>
               </div>

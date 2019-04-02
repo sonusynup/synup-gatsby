@@ -7,7 +7,7 @@ export default (
   bgHoverImage,
   featureIcon,
   bgClass,
-  featureUrl,
+  featureUrl
 ) => ({
   title,
   description,
@@ -17,5 +17,5 @@ export default (
   bgHoverImage,
   featureIcon,
   bgClass,
-  to: featureUrl
+  to: featureUrl,
 })

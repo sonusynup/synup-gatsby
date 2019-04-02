@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import CaseStudy from "../../molecules/caseStudy"
-import isNull from "../../../helpers/isNull";
+import isNull from "../../../helpers/isNull"
 
 const CaseStudyContent = ({
   partner: {
@@ -19,8 +19,7 @@ const CaseStudyContent = ({
   return (
     <section className="section_casestudy_content">
       <div className="container">
-      {
-        (!isNull(partnerPhoto) && !isNull(partnerDescription)) ? (
+        {!isNull(partnerPhoto) && !isNull(partnerDescription) ? (
           <CaseStudy
             isAdvantage
             partnerImage={partnerPhoto.file.url}
@@ -31,20 +30,21 @@ const CaseStudyContent = ({
             advantageIndustry={partnerIndustry}
             advantageGoal={partnerGoal}
           />
-        ) : null
-      }
-        {description ? description.map(item => (
-          <ul class="casestudy_set">
-            <li>
-              <h5>{item.title}</h5>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: item.description.childContentfulRichText.html,
-                }}
-              />
-            </li>
-          </ul>
-        )) : null}
+        ) : null}
+        {description
+          ? description.map(item => (
+              <ul class="casestudy_set">
+                <li>
+                  <h5>{item.title}</h5>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: item.description.childContentfulRichText.html,
+                    }}
+                  />
+                </li>
+              </ul>
+            ))
+          : null}
       </div>
     </section>
   )

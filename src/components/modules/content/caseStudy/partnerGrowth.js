@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 import Button from "../../../atoms/button"
 import isNull from "../../../../helpers/isNull"
 
@@ -11,10 +11,10 @@ const BusinessDetails = ({
   metricImage2,
   metricValue2,
 }) => {
-  const details=[
+  const details = [
     { metricValue: metricValue1, metricImage: metricImage1 },
     { metricValue: metricValue2, metricImage: metricImage2 },
-  ];
+  ]
   return (
     <div className="testimonial_wrapperCard">
       <div className="va_list">
@@ -50,10 +50,10 @@ BusinessDetails.prototype = {
 }
 
 BusinessDetails.defaultProps = {
-  metricValue1: '',
-  metricValue2: '',
-  metricImage1: '',
-  metricImage2: '',
+  metricValue1: "",
+  metricValue2: "",
+  metricImage1: "",
+  metricImage2: "",
 }
 
 export default BusinessDetails

@@ -5,21 +5,11 @@ import PartnerGrowth from "./partnerGrowth"
 
 // Case Study section
 // Testimonial can have multiple types.
-const CaseStudy = ({
-  caseSectionPartner: {
-    ...partnerProps
-  },
-  ...props,
-}) => (
+const CaseStudy = ({ caseSectionPartner: { ...partnerProps }, ...props }) => (
   <section class="section_testimonial">
     <div class="container">
-      <Testimonial
-        {...props}
-        {...partnerProps}
-      >
-        <PartnerGrowth
-          {...props}
-        />
+      <Testimonial {...props} {...partnerProps}>
+        <PartnerGrowth {...props} />
       </Testimonial>
     </div>
   </section>

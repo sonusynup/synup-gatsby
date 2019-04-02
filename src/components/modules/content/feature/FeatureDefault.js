@@ -1,6 +1,6 @@
 import React from "react"
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import Button from "../../../atoms/button"
 import { Link } from "gatsby"
 import getButtonClass from "../../../../helpers/getButtonClass"
@@ -119,28 +119,28 @@ FeatureDefault.propTypes = {
   featureDescription: PropTypes.shape({
     childContentfulRichText: PropTypes.shape({
       html: PropTypes.string,
-    })
+    }),
   }),
   featureImage: PropTypes.shape({
     file: PropTypes.shape({
       url: PropTypes.string,
-    })
+    }),
   }),
   featureIcon: PropTypes.shape({
     file: PropTypes.shape({
       url: PropTypes.string,
-    })
+    }),
   }),
   metricValue: PropTypes.string,
   metricImage: PropTypes.shape({
     file: PropTypes.shape({
       url: PropTypes.string,
-    })
+    }),
   }),
   featuredCaseStudy: PropTypes.shape({
     file: PropTypes.shape({
       url: PropTypes.string,
-    })
+    }),
   }),
 }
 
