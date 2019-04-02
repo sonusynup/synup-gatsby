@@ -12,6 +12,7 @@ const FeatureDefault = ({
   to,
   featureTitle,
   featureName,
+  featureUrl,
   featureDescription,
   featureImage,
   featureIcon,
@@ -37,7 +38,7 @@ const FeatureDefault = ({
             }}
           />
           {!isNull(featureButton) && (
-            <Link to={to}>
+            <Link to={featureUrl}>
               <Button
                 type={getButtonClass(featureButtonType)}
                 text={featureButton}
