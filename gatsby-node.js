@@ -11,6 +11,9 @@ exports.createPages = ({ graphql, actions }) => {
           webpageName
           announcementMessage
           announcementUrl
+          prefooterTitle
+          prefooterDescription
+          prefooterButtonText
           webpageSections {
             __typename
             ... on ContentfulPartnerSection {
@@ -390,6 +393,9 @@ exports.createPages = ({ graphql, actions }) => {
           sections: page.node.webpageSections,
           announcementMessage: page.node.announcementMessage,
           announcementUrl: page.node.announcementUrl,
+          prefooterTitle: page.node.prefooterTitle,
+          prefooterDescription: page.node.prefooterDescription,
+          prefooterButtonText: page.node.prefooterButtonText,
         }
       })
     })

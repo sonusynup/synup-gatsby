@@ -14,6 +14,9 @@ const Content = props => {
     <Layout
       announcementMessage={props.pageContext.announcementMessage}
       announcementUrl={props.pageContext.announcementUrl}
+      prefooterTitle={props.pageContext.prefooterTitle}
+      prefooterDescription={props.pageContext.prefooterDescription}
+      prefooterButtonText={props.pageContext.prefooterButtonText}
     >
       {sections.map(section => {
         switch (section.__typename) {
