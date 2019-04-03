@@ -10,8 +10,8 @@ const Button = ({ type, text, fullWidthBtn }) => {
   switch (type) {
     case "invert-primary":
       return (
-        <button class="btn btn_white  btn_arrow">
-          <span class="btn_textSpan">
+        <button className="btn btn_white  btn_arrow">
+          <span className="btn_textSpan">
             GET STARTED
             <SecondaryButtonAnimation />
           </span>
@@ -19,8 +19,8 @@ const Button = ({ type, text, fullWidthBtn }) => {
       )
     case "invert-secondary":
       return (
-        <button class="btn btn_outlineWhite  btn_arrow">
-          <span class="btn_textSpan">
+        <button className="btn btn_outlineWhite  btn_arrow">
+          <span className="btn_textSpan">
             LEARN MORE
             <PrimaryButtonAnimation />
           </span>

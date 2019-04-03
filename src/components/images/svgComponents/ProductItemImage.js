@@ -18,7 +18,7 @@ const ProductItemImage = () => (
     >
       <g
         id="UI/Topbars/Nav/Products"
-        class="square-black"
+        className="square-black"
         transform="translate(-253.000000, -40.000000)"
         stroke="#060E3D"
       >

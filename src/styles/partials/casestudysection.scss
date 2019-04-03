@@ -108,12 +108,17 @@
     padding: 0px 22px;
 }
 
-.casestudy_pre {
-    display: block;
-    font-size: $normal-font-size;
-    color: $green;
-    letter-spacing: $no-letter-spacing;
-    text-align: center;
+.casestudy_set h6{
+  display: block;
+  font-size: $normal-font-size;
+  color: $green;
+  letter-spacing: $no-letter-spacing;
+  text-align: center;
+}
+
+.casestudy_set img {
+  padding: 0px 22px;
+  width: 100%;
 }
 
 iframe.embed-responsive-item {

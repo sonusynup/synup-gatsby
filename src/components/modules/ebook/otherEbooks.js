@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import LinkedEbook from "../../molecules/linkedEbook"
 import Button from "../../atoms/button"
+import TargetLink from "../../atoms/targetLink"
 
 // Component which handles other ebooks
 const OtherEbooks = ({ latestBooksLimited }) => (
@@ -21,9 +21,9 @@ const OtherEbooks = ({ latestBooksLimited }) => (
               />
             ))}
           </div>
-          <Link to={"/resources/ebooks"}>
+          <TargetLink to={"/resources/ebooks"}>
             <Button type="secondary" text="VIEW ALL EBOOKS" />
-          </Link>
+          </TargetLink>
         </div>
       </div>
     </div>

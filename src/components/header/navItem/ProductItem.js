@@ -2,9 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 import ProductItemImage from "../../images/svgComponents/ProductItemImage"
+import TargetLink from "../../atoms/targetLink"
 
 const ProductItem = ({ title, description, webpageName }) => (
-  <Link to={webpageName} className="flex-submenu">
+  <TargetLink to={webpageName} className="flex-submenu">
     <figure>
       <ProductItemImage />
     </figure>
@@ -14,7 +15,7 @@ const ProductItem = ({ title, description, webpageName }) => (
         __html: description.childContentfulRichText.html,
       }}
     />
-  </Link>
+  </TargetLink>
 )
 
 export default ProductItem

@@ -43,12 +43,12 @@ module.exports = {
           renderNode: {
             // Example
             [BLOCKS.EMBEDDED_ASSET]: node => {
-              return `<img class='custom-asset img_fluid' src="${
+              return `<img className='custom-asset img_fluid' src="${
                 node.data.target.fields.file['en-US'].url
               }"/>`
             },
             [INLINES.EMBEDDED_ENTRY]: node => {
-              return `<div class='custom-entry' />${
+              return `<div className='custom-entry' />${
                 node.data.target.fields.name['en-US']
               }</div>`
             },

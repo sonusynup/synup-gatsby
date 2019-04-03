@@ -12,14 +12,12 @@ const Centered = ({
   partnerPosition,
 }) => (
   <div className="testimonialWrapper_comma">
-    <Link href="#">
-      <img
-        src={partnerLogo.file.url}
-        className="img_fluid"
-        alt=""
-        style={{ width: "100px" }}
-      />
-    </Link>
+    <img
+      src={partnerLogo.file.url}
+      className="img_fluid"
+      alt=""
+      style={{ width: "100px" }}
+    />
     <h3 className="testimonialTitle">{partnerSuccess}</h3>
     <p
       className="testimonialContent"

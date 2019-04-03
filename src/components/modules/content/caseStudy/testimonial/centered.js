@@ -1,9 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from 'prop-types'
+
 import isNull from '../../../../../helpers/isNull'
 import Button from "../../../../atoms/button"
 import commaImg from '../../../../images/svg/comma.svg'
+import TargetLink from "../../../../atoms/targetLink"
 
 const CenteredTestimonial = ({
   partnerLogo,
@@ -15,13 +16,13 @@ const CenteredTestimonial = ({
   <div className="testimonialWrapper_comma">
     {
       !isNull(partnerLogo) ? (
-        <Link to="">
+        <TargetLink to="">
           <img
             src={partnerLogo.file.url}
             className="img_fluid"
             alt=""
           />
-        </Link>
+        </TargetLink>
       ) : null
     }
     <h3 className="testimonialTitle">{partnerSuccess}</h3>

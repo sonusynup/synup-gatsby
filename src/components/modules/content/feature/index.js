@@ -26,10 +26,10 @@ const Feature = ({ featureType, ...props }) => {
   }
 
   return (
-    <section class="section_wrapper">
+    <section className="section_wrapper">
       <div className="container">
         <div
-          class={`blockWrapper ${
+          className={`blockWrapper ${
             props.contentAlignment === "Right align content"
               ? " d-flex_reverse"
               : null

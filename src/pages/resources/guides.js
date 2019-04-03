@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Button from "../../components/atoms/button"
+import TargetLink from "../../components/atoms/targetLink"
 import Layout from '../../components/layout'
 
 const GuidesList = ({
@@ -28,14 +29,14 @@ const GuidesList = ({
                   <div className="blogWrapper_right">
                     <div className="card_deck">
                       <div className="blogWrapper_inner">
-                        <Link to={`resources/guide/${edge.node.id}`} className="blogcard_anchor">
+                        <TargetLink to={`resources/guide/${edge.node.id}`} className="blogcard_anchor">
                           <p className="blogcard_text">
                             {
                               edge.node.guideTitle
                             }
                           </p>
                           <Button type="borderlessArrow" text="READ STORY" />
-                        </Link>
+                        </TargetLink>
                       </div>
                     </div>
                   </div>

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import Button from "../../../atoms/button"
+import TargetLink from "../../../atoms/targetLink"
 import isNull from "../../../../helpers/isNull"
 
 const getInvertedButtonType = buttonType => {
@@ -37,22 +38,22 @@ const FeatureInverted = ({
         />
       )}
       {!isNull(featureButton) ? (
-        <Link to={featureUrl}>
+        <TargetLink to={featureUrl}>
           <Button
             type={getInvertedButtonType(featureButtonType)}
             text={featureButton}
           />
-        </Link>
+        </TargetLink>
       ) : null}
       {!isNull(featureSecondaryButton) ? (
         <>
-          <span class="space" />
-          <Link to={featureSecondaryUrl}>
+          <span className="space" />
+          <TargetLink to={featureSecondaryUrl}>
             <Button
               type={getInvertedButtonType(featureSecondaryButtonType)}
               text={featureSecondaryButton}
             />
-          </Link>
+          </TargetLink>
         </>
       ) : null}
     </div>

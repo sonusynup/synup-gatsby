@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import Button from "../../../atoms/button"
+import TargetLink from "../../../atoms/targetLink"
 import isNull from "../../../../helpers/isNull"
 import getButtonClass from "../../../../helpers/getButtonClass"
 
@@ -31,12 +32,12 @@ const HeroDefault = ({
           />
         ) : null}
         {!isNull(heroButtonText) && !isNull(heroButtonLink) ? (
-          <Link to={heroButtonLink}>
+          <TargetLink to={heroButtonLink}>
             <Button
               type={getButtonClass(heroButtonType)}
               text={heroButtonText}
             />
-          </Link>
+          </TargetLink>
         ) : null}
       </div>
     </div>

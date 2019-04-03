@@ -1,37 +1,37 @@
 import React from "react"
 import Button from "../../../atoms/button"
-import { Link } from "gatsby"
+import TargetLink from "../../../atoms/targetLink"
 
 import ContentHoverActionImage from "../../../images/svgComponents/contentHoverActionImage"
 
 const Ebook = props => (
-  <section class="ebook">
-    <div class="container">
-      <div class="ebook_other">
+  <section className="ebook">
+    <div className="container">
+      <div className="ebook_other">
         <h3>other Ebooks</h3>
-        <div class="ebook_wrapper">
-          <div class="ebook_lists">
+        <div className="ebook_wrapper">
+          <div className="ebook_lists">
             {props.ebookData.edges.map(Ebook => (
-              <Link to="/modules/ebook" className="ebook_anchor">
-                <div class="overlay_content">
-                  <div class="content-overlay" />
+              <TargetLink to="/modules/ebook" className="ebook_anchor">
+                <div className="overlay_content">
+                  <div className="content-overlay" />
                   <figure>
                     <img
                       src={Ebook.node.bookCoverImage.file.url}
-                      class="img_fluid"
+                      className="img_fluid"
                       alt=""
                     />
                   </figure>
-                  <div class="content-details">
+                  <div className="content-details">
                     <ContentHoverActionImage />
                   </div>
                 </div>
-              </Link>
+              </TargetLink>
             ))}
           </div>
-          <Link to="/resources/ebooks">
+          <TargetLink to="/resources/ebooks">
             <Button type="secondary" text="VIEW ALL EBOOKS" />
-          </Link>
+          </TargetLink>
         </div>
       </div>
     </div>

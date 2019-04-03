@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import TargetLink from "../../atoms/targetLink"
 
 const CompanyNavGroup = ({ onExpand, isExpanded, onClose, ...props }) => {
   const onMouseEnterOrExit = () => {
@@ -32,9 +32,9 @@ const CompanyNavGroup = ({ onExpand, isExpanded, onClose, ...props }) => {
         <div className="company-submenu arrow_box">
           <ul>
             {props.companyList.map(resource => (
-              <Link key={resource.title} to={resource.link}>
+              <TargetLink key={resource.title} to={resource.link}>
                 <li data-toggle="tab">{resource.title}</li>
-              </Link>
+              </TargetLink>
             ))}
           </ul>
         </div>

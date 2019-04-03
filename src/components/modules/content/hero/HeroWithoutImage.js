@@ -8,15 +8,15 @@ const HeroWithoutImage = ({
   heroDescription,
   heroTitle,
 }) => (
-  <section class="section_featureshero">
-    <div class="container">
-      <div class="heroblock_features">
-        <div class="heroblock_innerFeatures">
+  <section className="section_featureshero">
+    <div className="container">
+      <div className="heroblock_features">
+        <div className="heroblock_innerFeatures">
           {!isNull(heroIcon) ? (
-            <img class="heroblock_icon" src={heroIcon.file.url} alt="" />
+            <img className="heroblock_icon" src={heroIcon.file.url} alt="" />
           ) : null}
           {!isNull(heroCaption) ? (
-            <h5 class="card_title">{heroCaption}</h5>
+            <h5 className="card_title">{heroCaption}</h5>
           ) : null}
         </div>
         {!isNull(heroTitle) ? <h2>{heroTitle}</h2> : null}

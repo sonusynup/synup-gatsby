@@ -2,7 +2,7 @@ import React from "react"
 
 import PropTypes from "prop-types"
 import Button from "../../../atoms/button"
-import { Link } from "gatsby"
+import TargetLink from "../../../atoms/targetLink"
 import getButtonClass from "../../../../helpers/getButtonClass"
 import isNull from "../../../../helpers/isNull"
 
@@ -39,20 +39,20 @@ const FeatureDefault = ({
             }}
           />
           {!isNull(featureButton) && (
-            <Link to={featureUrl}>
+            <TargetLink to={featureUrl}>
               <Button
                 type={getButtonClass(featureButtonType)}
                 text={featureButton}
               />
-            </Link>
+            </TargetLink>
           )}
         </div>
         {!isNull(metricImage) && !isNull(metricValue) ? (
           <div className="block_body">
             <div className="va_set">
-              <Link to={metricUrl}>
+              <TargetLink to={metricUrl}>
                 <img src={metricImage.file.url} className="img_fluid" alt="" />
-              </Link>
+              </TargetLink>
               <p className="va_text">{metricValue}</p>
             </div>
           </div>

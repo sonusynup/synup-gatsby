@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
+import TargetLink from '../../atoms/targetLink'
 import ContentHoverableSecondaryImage from "../../images/svgComponents/conventHoverSecondaryActionImage"
 
 const CardTransparent = ({
@@ -13,7 +13,7 @@ const CardTransparent = ({
   to,
 }) => (
   <div className="popCard">
-    <Link to={to}>
+    <TargetLink to={to}>
       <div className="card_transparent">
         <div className="card_body">
           <img className="card_imgTop" src={image} alt="FeatureCard" />
@@ -36,7 +36,7 @@ const CardTransparent = ({
           </span>
         </div>
       </div>
-    </Link>
+    </TargetLink>
   </div>
 )
 

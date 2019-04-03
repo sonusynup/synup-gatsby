@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
+import TargetLink from "../../../atoms/targetLink"
 import Button from "../../atoms/button"
 import isNull from "../../../helpers/isNull"
 
@@ -23,9 +23,9 @@ const BusinessDetails = ({ details }) => (
         </div>
       ))}
     </div>
-    <Link to="/rs">
+    <TargetLink to="/rs">
       <Button type="secondary" text="READ MORE" />
-    </Link>
+    </TargetLink>
   </div>
 )
 

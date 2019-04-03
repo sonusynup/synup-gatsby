@@ -3,6 +3,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Button from "../atoms/button"
+import TargetLink from "../atoms/targetLink"
 import SynupLogo from "../../components/images/svgComponents/synupLogo"
 import HamburgerIcon from "./navItem/HamburgerItem"
 
@@ -80,7 +81,7 @@ class Header extends React.Component {
     return (
       <>
         {!isNull(announcementMessage) && !isNull(announcementUrl) ? (
-          <Link to={announcementUrl}>
+          <TargetLink to={announcementUrl}>
             <div className="annoucement_bar primary_bg">
               <div className="container">
                 <p
@@ -89,7 +90,7 @@ class Header extends React.Component {
                 />
               </div>
             </div>
-          </Link>
+          </TargetLink>
         ) : null}
 
         <header
@@ -101,9 +102,9 @@ class Header extends React.Component {
         >
           <div className="container">
             <h1>
-              <Link to="/">
+              <TargetLink to="/">
                 <SynupLogo />
-              </Link>
+              </TargetLink>
             </h1>
             <HamburgerIcon
               onClick={this.toggleHamburgerMenu}
@@ -145,19 +146,19 @@ class Header extends React.Component {
                   companyList={this.props.companyList}
                 />
                 <li>
-                  <Link to="/" className="js-scroll-trigger nav-link">
+                  <TargetLink to="/customers" className="js-scroll-trigger nav-link">
                     CUSTOMERS
-                  </Link>
+                  </TargetLink>
                 </li>
                 <li>
-                  <Link to="/" className="btn_link btn_signin">
+                  <TargetLink to="/sign-in" className="btn_link btn_signin">
                     SIGN IN
-                  </Link>
+                  </TargetLink>
                 </li>
                 <li>
-                  <Link to="/" className="btn_full">
+                  <TargetLink to="/get-started" className="btn_full">
                     <Button type="primary" text="GET STARTED" />
-                  </Link>
+                  </TargetLink>
                 </li>
               </ul>
             </nav>

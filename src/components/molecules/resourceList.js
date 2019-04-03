@@ -11,9 +11,9 @@ const EachItem = ({ heading, buttonText, to }) => (
   >
     <a href="#" className="blogcard_anchor">
       <p className="blogcard_text">{heading}</p>
-      <Link to={to}>
+      <TargetLink to={to}>
         <Button type="secondary" text={buttonText} />
-      </Link>
+      </TargetLink>
     </a>
   </div>
 )
@@ -24,7 +24,7 @@ const ResourceList = ({ resources }) => (
       <div className="ebook_wrapper">
         <div className="ebook_lists">
           {resources.map(resource => (
-            <Link to={resource.to} key={resource.to} className="ebook_anchor">
+            <TargetLink to={resource.to} key={resource.to} className="ebook_anchor">
               {resource.noImage ? (
                 <EachItem
                   heading={resource.title}
@@ -42,7 +42,7 @@ const ResourceList = ({ resources }) => (
                   </div>
                 </div>
               )}
-            </Link>
+            </TargetLink>
           ))}
         </div>
       </div>

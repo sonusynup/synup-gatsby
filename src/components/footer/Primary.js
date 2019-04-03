@@ -6,6 +6,7 @@ import FacebookImage from "../images/svgComponents/FacebookImage"
 import LinkedInImage from "../images/svgComponents/LinkedInImage"
 import TwitterImage from "../images/svgComponents/TwitterImage"
 import InstagramImage from "../images/svgComponents/InstagramImage"
+import TargetLink from "../atoms/targetLink"
 
 const socialIcons = [
   { title: LinkedInImage, link: "www.linkedin.com" },
@@ -30,18 +31,18 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
             </li>
             {companyList.map(section => (
               <li>
-                <Link to={section.link} className="footer_link">
+                <TargetLink to={section.link} className="footer_link">
                   {section.title}
-                </Link>
+                </TargetLink>
               </li>
             ))}
           </ul>
           <ul className="socialicon_wrapper">
             {socialIcons.map(icon => (
               <li className="socialIcon">
-                <Link to={icon.link}>
+                <TargetLink to={icon.link}>
                   <icon.title />
-                </Link>
+                </TargetLink>
               </li>
             ))}
           </ul>
@@ -53,9 +54,9 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
               .map(item => (
                 <li>
-                  <Link to={item.node.webpageName} className="footer_link">
+                  <TargetLink to={item.node.webpageName} className="footer_link">
                     {item.node.navbarTitle}
-                  </Link>
+                  </TargetLink>
                 </li>
               ))}
           </ul>
@@ -65,9 +66,9 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
             <li className="footer_linksheading">RESOURCES</li>
             {resourceList.map(resource => (
               <li key={resource.title}>
-                <Link to={resource.link} className="footer_link">
+                <TargetLink to={resource.link} className="footer_link">
                   {resource.title}
-                </Link>
+                </TargetLink>
               </li>
             ))}
           </ul>
@@ -76,29 +77,29 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           <ul>
             <li className="footer_linksheading">COMPARE</li>
             <li>
-              <Link to="" className="footer_link">
+              <TargetLink to="" className="footer_link">
                 Yext
-              </Link>
+              </TargetLink>
             </li>
             <li>
-              <Link to="" className="footer_link">
+              <TargetLink to="" className="footer_link">
                 MozLocal
-              </Link>
+              </TargetLink>
             </li>
             <li>
-              <Link to="" className="footer_link">
+              <TargetLink to="" className="footer_link">
                 Brightlocal
-              </Link>
+              </TargetLink>
             </li>
             <li>
-              <Link to="" className="footer_link">
+              <TargetLink to="" className="footer_link">
                 Podium
-              </Link>
+              </TargetLink>
             </li>
             <li>
-              <Link to="" className="footer_link">
+              <TargetLink to="" className="footer_link">
                 Godaddy
-              </Link>
+              </TargetLink>
             </li>
           </ul>
         </div>
@@ -109,9 +110,9 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
               .map(item => (
                 <li>
-                  <Link to={item.node.webpageName} className="footer_link">
+                  <TargetLink to={item.node.webpageName} className="footer_link">
                     {item.node.navbarTitle}
-                  </Link>
+                  </TargetLink>
                 </li>
               ))}
           </ul>
