@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import CaseStudy from "../../molecules/caseStudy"
+import Testimonial from '../../molecules/caseStudy/testimonial'
 import isNull from "../../../helpers/isNull"
 
 const CaseStudyContent = ({
@@ -20,15 +20,14 @@ const CaseStudyContent = ({
     <section className="section_casestudy_content">
       <div className="container">
         {!isNull(partnerPhoto) && !isNull(partnerDescription) ? (
-          <CaseStudy
-            isAdvantage
+          <Testimonial
+            type="default"
             partnerImage={partnerPhoto.file.url}
             partnerTestimonial={partnerTestimonial.content[0].content[0].value}
             partnerName={partnerName}
             partnerPosition={partnerDescription.content[0].content[0].value}
-            advantageImage={partnerLogo}
-            advantageIndustry={partnerIndustry}
-            advantageGoal={partnerGoal}
+            partnerLogo={partnerLogo}
+            partnerSuccess={partnerGoal}
           />
         ) : null}
         {description
