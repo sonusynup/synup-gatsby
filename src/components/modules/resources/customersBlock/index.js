@@ -1,7 +1,7 @@
 import React from "react"
 import Button from "../../../atoms/button"
 import Image from "../../../images/customerstatic.png"
-import { Link } from "gatsby"
+import TargetLink from "../../../atoms/targetLink"
 
 const CustomersBlock = props => (
   <section className="section_blog">
@@ -17,7 +17,7 @@ const CustomersBlock = props => (
         <div className="blogWrapper_right">
           <div className="card_deck">
             <div className="blogWrapper_inner">
-              <Link to={`resources/casestudy/${props.casestudyData.edges[0].node.id}`} className="blogcard_anchor">
+              <TargetLink to={`resources/casestudy/${props.casestudyData.edges[0].node.id}`} className="blogcard_anchor">
                 <p className="blogcard_text">
                   {
                     props.casestudyData.edges[0].node.casestudyTitle
@@ -25,10 +25,10 @@ const CustomersBlock = props => (
                   }
                 </p>
                 <Button type="borderlessArrow" text="READ STORY" />
-              </Link>
+              </TargetLink>
             </div>
             <div className="blogWrapper_inner">
-              <Link to={`resources/casestudy/${props.casestudyData.edges[1].node.id}`} className="blogcard_anchor">
+              <TargetLink to={`resources/casestudy/${props.casestudyData.edges[1].node.id}`} className="blogcard_anchor">
                 <p className="blogcard_text">
                   {
                     props.casestudyData.edges[1].node.casestudyTitle
@@ -36,14 +36,14 @@ const CustomersBlock = props => (
                   }
                 </p>
                 <Button type="borderlessArrow" text="READ STORY" />
-              </Link>
+              </TargetLink>
             </div>
           </div>
         </div>
       </div>
-      <Link to="/resources/casestudies">
+      <TargetLink to="/resources/casestudies">
         <Button type="secondary" text="VIEW ALL STORIES" />
-      </Link>
+      </TargetLink>
     </div>
   </section>
 )

@@ -1,10 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import SolutionBgImage from "../../images/svgComponents/solutionBgImage"
 
+import TargetLink from "../../atoms/targetLink"
+
 const SolutionNavItem = ({ title, description, webpageName }) => (
-  <Link to={webpageName} className="flex-submenu">
+  <TargetLink to={webpageName} className="flex-submenu">
     <figure>
       <SolutionBgImage />
     </figure>
@@ -14,7 +15,7 @@ const SolutionNavItem = ({ title, description, webpageName }) => (
         __html: description.childContentfulRichText.html,
       }}
     />
-  </Link>
+  </TargetLink>
 )
 
 export default SolutionNavItem

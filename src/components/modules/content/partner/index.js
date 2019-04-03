@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import isNull from "../../../../helpers/isNull"
+import TargetLink from "../../../atoms/targetLink"
 
 // Renders partner section
 // TODO: Add link to each partner
@@ -15,7 +15,7 @@ const Partner = ({ partnerList, partnerSectionTitle }) => (
         <div className="banner_logoWrapper">
           {!isNull(partnerList)
             ? partnerList.map(partner => (
-                <Link to={partner.partnerUrl} className="banner_logo">
+                <TargetLink to={partner.partnerUrl} className="banner_logo">
                   {!isNull(partner.partnerLogo) ? (
                     <img
                       src={partner.partnerLogo.file.url}
@@ -23,7 +23,7 @@ const Partner = ({ partnerList, partnerSectionTitle }) => (
                       alt="VideoBanner"
                     />
                   ) : null}
-                </Link>
+                </TargetLink>
               ))
             : null}
         </div>

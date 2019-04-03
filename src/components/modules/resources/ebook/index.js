@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "../../../atoms/button"
-import { Link } from "gatsby"
+import TargetLink from "../../../atoms/targetLink"
 
 import ContentHoverActionImage from "../../../images/svgComponents/contentHoverActionImage"
 
@@ -12,7 +12,7 @@ const Ebook = props => (
         <div className="ebook_wrapper">
           <div className="ebook_lists">
             {props.ebookData.edges.map(Ebook => (
-              <Link to="/modules/ebook" className="ebook_anchor">
+              <TargetLink to="/modules/ebook" className="ebook_anchor">
                 <div className="overlay_content">
                   <div className="content-overlay" />
                   <figure>
@@ -26,12 +26,12 @@ const Ebook = props => (
                     <ContentHoverActionImage />
                   </div>
                 </div>
-              </Link>
+              </TargetLink>
             ))}
           </div>
-          <Link to="/resources/ebooks">
+          <TargetLink to="/resources/ebooks">
             <Button type="secondary" text="VIEW ALL EBOOKS" />
-          </Link>
+          </TargetLink>
         </div>
       </div>
     </div>

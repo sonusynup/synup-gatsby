@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Link } from "gatsby"
+import TargetLink from "../../atoms/targetLink"
 import Button from "../../atoms/button"
 
 // TODO: need borderless button component
@@ -61,7 +61,7 @@ const ResourcesNavGroup = ({
             <div className="tab-content">
               <div className="tab-pane active">
                 <h3>{activeResource}</h3>
-                <Link
+                <TargetLink
                   to={
                     props.resourceList.find(
                       resource => resource.title === activeResource
@@ -69,7 +69,7 @@ const ResourcesNavGroup = ({
                   }
                 >
                   <Button type="borderless" text="READ NOW" />
-                </Link>
+                </TargetLink>
               </div>
             </div>
           </div>

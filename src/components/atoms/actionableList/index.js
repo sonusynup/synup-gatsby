@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
+import TargetLink from '../targetLink'
 import Button from "../button"
 
 // TODO: Make the buttons generic
@@ -24,9 +24,9 @@ const ActionableList = ({
           <li key={listItem}>{listItem}</li>
         ))}
       </ul>
-      <Link to={to}>
+      <TargetLink to={to}>
         <Button type={actionType} text={actionText} />
-      </Link>
+      </TargetLink>
     </div>
   ) : (
     <div className="leftBlock">

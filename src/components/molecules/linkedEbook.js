@@ -1,10 +1,10 @@
 import React from "react"
 
-import { Link } from "gatsby"
+import TargetLink from "../../components/atoms/targetLink"
 import ContentHoverActionImage from "../images/svgComponents/contentHoverActionImage"
 
 const LinkedEbook = ({ to, thumbnail }) => (
-  <Link to={to} className="ebook_anchor">
+  <TargetLink to={to} className="ebook_anchor">
     <div className="overlay_content">
       <div className="content-overlay" />
       <figure>
@@ -14,7 +14,7 @@ const LinkedEbook = ({ to, thumbnail }) => (
         <ContentHoverActionImage />
       </div>
     </div>
-  </Link>
+  </TargetLink>
 )
 
 export default LinkedEbook

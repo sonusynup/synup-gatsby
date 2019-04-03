@@ -12,7 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-
+import TargetLink from "./atoms/targetLink"
 // TODO: Split these files as per indiviual scss
 import "./layout.scss"
 import "./additionals.css"
@@ -99,12 +99,12 @@ const Layout = ({
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
 
-          <link
+          <TargetLink
             rel="shortcut icon"
             type="image/x-icon"
             href="images/favicon.png"
           />
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <TargetLink rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" />
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" />

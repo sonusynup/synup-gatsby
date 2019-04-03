@@ -1,6 +1,6 @@
 import React from "react"
 import ResourcesImg from "../../../images/svg/cube.svg"
-import { Link } from "gatsby"
+import TargetLink from "../../../atoms/targetLink"
 
 const WebinarSection = props => (
   <section className="section_resource">
@@ -14,7 +14,7 @@ const WebinarSection = props => (
           </p>
         </div>
         <div className="rightBlock webinar_resourceBlock">
-          <Link to="/resources/webinars">
+          <TargetLink to="/resources/webinars">
             <div className="blogTool-overlay" />
             <div className="resourcesHeading">
               <div className="blogInnerTool-overlay" />
@@ -46,7 +46,7 @@ const WebinarSection = props => (
                 />
               </div>
             </div>
-          </Link>
+          </TargetLink>
         </div>
       </div>
     </div>

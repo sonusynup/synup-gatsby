@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import Button from "../../../atoms/button"
+import TargetLink from "../../../atoms/targetLink"
 import isNull from "../../../../helpers/isNull"
 import getButtonClass from "../../../../helpers/getButtonClass"
 
@@ -41,12 +42,12 @@ const HeroContinuousBlock = ({
           {!isNull(heroButtonLink) &&
           !isNull(heroButtonType) &&
           !isNull(heroButtonText) ? (
-            <Link to={heroButtonLink}>
+            <TargetLink to={heroButtonLink}>
               <Button
                 type={getButtonClass(heroButtonType)}
                 text={heroButtonText}
               />
-            </Link>
+            </TargetLink>
           ) : null}
         </div>
         {!isNull(heroBackground) ? (

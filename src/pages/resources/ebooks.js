@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import Button from "../../components/atoms/button"
+import TargetLink from '../../components/atoms/targetLink'
 import ContentHoverActionImage from "../../components/images/svgComponents/contentHoverActionImage"
 import Layout from "../../components/layout"
 
@@ -27,7 +27,7 @@ const EbookList = ({
             <div className="ebook_wrapper">
               <div className="ebook_lists">
                 {edges.map(Ebook => (
-                  <Link
+                  <TargetLink
                     to={`/resources/ebook/${Ebook.node.id}`}
                     className="ebook_anchor"
                   >
@@ -44,7 +44,7 @@ const EbookList = ({
                         <ContentHoverActionImage />
                       </div>
                     </div>
-                  </Link>
+                  </TargetLink>
                 ))}
               </div>
             </div>

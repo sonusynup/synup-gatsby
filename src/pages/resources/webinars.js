@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import ResourceList from "../../components/molecules/resourceList"
+import TargetLink from "../../components/atoms/targetLink"
 import Layout from "../../components/layout"
 
 const WebinarList = ({
@@ -14,7 +14,7 @@ const WebinarList = ({
         {edges.map(edge => (
           <div className="blockWrapper">
             <div className="rightBlock webinar_resourceBlock">
-              <Link to={`/resources/webinar/${edge.node.id}`}>
+              <TargetLink to={`/resources/webinar/${edge.node.id}`}>
                 <div className="blogTool-overlay" />
                 <div className="resourcesHeading">
                   <div className="blogInnerTool-overlay" />
@@ -42,7 +42,7 @@ const WebinarList = ({
                     )}
                   </div>
                 </div>
-              </Link>
+              </TargetLink>
             </div>
           </div>
         ))}

@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import Button from "../button"
+import TargetLink from '../targetLink'
 import isNull from "../../../helpers/isNull"
 
 class Card extends React.Component {
@@ -44,7 +44,7 @@ class Card extends React.Component {
         onMouseLeave={this.onMouseLeaveCard}
         style={{ backgroundImage: `url(${image})` }}
       >
-        <Link to={to}>
+        <TargetLink to={to}>
           <div className="card_body">
             {!isNull(featureIcon) && (
               <img className="card_imgTop" src={featureIcon.file.url} alt="" />
@@ -62,7 +62,7 @@ class Card extends React.Component {
           <div className="card_footer">
             <Button type="borderless" text={actionText} />
           </div>
-        </Link>
+        </TargetLink>
       </div>
     )
   }

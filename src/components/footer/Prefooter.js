@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Button from "../atoms/button"
+import Button from '../atoms/button'
+import TargetLink from '../atoms/targetLink'
 import isNull from "../../helpers/isNull";
 
 const Prefooter = ({
@@ -16,9 +16,9 @@ const Prefooter = ({
         <div className="grandientWrapper">
           <h3 className="whiteTitle">{prefooterTitle}</h3>
           <p>{prefooterDescription}</p>
-          <Link to="/">
+          <TargetLink to="/">
             <Button type="invert-primary" text={prefooterButtonText} />
-          </Link>
+          </TargetLink>
         </div>
       </div>
     </section>
