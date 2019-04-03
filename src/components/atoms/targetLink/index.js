@@ -9,6 +9,9 @@ const linkType = (to) => {
 
 const TargetLink = ({ children, to, ...props }) => {
   if (linkType(to) === 'external') {
+    if (to[0] !== 'h') {
+      to = `https://${to}`;
+    }
     return (
       <a href={to} {...props}>
         {children}
