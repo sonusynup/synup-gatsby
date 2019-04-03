@@ -151,12 +151,12 @@ class Header extends React.Component {
                   </TargetLink>
                 </li>
                 <li>
-                  <TargetLink to="/" className="btn_link btn_signin">
+                  <TargetLink to="/sign-in" className="btn_link btn_signin">
                     SIGN IN
                   </TargetLink>
                 </li>
                 <li>
-                  <TargetLink to="/" className="btn_full">
+                  <TargetLink to="/get-started" className="btn_full">
                     <Button type="primary" text="GET STARTED" />
                   </TargetLink>
                 </li>
