@@ -1,7 +1,5 @@
 import React from "react"
 
-import PropTypes from "prop-types"
-
 import DefaultTestimonial from "./default"
 import InlineTestimonial from "./inline"
 import CenteredTestimonial from "./centered"

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import TargetLink from "../../components/atoms/targetLink"
 import ContentHoverActionImage from "../../components/images/svgComponents/contentHoverActionImage"
@@ -10,14 +10,7 @@ const EbookList = ({
     allContentfulEbooks: { edges },
   },
 }) => {
-  const eBooks = edges.map(edge => {
-    return {
-      title: edge.node.bookTitle,
-      id: edge.node.id,
-      to: `/resources/ebook/${edge.node.id}`,
-      image: edge.node.bookCoverImage.file.url,
-    }
-  })
+
   return (
     <Layout>
       <section className="ebook">

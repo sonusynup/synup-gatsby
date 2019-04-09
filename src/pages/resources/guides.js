@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Button from "../../components/atoms/button"
 import TargetLink from "../../components/atoms/targetLink"
 import Layout from "../../components/layout"
@@ -9,14 +9,6 @@ const GuidesList = ({
     allContentfulGuides: { edges },
   },
 }) => {
-  const guides = edges.map(edge => {
-    return {
-      title: edge.node.guideTitle,
-      id: edge.node.id,
-      to: `/resources/guide/${edge.node.id}`,
-      noImage: true,
-    }
-  })
   return (
     <Layout>
       <div className="container">

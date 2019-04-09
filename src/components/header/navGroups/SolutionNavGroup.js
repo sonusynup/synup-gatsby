@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import SolutionNavItem from "../navItem/SolutionItem"
 
 const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {

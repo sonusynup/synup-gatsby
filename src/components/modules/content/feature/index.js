@@ -6,9 +6,6 @@ import FeatureInverted from "./FeatureInverted"
 import FeatureWhitelabel from "./FeatureWhitelabel"
 import FeatureTitleWithImage from "./FeatureTitleWithImage"
 
-import Button from "../../../atoms/button"
-
-// TODO: Make Wrapper class working well
 const Feature = ({ featureType, ...props }) => {
   let FeatureContent = null
   switch (featureType) {
@@ -23,6 +20,9 @@ const Feature = ({ featureType, ...props }) => {
       break
     case "titleWithImage":
       FeatureContent = <FeatureTitleWithImage {...props} />
+      break
+    default:
+      return null;
   }
 
   return (

@@ -67,7 +67,7 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           <ul>
             <li className="footer_linksheading">RESOURCES</li>
             {resourceList.map((resource, index) => (
-              <li key={resource.title} key={index}>
+              <li key={resource.title}>
                 <TargetLink to={resource.link} className="footer_link">
                   {resource.title}
                 </TargetLink>

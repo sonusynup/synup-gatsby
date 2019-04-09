@@ -3,7 +3,6 @@ import React from "react"
 import TargetLink from "../../atoms/targetLink"
 import Button from "../../atoms/button"
 
-// TODO: need borderless button component
 const ResourcesNavGroup = ({
   onExpand,
   onClose,
@@ -31,7 +30,7 @@ const ResourcesNavGroup = ({
       onClick={onTapOnOrOff}
       onMouseLeave={onMouseEnterOrExit}
     >
-      <span href="#" className="dropdown js-scroll-trigger nav-link">
+      <span className="dropdown js-scroll-trigger nav-link">
         RESOURCES
       </span>
       <div
@@ -74,7 +73,7 @@ const ResourcesNavGroup = ({
             </div>
           </div>
           <div className="tab-support">
-            <a href="#">SUPPORT and product FAQ</a>
+            <TargetLink to="/support">SUPPORT and product FAQ</TargetLink>
           </div>
         </div>
       </div>

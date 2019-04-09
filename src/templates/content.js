@@ -22,19 +22,16 @@ const Content = props => {
         switch (section.__typename) {
           case "ContentfulHeroSection":
             return <Hero {...section} key={index} />
-            break
           case "ContentfulFeaturesSection":
             return <Feature {...section} key={index} />
-            break
           case "ContentfulProductSection":
             return <Product {...section} key={index} />
-            break
           case "ContentfulCaseStudySection":
             return <CaseStudy {...section} key={index} />
-            break
           case "ContentfulPartnerSection":
             return <Partner {...section} key={index} />
-            break
+          default:
+            return null
         }
       })}
     </Layout>

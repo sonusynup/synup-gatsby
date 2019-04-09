@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import TargetLink from "../../components/atoms/targetLink"
 import Layout from "../../components/layout"
 
@@ -25,10 +25,11 @@ const WebinarList = ({
                   <img
                     className="webinarAvartar"
                     src={edge.node.speakers.speakers[0].speakerPhoto.file.url}
+                    alt=""
                   />
                   <div className="position">
                     <p className="speaker">
-                      {edge.node.speakers.speakers[0].speakerName}
+                    {edge.node.speakers.speakers[0].speakerName}
                     </p>
                     {edge.node.speakers.speakers[0].speakerDescription.content.map(
                       description => (

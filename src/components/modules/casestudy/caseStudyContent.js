@@ -13,7 +13,6 @@ const CaseStudyContent = props => {
     partnerDescription,
     partnerPhoto,
     partnerLogo,
-    partnerIndustry,
     partnerGoal,
   } = partner
 

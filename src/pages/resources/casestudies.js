@@ -9,14 +9,7 @@ const CaseStudyList = ({
     allContentfulCaseStudy: { edges },
   },
 }) => {
-  const caseStudies = edges.map(edge => {
-    return {
-      title: edge.node.casestudyTitle.casestudyTitle,
-      id: edge.node.id,
-      to: `/resources/casestudy/${edge.node.id}`,
-      noImage: true,
-    }
-  })
+
   return (
     <Layout>
       <div className="container">
