@@ -51,25 +51,28 @@ class BusinessForm extends React.Component {
       <div className="form_wrapper">
         <form>
           <FormInput
+            name="FIRST NAME"
             label="FIRST NAME"
             placeholder="Your full name"
             inputClass="form_inputField form_control"
             onChange={this.onChangeFormField("firstName", true)}
           />
           <FormInput
+            name="BUSINESS NAME"
             label="BUISNESS NAME"
             placeholder="Your business name"
             inputClass="form_inputField form_control"
             onChange={this.onChangeFormField("businessName", true)}
           />
           <FormInput
-            name="exampleInputEmail1"
+            name="EMAIL"
             label="EMAIL"
             placeholder="you@gmail.com"
             inputClass="form_inputField form_control"
             onChange={this.onChangeFormField("email", true)}
           />
           <FormInput
+            name="PHONE"
             label="PHONE"
             placeholder="Your Phone Number"
             inputClass="form_inputField form_control"

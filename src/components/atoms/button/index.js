@@ -16,7 +16,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
           onClick={onClick}
         >
           <span className="btn_textSpan">
-            GET STARTED
+            {text}
             <SecondaryButtonAnimation />
           </span>
         </button>
@@ -29,7 +29,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
           onClick={onClick}
         >
           <span className="btn_textSpan">
-            GET STARTED
+            {text}
             <SecondaryButtonAnimation />
           </span>
         </button>
@@ -42,7 +42,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
           onClick={onClick}
         >
           <span className="btn_textSpan">
-            LEARN MORE
+            {text}
             <PrimaryButtonAnimation />
           </span>
         </button>

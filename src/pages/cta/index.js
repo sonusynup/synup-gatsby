@@ -7,6 +7,7 @@ import BookSlot from "../../components/images/bookslot.png"
 import Header from "./header"
 import BusinessButton from "./businessButton"
 import BusinessForm from "./businessForm"
+import Layout from "../../components/layout";
 
 class Cta extends React.Component {
   state = {
@@ -30,62 +31,64 @@ class Cta extends React.Component {
 
   render() {
     return (
-      <main>
-        <section className="ctaflow">
-          <div className="container">
-            <h3 className="whiteTitle">Alright, let’s get started.</h3>
-            <Header activeScreen={this.state.activeScreen} />
-            <div className="cta-tab-content">
-              <div
-                className={`tab-pane ${
-                  this.state.activeScreen === "businessType" ? "active" : ""
-                }`}
-                id="item-1"
-              >
-                <BusinessButton
-                  title="SINGLE - LOCATION BUSINESS"
-                  subTitle="More than 2 locations"
-                  image={singleLocationImage}
-                  onClick={() => this.onClickBusinessButton("single")}
-                />
-                <BusinessButton
-                  title="Multi - LOCATION BUSINESS"
-                  subTitle="More than 2 locations"
-                  image={multiLocationImage}
-                  onClick={() => this.onClickBusinessButton("multi")}
-                />
-                <BusinessButton
-                  title="MARKETING AGENCY"
-                  subTitle="More than 2 locations"
-                  image={marketingImage}
-                  onClick={() => this.onClickBusinessButton("marketing")}
-                />
-              </div>
-              <div
-                className={`tab-pane ${
-                  this.state.activeScreen === "businessDetails" ? "active" : ""
-                }`}
-                id="item-2"
-              >
-                <BusinessForm submitBusinessForm={this.submitBusinessForm} />
-              </div>
-              <div
-                className={`tab-pane ${
-                  this.state.activeScreen === "bookSlot" ? "active" : ""
-                }`}
-                id="item-3"
-              >
-                <div className="Bookslot">
-                  <figure>
-                    {" "}
-                    <img src={BookSlot} className="img_fluid" alt="" />
-                  </figure>
+      <Layout>
+        <main>
+          <section className="ctaflow">
+            <div className="container">
+              <h3 className="whiteTitle">Alright, let’s get started.</h3>
+              <Header activeScreen={this.state.activeScreen} />
+              <div className="cta-tab-content">
+                <div
+                  className={`tab-pane ${
+                    this.state.activeScreen === "businessType" ? "active" : ""
+                  }`}
+                  id="item-1"
+                >
+                  <BusinessButton
+                    title="SINGLE - LOCATION BUSINESS"
+                    subTitle="More than 2 locations"
+                    image={singleLocationImage}
+                    onClick={() => this.onClickBusinessButton("single")}
+                  />
+                  <BusinessButton
+                    title="Multi - LOCATION BUSINESS"
+                    subTitle="More than 2 locations"
+                    image={multiLocationImage}
+                    onClick={() => this.onClickBusinessButton("multi")}
+                  />
+                  <BusinessButton
+                    title="MARKETING AGENCY"
+                    subTitle="More than 2 locations"
+                    image={marketingImage}
+                    onClick={() => this.onClickBusinessButton("marketing")}
+                  />
+                </div>
+                <div
+                  className={`tab-pane ${
+                    this.state.activeScreen === "businessDetails" ? "active" : ""
+                  }`}
+                  id="item-2"
+                >
+                  <BusinessForm submitBusinessForm={this.submitBusinessForm} />
+                </div>
+                <div
+                  className={`tab-pane ${
+                    this.state.activeScreen === "bookSlot" ? "active" : ""
+                  }`}
+                  id="item-3"
+                >
+                  <div className="Bookslot">
+                    <figure>
+                      {" "}
+                      <img src={BookSlot} className="img_fluid" alt="" />
+                    </figure>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </Layout>
     )
   }
 }
