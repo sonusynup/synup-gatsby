@@ -8,6 +8,7 @@ const FormButtonGroup = ({
   buttonGroupWrapperClass,
   buttons,
   onChange,
+  buttonClass,
 }) => (
   <div className={wrapperClass} role="group" aria-label="Basic">
     <label htmlFor={name}>{label}</label>
@@ -16,7 +17,7 @@ const FormButtonGroup = ({
         <button
           key={button.value}
           type="button"
-          className="btn btn_form"
+          className={buttonClass}
           onClick={() => onChange(button.value)}
         >
           {button.labelFirst}
@@ -40,11 +41,13 @@ FormButtonGroup.propTypes = {
       value: PropTypes.string,
     })
   ).isRequired,
+  buttonClass: PropTypes.string
 }
 
 FormButtonGroup.defaultProps = {
   wrapperClass: "btn-group",
   buttonGroupWrapperClass: "btn_groupWrapper",
+  buttonClass: "btn btn_form"
 }
 
 export default FormButtonGroup

@@ -17,6 +17,15 @@ const Button = ({ type, text, fullWidthBtn }) => {
           </span>
         </button>
       )
+    case "invert-primary-fullwidth":
+      return (
+        <button className="btn btn_white  btn_arrow btn_fullWidth">
+          <span className="btn_textSpan">
+            GET STARTED
+            <SecondaryButtonAnimation />
+          </span>
+        </button>
+    )
     case "invert-secondary":
       return (
         <button className="btn btn_outlineWhite  btn_arrow">
