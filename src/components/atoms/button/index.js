@@ -4,13 +4,13 @@ import PropTypes from "prop-types"
 import PrimaryButtonAnimation from "../../images/svgComponents/primaryButtonAnimation"
 import SecondaryButtonAnimation from "../../images/svgComponents/secondaryButtonAnimation"
 
-const Button = ({ type, text, fullWidthBtn }) => {
+const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
   const fullWidthClass = fullWidthBtn ? "btn_fullWidth" : ""
 
   switch (type) {
     case "invert-primary":
       return (
-        <button className="btn btn_white  btn_arrow">
+        <button className="btn btn_white  btn_arrow" type={buttonType} onClick={onClick}>
           <span className="btn_textSpan">
             GET STARTED
             <SecondaryButtonAnimation />
@@ -19,7 +19,7 @@ const Button = ({ type, text, fullWidthBtn }) => {
       )
     case "invert-primary-fullwidth":
       return (
-        <button className="btn btn_white  btn_arrow btn_fullWidth">
+        <button className="btn btn_white  btn_arrow btn_fullWidth" type={buttonType} onClick={onClick}>
           <span className="btn_textSpan">
             GET STARTED
             <SecondaryButtonAnimation />
@@ -28,7 +28,7 @@ const Button = ({ type, text, fullWidthBtn }) => {
     )
     case "invert-secondary":
       return (
-        <button className="btn btn_outlineWhite  btn_arrow">
+        <button className="btn btn_outlineWhite  btn_arrow" type={buttonType} onClick={onClick}>
           <span className="btn_textSpan">
             LEARN MORE
             <PrimaryButtonAnimation />
@@ -38,7 +38,9 @@ const Button = ({ type, text, fullWidthBtn }) => {
     case "secondary":
       return (
         <button
+          type={buttonType}
           className={`btn btn_outlineTransparent btn_arrow ${fullWidthClass}`}
+          onClick={onClick}
         >
           <span className="btn_textSpan">
             {text}

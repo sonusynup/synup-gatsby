@@ -2,6 +2,7 @@ import React from 'react'
 import singleLocationImage from '../../components/images/svg/singlelocationIcon.svg'
 import multiLocationImage from '../../components/images/svg/multilocation.svg'
 import marketingImage from '../../components/images/svg/marketingicon.svg'
+import BookSlot from '../../components/images/bookslot.png'
 
 import Header from './header'
 import BusinessButton from './businessButton'
@@ -17,6 +18,13 @@ class Cta extends React.Component {
     this.setState({
       businessType,
       activeScreen: 'businessDetails'
+    })
+  }
+
+  submitBusinessForm = (data) => {
+    console.log(data);
+    this.setState({
+      activeScreen: 'bookSlot',
     })
   }
 
@@ -40,7 +48,7 @@ class Cta extends React.Component {
                   <BusinessButton
                     title="Multi - LOCATION BUSINESS"
                     subTitle="More than 2 locations"
-                    image={singleLocationImage}
+                    image={multiLocationImage}
                     onClick={() => this.onClickBusinessButton('multi')}
                   />
                   <BusinessButton
@@ -51,11 +59,13 @@ class Cta extends React.Component {
                   />
                 </div>
                 <div className={`tab-pane ${this.state.activeScreen === 'businessDetails' ? 'active' : ''}`} id="item-2">
-                  <BusinessForm />
+                  <BusinessForm
+                    submitBusinessForm={this.submitBusinessForm}
+                  />
                 </div>
                 <div className={`tab-pane ${this.state.activeScreen === 'bookSlot' ? 'active' : ''}`} id="item-3">
                   <div className="Bookslot">
-                    <figure> <img src="images/bookslot.png" className="img_fluid" alt="" /></figure>
+                    <figure> <img src={BookSlot} className="img_fluid" alt="" /></figure>
                   </div>
                 </div>
               </div>

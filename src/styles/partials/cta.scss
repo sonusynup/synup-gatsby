@@ -196,7 +196,10 @@
 
       .form_inputField {
           border: 1px solid white;
-          color: #4865FF;
+          &:focus {
+            color: #4865FF;
+          }
+          color: #ffffff;
           background: transparent;
 
           &:focus {

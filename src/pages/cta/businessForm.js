@@ -5,11 +5,12 @@ import FormInput from "../../components/atoms/formInput"
 import FormButtonGroup from "../../components/atoms/formButtonGroup"
 
 // Handles the entire state of the form
-class EbookSubscriptionForm extends React.Component {
+class BusinessForm extends React.Component {
   // State holding the form data
   state = {
-    fullName: "",
+    firstName: "",
     email: "",
+    phoneNumber: "",
     businessName: "",
     businessType: "",
     employeeCount: null,
@@ -84,11 +85,27 @@ class EbookSubscriptionForm extends React.Component {
             buttons={this.countButtons}
             onChange={this.onChangeFormField("employeeCount")}
           />
-          <Button type="invert-primary-fullwidth" text="RESERVE YOUR SEAT" fullWidthBtn />
+          <Button 
+            buttonType="button"
+            type="invert-primary-fullwidth" 
+            text="RESERVE YOUR SEAT" 
+            fullWidthBtn
+            onClick={() => {
+              console.log('clicked ')
+              this.props.submitBusinessForm({
+                firstName: this.state.firstName,
+                email: this.state.email,
+                businessName: this.state.businessName,
+                businessType: this.state.businessType,
+                phoneNumber: this.state.phoneNumber,
+                employeeCount: this.state.employeeCount,
+              })
+            }}
+          />
         </form>
       </div>
     )
   }
 }
 
-export default EbookSubscriptionForm
+export default BusinessForm
