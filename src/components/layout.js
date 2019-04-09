@@ -41,7 +41,9 @@ const companyList = [
 const Layout = ({
   children,
   announcementMessage,
-  announcementUrl,
+  announcementLink,
+  announcementButtonText,
+  sticky,
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
@@ -84,7 +86,9 @@ const Layout = ({
           resourceList={resourceList}
           companyList={companyList}
           announcementMessage={announcementMessage}
-          announcementUrl={announcementUrl}
+          announcementLink={announcementLink}
+          announcementButtonText={announcementButtonText}
+          sticky={sticky}
         />
         {/* Dynamic injection of page meta */}
         <Helmet>

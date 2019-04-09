@@ -20,6 +20,7 @@ class Header extends React.Component {
     isMenuExpanded: false,
     scrollBarFixed: false,
     activeResource: "Ebooks",
+    isAnnouncementVisible: true,
   }
 
   componentDidMount() {
@@ -66,28 +67,37 @@ class Header extends React.Component {
 
   render() {
     const { isMenuExpanded } = this.state
-    const { announcementMessage, announcementUrl } = this.props
+    const { announcementMessage, announcementLink, announcementButtonText, sticky } = this.props
     const filterItemsByGroup = group =>
       this.props.data.allContentfulWebpage.edges.filter(
         edge => edge.node.navbarGroup === group
       )
     const withAnnouncementClass =
-      !isNull(announcementMessage) && !isNull(announcementUrl)
+      (!isNull(announcementMessage) && !isNull(announcementLink) && this.state.isAnnouncementVisible)
         ? "with-announcement"
         : null
     return (
       <>
-        {!isNull(announcementMessage) && !isNull(announcementUrl) ? (
-          <TargetLink to={announcementUrl}>
-            <div className="annoucement_bar primary_bg">
-              <div className="container">
-                <p
-                  className="annoucement_pre"
-                  dangerouslySetInnerHTML={{ __html: announcementMessage }}
-                />
+        {(
+          !isNull(announcementMessage) && 
+          !isNull(announcementLink) && 
+          !isNull(announcementButtonText) && 
+          !isNull(sticky) &&
+          this.state.isAnnouncementVisible
+        ) ? (
+          <>
+            <TargetLink to={announcementLink}>
+              <div className="annoucement_bar primary_bg">
+                <div className="container">
+                  <p className="annoucement_pre">
+                    <span className="label">{announcementButtonText}</span>
+                    {announcementMessage}
+                  </p>
+                </div>
               </div>
-            </div>
-          </TargetLink>
+            </TargetLink>
+            <span style={{ top: '100px', position: 'fixed', left: '100px', zIndex: "100" }} onClick={() => { console.log('clicked '); this.setState({ isAnnouncementVisible: false })}}>X</span>
+          </>
         ) : null}
 
         <header

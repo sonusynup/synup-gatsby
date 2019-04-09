@@ -12,8 +12,7 @@ const Content = props => {
   const sections = props.pageContext.sections
   return (
     <Layout
-      announcementMessage={props.pageContext.announcementMessage}
-      announcementUrl={props.pageContext.announcementUrl}
+      {...props.pageContext.announcement}
       prefooterTitle={props.pageContext.prefooterTitle}
       prefooterDescription={props.pageContext.prefooterDescription}
       prefooterButtonText={props.pageContext.prefooterButtonText}
