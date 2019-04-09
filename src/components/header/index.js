@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { Link } from "gatsby"
 
 import Button from "../atoms/button"
 import TargetLink from "../atoms/targetLink"
@@ -15,8 +14,6 @@ import isNull from "../../helpers/isNull"
 
 const ref = React.createRef()
 
-// TODO: Refactor this as per new layout
-// Remove hardcoding ebook
 class Header extends React.Component {
   state = {
     activeExpandedNavItem: "",

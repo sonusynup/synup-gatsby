@@ -45,15 +45,15 @@ const ResourcesNavGroup = ({
               <ul className="nav nav-tabs nav-stacked">
                 {props.resourceList.map(resource => (
                   <li key={resource.title} to={resource.link}>
-                    <a
-                      onClick={onChangeActiveResource(resource.title)}
+                    <TargetLink
+                      to={resource.link}
                       data-toggle="tab"
                       className={`${
                         activeResource === resource.title ? "active" : ""
                       }`}
                     >
                       {resource.title}
-                    </a>
+                    </TargetLink>
                   </li>
                 ))}
               </ul>

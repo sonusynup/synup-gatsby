@@ -9,7 +9,7 @@
             <stop stop-color="#BFC9FF" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
         <g id="UI/Headers/Resources" transform="translate(-82.000000, -160.000000)">
             <g id="cube" transform="translate(82.000000, 160.000000)">
                 <polygon id="Path" fill="url(#linearGradient-1)" opacity="0.942522321" points="54.028436 120 0 93.0552923 0 26.7298578 54.028436 53.6745656"></polygon>

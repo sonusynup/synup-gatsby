@@ -18,22 +18,22 @@ const Content = props => {
       prefooterDescription={props.pageContext.prefooterDescription}
       prefooterButtonText={props.pageContext.prefooterButtonText}
     >
-      {sections.map(section => {
+      {sections.map((section, index) => {
         switch (section.__typename) {
           case "ContentfulHeroSection":
-            return <Hero {...section} />
+            return <Hero {...section} key={index} />
             break
           case "ContentfulFeaturesSection":
-            return <Feature {...section} />
+            return <Feature {...section} key={index} />
             break
           case "ContentfulProductSection":
-            return <Product {...section} />
+            return <Product {...section} key={index} />
             break
           case "ContentfulCaseStudySection":
-            return <CaseStudy {...section} />
+            return <CaseStudy {...section} key={index} />
             break
           case "ContentfulPartnerSection":
-            return <Partner {...section} />
+            return <Partner {...section} key={index} />
             break
         }
       })}

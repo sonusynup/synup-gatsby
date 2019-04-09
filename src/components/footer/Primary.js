@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import SynupLogo from "../images/svgComponents/synupLogo"
 import FacebookImage from "../images/svgComponents/FacebookImage"
@@ -25,12 +24,12 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
         <div className="footer_linksWrapper">
           <ul>
             <li className="footer_linksheading">
-              <a href="">
+              <TargetLink to="/">
                 <SynupLogo />
-              </a>
+              </TargetLink>
             </li>
-            {companyList.map(section => (
-              <li>
+            {companyList.map((section, index) => (
+              <li key={index}>
                 <TargetLink to={section.link} className="footer_link">
                   {section.title}
                 </TargetLink>
@@ -38,8 +37,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
             ))}
           </ul>
           <ul className="socialicon_wrapper">
-            {socialIcons.map(icon => (
-              <li className="socialIcon">
+            {socialIcons.map((icon, index) => (
+              <li className="socialIcon" key={index}>
                 <TargetLink to={icon.link}>
                   <icon.title />
                 </TargetLink>
@@ -52,8 +51,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
             <li className="footer_linksheading">PRODUCTS</li>
             {filterItemsByGroup("products")
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
-              .map(item => (
-                <li>
+              .map((item, index) => (
+                <li key={index}>
                   <TargetLink
                     to={item.node.webpageName}
                     className="footer_link"
@@ -67,8 +66,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
         <div className="footer_linksWrapper">
           <ul>
             <li className="footer_linksheading">RESOURCES</li>
-            {resourceList.map(resource => (
-              <li key={resource.title}>
+            {resourceList.map((resource, index) => (
+              <li key={resource.title} key={index}>
                 <TargetLink to={resource.link} className="footer_link">
                   {resource.title}
                 </TargetLink>
@@ -111,8 +110,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
             <li className="footer_linksheading">SOLUTIONS</li>
             {filterItemsByGroup("solutions")
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
-              .map(item => (
-                <li>
+              .map((item, index) => (
+                <li key={index}>
                   <TargetLink
                     to={item.node.webpageName}
                     className="footer_link"

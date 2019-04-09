@@ -13,7 +13,7 @@
         <circle id="path-6" cx="27.5" cy="27.5" r="27.5"></circle>
         <circle id="path-8" cx="25.5" cy="25.5" r="25.5"></circle>
     </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
         <g id="UI/Components/Cards/Resources/FeaturedWebinar">
             <g id="Group-4">
                 <g id="webinar3-copy">
@@ -73,7 +73,7 @@
                     <tspan x="40" y="66">How to reduce churn for your </tspan>
                     <tspan x="40" y="100">agency</tspan>
                 </text>
-                <rect id="Rectangle-Copy-4" stroke="#FFFFFF" stroke-width="2" fill="#FFFFFF" x="601" y="51" width="92" height="20" rx="3"></rect>
+                <rect id="Rectangle-Copy-4" stroke="#FFFFFF" strokeWidth="2" fill="#FFFFFF" x="601" y="51" width="92" height="20" rx="3"></rect>
                 <text id="Free-Webinar" font-family="Sailec-Medium, Sailec" font-size="12" font-weight="400" line-spacing="9" fill="#4865FF">
                     <tspan x="608" y="68">Free Webinar</tspan>
                 </text>

@@ -8,8 +8,8 @@ import isNull from "../../../helpers/isNull"
 const BusinessDetails = ({ details }) => (
   <div className="testimonial_wrapperCard">
     <div className="va_list">
-      {details.map(detail => (
-        <div className="va_set">
+      {details.map((detail, index) => (
+        <div className="va_set" key={index}>
           {!isNull(detail.metricImage) && (
             <img
               src={detail.metricImage.file.url}

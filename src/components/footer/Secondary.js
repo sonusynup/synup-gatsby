@@ -1,28 +1,30 @@
 import React from "react"
 
+import TargetLink from '../atoms/targetLink'
+
 const SecondaryFooter = () => (
   <div className="footer_secondary">
     <div className="container">
       <ul className="footer_secondaryLinks">
         <li>
-          <a href="" className="footer_link">
+          <TargetLink to="/support" className="footer_link">
             Support
-          </a>
+          </TargetLink>
         </li>
         <li>
-          <a href="" className="footer_link">
+          <TargetLink to="/privacy" className="footer_link">
             Privacy
-          </a>
+          </TargetLink>
         </li>
         <li>
-          <a href="" className="footer_link">
+          <TargetLink to="/terms" className="footer_link">
             Terms and Conditions
-          </a>
+          </TargetLink>
         </li>
         <li>
-          <a href="" className="footer_link">
+          <TargetLink to="/cookies" className="footer_link">
             Cookies
-          </a>
+          </TargetLink>
         </li>
       </ul>
     </div>
