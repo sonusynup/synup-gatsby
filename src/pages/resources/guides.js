@@ -16,8 +16,8 @@ const GuidesList = ({
           <div className="container">
             <h3>Customer Stories</h3>
             <div className="blogWrapper">
-              {edges.map(edge => (
-                <div className="blogWrapper_right">
+              {edges.map((edge, index) => (
+                <div className="blogWrapper_right" key={index}>
                   <div className="card_deck">
                     <div className="blogWrapper_inner">
                       <TargetLink

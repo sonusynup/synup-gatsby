@@ -42,8 +42,7 @@ const CardTransparent = ({
 
 CardTransparent.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  isDescriptionRichText: PropTypes.string.isRequired,
+  isDescriptionRichText: PropTypes.bool.isRequired,
   action: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 }
