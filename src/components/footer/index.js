@@ -5,7 +5,7 @@ import SecondaryFooter from "./Secondary"
 import Prefooter from "./Prefooter"
 
 // TODO: Refactor this, replace gatsby link
-const Footer = ({ 
+const Footer = ({
   data,
   resourceList,
   companyList,

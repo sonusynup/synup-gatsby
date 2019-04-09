@@ -41,13 +41,13 @@ FormButtonGroup.propTypes = {
       value: PropTypes.string,
     })
   ).isRequired,
-  buttonClass: PropTypes.string
+  buttonClass: PropTypes.string,
 }
 
 FormButtonGroup.defaultProps = {
   wrapperClass: "btn-group",
   buttonGroupWrapperClass: "btn_groupWrapper",
-  buttonClass: "btn btn_form"
+  buttonClass: "btn btn_form",
 }
 
 export default FormButtonGroup

@@ -54,7 +54,10 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
               .map(item => (
                 <li>
-                  <TargetLink to={item.node.webpageName} className="footer_link">
+                  <TargetLink
+                    to={item.node.webpageName}
+                    className="footer_link"
+                  >
                     {item.node.navbarTitle}
                   </TargetLink>
                 </li>
@@ -110,7 +113,10 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
               .map(item => (
                 <li>
-                  <TargetLink to={item.node.webpageName} className="footer_link">
+                  <TargetLink
+                    to={item.node.webpageName}
+                    className="footer_link"
+                  >
                     {item.node.navbarTitle}
                   </TargetLink>
                 </li>

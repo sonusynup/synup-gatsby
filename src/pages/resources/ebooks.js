@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import TargetLink from '../../components/atoms/targetLink'
+import TargetLink from "../../components/atoms/targetLink"
 import ContentHoverActionImage from "../../components/images/svgComponents/contentHoverActionImage"
 import Layout from "../../components/layout"
 

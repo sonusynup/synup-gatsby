@@ -17,7 +17,12 @@ const CustomersBlock = props => (
         <div className="blogWrapper_right">
           <div className="card_deck">
             <div className="blogWrapper_inner">
-              <TargetLink to={`resources/casestudy/${props.casestudyData.edges[0].node.id}`} className="blogcard_anchor">
+              <TargetLink
+                to={`resources/casestudy/${
+                  props.casestudyData.edges[0].node.id
+                }`}
+                className="blogcard_anchor"
+              >
                 <p className="blogcard_text">
                   {
                     props.casestudyData.edges[0].node.casestudyTitle
@@ -28,7 +33,12 @@ const CustomersBlock = props => (
               </TargetLink>
             </div>
             <div className="blogWrapper_inner">
-              <TargetLink to={`resources/casestudy/${props.casestudyData.edges[1].node.id}`} className="blogcard_anchor">
+              <TargetLink
+                to={`resources/casestudy/${
+                  props.casestudyData.edges[1].node.id
+                }`}
+                className="blogcard_anchor"
+              >
                 <p className="blogcard_text">
                   {
                     props.casestudyData.edges[1].node.casestudyTitle

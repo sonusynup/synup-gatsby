@@ -40,9 +40,9 @@ const companyList = [
 // Handles the layout of the app
 // Layout includes headers, app and footer.
 // Each route will replace the app as it is there
-const Layout = ({ 
-  children, 
-  announcementMessage, 
+const Layout = ({
+  children,
+  announcementMessage,
   announcementUrl,
   prefooterTitle,
   prefooterDescription,

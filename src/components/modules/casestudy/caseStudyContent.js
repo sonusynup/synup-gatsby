@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Testimonial from '../../molecules/caseStudy/testimonial'
+import Testimonial from "../../molecules/caseStudy/testimonial"
 import isNull from "../../../helpers/isNull"
 
-const CaseStudyContent = (props) => {
-  const partner = !isNull(props.partner) ? props.partner : {};
-  const description = !isNull(props.description) ? props.description : '';
+const CaseStudyContent = props => {
+  const partner = !isNull(props.partner) ? props.partner : {}
+  const description = !isNull(props.description) ? props.description : ""
   const {
     partnerTestimonial,
     partnerName,
@@ -15,9 +15,8 @@ const CaseStudyContent = (props) => {
     partnerLogo,
     partnerIndustry,
     partnerGoal,
-  } = partner;
-    
-  
+  } = partner
+
   return (
     <section className="section_casestudy_content">
       <div className="container">

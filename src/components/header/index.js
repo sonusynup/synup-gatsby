@@ -146,7 +146,10 @@ class Header extends React.Component {
                   companyList={this.props.companyList}
                 />
                 <li>
-                  <TargetLink to="/customers" className="js-scroll-trigger nav-link">
+                  <TargetLink
+                    to="/customers"
+                    className="js-scroll-trigger nav-link"
+                  >
                     CUSTOMERS
                   </TargetLink>
                 </li>

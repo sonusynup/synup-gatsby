@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import TargetLink from '../../atoms/targetLink'
+import TargetLink from "../../atoms/targetLink"
 import ContentHoverableSecondaryImage from "../../images/svgComponents/conventHoverSecondaryActionImage"
 
 const CardTransparent = ({

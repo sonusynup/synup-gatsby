@@ -1,11 +1,6 @@
-import React from 'react'
+import React from "react"
 
-const BusinessButton = ({
-  image,
-  title,
-  subTitle,
-  onClick,
-}) => (
+const BusinessButton = ({ image, title, subTitle, onClick }) => (
   <a className="businessCard" onClick={onClick}>
     <figure>
       <img src={image} alt="" />

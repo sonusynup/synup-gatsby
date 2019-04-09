@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import TargetLink from '../targetLink'
+import TargetLink from "../targetLink"
 import Button from "../button"
 
 // TODO: Make the buttons generic

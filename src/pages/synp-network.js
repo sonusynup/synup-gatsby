@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 
 const SynpNetwork = () => (
   <Layout>
-    <div className="container">
-      SynpNetwork
-    </div>
+    <div className="container">SynpNetwork</div>
   </Layout>
 )
 

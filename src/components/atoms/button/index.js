@@ -10,7 +10,11 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
   switch (type) {
     case "invert-primary":
       return (
-        <button className="btn btn_white  btn_arrow" type={buttonType} onClick={onClick}>
+        <button
+          className="btn btn_white  btn_arrow"
+          type={buttonType}
+          onClick={onClick}
+        >
           <span className="btn_textSpan">
             GET STARTED
             <SecondaryButtonAnimation />
@@ -19,16 +23,24 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
       )
     case "invert-primary-fullwidth":
       return (
-        <button className="btn btn_white  btn_arrow btn_fullWidth" type={buttonType} onClick={onClick}>
+        <button
+          className="btn btn_white  btn_arrow btn_fullWidth"
+          type={buttonType}
+          onClick={onClick}
+        >
           <span className="btn_textSpan">
             GET STARTED
             <SecondaryButtonAnimation />
           </span>
         </button>
-    )
+      )
     case "invert-secondary":
       return (
-        <button className="btn btn_outlineWhite  btn_arrow" type={buttonType} onClick={onClick}>
+        <button
+          className="btn btn_outlineWhite  btn_arrow"
+          type={buttonType}
+          onClick={onClick}
+        >
           <span className="btn_textSpan">
             LEARN MORE
             <PrimaryButtonAnimation />

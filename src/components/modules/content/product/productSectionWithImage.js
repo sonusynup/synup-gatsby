@@ -20,7 +20,11 @@ const ProductSectionWithImage = ({
             }}
           />
           <figure className="floatingCard_img">
-            <img src={productSectionImage.file.url} className="img_fluid" alt="" />
+            <img
+              src={productSectionImage.file.url}
+              className="img_fluid"
+              alt=""
+            />
           </figure>
         </div>
         <div className="popCard_wrapper">

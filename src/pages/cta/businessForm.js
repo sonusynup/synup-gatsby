@@ -85,13 +85,13 @@ class BusinessForm extends React.Component {
             buttons={this.countButtons}
             onChange={this.onChangeFormField("employeeCount")}
           />
-          <Button 
+          <Button
             buttonType="button"
-            type="invert-primary-fullwidth" 
-            text="RESERVE YOUR SEAT" 
+            type="invert-primary-fullwidth"
+            text="RESERVE YOUR SEAT"
             fullWidthBtn
             onClick={() => {
-              console.log('clicked ')
+              console.log("clicked ")
               this.props.submitBusinessForm({
                 firstName: this.state.firstName,
                 email: this.state.email,
