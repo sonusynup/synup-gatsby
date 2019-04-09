@@ -15,7 +15,7 @@
         </filter>
         <rect id="path-2" x="0" y="0" width="80" height="80" rx="4"></rect>
     </defs>
-    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fill-rule="evenodd">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="UI/Headers/Guides" transform="translate(-670.000000, -110.000000)">
             <g id="Group-7" filter="url(#filter-1)" transform="translate(680.000000, 112.000000)">
                 <mask id="mask-3" fill="white">

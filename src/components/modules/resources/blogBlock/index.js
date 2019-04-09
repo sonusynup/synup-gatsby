@@ -38,7 +38,7 @@ const BlogBlock = () => (
                     stroke="none"
                     strokeWidth="1"
                     fill="none"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   >
                     <g
                       id="UI/Components/Buttons/PrimaryBig/hover"
@@ -89,7 +89,7 @@ const BlogBlock = () => (
                       stroke="none"
                       strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <g
                         id="UI/Components/Buttons/SecondaryBig/hover"
@@ -136,7 +136,7 @@ const BlogBlock = () => (
                       stroke="none"
                       strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <g
                         id="UI/Components/Buttons/SecondaryBig/hover"
@@ -183,7 +183,7 @@ const BlogBlock = () => (
                 stroke="none"
                 strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="UI/Components/Buttons/SecondaryBig/hover"

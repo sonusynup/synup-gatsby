@@ -14,7 +14,7 @@ const SecondaryButtonAnimation = () => (
       stroke="none"
       strokeWidth="1"
       fill="none"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     >
       <g
         id="UI/Components/button/SecondaryBig/hover"
