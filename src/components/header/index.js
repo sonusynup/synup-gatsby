@@ -67,7 +67,7 @@ class Header extends React.Component {
 
   render() {
     const { isMenuExpanded } = this.state
-    const { announcementMessage, announcementLink, announcementButtonText, sticky } = this.props
+    const { announcementMessage, announcementLink, announcementButtonText, navbarSticky, announcementSticky } = this.props
     const filterItemsByGroup = group =>
       this.props.data.allContentfulWebpage.edges.filter(
         edge => edge.node.navbarGroup === group
@@ -76,13 +76,14 @@ class Header extends React.Component {
       (!isNull(announcementMessage) && !isNull(announcementLink) && this.state.isAnnouncementVisible)
         ? "with-announcement"
         : null
+    
     return (
       <>
         {(
           !isNull(announcementMessage) && 
           !isNull(announcementLink) && 
           !isNull(announcementButtonText) && 
-          !isNull(sticky) &&
+          !isNull(announcementSticky) &&
           this.state.isAnnouncementVisible
         ) ? (
           <>

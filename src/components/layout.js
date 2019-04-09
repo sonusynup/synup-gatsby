@@ -40,10 +40,11 @@ const companyList = [
 // Each route will replace the app as it is there
 const Layout = ({
   children,
+  navbarSticky,
   announcementMessage,
   announcementLink,
   announcementButtonText,
-  sticky,
+  sticky: announcementSticky,
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
@@ -88,7 +89,8 @@ const Layout = ({
           announcementMessage={announcementMessage}
           announcementLink={announcementLink}
           announcementButtonText={announcementButtonText}
-          sticky={sticky}
+          announcementSticky={announcementSticky}
+          navbarSticky={navbarSticky}
         />
         {/* Dynamic injection of page meta */}
         <Helmet>

@@ -16,6 +16,7 @@ const Content = props => {
       prefooterTitle={props.pageContext.prefooterTitle}
       prefooterDescription={props.pageContext.prefooterDescription}
       prefooterButtonText={props.pageContext.prefooterButtonText}
+      navbarSticky={props.pageContext.navbarSticky}
     >
       {sections.map((section, index) => {
         switch (section.__typename) {

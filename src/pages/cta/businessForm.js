@@ -94,7 +94,6 @@ class BusinessForm extends React.Component {
             text="RESERVE YOUR SEAT"
             fullWidthBtn
             onClick={() => {
-              console.log("clicked ")
               this.props.submitBusinessForm({
                 firstName: this.state.firstName,
                 email: this.state.email,

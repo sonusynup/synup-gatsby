@@ -9,6 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
       edges{
         node {
           webpageName
+          navbarSticky
           announcement {
             announcementMessage
             announcementLink
@@ -399,6 +400,7 @@ exports.createPages = ({ graphql, actions }) => {
           prefooterTitle: page.node.prefooterTitle,
           prefooterDescription: page.node.prefooterDescription,
           prefooterButtonText: page.node.prefooterButtonText,
+          navbarSticky: page.node.navbarSticky,
         }
       })
     })
