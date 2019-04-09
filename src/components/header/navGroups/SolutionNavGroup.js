@@ -28,7 +28,7 @@ const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {
       >
         <div className="solutions-submenu arrow_box">
           {items
-            .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
+            .sort((x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder)
             .map((item, index) => (
               <SolutionNavItem
                 key={index}

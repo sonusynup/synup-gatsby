@@ -50,7 +50,7 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
         <h5 className="footer_linksheading">PRODUCTS</h5>
           <ul className="dropdown-menu">
             {filterItemsByGroup("products")
-              .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
+              .sort((x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder)
               .map((item, index) => (
                 <li key={index}>
                   <TargetLink
@@ -109,7 +109,7 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
         <h5 className="footer_linksheading">SOLUTIONS</h5>
           <ul className="dropdown-menu">
             {filterItemsByGroup("solutions")
-              .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
+              .sort((x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder)
               .map((item, index) => (
                 <li key={index}>
                   <TargetLink

@@ -62,13 +62,15 @@ const Layout = ({
           edges {
             node {
               webpageName
-              navbarTitle
-              navbarOrder
-              navbarGroup
-              navbarTitle
-              navbarImage {
-                file {
-                  url
+              navbar {
+                navbarTitle
+                navbarOrder
+                navbarGroup
+                navbarTitle
+                navbarImage {
+                  file {
+                    url
+                  }
                 }
               }
               navbarDescription {

@@ -73,7 +73,7 @@ class Header extends React.Component {
     const { announcementMessage, announcementLink, announcementButtonText, navbarSticky, announcementSticky , navbarTheme} = this.props
     const filterItemsByGroup = group =>
       this.props.data.allContentfulWebpage.edges.filter(
-        edge => edge.node.navbarGroup === group
+        edge => edge.node.navbar && edge.node.navbar.navbarGroup === group
       )
     const withAnnouncementClass =
       (!isNull(announcementMessage) && !isNull(announcementLink) && this.state.isAnnouncementVisible)

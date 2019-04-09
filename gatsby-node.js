@@ -9,8 +9,10 @@ exports.createPages = ({ graphql, actions }) => {
       edges{
         node {
           webpageName
-          navbarSticky
-          navbarTheme
+          navbar {
+            navbarSticky
+            navbarTheme
+          }
           announcement {
             announcementMessage
             announcementLink

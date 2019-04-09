@@ -31,11 +31,11 @@ const ProductNavGroup = ({ onExpand, isExpanded, onClose, items }) => {
       >
         <div className="product-submenu arrow_box">
           {items
-            .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
+            .sort((x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder)
             .map((item, index) => (
               <ProductItem
                 key={index}
-                title={item.node.navbarTitle}
+                title={item.node.navbar.navbarTitle}
                 description={item.node.navbarDescription}
                 webpageName={item.node.webpageName}
               />
