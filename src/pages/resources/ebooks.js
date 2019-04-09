@@ -19,16 +19,17 @@ const EbookList = ({
             <h3>other Ebooks</h3>
             <div className="ebook_wrapper">
               <div className="ebook_lists">
-                {edges.map(Ebook => (
+                {edges.map((ebook, index) => (
                   <TargetLink
-                    to={`/resources/ebook/${Ebook.node.id}`}
+                    to={`/resources/ebook/${ebook.node.id}`}
                     className="ebook_anchor"
+                    key={index}
                   >
                     <div className="overlay_content">
                       <div className="content-overlay" />
                       <figure>
                         <img
-                          src={Ebook.node.bookCoverImage.file.url}
+                          src={ebook.node.bookCoverImage.file.url}
                           className="img_fluid"
                           alt=""
                         />

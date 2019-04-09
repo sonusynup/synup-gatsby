@@ -11,15 +11,15 @@ const WebinarList = ({
   return (
     <Layout>
       <div className="container">
-        {edges.map(edge => (
-          <div className="blockWrapper">
+        {edges.map((edge, index) => (
+          <div className="blockWrapper" key={index}>
             <div className="rightBlock webinar_resourceBlock">
               <TargetLink to={`/resources/webinar/${edge.node.id}`}>
                 <div className="blogTool-overlay" />
                 <div className="resourcesHeading">
                   <div className="blogInnerTool-overlay" />
-                  <h5 class>{edge.node.webinarTitle}</h5>
-                  <p class>{edge.node.webinarDate}</p>
+                  <h5 className="">{edge.node.webinarTitle}</h5>
+                  <p className="">{edge.node.webinarDate}</p>
                 </div>
                 <div className="resource_inner">
                   <img
@@ -32,12 +32,14 @@ const WebinarList = ({
                     {edge.node.speakers.speakers[0].speakerName}
                     </p>
                     {edge.node.speakers.speakers[0].speakerDescription.content.map(
-                      description => (
+                      (description, index) => (
                         <p
                           className="position"
                           dangerouslySetInnerHTML={{
                             __html: description.content[0].value,
                           }}
+                          index={index}
+                          key={index}
                         />
                       )
                     )}
