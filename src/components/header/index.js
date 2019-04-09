@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { Link } from "gatsby"
 
 import Button from "../atoms/button"
 import TargetLink from "../atoms/targetLink"
@@ -15,14 +14,13 @@ import isNull from "../../helpers/isNull"
 
 const ref = React.createRef()
 
-// TODO: Refactor this as per new layout
-// Remove hardcoding ebook
 class Header extends React.Component {
   state = {
     activeExpandedNavItem: "",
     isMenuExpanded: false,
     scrollBarFixed: false,
     activeResource: "Ebooks",
+    isAnnouncementVisible: true,
   }
 
   componentDidMount() {
@@ -67,39 +65,59 @@ class Header extends React.Component {
     }
   }
 
+
+
   render() {
     const { isMenuExpanded } = this.state
-    const { announcementMessage, announcementUrl } = this.props
+    const { announcementMessage, announcementLink, announcementButtonText, navbarSticky, announcementSticky , navbarTheme} = this.props
     const filterItemsByGroup = group =>
       this.props.data.allContentfulWebpage.edges.filter(
         edge => edge.node.navbarGroup === group
       )
     const withAnnouncementClass =
-      !isNull(announcementMessage) && !isNull(announcementUrl)
+      (!isNull(announcementMessage) && !isNull(announcementLink) && this.state.isAnnouncementVisible)
         ? "with-announcement"
         : null
+    let theme = '';
+    if (navbarTheme === 'full-dark') {
+      theme = 'secoundary-topbar';
+    }
+    if (navbarTheme === 'minimal-light') {
+      theme = 'primary-topbar';
+    }
+
     return (
       <>
-        {!isNull(announcementMessage) && !isNull(announcementUrl) ? (
-          <TargetLink to={announcementUrl}>
-            <div className="annoucement_bar primary_bg">
-              <div className="container">
-                <p
-                  className="annoucement_pre"
-                  dangerouslySetInnerHTML={{ __html: announcementMessage }}
-                />
-              </div>
-            </div>
-          </TargetLink>
-        ) : null}
-
         <header
           ref={ref}
           className={`navbar ${withAnnouncementClass} navbar-toggleable-sm ${
             this.state.scrollBarFixed ? "header--fixed active" : "header--fixed"
-          } `}
+          } ${theme}`}
           id="header"
         >
+          {(
+            !isNull(announcementMessage) && 
+            !isNull(announcementLink) && 
+            !isNull(announcementButtonText) && 
+            !isNull(announcementSticky) &&
+            this.state.isAnnouncementVisible
+          ) ? (
+            <>
+              <TargetLink className="announcementWrapper primary_bg annoucement_bar" to={announcementLink}>
+                <div className="">
+                    <p className="annoucement_pre">
+                      <span className="label">{announcementButtonText}</span>
+                      {announcementMessage}
+                      <span className="closeIcon" 
+                        onClick={() => 
+                        { console.log('clicked '); 
+                        this.setState({ isAnnouncementVisible: false })}}>X</span>
+                    </p>
+                  </div>
+              </TargetLink>
+            </>
+          ) : null}
+          
           <div className="container">
             <h1>
               <TargetLink to="/">
@@ -146,7 +164,10 @@ class Header extends React.Component {
                   companyList={this.props.companyList}
                 />
                 <li>
-                  <TargetLink to="/customers" className="js-scroll-trigger nav-link">
+                  <TargetLink
+                    to="/customers"
+                    className="js-scroll-trigger nav-link"
+                  >
                     CUSTOMERS
                   </TargetLink>
                 </li>
@@ -156,7 +177,7 @@ class Header extends React.Component {
                   </TargetLink>
                 </li>
                 <li>
-                  <TargetLink to="/get-started" className="btn_full">
+                  <TargetLink to="/cta" className="btn_full">
                     <Button type="primary" text="GET STARTED" />
                   </TargetLink>
                 </li>

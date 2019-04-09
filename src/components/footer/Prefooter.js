@@ -1,17 +1,18 @@
 import React from "react"
 
-import Button from '../atoms/button'
-import TargetLink from '../atoms/targetLink'
-import isNull from "../../helpers/isNull";
+import Button from "../atoms/button"
+import TargetLink from "../atoms/targetLink"
+import isNull from "../../helpers/isNull"
 
 const Prefooter = ({
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
-}) => 
-  {
-    return (!isNull(prefooterTitle) && !isNull(prefooterDescription) && !isNull(prefooterDescription)) ? (
-      <section className="section_grandient">
+}) => {
+  return !isNull(prefooterTitle) &&
+    !isNull(prefooterDescription) &&
+    !isNull(prefooterDescription) ? (
+    <section className="section_grandient">
       <div className="container">
         <div className="grandientWrapper">
           <h3 className="whiteTitle">{prefooterTitle}</h3>
@@ -22,7 +23,7 @@ const Prefooter = ({
         </div>
       </div>
     </section>
-    ) : null
-  }
+  ) : null
+}
 
 export default Prefooter

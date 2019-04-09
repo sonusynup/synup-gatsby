@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../../components/layout'
+import Layout from "../../components/layout"
 
 const Blogs = () => (
   <Layout>
-    <div className="container">
-      Blogs
-    </div>
+    <div className="container">Blogs</div>
   </Layout>
 )
 

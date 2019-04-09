@@ -5,7 +5,7 @@ import TargetLink from "../../../atoms/targetLink"
 import Button from "../../../atoms/button"
 import isNull from "../../../../helpers/isNull"
 
-const BusinessDetails = ({
+const PartnerGrowth = ({
   metricImage1,
   metricValue1,
   metricImage2,
@@ -18,8 +18,8 @@ const BusinessDetails = ({
   return (
     <div className="testimonial_wrapperCard">
       <div className="va_list">
-        {details.map(detail => (
-          <div className="va_set">
+        {details.map((detail, index) => (
+          <div className="va_set" key={index}>
             <a href={detail.to}>
               {!isNull(detail.metricImage) && (
                 <img
@@ -42,18 +42,18 @@ const BusinessDetails = ({
   )
 }
 
-BusinessDetails.prototype = {
+PartnerGrowth.prototype = {
   metricValue1: PropTypes.string,
   metricValue2: PropTypes.string,
   metricImage1: PropTypes.string,
   metricImage2: PropTypes.string,
 }
 
-BusinessDetails.defaultProps = {
+PartnerGrowth.defaultProps = {
   metricValue1: "",
   metricValue2: "",
   metricImage1: "",
   metricImage2: "",
 }
 
-export default BusinessDetails
+export default PartnerGrowth

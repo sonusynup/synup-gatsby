@@ -9,8 +9,14 @@ exports.createPages = ({ graphql, actions }) => {
       edges{
         node {
           webpageName
-          announcementMessage
-          announcementUrl
+          navbarSticky
+          navbarTheme
+          announcement {
+            announcementMessage
+            announcementLink
+            announcementButtonText
+            sticky
+          }
           prefooterTitle
           prefooterDescription
           prefooterButtonText
@@ -391,11 +397,12 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve('./src/templates/content.js'),
         context: {
           sections: page.node.webpageSections,
-          announcementMessage: page.node.announcementMessage,
-          announcementUrl: page.node.announcementUrl,
+          announcement: page.node.announcement,
           prefooterTitle: page.node.prefooterTitle,
           prefooterDescription: page.node.prefooterDescription,
           prefooterButtonText: page.node.prefooterButtonText,
+          navbarSticky: page.node.navbarSticky,
+          navbarTheme: page.node.navbarTheme
         }
       })
     })
@@ -444,4 +451,14 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
   })
+}
+
+exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
+  const config = getConfig()
+  if (stage.startsWith('develop') && config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'react-dom': '@hot-loader/react-dom'
+    }
+  }
 }

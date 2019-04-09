@@ -3,7 +3,7 @@
     <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
     <title>Rectangle</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="UI/Headers/Feature" transform="translate(-655.000000, -64.000000)" fill="#CAD3FF">
             <rect id="Rectangle" x="655" y="64" width="128" height="128" rx="4"></rect>
         </g>

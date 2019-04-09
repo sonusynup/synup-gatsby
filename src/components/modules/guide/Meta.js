@@ -3,7 +3,6 @@ import React from "react"
 import Button from "../../atoms/button"
 
 const Meta = ({ meta }) => {
-  console.log("meta ", meta)
   if (meta === null) return null
   switch (meta.type) {
     case "tip":
@@ -17,7 +16,6 @@ const Meta = ({ meta }) => {
           />
         </div>
       )
-      break
     case "alert":
       return (
         <div className="primaryColor_block">
@@ -30,6 +28,8 @@ const Meta = ({ meta }) => {
           <Button type="secondary" text="LEARN MORE" />
         </div>
       )
+    default:
+      return null
   }
 }
 

@@ -2,10 +2,10 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const About = () => (
+const Cookies = () => (
   <Layout>
-    <div className="container">About</div>
+    <div className="container">Cookies</div>
   </Layout>
 )
 
-export default About
+export default Cookies

@@ -12,8 +12,6 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
-import TargetLink from "./atoms/targetLink"
-// TODO: Split these files as per indiviual scss
 import "./layout.scss"
 import "./additionals.css"
 
@@ -40,13 +38,17 @@ const companyList = [
 // Handles the layout of the app
 // Layout includes headers, app and footer.
 // Each route will replace the app as it is there
-const Layout = ({ 
-  children, 
-  announcementMessage, 
-  announcementUrl,
+const Layout = ({
+  children,
+  navbarSticky,
+  announcementMessage,
+  announcementLink,
+  announcementButtonText,
+  sticky: announcementSticky,
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
+  navbarTheme
 }) => (
   <StaticQuery
     query={graphql`
@@ -86,7 +88,11 @@ const Layout = ({
           resourceList={resourceList}
           companyList={companyList}
           announcementMessage={announcementMessage}
-          announcementUrl={announcementUrl}
+          announcementLink={announcementLink}
+          announcementButtonText={announcementButtonText}
+          announcementSticky={announcementSticky}
+          navbarSticky={navbarSticky}
+          navbarTheme={navbarTheme}
         />
         {/* Dynamic injection of page meta */}
         <Helmet>
@@ -98,13 +104,6 @@ const Layout = ({
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-
-          <TargetLink
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="images/favicon.png"
-          />
-          <TargetLink rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" />
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" />

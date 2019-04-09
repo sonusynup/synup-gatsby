@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import TargetLink from '../../atoms/targetLink'
+import TargetLink from "../../atoms/targetLink"
 import ContentHoverableSecondaryImage from "../../images/svgComponents/conventHoverSecondaryActionImage"
 
 const CardTransparent = ({
@@ -42,8 +42,7 @@ const CardTransparent = ({
 
 CardTransparent.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  isDescriptionRichText: PropTypes.string.isRequired,
+  isDescriptionRichText: PropTypes.bool.isRequired,
   action: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 }

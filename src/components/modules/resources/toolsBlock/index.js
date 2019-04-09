@@ -1,5 +1,7 @@
 import React from "react"
 
+import TargetLink from '../../../atoms/targetLink'
+
 const ToolsBlock = () => (
   <section className="section_blog">
     <div className="container">
@@ -30,9 +32,9 @@ const ToolsBlock = () => (
                   <g
                     id="Symbols"
                     stroke="none"
-                    stroke-width="1"
+                    strokeWidth="1"
                     fill="none"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   >
                     <g
                       id="UI/Components/Buttons/PrimaryBig/hover"
@@ -64,7 +66,7 @@ const ToolsBlock = () => (
           <div className="card_deck">
             <div className="blogWrapper_inner_red">
               <div className="testimonial_overlay darkred-overlay" />
-              <a href="#" className="blogcard_anchor">
+              <TargetLink href="#" className="blogcard_anchor">
                 <p className="blogcard_textWhite">Google Citation Checker</p>
                 <p className="blogcard_textWhite blogcard_textWhite_pre">
                   Do You Meet Google My Business Guidelines?
@@ -83,9 +85,9 @@ const ToolsBlock = () => (
                     <g
                       id="Symbols"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <g
                         id="UI/Components/Buttons/PrimaryBig/hover"
@@ -110,11 +112,11 @@ const ToolsBlock = () => (
                     </g>
                   </svg>
                 </span>
-              </a>
+              </TargetLink>
             </div>
             <div className="blogWrapper_inner_green">
               <div className="testimonial_overlay darkgreen-overlay" />
-              <a href="#" className="blogcard_anchor">
+              <TargetLink href="#" className="blogcard_anchor">
                 <p className="blogcard_textWhite blogcard_textWhite_pre">
                   Convince clients that it’s a marathon, not a sprint!
                 </p>
@@ -131,9 +133,9 @@ const ToolsBlock = () => (
                     <g
                       id="Symbols"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <g
                         id="UI/Components/Buttons/PrimaryBig/hover"
@@ -158,7 +160,7 @@ const ToolsBlock = () => (
                     </g>
                   </svg>
                 </span>
-              </a>
+              </TargetLink>
             </div>
           </div>
         </div>
@@ -178,9 +180,9 @@ const ToolsBlock = () => (
               <g
                 id="Symbols"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="UI/Components/Buttons/SecondaryBig/hover"

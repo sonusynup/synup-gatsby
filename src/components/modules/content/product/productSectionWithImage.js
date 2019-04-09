@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 import TransparentCard from "../../../atoms/cardTransparent"
 
@@ -20,12 +19,17 @@ const ProductSectionWithImage = ({
             }}
           />
           <figure className="floatingCard_img">
-            <img src={productSectionImage.file.url} className="img_fluid" alt="" />
+            <img
+              src={productSectionImage.file.url}
+              className="img_fluid"
+              alt=""
+            />
           </figure>
         </div>
         <div className="popCard_wrapper">
-          {productFeatures.map(feature => (
+          {productFeatures.map((feature, index) => (
             <TransparentCard
+              key={index}
               title={feature.featureTitle}
               description={feature.featureDescription}
               image={feature.featureIcon.file.url}
@@ -41,8 +45,6 @@ const ProductSectionWithImage = ({
 )
 
 ProductSectionWithImage.propTypes = {
-  productSectionDescription: PropTypes.string.isRequired,
-  productFeatures: PropTypes.string.isRequired,
 }
 
 export default ProductSectionWithImage

@@ -1,7 +1,7 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
-import TargetLink from '../../components/atoms/targetLink'
+import TargetLink from "../../components/atoms/targetLink"
 import ContentHoverActionImage from "../../components/images/svgComponents/contentHoverActionImage"
 import Layout from "../../components/layout"
 
@@ -10,14 +10,7 @@ const EbookList = ({
     allContentfulEbooks: { edges },
   },
 }) => {
-  const eBooks = edges.map(edge => {
-    return {
-      title: edge.node.bookTitle,
-      id: edge.node.id,
-      to: `/resources/ebook/${edge.node.id}`,
-      image: edge.node.bookCoverImage.file.url,
-    }
-  })
+
   return (
     <Layout>
       <section className="ebook">
@@ -26,16 +19,17 @@ const EbookList = ({
             <h3>other Ebooks</h3>
             <div className="ebook_wrapper">
               <div className="ebook_lists">
-                {edges.map(Ebook => (
+                {edges.map((ebook, index) => (
                   <TargetLink
-                    to={`/resources/ebook/${Ebook.node.id}`}
+                    to={`/resources/ebook/${ebook.node.id}`}
                     className="ebook_anchor"
+                    key={index}
                   >
                     <div className="overlay_content">
                       <div className="content-overlay" />
                       <figure>
                         <img
-                          src={Ebook.node.bookCoverImage.file.url}
+                          src={ebook.node.bookCoverImage.file.url}
                           className="img_fluid"
                           alt=""
                         />

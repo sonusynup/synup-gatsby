@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Button from "../button"
-import TargetLink from '../targetLink'
+import TargetLink from "../targetLink"
 import isNull from "../../../helpers/isNull"
 
 class Card extends React.Component {

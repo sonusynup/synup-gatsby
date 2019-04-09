@@ -28,6 +28,7 @@ const WebinarSection = props => (
                   props.webinarData.edges[0].node.speakers.speakers[0]
                     .speakerPhoto.file.url
                 }
+                alt=""
               />
               <div className>
                 <p className="speaker">

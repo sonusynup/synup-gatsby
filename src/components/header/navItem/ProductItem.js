@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import ProductItemImage from "../../images/svgComponents/ProductItemImage"
 import TargetLink from "../../atoms/targetLink"

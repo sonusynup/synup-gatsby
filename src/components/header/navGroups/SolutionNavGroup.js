@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import SolutionNavItem from "../navItem/SolutionItem"
 
 const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {
@@ -30,8 +29,9 @@ const SolutionNavGroup = ({ onExpand, onClose, isExpanded, items }) => {
         <div className="solutions-submenu arrow_box">
           {items
             .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
-            .map(item => (
+            .map((item, index) => (
               <SolutionNavItem
+                key={index}
                 title={item.node.navbarTitle}
                 description={item.node.navbarDescription}
                 webpageName={item.node.webpageName}

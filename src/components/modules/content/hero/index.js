@@ -12,6 +12,8 @@ const Hero = ({ heroType, ...props }) => {
       return <HeroContinuousBlock {...props} />
     case "Without Image":
       return <HeroWithoutImage {...props} />
+    default:
+      return null
   }
 }
 

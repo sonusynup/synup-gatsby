@@ -24,7 +24,11 @@ const ResourceList = ({ resources }) => (
       <div className="ebook_wrapper">
         <div className="ebook_lists">
           {resources.map(resource => (
-            <TargetLink to={resource.to} key={resource.to} className="ebook_anchor">
+            <TargetLink
+              to={resource.to}
+              key={resource.to}
+              className="ebook_anchor"
+            >
               {resource.noImage ? (
                 <EachItem
                   heading={resource.title}

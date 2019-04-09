@@ -1,5 +1,7 @@
 import React from "react"
 
+import TargetLink from '../../../atoms/targetLink'
+
 const BlogBlock = () => (
   <section className="section_blog">
     <div className="container">
@@ -36,9 +38,9 @@ const BlogBlock = () => (
                   <g
                     id="Symbols"
                     stroke="none"
-                    stroke-width="1"
+                    strokeWidth="1"
                     fill="none"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   >
                     <g
                       id="UI/Components/Buttons/PrimaryBig/hover"
@@ -69,7 +71,7 @@ const BlogBlock = () => (
         <div className="blogWrapper_right">
           <div className="card_deck">
             <div className="blogWrapper_inner">
-              <a href="#" className="blogcard_anchor">
+              <TargetLink className="blogcard_anchor">
                 <p className="blogcard_text">
                   Your Marketing Agency Needs a Customer Success Team – And
                   Here’s Why
@@ -87,9 +89,9 @@ const BlogBlock = () => (
                     <g
                       id="Symbols"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <g
                         id="UI/Components/Buttons/SecondaryBig/hover"
@@ -114,10 +116,10 @@ const BlogBlock = () => (
                     </g>
                   </svg>
                 </span>
-              </a>
+              </TargetLink>
             </div>
             <div className="blogWrapper_inner">
-              <a href="#" className="blogcard_anchor">
+              <TargetLink className="blogcard_anchor">
                 <p className="blogcard_text">
                   Convince clients that it’s a marathon, not a sprint!
                 </p>
@@ -134,9 +136,9 @@ const BlogBlock = () => (
                     <g
                       id="Symbols"
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <g
                         id="UI/Components/Buttons/SecondaryBig/hover"
@@ -161,7 +163,7 @@ const BlogBlock = () => (
                     </g>
                   </svg>
                 </span>
-              </a>
+              </TargetLink>
             </div>
           </div>
         </div>
@@ -181,9 +183,9 @@ const BlogBlock = () => (
               <g
                 id="Symbols"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="UI/Components/Buttons/SecondaryBig/hover"

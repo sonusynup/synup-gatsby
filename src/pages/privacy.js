@@ -2,10 +2,10 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const About = () => (
+const Privacy = () => (
   <Layout>
-    <div className="container">About</div>
+    <div className="container">Privacy</div>
   </Layout>
 )
 
-export default About
+export default Privacy

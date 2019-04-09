@@ -12,29 +12,27 @@ const Content = props => {
   const sections = props.pageContext.sections
   return (
     <Layout
-      announcementMessage={props.pageContext.announcementMessage}
-      announcementUrl={props.pageContext.announcementUrl}
+      {...props.pageContext.announcement}
       prefooterTitle={props.pageContext.prefooterTitle}
       prefooterDescription={props.pageContext.prefooterDescription}
       prefooterButtonText={props.pageContext.prefooterButtonText}
+      navbarSticky={props.pageContext.navbarSticky}
+      navbarTheme={props.pageContext.navbarTheme}
     >
-      {sections.map(section => {
+      {sections.map((section, index) => {
         switch (section.__typename) {
           case "ContentfulHeroSection":
-            return <Hero {...section} />
-            break
+            return <Hero {...section} key={index} />
           case "ContentfulFeaturesSection":
-            return <Feature {...section} />
-            break
+            return <Feature {...section} key={index} />
           case "ContentfulProductSection":
-            return <Product {...section} />
-            break
+            return <Product {...section} key={index} />
           case "ContentfulCaseStudySection":
-            return <CaseStudy {...section} />
-            break
+            return <CaseStudy {...section} key={index} />
           case "ContentfulPartnerSection":
-            return <Partner {...section} />
-            break
+            return <Partner {...section} key={index} />
+          default:
+            return null
         }
       })}
     </Layout>

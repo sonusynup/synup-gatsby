@@ -47,8 +47,9 @@ section {
     @include bp-lg {
         margin-top: 2rem;
         margin-bottom: 2rem;
-    ul {
-        margin-top: 2rem;
+
+        ul {
+            margin-top: 2rem;
         }
     }
 }
@@ -97,8 +98,9 @@ section {
     top: 0px;
     z-index: 999;
     right: 0px;
+
     @include bp-lg {
-        padding: 5px;
+        // padding: 5px;
     }
 
     @include bp-sm {
@@ -171,9 +173,11 @@ section {
         font-size: $base-font-size;
         color: $white;
     }
-    p{
+
+    p {
         color: $white;
     }
+
     h3 {
         max-width: 550px;
     }
@@ -193,9 +197,10 @@ section {
 }
 
 .space {
-        padding:0.625rem;
+    padding: 0.625rem;
+
     @include bp-xs {
-        padding:2px;
+        padding: 2px;
     }
 }
 
@@ -234,7 +239,8 @@ section {
 .resourcesHeading {
     position: relative;
     padding: 2.5rem;
-    P{
+
+    P {
         color: #fff;
         margin-top: 15px;
         position: relative;
@@ -257,6 +263,7 @@ section {
 
 .featuresCard {
     max-width: 440px;
+
     @include bp-sm {
         max-width: 100%;
     }
@@ -333,9 +340,11 @@ section {
     cursor: pointer;
     min-height: 200px;
     margin-bottom: 30px;
+
     @include bp-lg {
-        min-height: auto;        
+        min-height: auto;
     }
+
     @include bp-sm {
         padding: 15px;
     }
@@ -624,7 +633,7 @@ section {
     margin-bottom: 4.75rem;
 
     @include bp-lg {
-         margin-bottom: 2rem;
+        margin-bottom: 2rem;
     }
 }
 

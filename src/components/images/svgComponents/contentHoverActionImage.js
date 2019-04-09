@@ -14,9 +14,9 @@ const contentHoverActionImage = () => (
       <g
         id="Symbols"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="UI/Components/button/PrimaryBig/hover"
