@@ -11,6 +11,7 @@ import SolutionNavGroup from "./navGroups/SolutionNavGroup"
 import CompanyNavGroup from "./navGroups/CompanyNavGroup"
 import ProductNavGroup from "./navGroups/ProductNavGroup"
 import isNull from "../../helpers/isNull"
+import CloseIcon from '../images/svgComponents/CloseIcon'
 
 const ref = React.createRef()
 
@@ -111,7 +112,7 @@ class Header extends React.Component {
                       <span className="closeIcon" 
                         onClick={() => 
                         { console.log('clicked '); 
-                        this.setState({ isAnnouncementVisible: false })}}>X</span>
+                        this.setState({ isAnnouncementVisible: false })}}> <CloseIcon/> </span>
                     </p>
                   </div>
               </TargetLink>

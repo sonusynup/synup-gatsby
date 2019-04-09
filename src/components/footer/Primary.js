@@ -22,12 +22,12 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
     <div className="footer_primary">
       <div className="container footer_wrapper">
         <div className="footer_linksWrapper">
-          <ul>
-            <li className="footer_linksheading">
+        <h5 className="footer_linksheading">
               <TargetLink to="/">
                 <SynupLogo />
               </TargetLink>
-            </li>
+            </h5>
+          <ul className="dropdown-menu">
             {companyList.map((section, index) => (
               <li key={index}>
                 <TargetLink to={section.link} className="footer_link">
@@ -47,8 +47,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-          <ul>
-            <li className="footer_linksheading">PRODUCTS</li>
+        <h5 className="footer_linksheading">PRODUCTS</h5>
+          <ul className="dropdown-menu">
             {filterItemsByGroup("products")
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
               .map((item, index) => (
@@ -64,8 +64,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-          <ul>
-            <li className="footer_linksheading">RESOURCES</li>
+        <h5 className="footer_linksheading">RESOURCES</h5>
+          <ul className="dropdown-menu">
             {resourceList.map((resource, index) => (
               <li key={resource.title}>
                 <TargetLink to={resource.link} className="footer_link">
@@ -76,8 +76,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-          <ul>
-            <li className="footer_linksheading">COMPARE</li>
+        <h5 className="footer_linksheading">COMPARE</h5>
+          <ul className="dropdown-menu">
             <li>
               <TargetLink to="" className="footer_link">
                 Yext
@@ -106,8 +106,8 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-          <ul>
-            <li className="footer_linksheading">SOLUTIONS</li>
+        <h5 className="footer_linksheading">SOLUTIONS</h5>
+          <ul className="dropdown-menu">
             {filterItemsByGroup("solutions")
               .sort((x, y) => x.node.navbarOrder - y.node.navbarOrder)
               .map((item, index) => (

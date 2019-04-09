@@ -299,14 +299,26 @@ section {
 }
 
 .blogWrapper_right {
-    flex: 0.4;
-
+    flex: 1;
+    margin: 20px 0px;
+    width: 100%;
+    min-width: 450px;
+    max-width: 550px;
+    @include bp-sm {
+        min-width: auto;
+        max-width: 100%;
+    }
+    .blogWrapper_inner {
+        width: 100%;
+    }
     @include bp-md {
         flex: auto;
     }
 
     .card_deck {
         margin-top: 0px;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -333,7 +345,8 @@ section {
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
-    box-shadow: 0 3px 1px 0 rgba(152, 168, 255, 0.31);
+    box-shadow: 0 3px 1px 0 rgba(152, 168, 255, 0.31),
+    0 2px 4px 0 rgba(6, 14, 61, 0.1);
     border-radius: 5px;
     padding: 24px;
     transition: all 0.25s ease-in-out 0s;
