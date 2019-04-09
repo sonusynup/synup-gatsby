@@ -65,9 +65,11 @@ class Header extends React.Component {
     }
   }
 
+
+
   render() {
     const { isMenuExpanded } = this.state
-    const { announcementMessage, announcementLink, announcementButtonText, navbarSticky, announcementSticky } = this.props
+    const { announcementMessage, announcementLink, announcementButtonText, navbarSticky, announcementSticky , navbarTheme} = this.props
     const filterItemsByGroup = group =>
       this.props.data.allContentfulWebpage.edges.filter(
         edge => edge.node.navbarGroup === group
@@ -76,14 +78,21 @@ class Header extends React.Component {
       (!isNull(announcementMessage) && !isNull(announcementLink) && this.state.isAnnouncementVisible)
         ? "with-announcement"
         : null
-    
+    let theme = '';
+    if (navbarTheme === 'full-dark') {
+      theme = 'secoundary-topbar';
+    }
+    if (navbarTheme === 'minimal-light') {
+      theme = 'primary-topbar';
+    }
+
     return (
       <>
         <header
           ref={ref}
           className={`navbar ${withAnnouncementClass} navbar-toggleable-sm ${
             this.state.scrollBarFixed ? "header--fixed active" : "header--fixed"
-          } `}
+          } ${theme}`}
           id="header"
         >
           {(

@@ -48,6 +48,7 @@ const Layout = ({
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
+  navbarTheme
 }) => (
   <StaticQuery
     query={graphql`
@@ -91,6 +92,7 @@ const Layout = ({
           announcementButtonText={announcementButtonText}
           announcementSticky={announcementSticky}
           navbarSticky={navbarSticky}
+          navbarTheme={navbarTheme}
         />
         {/* Dynamic injection of page meta */}
         <Helmet>

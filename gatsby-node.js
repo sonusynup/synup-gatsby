@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
         node {
           webpageName
           navbarSticky
+          navbarTheme
           announcement {
             announcementMessage
             announcementLink
@@ -401,6 +402,7 @@ exports.createPages = ({ graphql, actions }) => {
           prefooterDescription: page.node.prefooterDescription,
           prefooterButtonText: page.node.prefooterButtonText,
           navbarSticky: page.node.navbarSticky,
+          navbarTheme: page.node.navbarTheme
         }
       })
     })
