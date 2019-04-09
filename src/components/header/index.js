@@ -79,28 +79,6 @@ class Header extends React.Component {
     
     return (
       <>
-        {(
-          !isNull(announcementMessage) && 
-          !isNull(announcementLink) && 
-          !isNull(announcementButtonText) && 
-          !isNull(announcementSticky) &&
-          this.state.isAnnouncementVisible
-        ) ? (
-          <>
-            <TargetLink to={announcementLink}>
-              <div className="annoucement_bar primary_bg">
-                <div className="container">
-                  <p className="annoucement_pre">
-                    <span className="label">{announcementButtonText}</span>
-                    {announcementMessage}
-                  </p>
-                </div>
-              </div>
-            </TargetLink>
-            <span style={{ top: '100px', position: 'fixed', left: '100px', zIndex: "100" }} onClick={() => { console.log('clicked '); this.setState({ isAnnouncementVisible: false })}}>X</span>
-          </>
-        ) : null}
-
         <header
           ref={ref}
           className={`navbar ${withAnnouncementClass} navbar-toggleable-sm ${
@@ -108,6 +86,29 @@ class Header extends React.Component {
           } `}
           id="header"
         >
+          {(
+            !isNull(announcementMessage) && 
+            !isNull(announcementLink) && 
+            !isNull(announcementButtonText) && 
+            !isNull(announcementSticky) &&
+            this.state.isAnnouncementVisible
+          ) ? (
+            <>
+              <TargetLink className="announcementWrapper primary_bg annoucement_bar" to={announcementLink}>
+                <div className="">
+                    <p className="annoucement_pre">
+                      <span className="label">{announcementButtonText}</span>
+                      {announcementMessage}
+                      <span className="closeIcon" 
+                        onClick={() => 
+                        { console.log('clicked '); 
+                        this.setState({ isAnnouncementVisible: false })}}>X</span>
+                    </p>
+                  </div>
+              </TargetLink>
+            </>
+          ) : null}
+          
           <div className="container">
             <h1>
               <TargetLink to="/">
