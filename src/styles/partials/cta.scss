@@ -1,0 +1,241 @@
+.ctaflow {
+  background-image: radial-gradient(circle at top left, #00d09c 0%, #4865ff 35%);
+  text-align: center;
+  
+  .tabs-center {
+      margin: 40px 0;
+
+      @include bp-md {
+          margin: 2rem 0;
+      }
+
+      @include bp-sm {
+          margin-bottom: 0px;
+      }
+
+      .nav {
+          justify-content: center;
+
+          li {
+              margin: 0 20px;
+              flex: 0.25;
+              position: relative;
+              counter-increment: step-counter;
+
+              @include bp-md {
+                  flex: unset;
+                  margin: 0;
+              }
+          }
+      }
+  }
+
+  .cta-tab-content {
+      margin-top: 4.125rem;
+      display: flex;
+      flex: 3;
+      border-left: none;
+
+      @include bp-md {
+          margin-top: 2rem;
+      }
+
+      figure {
+          text-align: center;
+      }
+
+      .tab-pane {
+          margin: 0 auto;
+          display: none;
+          background-color: transparent;
+          padding: 0;
+          overflow-y: visible;
+      }
+
+      .active {
+          display: block;
+      }
+  }
+
+  .flowStep {
+      padding-top: 70px;
+      opacity: .5;
+      transition: all 0.25s ease-in-out 0s;
+      position: relative;
+
+      &:hover {
+          opacity: 1;
+      }
+
+      &.active {
+          opacity: 1;
+
+          @include bp-md {
+              display: block;
+          }
+      }
+
+      @include bp-md {
+          display: none;
+      }
+
+      span {
+          font-weight: 500;
+          font-size: 16px;
+          color: #FFFFFF;
+          letter-spacing: 0.24px;
+          text-align: center;
+
+          @include bp-md {
+              display: none;
+          }
+      }
+
+      &::before {
+          content: counter(step-counter);
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          border-radius: 50%;
+          text-align: center;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.82);
+          font-weight: 500;
+          font-size: 20px;
+          color: #4865FF;
+          letter-spacing: 0;
+          top: 10px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+      }
+  }
+
+  .businessCard {
+      background: #FFFFFF;
+      box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
+      border-radius: 5px;
+      padding: 1.25rem 2.5rem;
+      min-width: 300px;
+      margin: 0 15px;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out 0s;
+
+      @include bp-lg {
+          min-width: auto;
+      }
+
+      @include bp-md {
+          min-width: 50%;
+          margin: 0;
+          margin-bottom: 20px;
+          box-shadow: none;
+      }
+
+      @include bp-sm {
+          min-width: 100%;
+      }
+
+      h5 {
+          font-weight: 500;
+          font-size: 14px;
+          color: #4865FF;
+          letter-spacing: 0;
+          text-align: center;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+      }
+
+      &:hover {
+          background: #F2F4FE;
+
+          @include bp-lg {
+              box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
+          }
+      }
+
+      &:hover .solutionnav-icon {
+          stroke: #4865FF;
+          fill: #4865FF;
+          fill-opacity: 0.1;
+      }
+  }
+
+  .form_wrapper {
+      min-width: 512px;
+      max-width: 512px;
+      margin: 0 auto;
+      background: transparent;
+      border: 2px solid #4865FF;
+      box-shadow: 0 21px 40px 0 rgba(6, 14, 61, 0.13);
+      padding: 2rem;
+      border-radius: 6px;
+      text-align: left;
+
+      @include bp-sm {
+          min-width: 100%;
+          padding: 16px;
+      }
+  }
+
+  form {
+      margin-top: 0;
+      padding: 0 20px;
+
+      @include bp-sm {
+          padding: 0px;
+      }
+
+      label {
+          color: #ffffff;
+      }
+
+      .form_inputField {
+          border: 1px solid white;
+          color: #4865FF;
+          background: transparent;
+
+          &:focus {
+              background: #FFFFFF;
+          }
+      }
+
+      ::-webkit-input-placeholder {
+          color: #ffffff;
+          opacity: 1;
+      }
+
+      ::-moz-placeholder {
+          color: #ffffff;
+          opacity: 1;
+      }
+
+      :-ms-input-placeholder {
+          color: #ffffff;
+          opacity: 1;
+      }
+
+      :-moz-placeholder {
+          color: #ffffff;
+          opacity: 1;
+      }
+  }
+
+  .btn_form {
+      border: 2px solid #fff;
+      opacity: 1;
+  }
+
+  .Bookslot {
+      img {
+          box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
+          cursor: pointer;
+      }
+
+  }
+
+}
