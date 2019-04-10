@@ -44,7 +44,6 @@ const ProductSectionWithImage = ({
   </section>
 )
 
-ProductSectionWithImage.propTypes = {
-}
+ProductSectionWithImage.propTypes = {}
 
 export default ProductSectionWithImage

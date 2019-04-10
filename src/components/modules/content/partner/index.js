@@ -15,7 +15,11 @@ const Partner = ({ partnerList, partnerSectionTitle }) => (
         <div className="banner_logoWrapper">
           {!isNull(partnerList)
             ? partnerList.map((partner, index) => (
-                <TargetLink to={partner.partnerUrl} className="banner_logo" key={index}>
+                <TargetLink
+                  to={partner.partnerUrl}
+                  className="banner_logo"
+                  key={index}
+                >
                   {!isNull(partner.partnerLogo) ? (
                     <img
                       src={partner.partnerLogo.file.url}

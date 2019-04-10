@@ -10,7 +10,6 @@ const EbookList = ({
     allContentfulEbooks: { edges },
   },
 }) => {
-
   return (
     <Layout>
       <section className="ebook">

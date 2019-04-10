@@ -11,7 +11,7 @@ import SolutionNavGroup from "./navGroups/SolutionNavGroup"
 import CompanyNavGroup from "./navGroups/CompanyNavGroup"
 import ProductNavGroup from "./navGroups/ProductNavGroup"
 import isNull from "../../helpers/isNull"
-import CloseIcon from '../images/svgComponents/CloseIcon'
+import CloseIcon from "../images/svgComponents/CloseIcon"
 
 const ref = React.createRef()
 
@@ -66,25 +66,32 @@ class Header extends React.Component {
     }
   }
 
-
-
   render() {
     const { isMenuExpanded } = this.state
-    const { announcementMessage, announcementLink, announcementButtonText, navbarSticky, announcementSticky , navbarTheme} = this.props
+    const {
+      announcementMessage,
+      announcementLink,
+      announcementButtonText,
+      navbarSticky,
+      announcementSticky,
+      navbarTheme,
+    } = this.props
     const filterItemsByGroup = group =>
       this.props.data.allContentfulWebpage.edges.filter(
         edge => edge.node.navbar && edge.node.navbar.navbarGroup === group
       )
     const withAnnouncementClass =
-      (!isNull(announcementMessage) && !isNull(announcementLink) && this.state.isAnnouncementVisible)
+      !isNull(announcementMessage) &&
+      !isNull(announcementLink) &&
+      this.state.isAnnouncementVisible
         ? "with-announcement"
         : null
-    let theme = '';
-    if (navbarTheme === 'full-dark') {
-      theme = 'secoundary-topbar';
+    let theme = ""
+    if (navbarTheme === "full-dark") {
+      theme = "secoundary-topbar"
     }
-    if (navbarTheme === 'minimal-light') {
-      theme = 'primary-topbar';
+    if (navbarTheme === "minimal-light") {
+      theme = "primary-topbar"
     }
 
     return (
@@ -96,29 +103,36 @@ class Header extends React.Component {
           } ${theme}`}
           id="header"
         >
-          {(
-            !isNull(announcementMessage) && 
-            !isNull(announcementLink) && 
-            !isNull(announcementButtonText) && 
-            !isNull(announcementSticky) &&
-            this.state.isAnnouncementVisible
-          ) ? (
+          {!isNull(announcementMessage) &&
+          !isNull(announcementLink) &&
+          !isNull(announcementButtonText) &&
+          !isNull(announcementSticky) &&
+          this.state.isAnnouncementVisible ? (
             <>
-              <TargetLink className="announcementWrapper primary_bg annoucement_bar" to={announcementLink}>
+              <TargetLink
+                className="announcementWrapper primary_bg annoucement_bar"
+                to={announcementLink}
+              >
                 <div className="">
-                    <p className="annoucement_pre">
-                      <span className="label">{announcementButtonText}</span>
-                      {announcementMessage}
-                      <span className="closeIcon" 
-                        onClick={() => 
-                        { console.log('clicked '); 
-                        this.setState({ isAnnouncementVisible: false })}}> <CloseIcon/> </span>
-                    </p>
-                  </div>
+                  <p className="annoucement_pre">
+                    <span className="label">{announcementButtonText}</span>
+                    {announcementMessage}
+                    <span
+                      className="closeIcon"
+                      onClick={() => {
+                        console.log("clicked ")
+                        this.setState({ isAnnouncementVisible: false })
+                      }}
+                    >
+                      {" "}
+                      <CloseIcon />{" "}
+                    </span>
+                  </p>
+                </div>
               </TargetLink>
             </>
           ) : null}
-          
+
           <div className="container">
             <h1>
               <TargetLink to="/">

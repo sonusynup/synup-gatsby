@@ -30,9 +30,7 @@ const ResourcesNavGroup = ({
       onClick={onTapOnOrOff}
       onMouseLeave={onMouseEnterOrExit}
     >
-      <span className="dropdown js-scroll-trigger nav-link">
-        RESOURCES
-      </span>
+      <span className="dropdown js-scroll-trigger nav-link">RESOURCES</span>
       <div
         className={`dropdown-content ${
           isExpanded ? "active" : ""

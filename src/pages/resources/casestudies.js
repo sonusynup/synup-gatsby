@@ -9,7 +9,6 @@ const CaseStudyList = ({
     allContentfulCaseStudy: { edges },
   },
 }) => {
-
   return (
     <Layout>
       <div className="container">

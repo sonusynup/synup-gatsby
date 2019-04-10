@@ -7,7 +7,7 @@ import BookSlot from "../../components/images/bookslot.png"
 import Header from "./header"
 import BusinessButton from "./businessButton"
 import BusinessForm from "./businessForm"
-import Layout from "../../components/layout";
+import Layout from "../../components/layout"
 
 class Cta extends React.Component {
   state = {
@@ -65,7 +65,9 @@ class Cta extends React.Component {
                 </div>
                 <div
                   className={`tab-pane ${
-                    this.state.activeScreen === "businessDetails" ? "active" : ""
+                    this.state.activeScreen === "businessDetails"
+                      ? "active"
+                      : ""
                   }`}
                   id="item-2"
                 >

@@ -1,6 +1,6 @@
 import React from "react"
 
-import TargetLink from '../../../atoms/targetLink'
+import TargetLink from "../../../atoms/targetLink"
 
 const ToolsBlock = () => (
   <section className="section_blog">

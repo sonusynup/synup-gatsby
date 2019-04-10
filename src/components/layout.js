@@ -48,7 +48,7 @@ const Layout = ({
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
-  navbarTheme
+  navbarTheme,
 }) => (
   <StaticQuery
     query={graphql`
@@ -78,7 +78,6 @@ const Layout = ({
                   }
                 }
               }
-              
             }
           }
         }

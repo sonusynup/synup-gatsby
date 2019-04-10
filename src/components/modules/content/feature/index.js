@@ -22,7 +22,7 @@ const Feature = ({ featureType, ...props }) => {
       FeatureContent = <FeatureTitleWithImage {...props} />
       break
     default:
-      return null;
+      return null
   }
 
   return (

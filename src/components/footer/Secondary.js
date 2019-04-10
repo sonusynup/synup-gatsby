@@ -1,6 +1,6 @@
 import React from "react"
 
-import TargetLink from '../atoms/targetLink'
+import TargetLink from "../atoms/targetLink"
 
 const SecondaryFooter = () => (
   <div className="footer_secondary">

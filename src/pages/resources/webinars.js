@@ -29,7 +29,7 @@ const WebinarList = ({
                   />
                   <div className="position">
                     <p className="speaker">
-                    {edge.node.speakers.speakers[0].speakerName}
+                      {edge.node.speakers.speakers[0].speakerName}
                     </p>
                     {edge.node.speakers.speakers[0].speakerDescription.content.map(
                       (description, index) => (

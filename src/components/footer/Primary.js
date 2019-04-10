@@ -23,11 +23,11 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
     <div className="footer_primary">
       <div className="container footer_wrapper">
         <div className="footer_linksWrapper">
-        <h5 className="footer_linksheading">
-              <TargetLink to="/">
-                <SynupLogo />
-              </TargetLink>
-            </h5>
+          <h5 className="footer_linksheading">
+            <TargetLink to="/">
+              <SynupLogo />
+            </TargetLink>
+          </h5>
           <ul className="dropdown-menu">
             {companyList.map((section, index) => (
               <li key={index}>
@@ -48,10 +48,12 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-        <h5 className="footer_linksheading">PRODUCTS</h5>
+          <h5 className="footer_linksheading">PRODUCTS</h5>
           <ul className="dropdown-menu">
             {filterItemsByGroup("products")
-              .sort((x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder)
+              .sort(
+                (x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder
+              )
               .map((item, index) => (
                 <li key={index}>
                   <TargetLink
@@ -65,7 +67,7 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-        <h5 className="footer_linksheading">RESOURCES</h5>
+          <h5 className="footer_linksheading">RESOURCES</h5>
           <ul className="dropdown-menu">
             {resourceList.map((resource, index) => (
               <li key={resource.title}>
@@ -77,7 +79,7 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-        <h5 className="footer_linksheading">COMPARE</h5>
+          <h5 className="footer_linksheading">COMPARE</h5>
           <ul className="dropdown-menu">
             <li>
               <TargetLink to="" className="footer_link">
@@ -107,22 +109,22 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
           </ul>
         </div>
         <div className="footer_linksWrapper">
-        <h5 className="footer_linksheading">SOLUTIONS</h5>
+          <h5 className="footer_linksheading">SOLUTIONS</h5>
           <ul className="dropdown-menu">
             {filterItemsByGroup("solutions")
-              .sort((x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder)
+              .sort(
+                (x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder
+              )
               .map((item, index) => (
-                (
-                  <li key={index}>
-                    <TargetLink
-                      to={item.node.webpageName}
-                      className="footer_link"
-                    >
-                      {item.node.navbar.navbarTitle}
-                    </TargetLink>
-                  </li>
-                )))
-            }
+                <li key={index}>
+                  <TargetLink
+                    to={item.node.webpageName}
+                    className="footer_link"
+                  >
+                    {item.node.navbar.navbarTitle}
+                  </TargetLink>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

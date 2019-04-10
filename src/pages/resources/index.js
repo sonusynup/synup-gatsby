@@ -6,7 +6,7 @@ import Ebook from "../../components/modules/resources/ebook"
 // eslint-disable-next-line
 import BlogBlock from "../../components/modules/resources/blogBlock"
 import CustomersBlock from "../../components/modules/resources/customersBlock"
- // eslint-disable-next-line
+// eslint-disable-next-line
 import ToolsBlock from "../../components/modules/resources/toolsBlock"
 
 const Resources = props => (
