@@ -77,7 +77,7 @@
     }
 
     &.with-announcement {
-        top: 40px;
+        // top: 40px;
 
         @include bp-md {
             // top: 25px;
@@ -376,7 +376,7 @@ header.navbar.header--top {
 }
 
 .header--fixed_annoucement {
-    top: 40px;
+    // top: 40px;
 
     @include bp-lg {
         top: 50px;

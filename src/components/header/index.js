@@ -106,14 +106,7 @@ class Header extends React.Component {
 
     return (
       <>
-        <header
-          ref={ref}
-          className={`navbar ${withAnnouncementClass} navbar-toggleable-sm ${
-            this.state.scrollBarFixed ? "header--fixed active" : "header--fixed"
-          } ${theme}`}
-          id="header"
-        >
-          {!isNull(announcementMessage) &&
+        {!isNull(announcementMessage) &&
           !isNull(announcementLink) &&
           !isNull(announcementButtonText) &&
           !isNull(announcementSticky) &&
@@ -144,7 +137,14 @@ class Header extends React.Component {
               </div>
             </>
           ) : null}
-
+        <header
+          ref={ref}
+          className={`navbar ${withAnnouncementClass} navbar-toggleable-sm ${
+            this.state.scrollBarFixed ? "header--fixed active" : "header--fixed"
+          } ${theme}`}
+          style={{ position: navbarSticky ? 'sticky' : 'fixed' }}
+          id="header"
+        >
           <div className="container">
             <h1>
               <TargetLink to="/">
