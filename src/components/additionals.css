@@ -46,9 +46,6 @@
   }
 
 @media only screen and (max-width: 991px) {
-  .footer_linksheading:after {
-    background-image: url(./images/svg/Arrow/downarrowblue.svg);
-  }
 
   .footer_linksheading:after {
     background-image: url(./images/svg/Arrow/downarrowblack.svg);
@@ -65,5 +62,9 @@
     background-repeat: no-repeat;
     background-size: 100%;
     transition: all 0.25s;
+  }
+  .footer_linksheading.expanded:after {
+    background-image: url(./images/svg/Arrow/downarrowblue.svg);
+    transform: rotate(180deg);
   }
 }

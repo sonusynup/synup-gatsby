@@ -20,9 +20,16 @@ class PrimaryFooter extends React.Component {
   }
 
   changeDropdown = (activeFooterClicked) => {
-    this.setState({
-      activeFooterClicked
-    })
+    if (this.state.activeFooterClicked === activeFooterClicked) {
+      this.setState({
+        activeFooterClicked: null
+      })
+    } else {
+      this.setState({
+        activeFooterClicked
+      })
+    }
+    
   }
 
   render() {
@@ -41,7 +48,7 @@ class PrimaryFooter extends React.Component {
       <div className="footer_primary">
         <div className="container footer_wrapper">
           <div className="footer_linksWrapper">
-            <h5 className="footer_linksheading" onClick={() => { console.log('clicked'); this.changeDropdown('root') }}>
+            <h5 className={`footer_linksheading ${this.state.activeFooterClicked === 'root' ? 'expanded' : 'null'}`} onClick={() => { this.changeDropdown('root') }}>
               <TargetLink to="/">
                 <SynupLogo />
               </TargetLink>
@@ -66,7 +73,7 @@ class PrimaryFooter extends React.Component {
             </ul>
           </div>
           <div className="footer_linksWrapper">
-            <h5 className="footer_linksheading" onClick={() => { this.changeDropdown('products') }}>PRODUCTS</h5>
+            <h5 className={`footer_linksheading ${this.state.activeFooterClicked === 'products' ? 'expanded' : 'null'}`} onClick={() => { this.changeDropdown('products') }}>PRODUCTS</h5>
             <ul className={`dropdown-menu ${this.state.activeFooterClicked === 'products' ? 'active' : ''}`}>
               {filterItemsByGroup("products")
                 .sort(
@@ -85,7 +92,7 @@ class PrimaryFooter extends React.Component {
             </ul>
           </div>
           <div className="footer_linksWrapper">
-            <h5 className="footer_linksheading" onClick={() => { this.changeDropdown('resources') }}>RESOURCES</h5>
+            <h5 className={`footer_linksheading ${this.state.activeFooterClicked === 'resources' ? 'expanded' : 'null'}`} onClick={() => { this.changeDropdown('resources') }}>RESOURCES</h5>
             <ul className={`dropdown-menu ${this.state.activeFooterClicked === 'resources' ? 'active' : ''}`}>
               {resourceList.map((resource, index) => (
                 <li key={resource.title}>
@@ -97,7 +104,7 @@ class PrimaryFooter extends React.Component {
             </ul>
           </div>
           <div className="footer_linksWrapper">
-            <h5 className="footer_linksheading" onClick={() => { this.changeDropdown('compare') }}>COMPARE</h5>
+            <h5 className={`footer_linksheading ${this.state.activeFooterClicked === 'compare' ? 'expanded' : 'null'}`} onClick={() => { this.changeDropdown('compare') }}>COMPARE</h5>
             <ul className={`dropdown-menu ${this.state.activeFooterClicked === 'compare' ? 'active' : ''}`} onClick={() => { this.changeDropdown('compare') }}>
               <li>
                 <TargetLink to="" className="footer_link">
@@ -127,7 +134,7 @@ class PrimaryFooter extends React.Component {
             </ul>
           </div>
           <div className="footer_linksWrapper">
-            <h5 className="footer_linksheading" onClick={() => { this.changeDropdown('solutions') }}>SOLUTIONS</h5>
+            <h5 className={`footer_linksheading ${this.state.activeFooterClicked === 'solutions' ? 'active' : 'null'}`} onClick={() => { this.changeDropdown('solutions') }}>SOLUTIONS</h5>
             <ul className={`dropdown-menu ${this.state.activeFooterClicked === 'solutions' ? 'active' : ''}`} onClick={() => { this.changeDropdown('solutions') }}>
               {filterItemsByGroup("solutions")
                 .sort(
