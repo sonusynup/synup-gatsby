@@ -3,6 +3,7 @@ import React from "react"
 import Button from "../../components/atoms/button"
 import FormInput from "../../components/atoms/formInput"
 import FormButtonGroup from "../../components/atoms/formButtonGroup"
+import isNull from "../../helpers/isNull";
 
 // Handles the entire state of the form
 class BusinessForm extends React.Component {
@@ -12,7 +13,6 @@ class BusinessForm extends React.Component {
     email: "",
     phoneNumber: "",
     businessName: "",
-    businessType: "",
     employeeCount: null,
   }
 
@@ -93,13 +93,18 @@ class BusinessForm extends React.Component {
             type="invert-primary-fullwidth"
             text="RESERVE YOUR SEAT"
             fullWidthBtn
-            disabled
+            disabled={
+              !(this.state.firstName) || 
+              !(this.state.email) || 
+              !(this.state.businessName) || 
+              !(this.state.phoneNumber) || 
+              !(this.state.employeeCount)
+            }
             onClick={() => {
               this.props.submitBusinessForm({
                 firstName: this.state.firstName,
                 email: this.state.email,
                 businessName: this.state.businessName,
-                businessType: this.state.businessType,
                 phoneNumber: this.state.phoneNumber,
                 employeeCount: this.state.employeeCount,
               })
