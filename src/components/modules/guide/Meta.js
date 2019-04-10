@@ -1,6 +1,7 @@
 import React from "react"
 
 import Button from "../../atoms/button"
+import TargetLink from "../../atoms/targetLink";
 
 const Meta = ({ meta }) => {
   if (meta === null) return null
@@ -25,7 +26,9 @@ const Meta = ({ meta }) => {
               __html: meta.description.childContentfulRichText.html,
             }}
           />
-          <Button type="secondary" text="LEARN MORE" />
+          <TargetLink to={buttonLink}>
+            <Button type="secondary" text={meta.buttonText} />
+          </TargetLink>
         </div>
       )
     default:
