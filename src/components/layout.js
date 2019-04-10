@@ -85,6 +85,53 @@ const Layout = ({
             }
           }
         }
+        allContentfulFeaturedResource {
+          edges {
+            node {
+              activeFeatured
+              caseStudy {
+                id
+                casestudyTitle {
+                  casestudyTitle
+                }
+                casestudyPartner {
+                  partnerLogo {
+                    file {
+                      url
+                    }
+                  }
+                }
+              }
+              webinar {
+                id
+                webinarTitle
+                webinarCover {
+                  file {
+                    url
+                  }
+                }
+              }
+              guides {
+                id
+                guideTitle
+                guideCover {
+                  file {
+                    url
+                  }
+                }
+              }
+              ebooks {
+                id
+                bookTitle
+                bookCoverImage {
+                  file {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (

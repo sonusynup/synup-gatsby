@@ -183,6 +183,7 @@ class Header extends React.Component {
                   onChangeActiveResource={this.onChangeActiveResource}
                   activeResource={this.state.activeResource}
                   resourceList={this.props.resourceList}
+                  featuredResources={this.props.data.allContentfulFeaturedResource}
                 />
                 <CompanyNavGroup
                   onExpand={this.setActiveHoverNavItem("company")}
