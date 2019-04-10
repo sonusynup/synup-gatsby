@@ -1,253 +1,275 @@
 .ctaflow {
-  background-image: radial-gradient(circle at top left, #00d09c 0%, #4865ff 35%);
-  text-align: center;
-  
-  .tabs-center {
-      margin: 40px 0;
+    position: relative;
+    background-image: radial-gradient(circle at top left, #00d09c 0%, #4865ff 35%);
+    text-align: center;
+    height: 100vh;
+    overflow: scroll;
 
-      @include bp-md {
-          margin: 2rem 0;
-      }
+    .tabs-center {
+        margin: 40px 0;
 
-      @include bp-sm {
-          margin-bottom: 0px;
-      }
+        @include bp-md {
+            margin: 2rem 0;
+        }
 
-      .nav {
-          justify-content: center;
+        @include bp-sm {
+            margin-bottom: 0px;
+        }
 
-          li {
-              margin: 0 20px;
-              flex: 0.25;
-              position: relative;
-              counter-increment: step-counter;
+        .nav {
+            justify-content: center;
 
-              @include bp-md {
-                  flex: unset;
-                  margin: 0;
-              }
-          }
-      }
-  }
+            li {
+                margin: 0 20px;
+                flex: 0.25;
+                position: relative;
+                counter-increment: step-counter;
 
-  .cta-tab-content {
-      margin-top: 4.125rem;
-      display: flex;
-      flex: 3;
-      border-left: none;
-
-      @include bp-md {
-          margin-top: 2rem;
-      }
-
-      figure {
-          text-align: center;
-      }
-
-      .tab-pane {
-          margin: 0 auto;
-          display: none;
-          background-color: transparent;
-          padding: 0;
-          overflow-y: visible;
-          &.active {
-            display: flex;
-          }
-          @include bp-md {
-            &.active {
-              display: block
+                @include bp-md {
+                    flex: unset;
+                    margin: 0;
+                }
             }
-          }
-      }
+        }
+    }
 
-      .active {
-          display: block;
-      }
+    .cta-tab-content {
+        margin-top: 4.125rem;
+        display: flex;
+        flex: 3;
+        border-left: none;
 
-  }
+        @include bp-md {
+            margin-top: 2rem;
+        }
 
-  .flowStep {
-      padding-top: 70px;
-      opacity: .5;
-      transition: all 0.25s ease-in-out 0s;
-      position: relative;
+        figure {
+            text-align: center;
+        }
 
-      &:hover {
-          opacity: 1;
-      }
+        .tab-pane {
+            margin: 0 auto;
+            display: none;
+            background-color: transparent;
+            padding: 0;
+            overflow-y: visible;
 
-      &.active {
-          opacity: 1;
+            &.active {
+                display: flex;
+            }
 
-          @include bp-md {
-              display: block;
-          }
-      }
+            @include bp-md {
+                &.active {
+                    display: block
+                }
+            }
+        }
 
-      @include bp-md {
-          display: none;
-      }
+        .active {
+            display: block;
+        }
 
-      span {
-          font-weight: 500;
-          font-size: 16px;
-          color: #FFFFFF;
-          letter-spacing: 0.24px;
-          text-align: center;
+    }
 
-          @include bp-md {
-              display: none;
-          }
-      }
+    .flowStep {
+        padding-top: 70px;
+        opacity: .5;
+        transition: all 0.25s ease-in-out 0s;
+        position: relative;
 
-      &::before {
-          content: counter(step-counter);
-          width: 45px;
-          height: 45px;
-          position: absolute;
-          border-radius: 50%;
-          text-align: center;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: rgba(255, 255, 255, 0.82);
-          font-weight: 500;
-          font-size: 20px;
-          color: #4865FF;
-          letter-spacing: 0;
-          top: 10px;
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-      }
-  }
+        &:hover {
+            opacity: 1;
+        }
 
-  .businessCard {
-      background: #FFFFFF;
-      box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
-      border-radius: 5px;
-      padding: 1.25rem 2.5rem;
-      min-width: 300px;
-      margin: 0 15px;
-      cursor: pointer;
-      transition: all 0.25s ease-in-out 0s;
+        &.active {
+            opacity: 1;
 
-      @include bp-lg {
-          min-width: auto;
-      }
+            @include bp-md {
+                display: block;
+            }
+        }
 
-      @include bp-md {
-          min-width: 50%;
-          margin: 0;
-          margin-bottom: 20px;
-          box-shadow: none;
-      }
+        @include bp-md {
+            display: none;
+        }
 
-      @include bp-sm {
-          min-width: 100%;
-      }
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            color: #FFFFFF;
+            letter-spacing: 0.24px;
+            text-align: center;
 
-      h5 {
-          font-weight: 500;
-          font-size: 14px;
-          color: #4865FF;
-          letter-spacing: 0;
-          text-align: center;
-          margin-top: 2rem;
-          margin-bottom: 1rem;
-      }
+            @include bp-md {
+                display: none;
+            }
+        }
 
-      &:hover {
-          background: #F2F4FE;
-
-          @include bp-lg {
-              box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
-          }
-      }
-
-      &:hover .solutionnav-icon {
-          stroke: #4865FF;
-          fill: #4865FF;
-          fill-opacity: 0.1;
-      }
-  }
-
-  .form_wrapper {
-      min-width: 512px;
-      max-width: 512px;
-      margin: 0 auto;
-      background: transparent;
-      border: 2px solid #4865FF;
-      box-shadow: 0 21px 40px 0 rgba(6, 14, 61, 0.13);
-      padding: 2rem;
-      border-radius: 6px;
-      text-align: left;
-
-      @include bp-sm {
-          min-width: 100%;
-          padding: 16px;
-      }
-  }
-
-  form {
-      margin-top: 0;
-      padding: 0 20px;
-
-      @include bp-sm {
-          padding: 0px;
-      }
-
-      label {
-          color: #ffffff;
-      }
-
-      .form_inputField {
-          border: 1px solid white;
-          &:focus {
+        &::before {
+            content: counter(step-counter);
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            border-radius: 50%;
+            text-align: center;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.82);
+            font-weight: 500;
+            font-size: 20px;
             color: #4865FF;
-          }
-          color: #ffffff;
-          background: transparent;
+            letter-spacing: 0;
+            top: 10px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
 
-          &:focus {
-              background: #FFFFFF;
-          }
-      }
+    .businessCard {
+        background: #FFFFFF;
+        box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
+        border-radius: 5px;
+        padding: 1.25rem 2.5rem;
+        min-width: 300px;
+        margin: 0 15px;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out 0s;
 
-      ::-webkit-input-placeholder {
-          color: #ffffff;
-          opacity: 1;
-      }
+        @include bp-lg {
+            min-width: auto;
+        }
 
-      ::-moz-placeholder {
-          color: #ffffff;
-          opacity: 1;
-      }
+        @include bp-md {
+            min-width: 50%;
+            margin: 0;
+            margin-bottom: 20px;
+            box-shadow: none;
+        }
 
-      :-ms-input-placeholder {
-          color: #ffffff;
-          opacity: 1;
-      }
+        @include bp-sm {
+            min-width: 100%;
+        }
 
-      :-moz-placeholder {
-          color: #ffffff;
-          opacity: 1;
-      }
-  }
+        h5 {
+            font-weight: 500;
+            font-size: 14px;
+            color: #4865FF;
+            letter-spacing: 0;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
 
-  .btn_form {
-      border: 2px solid #fff;
-      opacity: 1;
-  }
+        &:hover {
+            background: #F2F4FE;
 
-  .Bookslot {
-      img {
-          box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
-          cursor: pointer;
-      }
+            @include bp-lg {
+                box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
+            }
+        }
 
-  }
+        &:hover .solutionnav-icon {
+            stroke: #4865FF;
+            fill: #4865FF;
+            fill-opacity: 0.1;
+        }
+    }
+
+    .form_wrapper {
+        min-width: 512px;
+        max-width: 512px;
+        margin: 0 auto;
+        background: transparent;
+        border: 2px solid #4865FF;
+        box-shadow: 0 21px 40px 0 rgba(6, 14, 61, 0.13);
+        padding: 2rem;
+        border-radius: 6px;
+        text-align: left;
+
+        @include bp-sm {
+            min-width: 100%;
+            padding: 16px;
+        }
+    }
+
+    form {
+        margin-top: 0;
+        padding: 0 20px;
+
+        @include bp-sm {
+            padding: 0px;
+        }
+
+        label {
+            color: #ffffff;
+        }
+
+        .form_inputField {
+            border: 1px solid white;
+
+            &:focus {
+                color: #4865FF;
+            }
+
+            color: #ffffff;
+            background: transparent;
+
+            &:focus {
+                background: #FFFFFF;
+            }
+        }
+
+        ::-webkit-input-placeholder {
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        ::-moz-placeholder {
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        :-moz-placeholder {
+            color: #ffffff;
+            opacity: 1;
+        }
+    }
+
+    .btn_form {
+        border: 2px solid #fff;
+        opacity: 1;
+    }
+
+    .Bookslot {
+        img {
+            box-shadow: 0 14px 40px 0 rgba(24, 34, 89, 0.38);
+            cursor: pointer;
+        }
+
+    }
+
+    .modelClose {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out 0s;
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+        &:hover {
+            opacity: .75;
+        }
+    }
 
 }

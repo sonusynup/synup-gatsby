@@ -7,6 +7,7 @@ import BookSlot from "../../components/images/bookslot.png"
 import Header from "./header"
 import BusinessButton from "./businessButton"
 import BusinessForm from "./businessForm"
+import CloseIcon from "../../components/images/svgComponents/CloseIcon";
 
 class Cta extends React.Component {
   state = {
@@ -35,7 +36,7 @@ class Cta extends React.Component {
   render() {
     return (
       <section className="ctaflow">
-        <div style={{ float: 'left', color: 'white' }} onClick={this.onClickBack}>Back</div>
+        <span className="modelClose" onClick={this.onClickBack}> <CloseIcon/> </span>
         <div className="container">
           <h3 className="whiteTitle">Alright, let’s get started.</h3>
           <Header activeScreen={this.state.activeScreen} />
