@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import PrimaryButtonAnimation from "../../images/svgComponents/primaryButtonAnimation"
 import SecondaryButtonAnimation from "../../images/svgComponents/secondaryButtonAnimation"
 
-const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
+const Button = ({ type, text, fullWidthBtn, buttonType, onClick, disabled }) => {
   const fullWidthClass = fullWidthBtn ? "btn_fullWidth" : ""
 
   switch (type) {
@@ -14,6 +14,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
           className="btn btn_white  btn_arrow"
           type={buttonType}
           onClick={onClick}
+          disabled={disabled}
         >
           <span className="btn_textSpan">
             {text}
@@ -27,6 +28,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
           className="btn btn_white  btn_arrow btn_fullWidth"
           type={buttonType}
           onClick={onClick}
+          disabled={disabled}
         >
           <span className="btn_textSpan">
             {text}
@@ -40,6 +42,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
           className="btn btn_outlineWhite  btn_arrow"
           type={buttonType}
           onClick={onClick}
+          disabled={disabled}
         >
           <span className="btn_textSpan">
             {text}
@@ -53,6 +56,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick }) => {
           type={buttonType}
           className={`btn btn_outlineTransparent btn_arrow ${fullWidthClass}`}
           onClick={onClick}
+          disabled={disabled}
         >
           <span className="btn_textSpan">
             {text}

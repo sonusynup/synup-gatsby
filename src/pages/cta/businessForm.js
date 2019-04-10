@@ -93,6 +93,7 @@ class BusinessForm extends React.Component {
             type="invert-primary-fullwidth"
             text="RESERVE YOUR SEAT"
             fullWidthBtn
+            disabled
             onClick={() => {
               this.props.submitBusinessForm({
                 firstName: this.state.firstName,
