@@ -7,7 +7,6 @@ import BookSlot from "../../components/images/bookslot.png"
 import Header from "./header"
 import BusinessButton from "./businessButton"
 import BusinessForm from "./businessForm"
-import Layout from "../../components/layout"
 
 class Cta extends React.Component {
   state = {

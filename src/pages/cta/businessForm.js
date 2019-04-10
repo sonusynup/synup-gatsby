@@ -3,7 +3,6 @@ import React from "react"
 import Button from "../../components/atoms/button"
 import FormInput from "../../components/atoms/formInput"
 import FormButtonGroup from "../../components/atoms/formButtonGroup"
-import isNull from "../../helpers/isNull";
 
 // Handles the entire state of the form
 class BusinessForm extends React.Component {

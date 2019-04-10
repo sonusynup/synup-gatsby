@@ -49,7 +49,7 @@ const ResourcesNavGroup = ({
         >
           <h3>{resourceData.webinar.webinarTitle}</h3>
           <div>
-            <img src={resourceData.webinar.webinarCover.file.url} className="img_fluid" style={{ maxWidth: '100px '}} />
+            <img src={resourceData.webinar.webinarCover.file.url} className="img_fluid" style={{ maxWidth: '100px '}} alt="" />
           </div>
           <div>
             <Button type="borderless" text="READ NOW" />
@@ -62,7 +62,7 @@ const ResourcesNavGroup = ({
           to={`/resources/ebook/${resourceData.ebooks.id}`}
         >
           <h3>{resourceData.ebooks.bookTitle}</h3>
-          <img src={resourceData.ebooks.bookCoverImage.file.url} className="img_fluid" style={{ maxWidth: '100px '}} />
+          <img src={resourceData.ebooks.bookCoverImage.file.url} className="img_fluid" style={{ maxWidth: '100px '}} alt="" />
           <div>
             <Button type="borderless" text="READ NOW" />
           </div>
@@ -75,7 +75,7 @@ const ResourcesNavGroup = ({
         >
           <h3>{resourceData.guides.guideTitle}</h3>
           <div>
-            <img src={resourceData.guides.guideCover.file.url} className="img_fluid" style={{ maxWidth: '100px '}} />
+            <img src={resourceData.guides.guideCover.file.url} className="img_fluid" style={{ maxWidth: '100px '}} alt="" />
           </div>
           <Button type="borderless" text="READ NOW" />
         </TargetLink>
