@@ -21,6 +21,10 @@ const TargetLink = ({ children, to, ...props }) => {
     if (to && to[0] !== "/") {
       to = `/${to}`
     }
+    if (!to) {
+      to = '/'
+    }
+
     return (
       <Link to={to} {...props}>
         {children}

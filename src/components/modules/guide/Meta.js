@@ -1,7 +1,7 @@
 import React from "react"
 
 import Button from "../../atoms/button"
-import TargetLink from "../../atoms/targetLink";
+import TargetLink from "../../atoms/targetLink"
 
 const Meta = ({ meta }) => {
   if (meta === null) return null

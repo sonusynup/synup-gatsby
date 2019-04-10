@@ -4,18 +4,31 @@ import WebinarSpeakers from "./webinarSpeakers"
 // Todo bring this to the right format
 // January 15, 2019 / 9:00AM EST</pre>
 const parseTime = time => {
-  const date = new Date(time);
-  const year = date.getFullYear();
-  let month = date.getMonth();
-  let dt = date.getDate();
+  const date = new Date(time)
+  const year = date.getFullYear()
+  let month = date.getMonth()
+  let dt = date.getDate()
   if (dt < 10) {
-    dt = '0' + dt;
+    dt = "0" + dt
   }
   if (month < 10) {
-    month = '0' + month;
+    month = "0" + month
   }
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  return `${months[month-'0']} ${dt} / ${time.split('T')[1]} EST`;
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ]
+  return `${months[month - "0"]} ${dt}, ${year} / ${time.split("T")[1]} EST`
 }
 
 // Renders the webinar details

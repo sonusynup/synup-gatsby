@@ -95,13 +95,13 @@ class Header extends React.Component {
       theme = "primary-topbar"
     }
 
-    let announcementClass = 'announcement-blue-accent';
+    let announcementClass = "announcement-blue-accent"
 
-    if (announcementTheme === 'GreenAccent') {
-      announcementClass = 'announcement-green-accent';
+    if (announcementTheme === "GreenAccent") {
+      announcementClass = "announcement-green-accent"
     }
-    if (announcementTheme === 'RedAccent') {
-      announcementClass = 'announcement-red-accent'
+    if (announcementTheme === "RedAccent") {
+      announcementClass = "announcement-red-accent"
     }
 
     return (
@@ -119,20 +119,21 @@ class Header extends React.Component {
           !isNull(announcementSticky) &&
           this.state.isAnnouncementVisible ? (
             <>
-              <div
-                className={`annoucement_bar ${announcementClass}`}
-              >
+              <div className={`annoucement_bar ${announcementClass}`}>
                 <span
                   className="closeIcon"
-                  onClick={(e) => {
-                    e.stopPropagation();
+                  onClick={e => {
+                    e.stopPropagation()
                     this.setState({ isAnnouncementVisible: false })
                   }}
                 >
                   {" "}
                   <CloseIcon />{" "}
                 </span>
-                <TargetLink to={announcementLink} className="announcementWrapper">
+                <TargetLink
+                  to={announcementLink}
+                  className="announcementWrapper"
+                >
                   <div className="">
                     <p className="annoucement_pre">
                       <span className="label">{announcementButtonText}</span>

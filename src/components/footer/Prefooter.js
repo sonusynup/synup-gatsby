@@ -10,10 +10,10 @@ const Prefooter = ({
   prefooterButtonText,
   prefooterLink,
 }) => {
-  return (!isNull(prefooterTitle) &&
+  return !isNull(prefooterTitle) &&
     !isNull(prefooterDescription) &&
-    !isNull(prefooterDescription) && 
-    !isNull(prefooterLink)) ? (
+    !isNull(prefooterDescription) &&
+    !isNull(prefooterLink) ? (
     <section className="section_grandient">
       <div className="container">
         <div className="grandientWrapper">
