@@ -50,11 +50,20 @@
           background-color: transparent;
           padding: 0;
           overflow-y: visible;
+          &.active {
+            display: flex;
+          }
+          @include bp-md {
+            &.active {
+              display: block
+            }
+          }
       }
 
       .active {
           display: block;
       }
+
   }
 
   .flowStep {
