@@ -9,6 +9,12 @@ exports.createPages = ({ graphql, actions }) => {
       edges{
         node {
           webpageName
+          meta {
+            metas {
+              name
+              content
+            }
+          }
           navbar {
             navbarSticky
             navbarTheme
@@ -252,16 +258,6 @@ exports.createPages = ({ graphql, actions }) => {
                 html
               }
             }
-            meta {
-              type
-              title
-              description {
-                childContentfulRichText {
-                  html
-                }
-              }
-              buttonText
-            }
             images{
               file {
                 url
@@ -401,11 +397,11 @@ exports.createPages = ({ graphql, actions }) => {
         path: page.node.webpageName === 'home' ? '/' : page.node.webpageName,
         component: path.resolve('./src/templates/content.js'),
         context: {
-          sections: page.node.webpageSections,
+        sections: page.node.webpageSections,
           announcement: page.node.announcement,
           prefooter: page.node.prefooter,
-          navbarSticky: page.node.navbar.navbarSticky,
-          navbarTheme: page.node.navbar.navbarTheme
+          navbar: page.node.navbar,
+          meta: page.node.meta,
         }
       })
     })

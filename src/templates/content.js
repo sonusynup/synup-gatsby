@@ -13,9 +13,9 @@ const Content = props => {
   return (
     <Layout
       {...props.pageContext.announcement}
+      {...props.pageContext.navbar}
       {...props.pageContext.prefooter}
-      navbarSticky={props.pageContext.navbarSticky}
-      navbarTheme={props.pageContext.navbarTheme}
+      meta={props.pageContext.meta}
     >
       {sections.map((section, index) => {
         switch (section.__typename) {
