@@ -10,11 +10,11 @@ const SolutionNavItem = ({ title, description, webpageName }) => (
       <SolutionBgImage />
     </figure>
     <h5>{title}</h5>
-    <div
+    {/* <div
       dangerouslySetInnerHTML={{
         __html: description.childContentfulRichText.html,
       }}
-    />
+    /> */}
   </TargetLink>
 )
 

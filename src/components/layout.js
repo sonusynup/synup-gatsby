@@ -72,12 +72,13 @@ const Layout = ({
                     url
                   }
                 }
-              }
-              navbarDescription {
-                childContentfulRichText {
-                  html
+                navbarDescription {
+                  childContentfulRichText {
+                    html
+                  }
                 }
               }
+              
             }
           }
         }

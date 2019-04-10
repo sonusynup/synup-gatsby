@@ -13,10 +13,11 @@ const socialIcons = [
   { title: TwitterImage, link: "www.twitter.com" },
   { title: InstagramImage, link: "www.facebook.com" },
 ]
+
 const PrimaryFooter = ({ data, resourceList, companyList }) => {
   const filterItemsByGroup = group =>
     data.allContentfulWebpage.edges.filter(
-      edge => edge.node.navbarGroup === group
+      edge => edge.node.navbar.navbarGroup === group
     )
   return (
     <div className="footer_primary">
@@ -57,7 +58,7 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
                     to={item.node.webpageName}
                     className="footer_link"
                   >
-                    {item.node.navbarTitle}
+                    {item.node.navbar.navbarTitle}
                   </TargetLink>
                 </li>
               ))}
@@ -111,15 +112,17 @@ const PrimaryFooter = ({ data, resourceList, companyList }) => {
             {filterItemsByGroup("solutions")
               .sort((x, y) => x.node.navbar.navbarOrder - y.node.navbar.navbarOrder)
               .map((item, index) => (
-                <li key={index}>
-                  <TargetLink
-                    to={item.node.webpageName}
-                    className="footer_link"
-                  >
-                    {item.node.navbarTitle}
-                  </TargetLink>
-                </li>
-              ))}
+                (
+                  <li key={index}>
+                    <TargetLink
+                      to={item.node.webpageName}
+                      className="footer_link"
+                    >
+                      {item.node.navbar.navbarTitle}
+                    </TargetLink>
+                  </li>
+                )))
+            }
           </ul>
         </div>
       </div>

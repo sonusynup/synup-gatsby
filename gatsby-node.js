@@ -403,8 +403,8 @@ exports.createPages = ({ graphql, actions }) => {
           prefooterTitle: page.node.prefooterTitle,
           prefooterDescription: page.node.prefooterDescription,
           prefooterButtonText: page.node.prefooterButtonText,
-          navbarSticky: page.node.navbarSticky,
-          navbarTheme: page.node.navbarTheme
+          navbarSticky: page.node.navbar.navbarSticky,
+          navbarTheme: page.node.navbar.navbarTheme
         }
       })
     })
