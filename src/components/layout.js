@@ -48,6 +48,7 @@ const Layout = ({
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
+  prefooterLink,
   navbarTheme,
 }) => (
   <StaticQuery
@@ -118,6 +119,7 @@ const Layout = ({
           prefooterTitle={prefooterTitle}
           prefooterDescription={prefooterDescription}
           prefooterButtonText={prefooterButtonText}
+          prefooterLink={prefooterLink}
         />
       </>
     )}

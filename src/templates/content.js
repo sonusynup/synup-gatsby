@@ -13,9 +13,7 @@ const Content = props => {
   return (
     <Layout
       {...props.pageContext.announcement}
-      prefooterTitle={props.pageContext.prefooterTitle}
-      prefooterDescription={props.pageContext.prefooterDescription}
-      prefooterButtonText={props.pageContext.prefooterButtonText}
+      {...props.pageContext.prefooter}
       navbarSticky={props.pageContext.navbarSticky}
       navbarTheme={props.pageContext.navbarTheme}
     >

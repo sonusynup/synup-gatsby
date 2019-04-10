@@ -19,9 +19,12 @@ exports.createPages = ({ graphql, actions }) => {
             announcementButtonText
             sticky
           }
-          prefooterTitle
-          prefooterDescription
-          prefooterButtonText
+          prefooter {
+            prefooterTitle
+            prefooterLink
+            prefooterDescription
+            prefooterButtonText
+          }  
           webpageSections {
             __typename
             ... on ContentfulPartnerSection {
@@ -400,9 +403,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           sections: page.node.webpageSections,
           announcement: page.node.announcement,
-          prefooterTitle: page.node.prefooterTitle,
-          prefooterDescription: page.node.prefooterDescription,
-          prefooterButtonText: page.node.prefooterButtonText,
+          prefooter: page.node.prefooter,
           navbarSticky: page.node.navbar.navbarSticky,
           navbarTheme: page.node.navbar.navbarTheme
         }

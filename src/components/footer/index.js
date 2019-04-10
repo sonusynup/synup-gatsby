@@ -12,12 +12,14 @@ const Footer = ({
   prefooterTitle,
   prefooterDescription,
   prefooterButtonText,
+  prefooterLink,
 }) => (
   <>
     <Prefooter
       prefooterTitle={prefooterTitle}
       prefooterDescription={prefooterDescription}
       prefooterButtonText={prefooterButtonText}
+      prefooterLink={prefooterLink}
     />
     <footer>
       <section className="footer">
