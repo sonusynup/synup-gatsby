@@ -119,27 +119,28 @@ class Header extends React.Component {
           !isNull(announcementSticky) &&
           this.state.isAnnouncementVisible ? (
             <>
-              <TargetLink
-                className={`announcementWrapper annoucement_bar ${announcementClass}`}
-                to={announcementLink}
+              <div
+                className={`annoucement_bar ${announcementClass}`}
               >
-                <div className="">
-                  <p className="annoucement_pre">
-                    <span className="label">{announcementButtonText}</span>
-                    {announcementMessage}
-                    <span
-                      className="closeIcon"
-                      onClick={() => {
-                        console.log("clicked ")
-                        this.setState({ isAnnouncementVisible: false })
-                      }}
-                    >
-                      {" "}
-                      <CloseIcon />{" "}
-                    </span>
-                  </p>
-                </div>
-              </TargetLink>
+                <span
+                  className="closeIcon"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    this.setState({ isAnnouncementVisible: false })
+                  }}
+                >
+                  {" "}
+                  <CloseIcon />{" "}
+                </span>
+                <TargetLink to={announcementLink} className="announcementWrapper">
+                  <div className="">
+                    <p className="annoucement_pre">
+                      <span className="label">{announcementButtonText}</span>
+                      {announcementMessage}
+                    </p>
+                  </div>
+                </TargetLink>
+              </div>
             </>
           ) : null}
 

@@ -926,9 +926,9 @@ header.navbar.header--top {
 }
 
 .closeIcon {
-    margin-left: 15px;
+    right: 20px;
     line-height: normal;
-
+    position: absolute;
     &:hover {
         svg {
             opacity: .7;

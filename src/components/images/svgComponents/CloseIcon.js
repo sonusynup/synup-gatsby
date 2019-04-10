@@ -12,7 +12,7 @@ const CloseIcon = () => {
         x="0px"
         y="0px"
         viewBox="0 0 469.785 469.785"
-        style={{ enableBackground: "new 0 0 469.785 469.785" }}
+        style={{ enableBackground: "new 0 0 469.785 469.785", zIndex: 100 }}
         xml
         space="preserve"
         width="12px"
