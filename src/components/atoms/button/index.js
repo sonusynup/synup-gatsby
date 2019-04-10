@@ -80,7 +80,7 @@ const Button = ({ type, text, fullWidthBtn, buttonType, onClick, disabled }) => 
       )
     default:
       return (
-        <button className={`btn btn_primary btn_arrow ${fullWidthClass}`}>
+        <button className={`btn btn_primary btn_arrow ${fullWidthClass}`} disabled={disabled}>
           <span className="btn_textSpan">
             {text}
             <PrimaryButtonAnimation />

@@ -84,7 +84,18 @@ class EbookSubscriptionForm extends React.Component {
             buttons={this.countButtons}
             onChange={this.onChangeFormField("employeeCount")}
           />
-          <Button type="primary" text="RESERVE YOUR SEAT" fullWidthBtn />
+          <Button
+            type="primary"
+            text="RESERVE YOUR SEAT"
+            fullWidthBtn
+            disabled={
+              this.state.fullName === "" ||
+              this.state.email === "" ||
+              this.state.businessName === "" ||
+              this.state.businessType === "" ||
+              this.state.employeeCount === null
+            }
+          />
         </form>
       </div>
     )
