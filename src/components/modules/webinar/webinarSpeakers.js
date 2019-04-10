@@ -5,8 +5,8 @@ const WebinarSpeakers = ({ speakers }) => (
   <div className="speakers_wrapper">
     <h5 className="speakers_title">Speakers</h5>
     <div className="speakers_wrapperBlock">
-      {speakers.speakers.map(speaker => (
-        <div className="speakers_block">
+      {speakers.speakers.map((speaker, index) => (
+        <div className="speakers_block" key={index}>
           <figure>
             <img
               src={speaker.speakerPhoto.file.url}

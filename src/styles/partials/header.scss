@@ -151,7 +151,7 @@ nav {
         &:after {
             position: absolute;
             top: 50%;
-            // background-image: url(../images/svg/Arrow/downarrowblack.svg);
+            
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -187,9 +187,6 @@ nav {
     &:hover {
         color: $blue;
 
-        &:after {
-            // background-image: url(../images/svg/Arrow/downarrowblue.svg);
-        }
 
         &:last-child {
             &:after {

@@ -13,3 +13,26 @@
 .testimonialWrapper {
   background-image: url(./images/svg/testimonial-icon.svg);
 }
+
+@media only screen and (max-width: 767px) {
+  .nav-link:hover:after {
+    background-image: url(./images/svg/Arrow/downarrowblue.svg);
+  }
+  
+  .nav-link:after {
+    background-image: url(./images/svg/Arrow/downarrowblack.svg);
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 8px;
+    content: '';
+    width: 14px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 0.25s;
+  }    
+}
