@@ -11,12 +11,13 @@ const Ebook = props => (
         <h3>other Ebooks</h3>
         <div className="ebook_wrapper">
           <div className="ebook_lists">
-            {props.ebookData.edges.map(Ebook => (
-              <TargetLink to="/modules/ebook" className="ebook_anchor">
+            {props.ebookData.edges.map((Ebook, index) => (
+              <TargetLink to="/modules/ebook" className="ebook_anchor" key={index}>
                 <div className="overlay_content">
                   <div className="content-overlay" />
                   <figure>
                     <img
+                      
                       src={Ebook.node.bookCoverImage.file.url}
                       className="img_fluid"
                       alt=""

@@ -2,12 +2,17 @@ import React from "react"
 
 // Handles render of Ebook Detail screen
 const EbookDetails = ({
-  bookDetails: { bookCoverImage, bookTitle, bookDescription },
+  bookDetails: { bookCoverImage, bookTitle, bookDescription, borderColor },
 }) => (
   <div className="ebook_block">
     <div className="ebook_img">
       <figure>
-        <img src={bookCoverImage.file.url} className="img_fluid" alt="" />
+        <img
+          style={{ border: `10px solid ${borderColor ? borderColor : '#4865FF'}` }}
+          src={bookCoverImage.file.url}
+          className="img_fluid"
+          alt=""
+        />
       </figure>
     </div>
     <div className="ebook_title">

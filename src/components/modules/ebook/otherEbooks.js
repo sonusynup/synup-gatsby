@@ -18,6 +18,7 @@ const OtherEbooks = ({ latestBooksLimited }) => (
               <LinkedEbook
                 to={`/resources/ebook/${ebook.node.id} `}
                 thumbnail={ebook.node.bookCoverImage.file.url}
+                borderColor={ebook.node.borderColor}
               />
             ))}
           </div>

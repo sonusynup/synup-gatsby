@@ -28,6 +28,7 @@ const EbookList = ({
                       <div className="content-overlay" />
                       <figure>
                         <img
+                          style={{ border: `10px solid ${ebook.node.borderColor ? ebook.node.borderColor : '#4865FF'}` }}
                           src={ebook.node.bookCoverImage.file.url}
                           className="img_fluid"
                           alt=""
@@ -55,6 +56,7 @@ export const query = graphql`
         node {
           id
           bookTitle
+          borderColor
           bookCoverImage {
             file {
               url

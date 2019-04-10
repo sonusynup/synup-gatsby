@@ -378,6 +378,7 @@ exports.createPages = ({ graphql, actions }) => {
         node {
           id
           bookTitle
+          borderColor
           bookCoverImage {
             file{
               url
