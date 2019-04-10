@@ -26,7 +26,7 @@ const Meta = ({ meta }) => {
               __html: meta.description.childContentfulRichText.html,
             }}
           />
-          <TargetLink to={buttonLink}>
+          <TargetLink to={meta.buttonLink}>
             <Button type="secondary" text={meta.buttonText} />
           </TargetLink>
         </div>

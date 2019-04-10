@@ -23,6 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
             announcementMessage
             announcementLink
             announcementButtonText
+            theme
             sticky
           }
           prefooter {
@@ -39,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
                 partnerIndustry
                 partnerPhoto {
                   file {
-                    url
+                    url 
                   }
                 }
                 partnerLogo {
@@ -257,6 +258,17 @@ exports.createPages = ({ graphql, actions }) => {
               childContentfulRichText {
                 html
               }
+            }
+            meta {
+              type
+              title
+              description {
+                childContentfulRichText {
+                  html
+                }
+              }
+              buttonText
+              buttonLink
             }
             images{
               file {

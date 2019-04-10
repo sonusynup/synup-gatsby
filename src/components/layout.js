@@ -45,6 +45,7 @@ const Layout = ({
   announcementMessage,
   announcementLink,
   announcementButtonText,
+  theme: announcementTheme,
   sticky: announcementSticky,
   prefooterTitle,
   prefooterDescription,
@@ -96,6 +97,7 @@ const Layout = ({
           announcementLink={announcementLink}
           announcementButtonText={announcementButtonText}
           announcementSticky={announcementSticky}
+          announcementTheme={announcementTheme}
           navbarSticky={navbarSticky}
           navbarTheme={navbarTheme}
         />

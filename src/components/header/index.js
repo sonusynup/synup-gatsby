@@ -72,6 +72,7 @@ class Header extends React.Component {
       announcementMessage,
       announcementLink,
       announcementButtonText,
+      announcementTheme,
       navbarSticky,
       announcementSticky,
       navbarTheme,
@@ -94,6 +95,15 @@ class Header extends React.Component {
       theme = "primary-topbar"
     }
 
+    let announcementClass = 'announcement-blue-accent';
+
+    if (announcementTheme === 'GreenAccent') {
+      announcementClass = 'announcement-green-accent';
+    }
+    if (announcementTheme === 'RedAccent') {
+      announcementClass = 'announcement-red-accent'
+    }
+
     return (
       <>
         <header
@@ -110,7 +120,7 @@ class Header extends React.Component {
           this.state.isAnnouncementVisible ? (
             <>
               <TargetLink
-                className="announcementWrapper primary_bg annoucement_bar"
+                className={`announcementWrapper annoucement_bar ${announcementClass}`}
                 to={announcementLink}
               >
                 <div className="">

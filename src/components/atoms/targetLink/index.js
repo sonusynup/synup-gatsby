@@ -9,7 +9,7 @@ const linkType = to => {
 
 const TargetLink = ({ children, to, ...props }) => {
   if (linkType(to) === "external") {
-    if (to[0] !== "h") {
+    if (to && to[0] !== "h") {
       to = `https://${to}`
     }
     return (
@@ -18,7 +18,7 @@ const TargetLink = ({ children, to, ...props }) => {
       </a>
     )
   } else {
-    if (to[0] !== "/") {
+    if (to && to[0] !== "/") {
       to = `/${to}`
     }
     return (

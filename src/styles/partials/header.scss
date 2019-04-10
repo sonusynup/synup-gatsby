@@ -346,8 +346,19 @@ header.navbar {
     }
 }
 
+.announcement-blue-accent {
+  background-color: $brand-blue;
+}
+.announcement-green-accent {
+  background-color: $green;
+}
+.announcement-red-accent {
+  background-color: red;
+}
+
 .announcementWrapper {
     display: block;
+
 }
 
 header.navbar.header--top {
