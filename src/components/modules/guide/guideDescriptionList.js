@@ -36,7 +36,7 @@ const GuideDescriptionList = ({ content, description }) => (
                   </div>
                 </div>
               </li>
-              <Meta meta={item.meta} />
+              {/* <Meta meta={item.meta} /> */}
             </>
           ))}
         </div>

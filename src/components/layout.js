@@ -12,6 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import isNull from '../helpers/isNull'
 import "./layout.scss"
 import "./additionals.css"
 
@@ -104,7 +105,7 @@ const Layout = ({
           <meta http-equiv="x-ua-compatible" content="ie=edge" />
           <title>Synup</title>
           
-          {meta.metas.map(({ name, content }) => <meta name={name} content={content} />)}
+          {!isNull(meta) ? meta.metas.map(({ name, content }) => <meta name={name} content={content} />) : null}
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" />
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" />
         </Helmet>
