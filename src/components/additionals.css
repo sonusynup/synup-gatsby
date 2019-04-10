@@ -14,10 +14,7 @@
   background-image: url(./images/svg/testimonial-icon.svg);
 }
 
-@media only screen and (max-width: 767px) {
-  .nav-link:hover:after {
-    background-image: url(./images/svg/Arrow/downarrowblue.svg);
-  }
+@media only screen and (max-width: 991px) {
   
   .nav-link:after {
     background-image: url(./images/svg/Arrow/downarrowblack.svg);
@@ -35,4 +32,9 @@
     background-size: 100%;
     transition: all 0.25s;
   }    
+  .nav-link.expanded:after {
+    background-image: url(./images/svg/Arrow/downarrowblue.svg);
+    transform: rotate(180deg);
+  }
+
 }

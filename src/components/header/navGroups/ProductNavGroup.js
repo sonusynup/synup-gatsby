@@ -21,7 +21,7 @@ const ProductNavGroup = ({ onExpand, isExpanded, onClose, items }) => {
       onClick={onTapOnOrOff}
       onMouseLeave={onMouseEnterOrExit}
     >
-      <span href="#" className="dropdown js-scroll-trigger nav-link">
+      <span href="#" className={`dropdown js-scroll-trigger nav-link ${isExpanded ? "expanded" : ""}`}>
         PRODUCTS
       </span>
       <div

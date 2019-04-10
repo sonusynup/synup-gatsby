@@ -21,7 +21,7 @@ const CompanyNavGroup = ({ onExpand, isExpanded, onClose, ...props }) => {
       onClick={onTapOnOrOff}
       onMouseLeave={onMouseEnterOrExit}
     >
-      <span href="#" className="dropdown js-scroll-trigger nav-link">
+      <span href="#" className={`dropdown js-scroll-trigger nav-link ${isExpanded ? "expanded" : ""}`}>
         COMPANY
       </span>
       <div
