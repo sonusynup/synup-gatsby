@@ -4,6 +4,7 @@ import Button from "../../atoms/button"
 import FormInput from "../../atoms/formInput"
 import FormButtonGroup from "../../atoms/formButtonGroup"
 
+
 // Handles the entire state of the form
 class EbookSubscriptionForm extends React.Component {
   // State holding the form data
