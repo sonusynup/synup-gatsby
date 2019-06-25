@@ -1,6 +1,28 @@
 // npm i @contentful/rich-text-types
 const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
 
+let contentfulConfig
+
+try {
+  // Load the Contentful config from the .contentful.json
+  contentfulConfig = require('./.contentful')
+} catch (_) {}
+
+// Overwrite the Contentful config with environment variables if they exist
+contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || contentfulConfig.accessToken,
+  host: process.env.CONTENTFUL_HOST
+}
+
+const { spaceId, accessToken } = contentfulConfig
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    'Contentful spaceId and the delivery token need to be provided.'
+  )
+}
+
 module.exports = {
   siteMetadata: {
     title: `Synp`,
@@ -27,10 +49,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `2ddwaxp8l2no`,
-        accessToken: '0aaf089f64fd1c4f2e7e4e2a7de6df3ace0bd852b38e3e71d3e9653f19331ce7',
-      },
+      options: contentfulConfig,
     },
     {
       resolve: '@contentful/gatsby-transformer-contentful-richtext',
