@@ -1,5 +1,4 @@
-// npm i @contentful/rich-text-types
-const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
+
 
 let contentfulConfig
 
@@ -22,6 +21,9 @@ if (!spaceId || !accessToken) {
     'Contentful spaceId and the delivery token need to be provided.'
   )
 }
+
+//npm i @contentful/rich-text-types
+const { BLOCKS, MARKS, INLINES } = require('@contentful/rich-text-types')
 
 module.exports = {
   siteMetadata: {
